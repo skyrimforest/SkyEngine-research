@@ -1,0 +1,37 @@
+# sky_research 研究栈: 只起 FJSP + MAPF 两个算法微服务 (去掉 GPU 预约, Mac 可跑)
+# 引擎侧由 skyresearch 容器内的 sky_research/common/engine_adapter.py 直接驱动。
+#
+#  用法:
+#    docker compose -f docker/research-stack.yaml up -d
+#    docker network connect sky_research_research-net skyresearch   # 让驱动容器入网
+#
+# 服务选择:
+#   fjsp:  skyengine-fjsp-best (CP-SAT) / skyengine-fjsp-de / skyengine-fjsp-pso
+#   mapf:  skyengine-mapf-classical (EECBS/PBS/LNS2/LaCAM3/CBSH2-RTC/LG-LaCAM)
+#          skyengine-mapf-lacam / skyengine-mapf-pibt
+services:
+  fjsp:
+    image: ${FJSP_IMAGE:-skyengine-fjsp-best:latest}
+    environment:
+      SKY_LOG_LEVEL: INFO
+      SEED: ${SEED:-42}
+      TIME_LIMIT: ${FJSP_TIME_LIMIT:-30}
+    expose:
+      - "8002"
+    networks:
+      - research-net
+
+  mapf:
+    image: ${MAPF_IMAGE:-skyengine-mapf-classical:latest}
+    environment:
+      SKY_LOG_LEVEL: INFO
+      SEED: ${SEED:-42}
+      TIME_LIMIT: ${MAPF_TIME_LIMIT:-30}
+    expose:
+      - "8001"
+    networks:
+      - research-net
+
+networks:
+  research-net:
+    driver: bridge
