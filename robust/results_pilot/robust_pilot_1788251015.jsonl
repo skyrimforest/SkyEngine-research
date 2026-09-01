@@ -1,0 +1,25 @@
+{"n_runs": 24}
+{"makespan": 1099, "finished": true, "revisions": 0, "queue_wait": 1.290909090909091, "blocking": 24.564102564102566, "instance": "mk01", "variance": "none", "policy": "greedy+astar", "wall_time_s": 3.573}
+{"makespan": 408, "finished": true, "revisions": 0, "queue_wait": 1.0545454545454545, "blocking": 3.018181818181818, "instance": "mk01", "variance": "none", "policy": "cpsat-static", "wall_time_s": 3.765}
+{"makespan": 408, "finished": true, "revisions": 0, "instance": "mk01", "variance": "none", "policy": "cpsat-periodic100", "wall_time_s": 4.72}
+{"makespan": 2517, "finished": true, "revisions": 0, "queue_wait": 1.290909090909091, "blocking": 47.05128205128205, "instance": "mk01", "variance": "mild", "policy": "greedy+astar", "wall_time_s": 8.388}
+{"makespan": 408, "finished": true, "revisions": 0, "queue_wait": 1.0545454545454545, "blocking": 3.018181818181818, "instance": "mk01", "variance": "mild", "policy": "cpsat-static", "wall_time_s": 3.768}
+{"makespan": 408, "finished": true, "revisions": 0, "instance": "mk01", "variance": "mild", "policy": "cpsat-periodic100", "wall_time_s": 4.72}
+{"makespan": 2518, "finished": true, "revisions": 0, "queue_wait": 1.290909090909091, "blocking": 47.05128205128205, "instance": "mk01", "variance": "moderate", "policy": "greedy+astar", "wall_time_s": 8.32}
+{"makespan": 414, "finished": true, "revisions": 0, "queue_wait": 1.0545454545454545, "blocking": 2.7818181818181817, "instance": "mk01", "variance": "moderate", "policy": "cpsat-static", "wall_time_s": 3.868}
+{"makespan": 408, "finished": true, "revisions": 0, "instance": "mk01", "variance": "moderate", "policy": "cpsat-periodic100", "wall_time_s": 4.46}
+{"makespan": 2262, "finished": true, "revisions": 0, "queue_wait": 1.690909090909091, "blocking": 27.564102564102566, "instance": "mk01", "variance": "high", "policy": "greedy+astar", "wall_time_s": 5.997}
+{"makespan": 468, "finished": true, "revisions": 0, "queue_wait": 1.018181818181818, "blocking": 3.0545454545454547, "instance": "mk01", "variance": "high", "policy": "cpsat-static", "wall_time_s": 3.261}
+{"makespan": 408, "finished": true, "revisions": 0, "instance": "mk01", "variance": "high", "policy": "cpsat-periodic100", "wall_time_s": 4.37}
+{"makespan": 4096, "finished": false, "revisions": 0, "queue_wait": 1.3818181818181818, "blocking": 9.444444444444445, "instance": "mk02", "variance": "none", "policy": "greedy+astar", "wall_time_s": 6.865}
+{"makespan": 410, "finished": true, "revisions": 0, "queue_wait": 1.1379310344827587, "blocking": 3.2115384615384617, "instance": "mk02", "variance": "none", "policy": "cpsat-static", "wall_time_s": 12.87}
+{"makespan": 410, "finished": true, "revisions": 0, "instance": "mk02", "variance": "none", "policy": "cpsat-periodic100", "wall_time_s": 14.28}
+{"makespan": 4096, "finished": false, "revisions": 0, "queue_wait": 1.3454545454545455, "blocking": 9.444444444444445, "instance": "mk02", "variance": "mild", "policy": "greedy+astar", "wall_time_s": 6.861}
+{"makespan": 410, "finished": true, "revisions": 0, "queue_wait": 1.1379310344827587, "blocking": 3.2115384615384617, "instance": "mk02", "variance": "mild", "policy": "cpsat-static", "wall_time_s": 12.898}
+{"makespan": 410, "finished": true, "revisions": 0, "instance": "mk02", "variance": "mild", "policy": "cpsat-periodic100", "wall_time_s": 14.3}
+{"makespan": 804, "finished": true, "revisions": 0, "queue_wait": 1.5, "blocking": 19.551724137931036, "instance": "mk02", "variance": "moderate", "policy": "greedy+astar", "wall_time_s": 2.628}
+{"makespan": 410, "finished": true, "revisions": 0, "queue_wait": 1.1206896551724137, "blocking": 3.2115384615384617, "instance": "mk02", "variance": "moderate", "policy": "cpsat-static", "wall_time_s": 12.915}
+{"makespan": 410, "finished": true, "revisions": 0, "instance": "mk02", "variance": "moderate", "policy": "cpsat-periodic100", "wall_time_s": 14.27}
+{"makespan": 4096, "finished": false, "revisions": 0, "queue_wait": 1.5087719298245614, "blocking": 64.65517241379311, "instance": "mk02", "variance": "high", "policy": "greedy+astar", "wall_time_s": 13.819}
+{"makespan": 406, "finished": true, "revisions": 0, "queue_wait": 1.103448275862069, "blocking": 2.826923076923077, "instance": "mk02", "variance": "high", "policy": "cpsat-static", "wall_time_s": 12.876}
+{"makespan": 410, "finished": true, "revisions": 0, "instance": "mk02", "variance": "high", "policy": "cpsat-periodic100", "wall_time_s": 14.29}
