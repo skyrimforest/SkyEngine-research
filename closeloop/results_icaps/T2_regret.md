@@ -2,15 +2,15 @@
 
 | scen | policy | RRegret (mean±std) | n |
 |---|---|---|---|
-| S1 | greedy-reactive | 1.039±0.257 | 15 |
-| S1 | cpsat-static | 0.992±0.023 | 21 |
-| S1 | cpsat-full | 1.191±0.082 | 19 |
-| S1 | cpsat-partial | 1.191±0.082 | 19 |
-| S4 | greedy-reactive | 1.438±1.017 | 13 |
-| S4 | cpsat-static | 1.063±0.088 | 21 |
-| S4 | cpsat-full | 1.244±0.101 | 18 |
-| S4 | cpsat-partial | 1.244±0.101 | 18 |
-| S3 | greedy-reactive | 0.957±0.229 | 10 |
-| S3 | cpsat-static | 1.030±0.048 | 15 |
-| S3 | cpsat-full | 1.846±0.638 | 17 |
-| S3 | cpsat-partial | 1.846±0.638 | 17 |
+| S1 | greedy-reactive | 1.011±0.217 | 39 |
+| S1 | cpsat-static | 0.991±0.025 | 48 |
+| S1 | cpsat-full | 1.245±0.142 | 46 |
+| S1 | cpsat-partial | 1.245±0.142 | 46 |
+| S4 | greedy-reactive | 1.220±0.746 | 35 |
+| S4 | cpsat-static | 1.057±0.105 | 48 |
+| S4 | cpsat-full | 1.259±0.120 | 44 |
+| S4 | cpsat-partial | 1.259±0.120 | 44 |
+| S3 | greedy-reactive | 1.043±0.562 | 26 |
+| S3 | cpsat-static | 1.033±0.047 | 39 |
+| S3 | cpsat-full | 2.251±1.155 | 37 |
+| S3 | cpsat-partial | 2.251±1.155 | 37 |
