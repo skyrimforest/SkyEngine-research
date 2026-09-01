@@ -128,35 +128,67 @@ class RecoveryOrchestrator:
 
         t0 = time.time()
         self.last_replan_step = step
-        try:
-            if (
-                self.scope == "partial"
-                and ev.get("type") == "machine_breakdown"
-                and hasattr(solver, "request_partial_schedule_repair")
-            ):
+        activated = False
+        prefer_partial = (
+            self.scope == "partial" and ev.get("type") == "machine_breakdown"
+        )
+        # 策略显式: scope=partial 直接局部修复; 否则 U4 全域 -> (机器事件) U3 兜底
+        if prefer_partial and hasattr(solver, "request_partial_schedule_repair"):
+            try:
                 revision = solver.request_partial_schedule_repair(
                     job_obs,
                     execution_env=self.env,
                     route_solver=self.coordinator.route_solver,
                     failed_machine_id=int(ev.get("machine_id", -1)),
-                    trigger={"type": "orchestrator", "event": ev, "step": step},
+                    trigger={"type": "orchestrator-scoped", "event": ev, "step": step},
                 )
-            else:
+                if revision is not None:
+                    self.stats["revision_count"] += 1
+                    activated = True
+            except Exception as e:  # noqa: BLE001
+                self.stats["revision_fail_count"] += 1
+                if self.verbose:
+                    print(f"[orchestrator] scoped partial failed at step {step}: {e}")
+        if not activated:
+            try:
                 revision = solver.request_plan_revision(
                     job_obs,
-                    recovery_level=2,
+                    recovery_level=4,  # U4 = joint_full_rescheduling
                     trigger={"type": "orchestrator", "event": ev, "step": step},
                     activate=True,
                     activation_env=self.env,
                     route_solver=self.coordinator.route_solver,
                 )
-            self.stats["revision_count"] += 1
-            if revision is not None and str(getattr(revision, "status", "")) == "activation_failed":
+                self.stats["revision_count"] += 1
+                activated = str(getattr(revision, "status", "")) != "activation_failed"
+                if not activated:
+                    self.stats["revision_fail_count"] += 1
+            except Exception as e:  # noqa: BLE001
                 self.stats["revision_fail_count"] += 1
-        except Exception as e:  # noqa: BLE001
-            self.stats["revision_fail_count"] += 1
-            if self.verbose:
-                print(f"[orchestrator] revision failed at step {step}: {e}")
+                if self.verbose:
+                    print(f"[orchestrator] U4 full revision failed at step {step}: {e}")
+        if not activated and ev.get("type") == "machine_breakdown" and hasattr(
+            solver, "request_partial_schedule_repair"
+        ):
+            try:
+                revision = solver.request_partial_schedule_repair(
+                    job_obs,
+                    execution_env=self.env,
+                    route_solver=self.coordinator.route_solver,
+                    failed_machine_id=int(ev.get("machine_id", -1)),
+                    trigger={"type": "orchestrator-fallback", "event": ev, "step": step},
+                )
+                if revision is not None:
+                    self.stats["revision_count"] += 1
+                    self.stats["partial_fallback_count"] = (
+                        self.stats.get("partial_fallback_count", 0) + 1
+                    )
+            except Exception as e:  # noqa: BLE001
+                if self.verbose:
+                    print(f"[orchestrator] U3 partial fallback failed at step {step}: {e}")
+        if not activated:
+            # 允许稍后事件(如修复完成)再次触发, 而非被最小间隔挡住
+            self.last_replan_step = step - self.min_replan_interval
         self.stats["planner_wall_s"] += time.time() - t0
         self.stats["triggered_events"].append({"step": step, "event": ev})
 
@@ -179,6 +211,8 @@ def run_closed_episode(
     mapf_service_url: str = "http://mapf:8001",
     mapf_time_limit_ms: int = 500,
     verbose: bool = False,
+    trigger_override: Optional[str] = None,
+    processing_time_config: Optional[dict] = None,
 ) -> dict:
     """运行一个带扰动注入与闭环策略的 episode。
 
@@ -187,6 +221,7 @@ def run_closed_episode(
       cpsat-static    : CP-SAT 一次规划, 扰动下不修正 (开环对照, à la generate-then-refine)
       cpsat-full      : CP-SAT + 事件触发全域残差重规划
       cpsat-partial   : CP-SAT + 事件触发局部修复 (围绕故障机器)
+    trigger_override: 覆盖触发器 (如 "periodic-100", 供鲁棒性实验复用)。
     """
     t0 = time.time()
     trigger, scope = "never", "full"
@@ -201,6 +236,8 @@ def run_closed_episode(
         trigger, scope = "event", "partial"
     else:
         raise ValueError(f"unknown policy {policy}")
+    if trigger_override is not None:
+        trigger = trigger_override
 
     fjsp_data = load_fjsp_json(fjsp_path)
     grid_map = load_map(map_file, map_name)
@@ -215,6 +252,7 @@ def run_closed_episode(
     env = GridFactoryEnv(
         grid_config=grid_cfg, machine_config=machine_cfg, job_config=job_cfg,
         random_target=False, exception_config=exception_config,
+        processing_time_config=processing_time_config,
     )
     obs, info = env.reset()
 

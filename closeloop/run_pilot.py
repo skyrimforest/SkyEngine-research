@@ -12,7 +12,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import signal
 import sys
 import time
 from pathlib import Path
@@ -54,28 +53,49 @@ INSTANCES = ["mk01", "mk02"]
 
 
 def run_one(inst, scen, policy, timeout_s=300.0):
+    """子进程隔离运行, 硬超时 SIGTERM/SIGKILL (引擎会吞 SIGALRM, 信号量法不可靠)。"""
+    import multiprocessing as mp
+
     fjsp = ROOT / "data" / "fjsp_official" / "brandimarte" / f"{inst}.json"
+    t0 = time.time()
+    tmp = ROOT / "results" / f".cl_{t0:.0f}_{inst}_{scen}_{policy}.json"
 
-    def _alarm(signum, frame):
-        raise TimeoutError(f"episode timeout {timeout_s}s")
+    def _target():
+        try:
+            # greedy 用内置 astar 路由(规则栈); cp_sat 系用滚动 EECBS
+            route = "astar" if policy == "greedy-reactive" else "rolling_mapf_http"
+            res = run_closed_episode(
+                fjsp_path=fjsp,
+                map_file=ROOT / "data" / "mapf" / "medium_maps.yaml",
+                map_name="medium-mazes-seed-0000",
+                policy=policy,
+                exception_config=SCENARIOS[scen],
+                num_agv=4, seed=42, max_steps=4096,
+                route_solver_name=route,
+            )
+        except Exception as e:  # noqa: BLE001
+            res = {"error": f"{type(e).__name__}: {e}"}
+        tmp.write_text(json.dumps(res, default=str))
 
-    old = signal.signal(signal.SIGALRM, _alarm)
-    signal.alarm(int(timeout_s))
+    ctx = mp.get_context("fork")
+    proc = ctx.Process(target=_target)
+    proc.start()
+    proc.join(timeout_s)
+    if proc.is_alive():
+        proc.terminate(); proc.join(5)
+        if proc.is_alive():
+            proc.kill(); proc.join(5)
+        res = {"error": f"hard timeout {timeout_s}s"}
+    else:
+        try:
+            res = json.loads(tmp.read_text())
+        except Exception as e:
+            res = {"error": f"unreadable: {e}"}
     try:
-        res = run_closed_episode(
-            fjsp_path=fjsp,
-            map_file=ROOT / "data" / "mapf" / "medium_maps.yaml",
-            map_name="medium-mazes-seed-0000",
-            policy=policy,
-            exception_config=SCENARIOS[scen],
-            num_agv=4, seed=42, max_steps=4096,
-        )
-    except Exception as e:
-        res = {"error": f"{type(e).__name__}: {e}", "config": {"instance": inst}}
-    finally:
-        signal.alarm(0)
-        signal.signal(signal.SIGALRM, old)
-
+        tmp.unlink(missing_ok=True)
+    except Exception:
+        pass
+    res["config"] = res.get("config", {})
     res["config"].update(instance=inst, scenario=scen, policy=policy)
     res["fjsp_optimum"] = instance_optimum(inst)
     if res.get("makespan") and res.get("fjsp_optimum"):

@@ -232,6 +232,7 @@ def run_episode(
     collision_system: Optional[str] = None,
     metrics_interval: int = 0,
     warmup_timeout: float = 120.0,
+    processing_time_config: Optional[dict] = None,
 ) -> dict:
     """运行一个完整 episode, 返回 {config, summary, steps, wall_time, finished}。
 
@@ -276,6 +277,7 @@ def run_episode(
         machine_config=machine_cfg,
         job_config=job_cfg,
         random_target=False,
+        processing_time_config=processing_time_config,
     )
     obs, info = env.reset()
 
