@@ -1,0 +1,2671 @@
+[
+ {
+  "case_id": "mk01|S0_none|greedy-reactive",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 1099,
+   "finished": true,
+   "steps": 1101,
+   "n_events": 0,
+   "events": [],
+   "agv_busy": 0.45481380563124435,
+   "agv_loaded": 0.18029064486830154,
+   "agv_waiting_total": 2401,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 24.564102564102566,
+   "queue_wait_mean": 1.290909090909091,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 0,
+   "agv_down_steps": 0,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 1,
+   "revision_count": 0,
+   "revision_fails": 0
+  },
+  "config_context": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "greedy-reactive",
+   "scenario": "S0_none"
+  },
+  "ground_truth": {
+   "localization": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "case_id": "mk01|S0_none|cpsat-static",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 408,
+   "finished": true,
+   "steps": 410,
+   "n_events": 0,
+   "events": [],
+   "agv_busy": 0.8567073170731707,
+   "agv_loaded": 0.46707317073170734,
+   "agv_waiting_total": 235,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 3.018181818181818,
+   "queue_wait_mean": 1.0545454545454545,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 0,
+   "agv_down_steps": 0,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 1,
+   "revision_count": 0,
+   "revision_fails": 0
+  },
+  "config_context": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "cpsat-static",
+   "scenario": "S0_none"
+  },
+  "ground_truth": {
+   "localization": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "case_id": "mk01|S0_none|cpsat-full",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 408,
+   "finished": true,
+   "steps": 410,
+   "n_events": 0,
+   "events": [],
+   "agv_busy": 0.8567073170731707,
+   "agv_loaded": 0.46707317073170734,
+   "agv_waiting_total": 235,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 3.018181818181818,
+   "queue_wait_mean": 1.0545454545454545,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 0,
+   "agv_down_steps": 0,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 1,
+   "revision_count": 0,
+   "revision_fails": 0
+  },
+  "config_context": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "scenario": "S0_none"
+  },
+  "ground_truth": {
+   "localization": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "case_id": "mk01|S0_none|cpsat-partial",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 408,
+   "finished": true,
+   "steps": 410,
+   "n_events": 0,
+   "events": [],
+   "agv_busy": 0.8567073170731707,
+   "agv_loaded": 0.46707317073170734,
+   "agv_waiting_total": 235,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 3.018181818181818,
+   "queue_wait_mean": 1.0545454545454545,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 0,
+   "agv_down_steps": 0,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 1,
+   "revision_count": 0,
+   "revision_fails": 0
+  },
+  "config_context": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "cpsat-partial",
+   "scenario": "S0_none"
+  },
+  "ground_truth": {
+   "localization": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "case_id": "mk01|S1_machine@150|greedy-reactive",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 1099,
+   "finished": true,
+   "steps": 1101,
+   "n_events": 2,
+   "events": [
+    {
+     "step": 150,
+     "type": "machine_breakdown",
+     "level": "warning",
+     "payload": {
+      "machine_id": 0,
+      "duration_steps": 40,
+      "reason": "machine_breakdown",
+      "current_op": null
+     }
+    },
+    {
+     "step": 189,
+     "type": "machine_recovery",
+     "level": "info",
+     "payload": {
+      "machine_id": 0
+     }
+    }
+   ],
+   "agv_busy": 0.45481380563124435,
+   "agv_loaded": 0.18029064486830154,
+   "agv_waiting_total": 2401,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 24.564102564102566,
+   "queue_wait_mean": 1.290909090909091,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 40,
+   "agv_down_steps": 0,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 1,
+   "revision_count": 0,
+   "revision_fails": 0
+  },
+  "config_context": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "greedy-reactive",
+   "scenario": "S1_machine@150"
+  },
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "mk01|S1_machine@150|cpsat-static",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 408,
+   "finished": true,
+   "steps": 410,
+   "n_events": 2,
+   "events": [
+    {
+     "step": 150,
+     "type": "machine_breakdown",
+     "level": "warning",
+     "payload": {
+      "machine_id": 0,
+      "duration_steps": 40,
+      "reason": "machine_breakdown",
+      "current_op": null
+     }
+    },
+    {
+     "step": 189,
+     "type": "machine_recovery",
+     "level": "info",
+     "payload": {
+      "machine_id": 0
+     }
+    }
+   ],
+   "agv_busy": 0.8567073170731707,
+   "agv_loaded": 0.46707317073170734,
+   "agv_waiting_total": 235,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 3.018181818181818,
+   "queue_wait_mean": 1.1090909090909091,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 40,
+   "agv_down_steps": 0,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 1,
+   "revision_count": 0,
+   "revision_fails": 0
+  },
+  "config_context": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "cpsat-static",
+   "scenario": "S1_machine@150"
+  },
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "mk01|S1_machine@150|cpsat-full",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 408,
+   "finished": true,
+   "steps": 410,
+   "n_events": 2,
+   "events": [
+    {
+     "step": 150,
+     "type": "machine_breakdown",
+     "level": "warning",
+     "payload": {
+      "machine_id": 0,
+      "duration_steps": 40,
+      "reason": "machine_breakdown",
+      "current_op": null
+     }
+    },
+    {
+     "step": 189,
+     "type": "machine_recovery",
+     "level": "info",
+     "payload": {
+      "machine_id": 0
+     }
+    }
+   ],
+   "agv_busy": 0.8567073170731707,
+   "agv_loaded": 0.46707317073170734,
+   "agv_waiting_total": 235,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 3.018181818181818,
+   "queue_wait_mean": 1.1090909090909091,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 40,
+   "agv_down_steps": 0,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 3,
+   "revision_count": 0,
+   "revision_fails": 2
+  },
+  "config_context": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "scenario": "S1_machine@150"
+  },
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "mk01|S1_machine@150|cpsat-partial",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 408,
+   "finished": true,
+   "steps": 410,
+   "n_events": 2,
+   "events": [
+    {
+     "step": 150,
+     "type": "machine_breakdown",
+     "level": "warning",
+     "payload": {
+      "machine_id": 0,
+      "duration_steps": 40,
+      "reason": "machine_breakdown",
+      "current_op": null
+     }
+    },
+    {
+     "step": 189,
+     "type": "machine_recovery",
+     "level": "info",
+     "payload": {
+      "machine_id": 0
+     }
+    }
+   ],
+   "agv_busy": 0.8567073170731707,
+   "agv_loaded": 0.46707317073170734,
+   "agv_waiting_total": 235,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 3.018181818181818,
+   "queue_wait_mean": 1.1090909090909091,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 40,
+   "agv_down_steps": 0,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 3,
+   "revision_count": 0,
+   "revision_fails": 2
+  },
+  "config_context": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "cpsat-partial",
+   "scenario": "S1_machine@150"
+  },
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "mk01|S2_machine+agv|greedy-reactive",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 1155,
+   "finished": true,
+   "steps": 1157,
+   "n_events": 4,
+   "events": [
+    {
+     "step": 150,
+     "type": "machine_breakdown",
+     "level": "warning",
+     "payload": {
+      "machine_id": 0,
+      "duration_steps": 40,
+      "reason": "machine_breakdown",
+      "current_op": null
+     }
+    },
+    {
+     "step": 189,
+     "type": "machine_recovery",
+     "level": "info",
+     "payload": {
+      "machine_id": 0
+     }
+    },
+    {
+     "step": 300,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 1,
+      "duration_steps": 20,
+      "reason": "agv_breakdown",
+      "position": [
+       15,
+       17
+      ],
+      "current_task_id": 8
+     }
+    },
+    {
+     "step": 319,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 1
+     }
+    }
+   ],
+   "agv_busy": 0.42350907519446845,
+   "agv_loaded": 0.17329299913569576,
+   "agv_waiting_total": 2668,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 30.0,
+   "queue_wait_mean": 1.290909090909091,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 40,
+   "agv_down_steps": 20,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 1,
+   "revision_count": 0,
+   "revision_fails": 0
+  },
+  "config_context": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "greedy-reactive",
+   "scenario": "S2_machine+agv"
+  },
+  "ground_truth": {
+   "localization": "machine:0+agv:1",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "case_id": "mk01|S2_machine+agv|cpsat-static",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 423,
+   "finished": true,
+   "steps": 425,
+   "n_events": 4,
+   "events": [
+    {
+     "step": 150,
+     "type": "machine_breakdown",
+     "level": "warning",
+     "payload": {
+      "machine_id": 0,
+      "duration_steps": 40,
+      "reason": "machine_breakdown",
+      "current_op": null
+     }
+    },
+    {
+     "step": 189,
+     "type": "machine_recovery",
+     "level": "info",
+     "payload": {
+      "machine_id": 0
+     }
+    },
+    {
+     "step": 300,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 1,
+      "duration_steps": 20,
+      "reason": "agv_breakdown",
+      "position": [
+       14,
+       13
+      ],
+      "current_task_id": 39
+     }
+    },
+    {
+     "step": 319,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 1
+     }
+    }
+   ],
+   "agv_busy": 0.8364705882352941,
+   "agv_loaded": 0.4364705882352941,
+   "agv_waiting_total": 278,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 2.8727272727272726,
+   "queue_wait_mean": 1.0727272727272728,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 40,
+   "agv_down_steps": 20,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 1,
+   "revision_count": 0,
+   "revision_fails": 0
+  },
+  "config_context": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "cpsat-static",
+   "scenario": "S2_machine+agv"
+  },
+  "ground_truth": {
+   "localization": "machine:0+agv:1",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "case_id": "mk01|S2_machine+agv|cpsat-full",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 423,
+   "finished": true,
+   "steps": 425,
+   "n_events": 4,
+   "events": [
+    {
+     "step": 150,
+     "type": "machine_breakdown",
+     "level": "warning",
+     "payload": {
+      "machine_id": 0,
+      "duration_steps": 40,
+      "reason": "machine_breakdown",
+      "current_op": null
+     }
+    },
+    {
+     "step": 189,
+     "type": "machine_recovery",
+     "level": "info",
+     "payload": {
+      "machine_id": 0
+     }
+    },
+    {
+     "step": 300,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 1,
+      "duration_steps": 20,
+      "reason": "agv_breakdown",
+      "position": [
+       14,
+       13
+      ],
+      "current_task_id": 39
+     }
+    },
+    {
+     "step": 319,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 1
+     }
+    }
+   ],
+   "agv_busy": 0.8364705882352941,
+   "agv_loaded": 0.4364705882352941,
+   "agv_waiting_total": 278,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 2.8727272727272726,
+   "queue_wait_mean": 1.0727272727272728,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 40,
+   "agv_down_steps": 20,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 5,
+   "revision_count": 0,
+   "revision_fails": 4
+  },
+  "config_context": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "scenario": "S2_machine+agv"
+  },
+  "ground_truth": {
+   "localization": "machine:0+agv:1",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "case_id": "mk01|S2_machine+agv|cpsat-partial",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 423,
+   "finished": true,
+   "steps": 425,
+   "n_events": 4,
+   "events": [
+    {
+     "step": 150,
+     "type": "machine_breakdown",
+     "level": "warning",
+     "payload": {
+      "machine_id": 0,
+      "duration_steps": 40,
+      "reason": "machine_breakdown",
+      "current_op": null
+     }
+    },
+    {
+     "step": 189,
+     "type": "machine_recovery",
+     "level": "info",
+     "payload": {
+      "machine_id": 0
+     }
+    },
+    {
+     "step": 300,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 1,
+      "duration_steps": 20,
+      "reason": "agv_breakdown",
+      "position": [
+       14,
+       13
+      ],
+      "current_task_id": 39
+     }
+    },
+    {
+     "step": 319,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 1
+     }
+    }
+   ],
+   "agv_busy": 0.8364705882352941,
+   "agv_loaded": 0.4364705882352941,
+   "agv_waiting_total": 278,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 2.8727272727272726,
+   "queue_wait_mean": 1.0727272727272728,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 40,
+   "agv_down_steps": 20,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 5,
+   "revision_count": 0,
+   "revision_fails": 4
+  },
+  "config_context": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "cpsat-partial",
+   "scenario": "S2_machine+agv"
+  },
+  "ground_truth": {
+   "localization": "machine:0+agv:1",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "case_id": "mk01|S3_mild_stochastic|greedy-reactive",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 977,
+   "finished": true,
+   "steps": 979,
+   "n_events": 18,
+   "events": [
+    {
+     "step": 31,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 2,
+      "duration_steps": 8,
+      "reason": "probabilistic_agv_failure",
+      "position": [
+       15,
+       17
+      ],
+      "current_task_id": 0
+     }
+    },
+    {
+     "step": 38,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 2
+     }
+    },
+    {
+     "step": 93,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 2,
+      "duration_steps": 8,
+      "reason": "probabilistic_agv_failure",
+      "position": [
+       14,
+       13
+      ],
+      "current_task_id": 10
+     }
+    },
+    {
+     "step": 100,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 0,
+      "duration_steps": 8,
+      "reason": "probabilistic_agv_failure",
+      "position": [
+       19,
+       11
+      ],
+      "current_task_id": 37
+     }
+    },
+    {
+     "step": 100,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 2
+     }
+    },
+    {
+     "step": 107,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 0
+     }
+    }
+   ],
+   "agv_busy": 0.5068947906026557,
+   "agv_loaded": 0.20122574055158324,
+   "agv_waiting_total": 1931,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 22.358974358974358,
+   "queue_wait_mean": 1.509090909090909,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 10,
+   "agv_down_steps": 64,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 1,
+   "revision_count": 0,
+   "revision_fails": 0
+  },
+  "config_context": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "greedy-reactive",
+   "scenario": "S3_mild_stochastic"
+  },
+  "ground_truth": {
+   "localization": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "case_id": "mk01|S3_mild_stochastic|cpsat-static",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 449,
+   "finished": true,
+   "steps": 451,
+   "n_events": 6,
+   "events": [
+    {
+     "step": 32,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 0,
+      "duration_steps": 8,
+      "reason": "probabilistic_agv_failure",
+      "position": [
+       10,
+       11
+      ],
+      "current_task_id": 1
+     }
+    },
+    {
+     "step": 39,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 0
+     }
+    },
+    {
+     "step": 89,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 2,
+      "duration_steps": 8,
+      "reason": "probabilistic_agv_failure",
+      "position": [
+       16,
+       13
+      ],
+      "current_task_id": 13
+     }
+    },
+    {
+     "step": 96,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 2
+     }
+    },
+    {
+     "step": 97,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 2,
+      "duration_steps": 8,
+      "reason": "probabilistic_agv_failure",
+      "position": [
+       16,
+       13
+      ],
+      "current_task_id": 13
+     }
+    },
+    {
+     "step": 104,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 2
+     }
+    }
+   ],
+   "agv_busy": 0.7899113082039911,
+   "agv_loaded": 0.4268292682926829,
+   "agv_waiting_total": 379,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 3.2545454545454544,
+   "queue_wait_mean": 1.018181818181818,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 0,
+   "agv_down_steps": 24,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 1,
+   "revision_count": 0,
+   "revision_fails": 0
+  },
+  "config_context": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "cpsat-static",
+   "scenario": "S3_mild_stochastic"
+  },
+  "ground_truth": {
+   "localization": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "case_id": "mk01|S3_mild_stochastic|cpsat-full",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 449,
+   "finished": true,
+   "steps": 451,
+   "n_events": 6,
+   "events": [
+    {
+     "step": 32,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 0,
+      "duration_steps": 8,
+      "reason": "probabilistic_agv_failure",
+      "position": [
+       10,
+       11
+      ],
+      "current_task_id": 1
+     }
+    },
+    {
+     "step": 39,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 0
+     }
+    },
+    {
+     "step": 89,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 2,
+      "duration_steps": 8,
+      "reason": "probabilistic_agv_failure",
+      "position": [
+       16,
+       13
+      ],
+      "current_task_id": 13
+     }
+    },
+    {
+     "step": 96,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 2
+     }
+    },
+    {
+     "step": 97,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 2,
+      "duration_steps": 8,
+      "reason": "probabilistic_agv_failure",
+      "position": [
+       16,
+       13
+      ],
+      "current_task_id": 13
+     }
+    },
+    {
+     "step": 104,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 2
+     }
+    }
+   ],
+   "agv_busy": 0.7899113082039911,
+   "agv_loaded": 0.4268292682926829,
+   "agv_waiting_total": 379,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 3.2545454545454544,
+   "queue_wait_mean": 1.018181818181818,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 0,
+   "agv_down_steps": 24,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 7,
+   "revision_count": 0,
+   "revision_fails": 6
+  },
+  "config_context": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "scenario": "S3_mild_stochastic"
+  },
+  "ground_truth": {
+   "localization": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "case_id": "mk01|S3_mild_stochastic|cpsat-partial",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 449,
+   "finished": true,
+   "steps": 451,
+   "n_events": 6,
+   "events": [
+    {
+     "step": 32,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 0,
+      "duration_steps": 8,
+      "reason": "probabilistic_agv_failure",
+      "position": [
+       10,
+       11
+      ],
+      "current_task_id": 1
+     }
+    },
+    {
+     "step": 39,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 0
+     }
+    },
+    {
+     "step": 89,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 2,
+      "duration_steps": 8,
+      "reason": "probabilistic_agv_failure",
+      "position": [
+       16,
+       13
+      ],
+      "current_task_id": 13
+     }
+    },
+    {
+     "step": 96,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 2
+     }
+    },
+    {
+     "step": 97,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 2,
+      "duration_steps": 8,
+      "reason": "probabilistic_agv_failure",
+      "position": [
+       16,
+       13
+      ],
+      "current_task_id": 13
+     }
+    },
+    {
+     "step": 104,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 2
+     }
+    }
+   ],
+   "agv_busy": 0.7899113082039911,
+   "agv_loaded": 0.4268292682926829,
+   "agv_waiting_total": 379,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 3.2545454545454544,
+   "queue_wait_mean": 1.018181818181818,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 0,
+   "agv_down_steps": 24,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 7,
+   "revision_count": 0,
+   "revision_fails": 6
+  },
+  "config_context": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "cpsat-partial",
+   "scenario": "S3_mild_stochastic"
+  },
+  "ground_truth": {
+   "localization": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "case_id": "mk02|S0_none|greedy-reactive",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 4096,
+   "finished": false,
+   "steps": 4096,
+   "n_events": 0,
+   "events": [],
+   "agv_busy": 0.41741943359375,
+   "agv_loaded": 0.02972412109375,
+   "agv_waiting_total": 9545,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 9.444444444444445,
+   "queue_wait_mean": 1.3818181818181818,
+   "machine_waiting_inbound": 0.16666666666666666,
+   "machine_down_steps": 0,
+   "agv_down_steps": 0,
+   "throughput_jobs": 9
+  },
+  "plan_revisions": {
+   "n_revisions": 1,
+   "revision_count": 0,
+   "revision_fails": 0
+  },
+  "config_context": {
+   "instance": "mk02",
+   "num_agv": 4,
+   "policy": "greedy-reactive",
+   "scenario": "S0_none"
+  },
+  "ground_truth": {
+   "localization": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "case_id": "mk02|S0_none|cpsat-static",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 410,
+   "finished": true,
+   "steps": 412,
+   "n_events": 0,
+   "events": [],
+   "agv_busy": 0.8598300970873787,
+   "agv_loaded": 0.46055825242718446,
+   "agv_waiting_total": 231,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 3.2115384615384617,
+   "queue_wait_mean": 1.1379310344827587,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 0,
+   "agv_down_steps": 0,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 1,
+   "revision_count": 0,
+   "revision_fails": 0
+  },
+  "config_context": {
+   "instance": "mk02",
+   "num_agv": 4,
+   "policy": "cpsat-static",
+   "scenario": "S0_none"
+  },
+  "ground_truth": {
+   "localization": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "case_id": "mk02|S0_none|cpsat-full",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 410,
+   "finished": true,
+   "steps": 412,
+   "n_events": 0,
+   "events": [],
+   "agv_busy": 0.8598300970873787,
+   "agv_loaded": 0.46055825242718446,
+   "agv_waiting_total": 231,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 3.2115384615384617,
+   "queue_wait_mean": 1.1379310344827587,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 0,
+   "agv_down_steps": 0,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 1,
+   "revision_count": 0,
+   "revision_fails": 0
+  },
+  "config_context": {
+   "instance": "mk02",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "scenario": "S0_none"
+  },
+  "ground_truth": {
+   "localization": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "case_id": "mk02|S0_none|cpsat-partial",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 410,
+   "finished": true,
+   "steps": 412,
+   "n_events": 0,
+   "events": [],
+   "agv_busy": 0.8598300970873787,
+   "agv_loaded": 0.46055825242718446,
+   "agv_waiting_total": 231,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 3.2115384615384617,
+   "queue_wait_mean": 1.1379310344827587,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 0,
+   "agv_down_steps": 0,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 1,
+   "revision_count": 0,
+   "revision_fails": 0
+  },
+  "config_context": {
+   "instance": "mk02",
+   "num_agv": 4,
+   "policy": "cpsat-partial",
+   "scenario": "S0_none"
+  },
+  "ground_truth": {
+   "localization": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "case_id": "mk02|S1_machine@150|greedy-reactive",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 3417,
+   "finished": true,
+   "steps": 3419,
+   "n_events": 2,
+   "events": [
+    {
+     "step": 150,
+     "type": "machine_breakdown",
+     "level": "warning",
+     "payload": {
+      "machine_id": 0,
+      "duration_steps": 40,
+      "reason": "machine_breakdown",
+      "current_op": null
+     }
+    },
+    {
+     "step": 189,
+     "type": "machine_recovery",
+     "level": "info",
+     "payload": {
+      "machine_id": 0
+     }
+    }
+   ],
+   "agv_busy": 0.2514624159110851,
+   "agv_loaded": 0.04701667154138637,
+   "agv_waiting_total": 10237,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 24.0,
+   "queue_wait_mean": 2.0,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 40,
+   "agv_down_steps": 0,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 1,
+   "revision_count": 0,
+   "revision_fails": 0
+  },
+  "config_context": {
+   "instance": "mk02",
+   "num_agv": 4,
+   "policy": "greedy-reactive",
+   "scenario": "S1_machine@150"
+  },
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "mk02|S1_machine@150|cpsat-static",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 410,
+   "finished": true,
+   "steps": 412,
+   "n_events": 2,
+   "events": [
+    {
+     "step": 150,
+     "type": "machine_breakdown",
+     "level": "warning",
+     "payload": {
+      "machine_id": 0,
+      "duration_steps": 40,
+      "reason": "machine_breakdown",
+      "current_op": null
+     }
+    },
+    {
+     "step": 189,
+     "type": "machine_recovery",
+     "level": "info",
+     "payload": {
+      "machine_id": 0
+     }
+    }
+   ],
+   "agv_busy": 0.8598300970873787,
+   "agv_loaded": 0.46055825242718446,
+   "agv_waiting_total": 231,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 3.2115384615384617,
+   "queue_wait_mean": 3.2758620689655173,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 40,
+   "agv_down_steps": 0,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 1,
+   "revision_count": 0,
+   "revision_fails": 0
+  },
+  "config_context": {
+   "instance": "mk02",
+   "num_agv": 4,
+   "policy": "cpsat-static",
+   "scenario": "S1_machine@150"
+  },
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "mk02|S1_machine@150|cpsat-full",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 410,
+   "finished": true,
+   "steps": 412,
+   "n_events": 2,
+   "events": [
+    {
+     "step": 150,
+     "type": "machine_breakdown",
+     "level": "warning",
+     "payload": {
+      "machine_id": 0,
+      "duration_steps": 40,
+      "reason": "machine_breakdown",
+      "current_op": null
+     }
+    },
+    {
+     "step": 189,
+     "type": "machine_recovery",
+     "level": "info",
+     "payload": {
+      "machine_id": 0
+     }
+    }
+   ],
+   "agv_busy": 0.8598300970873787,
+   "agv_loaded": 0.46055825242718446,
+   "agv_waiting_total": 231,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 3.2115384615384617,
+   "queue_wait_mean": 3.2758620689655173,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 40,
+   "agv_down_steps": 0,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 3,
+   "revision_count": 0,
+   "revision_fails": 2
+  },
+  "config_context": {
+   "instance": "mk02",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "scenario": "S1_machine@150"
+  },
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "mk02|S1_machine@150|cpsat-partial",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 410,
+   "finished": true,
+   "steps": 412,
+   "n_events": 2,
+   "events": [
+    {
+     "step": 150,
+     "type": "machine_breakdown",
+     "level": "warning",
+     "payload": {
+      "machine_id": 0,
+      "duration_steps": 40,
+      "reason": "machine_breakdown",
+      "current_op": null
+     }
+    },
+    {
+     "step": 189,
+     "type": "machine_recovery",
+     "level": "info",
+     "payload": {
+      "machine_id": 0
+     }
+    }
+   ],
+   "agv_busy": 0.8598300970873787,
+   "agv_loaded": 0.46055825242718446,
+   "agv_waiting_total": 231,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 3.2115384615384617,
+   "queue_wait_mean": 3.2758620689655173,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 40,
+   "agv_down_steps": 0,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 3,
+   "revision_count": 0,
+   "revision_fails": 2
+  },
+  "config_context": {
+   "instance": "mk02",
+   "num_agv": 4,
+   "policy": "cpsat-partial",
+   "scenario": "S1_machine@150"
+  },
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "mk02|S2_machine+agv|greedy-reactive",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 781,
+   "finished": true,
+   "steps": 783,
+   "n_events": 4,
+   "events": [
+    {
+     "step": 150,
+     "type": "machine_breakdown",
+     "level": "warning",
+     "payload": {
+      "machine_id": 0,
+      "duration_steps": 40,
+      "reason": "machine_breakdown",
+      "current_op": null
+     }
+    },
+    {
+     "step": 189,
+     "type": "machine_recovery",
+     "level": "info",
+     "payload": {
+      "machine_id": 0
+     }
+    },
+    {
+     "step": 300,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 1,
+      "duration_steps": 20,
+      "reason": "agv_breakdown",
+      "position": [
+       16,
+       11
+      ],
+      "current_task_id": 36
+     }
+    },
+    {
+     "step": 319,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 1
+     }
+    }
+   ],
+   "agv_busy": 0.5530012771392082,
+   "agv_loaded": 0.18805874840357598,
+   "agv_waiting_total": 1400,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 13.172413793103448,
+   "queue_wait_mean": 1.9482758620689655,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 40,
+   "agv_down_steps": 20,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 1,
+   "revision_count": 0,
+   "revision_fails": 0
+  },
+  "config_context": {
+   "instance": "mk02",
+   "num_agv": 4,
+   "policy": "greedy-reactive",
+   "scenario": "S2_machine+agv"
+  },
+  "ground_truth": {
+   "localization": "machine:0+agv:1",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "case_id": "mk02|S2_machine+agv|cpsat-static",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 426,
+   "finished": true,
+   "steps": 428,
+   "n_events": 4,
+   "events": [
+    {
+     "step": 150,
+     "type": "machine_breakdown",
+     "level": "warning",
+     "payload": {
+      "machine_id": 0,
+      "duration_steps": 40,
+      "reason": "machine_breakdown",
+      "current_op": null
+     }
+    },
+    {
+     "step": 189,
+     "type": "machine_recovery",
+     "level": "info",
+     "payload": {
+      "machine_id": 0
+     }
+    },
+    {
+     "step": 300,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 1,
+      "duration_steps": 20,
+      "reason": "agv_breakdown",
+      "position": [
+       19,
+       15
+      ],
+      "current_task_id": 34
+     }
+    },
+    {
+     "step": 319,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 1
+     }
+    }
+   ],
+   "agv_busy": 0.8300233644859814,
+   "agv_loaded": 0.4678738317757009,
+   "agv_waiting_total": 291,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 4.326923076923077,
+   "queue_wait_mean": 3.2586206896551726,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 40,
+   "agv_down_steps": 20,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 1,
+   "revision_count": 0,
+   "revision_fails": 0
+  },
+  "config_context": {
+   "instance": "mk02",
+   "num_agv": 4,
+   "policy": "cpsat-static",
+   "scenario": "S2_machine+agv"
+  },
+  "ground_truth": {
+   "localization": "machine:0+agv:1",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "case_id": "mk02|S2_machine+agv|cpsat-full",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 426,
+   "finished": true,
+   "steps": 428,
+   "n_events": 4,
+   "events": [
+    {
+     "step": 150,
+     "type": "machine_breakdown",
+     "level": "warning",
+     "payload": {
+      "machine_id": 0,
+      "duration_steps": 40,
+      "reason": "machine_breakdown",
+      "current_op": null
+     }
+    },
+    {
+     "step": 189,
+     "type": "machine_recovery",
+     "level": "info",
+     "payload": {
+      "machine_id": 0
+     }
+    },
+    {
+     "step": 300,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 1,
+      "duration_steps": 20,
+      "reason": "agv_breakdown",
+      "position": [
+       19,
+       15
+      ],
+      "current_task_id": 34
+     }
+    },
+    {
+     "step": 319,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 1
+     }
+    }
+   ],
+   "agv_busy": 0.8300233644859814,
+   "agv_loaded": 0.4678738317757009,
+   "agv_waiting_total": 291,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 4.326923076923077,
+   "queue_wait_mean": 3.2586206896551726,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 40,
+   "agv_down_steps": 20,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 5,
+   "revision_count": 0,
+   "revision_fails": 4
+  },
+  "config_context": {
+   "instance": "mk02",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "scenario": "S2_machine+agv"
+  },
+  "ground_truth": {
+   "localization": "machine:0+agv:1",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "case_id": "mk02|S2_machine+agv|cpsat-partial",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 426,
+   "finished": true,
+   "steps": 428,
+   "n_events": 4,
+   "events": [
+    {
+     "step": 150,
+     "type": "machine_breakdown",
+     "level": "warning",
+     "payload": {
+      "machine_id": 0,
+      "duration_steps": 40,
+      "reason": "machine_breakdown",
+      "current_op": null
+     }
+    },
+    {
+     "step": 189,
+     "type": "machine_recovery",
+     "level": "info",
+     "payload": {
+      "machine_id": 0
+     }
+    },
+    {
+     "step": 300,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 1,
+      "duration_steps": 20,
+      "reason": "agv_breakdown",
+      "position": [
+       19,
+       15
+      ],
+      "current_task_id": 34
+     }
+    },
+    {
+     "step": 319,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 1
+     }
+    }
+   ],
+   "agv_busy": 0.8300233644859814,
+   "agv_loaded": 0.4678738317757009,
+   "agv_waiting_total": 291,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 4.326923076923077,
+   "queue_wait_mean": 3.2586206896551726,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 40,
+   "agv_down_steps": 20,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 5,
+   "revision_count": 0,
+   "revision_fails": 4
+  },
+  "config_context": {
+   "instance": "mk02",
+   "num_agv": 4,
+   "policy": "cpsat-partial",
+   "scenario": "S2_machine+agv"
+  },
+  "ground_truth": {
+   "localization": "machine:0+agv:1",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "case_id": "mk02|S3_mild_stochastic|greedy-reactive",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 1103,
+   "finished": true,
+   "steps": 1105,
+   "n_events": 23,
+   "events": [
+    {
+     "step": 32,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 0,
+      "duration_steps": 8,
+      "reason": "probabilistic_agv_failure",
+      "position": [
+       14,
+       13
+      ],
+      "current_task_id": 2
+     }
+    },
+    {
+     "step": 39,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 0
+     }
+    },
+    {
+     "step": 94,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 3,
+      "duration_steps": 8,
+      "reason": "probabilistic_agv_failure",
+      "position": [
+       11,
+       24
+      ],
+      "current_task_id": 0
+     }
+    },
+    {
+     "step": 101,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 3
+     }
+    },
+    {
+     "step": 103,
+     "type": "machine_breakdown",
+     "level": "warning",
+     "payload": {
+      "machine_id": 0,
+      "duration_steps": 10,
+      "reason": "probabilistic_machine_failure",
+      "current_op": {
+       "job_id": 4,
+       "op_id": 0
+      }
+     }
+    },
+    {
+     "step": 112,
+     "type": "machine_recovery",
+     "level": "info",
+     "payload": {
+      "machine_id": 0
+     }
+    }
+   ],
+   "agv_busy": 0.43574660633484164,
+   "agv_loaded": 0.1346153846153846,
+   "agv_waiting_total": 2494,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 16.03448275862069,
+   "queue_wait_mean": 1.6724137931034482,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 10,
+   "agv_down_steps": 83,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 1,
+   "revision_count": 0,
+   "revision_fails": 0
+  },
+  "config_context": {
+   "instance": "mk02",
+   "num_agv": 4,
+   "policy": "greedy-reactive",
+   "scenario": "S3_mild_stochastic"
+  },
+  "ground_truth": {
+   "localization": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "case_id": "mk02|S3_mild_stochastic|cpsat-static",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 427,
+   "finished": true,
+   "steps": 429,
+   "n_events": 6,
+   "events": [
+    {
+     "step": 31,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 2,
+      "duration_steps": 8,
+      "reason": "probabilistic_agv_failure",
+      "position": [
+       5,
+       14
+      ],
+      "current_task_id": 1
+     }
+    },
+    {
+     "step": 38,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 2
+     }
+    },
+    {
+     "step": 90,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 1,
+      "duration_steps": 8,
+      "reason": "probabilistic_agv_failure",
+      "position": [
+       18,
+       11
+      ],
+      "current_task_id": 14
+     }
+    },
+    {
+     "step": 97,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 1
+     }
+    },
+    {
+     "step": 98,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 2,
+      "duration_steps": 8,
+      "reason": "probabilistic_agv_failure",
+      "position": [
+       17,
+       13
+      ],
+      "current_task_id": 17
+     }
+    },
+    {
+     "step": 105,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 2
+     }
+    }
+   ],
+   "agv_busy": 0.8397435897435898,
+   "agv_loaded": 0.4458041958041958,
+   "agv_waiting_total": 275,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 3.730769230769231,
+   "queue_wait_mean": 1.0689655172413792,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 0,
+   "agv_down_steps": 24,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 1,
+   "revision_count": 0,
+   "revision_fails": 0
+  },
+  "config_context": {
+   "instance": "mk02",
+   "num_agv": 4,
+   "policy": "cpsat-static",
+   "scenario": "S3_mild_stochastic"
+  },
+  "ground_truth": {
+   "localization": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "case_id": "mk02|S3_mild_stochastic|cpsat-full",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 427,
+   "finished": true,
+   "steps": 429,
+   "n_events": 6,
+   "events": [
+    {
+     "step": 31,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 2,
+      "duration_steps": 8,
+      "reason": "probabilistic_agv_failure",
+      "position": [
+       5,
+       14
+      ],
+      "current_task_id": 1
+     }
+    },
+    {
+     "step": 38,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 2
+     }
+    },
+    {
+     "step": 90,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 1,
+      "duration_steps": 8,
+      "reason": "probabilistic_agv_failure",
+      "position": [
+       18,
+       11
+      ],
+      "current_task_id": 14
+     }
+    },
+    {
+     "step": 97,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 1
+     }
+    },
+    {
+     "step": 98,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 2,
+      "duration_steps": 8,
+      "reason": "probabilistic_agv_failure",
+      "position": [
+       17,
+       13
+      ],
+      "current_task_id": 17
+     }
+    },
+    {
+     "step": 105,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 2
+     }
+    }
+   ],
+   "agv_busy": 0.8397435897435898,
+   "agv_loaded": 0.4458041958041958,
+   "agv_waiting_total": 275,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 3.730769230769231,
+   "queue_wait_mean": 1.0689655172413792,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 0,
+   "agv_down_steps": 24,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 7,
+   "revision_count": 0,
+   "revision_fails": 6
+  },
+  "config_context": {
+   "instance": "mk02",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "scenario": "S3_mild_stochastic"
+  },
+  "ground_truth": {
+   "localization": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "case_id": "mk02|S3_mild_stochastic|cpsat-partial",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 427,
+   "finished": true,
+   "steps": 429,
+   "n_events": 6,
+   "events": [
+    {
+     "step": 31,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 2,
+      "duration_steps": 8,
+      "reason": "probabilistic_agv_failure",
+      "position": [
+       5,
+       14
+      ],
+      "current_task_id": 1
+     }
+    },
+    {
+     "step": 38,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 2
+     }
+    },
+    {
+     "step": 90,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 1,
+      "duration_steps": 8,
+      "reason": "probabilistic_agv_failure",
+      "position": [
+       18,
+       11
+      ],
+      "current_task_id": 14
+     }
+    },
+    {
+     "step": 97,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 1
+     }
+    },
+    {
+     "step": 98,
+     "type": "agv_breakdown",
+     "level": "warning",
+     "payload": {
+      "agv_id": 2,
+      "duration_steps": 8,
+      "reason": "probabilistic_agv_failure",
+      "position": [
+       17,
+       13
+      ],
+      "current_task_id": 17
+     }
+    },
+    {
+     "step": 105,
+     "type": "agv_recovery",
+     "level": "info",
+     "payload": {
+      "agv_id": 2
+     }
+    }
+   ],
+   "agv_busy": 0.8397435897435898,
+   "agv_loaded": 0.4458041958041958,
+   "agv_waiting_total": 275,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 3.730769230769231,
+   "queue_wait_mean": 1.0689655172413792,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 0,
+   "agv_down_steps": 24,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 7,
+   "revision_count": 0,
+   "revision_fails": 6
+  },
+  "config_context": {
+   "instance": "mk02",
+   "num_agv": 4,
+   "policy": "cpsat-partial",
+   "scenario": "S3_mild_stochastic"
+  },
+  "ground_truth": {
+   "localization": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "case_id": "?|S4_harsh|greedy-reactive",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 595,
+   "finished": true,
+   "steps": 597,
+   "n_events": 2,
+   "events": [
+    {
+     "step": 80,
+     "type": "machine_breakdown",
+     "level": "warning",
+     "payload": {
+      "machine_id": 0,
+      "duration_steps": 200,
+      "reason": "machine_breakdown",
+      "current_op": null
+     }
+    },
+    {
+     "step": 279,
+     "type": "machine_recovery",
+     "level": "info",
+     "payload": {
+      "machine_id": 0
+     }
+    }
+   ],
+   "agv_busy": 0.7596314907872697,
+   "agv_loaded": 0.3458961474036851,
+   "agv_waiting_total": 574,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 14.564102564102564,
+   "queue_wait_mean": 14.836363636363636,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 200,
+   "agv_down_steps": 0,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 1,
+   "revision_count": 0,
+   "revision_fails": 0
+  },
+  "config_context": {
+   "instance": null,
+   "num_agv": 4,
+   "policy": "greedy-reactive",
+   "scenario": "S4_harsh"
+  },
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "?|S4_harsh|cpsat-static",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 467,
+   "finished": true,
+   "steps": 469,
+   "n_events": 2,
+   "events": [
+    {
+     "step": 80,
+     "type": "machine_breakdown",
+     "level": "warning",
+     "payload": {
+      "machine_id": 0,
+      "duration_steps": 200,
+      "reason": "machine_breakdown",
+      "current_op": null
+     }
+    },
+    {
+     "step": 279,
+     "type": "machine_recovery",
+     "level": "info",
+     "payload": {
+      "machine_id": 0
+     }
+    }
+   ],
+   "agv_busy": 0.8113006396588486,
+   "agv_loaded": 0.4168443496801706,
+   "agv_waiting_total": 354,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 3.3454545454545452,
+   "queue_wait_mean": 13.4,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 200,
+   "agv_down_steps": 0,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 1,
+   "revision_count": 0,
+   "revision_fails": 0
+  },
+  "config_context": {
+   "instance": null,
+   "num_agv": 4,
+   "policy": "cpsat-static",
+   "scenario": "S4_harsh"
+  },
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "?|S4_harsh|cpsat-full",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 467,
+   "finished": true,
+   "steps": 469,
+   "n_events": 2,
+   "events": [
+    {
+     "step": 80,
+     "type": "machine_breakdown",
+     "level": "warning",
+     "payload": {
+      "machine_id": 0,
+      "duration_steps": 200,
+      "reason": "machine_breakdown",
+      "current_op": null
+     }
+    },
+    {
+     "step": 279,
+     "type": "machine_recovery",
+     "level": "info",
+     "payload": {
+      "machine_id": 0
+     }
+    }
+   ],
+   "agv_busy": 0.8113006396588486,
+   "agv_loaded": 0.4168443496801706,
+   "agv_waiting_total": 354,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 3.3454545454545452,
+   "queue_wait_mean": 13.4,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 200,
+   "agv_down_steps": 0,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 3,
+   "revision_count": 0,
+   "revision_fails": 2
+  },
+  "config_context": {
+   "instance": null,
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "scenario": "S4_harsh"
+  },
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "?|S4_harsh|cpsat-partial",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 467,
+   "finished": true,
+   "steps": 469,
+   "n_events": 2,
+   "events": [
+    {
+     "step": 80,
+     "type": "machine_breakdown",
+     "level": "warning",
+     "payload": {
+      "machine_id": 0,
+      "duration_steps": 200,
+      "reason": "machine_breakdown",
+      "current_op": null
+     }
+    },
+    {
+     "step": 279,
+     "type": "machine_recovery",
+     "level": "info",
+     "payload": {
+      "machine_id": 0
+     }
+    }
+   ],
+   "agv_busy": 0.8113006396588486,
+   "agv_loaded": 0.4168443496801706,
+   "agv_waiting_total": 354,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 3.3454545454545452,
+   "queue_wait_mean": 13.4,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 200,
+   "agv_down_steps": 0,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 3,
+   "revision_count": 0,
+   "revision_fails": 2
+  },
+  "config_context": {
+   "instance": null,
+   "num_agv": 4,
+   "policy": "cpsat-partial",
+   "scenario": "S4_harsh"
+  },
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "?|S4_harsh|greedy-reactive",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 1132,
+   "finished": true,
+   "steps": 1134,
+   "n_events": 2,
+   "events": [
+    {
+     "step": 80,
+     "type": "machine_breakdown",
+     "level": "warning",
+     "payload": {
+      "machine_id": 0,
+      "duration_steps": 200,
+      "reason": "machine_breakdown",
+      "current_op": null
+     }
+    },
+    {
+     "step": 279,
+     "type": "machine_recovery",
+     "level": "info",
+     "payload": {
+      "machine_id": 0
+     }
+    }
+   ],
+   "agv_busy": 0.4781746031746032,
+   "agv_loaded": 0.1214726631393298,
+   "agv_waiting_total": 2367,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 10.689655172413794,
+   "queue_wait_mean": 7.086206896551724,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 200,
+   "agv_down_steps": 0,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 1,
+   "revision_count": 0,
+   "revision_fails": 0
+  },
+  "config_context": {
+   "instance": null,
+   "num_agv": 4,
+   "policy": "greedy-reactive",
+   "scenario": "S4_harsh"
+  },
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "?|S4_harsh|cpsat-static",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 426,
+   "finished": true,
+   "steps": 428,
+   "n_events": 2,
+   "events": [
+    {
+     "step": 80,
+     "type": "machine_breakdown",
+     "level": "warning",
+     "payload": {
+      "machine_id": 0,
+      "duration_steps": 200,
+      "reason": "machine_breakdown",
+      "current_op": {
+       "job_id": 5,
+       "op_id": 2
+      }
+     }
+    },
+    {
+     "step": 279,
+     "type": "machine_recovery",
+     "level": "info",
+     "payload": {
+      "machine_id": 0
+     }
+    }
+   ],
+   "agv_busy": 0.8014018691588785,
+   "agv_loaded": 0.4147196261682243,
+   "agv_waiting_total": 340,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 2.9019607843137254,
+   "queue_wait_mean": 10.931034482758621,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 200,
+   "agv_down_steps": 0,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 1,
+   "revision_count": 0,
+   "revision_fails": 0
+  },
+  "config_context": {
+   "instance": null,
+   "num_agv": 4,
+   "policy": "cpsat-static",
+   "scenario": "S4_harsh"
+  },
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "?|S4_harsh|cpsat-full",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 457,
+   "finished": true,
+   "steps": 459,
+   "n_events": 2,
+   "events": [
+    {
+     "step": 80,
+     "type": "machine_breakdown",
+     "level": "warning",
+     "payload": {
+      "machine_id": 0,
+      "duration_steps": 200,
+      "reason": "machine_breakdown",
+      "current_op": null
+     }
+    },
+    {
+     "step": 279,
+     "type": "machine_recovery",
+     "level": "info",
+     "payload": {
+      "machine_id": 0
+     }
+    }
+   ],
+   "agv_busy": 0.8001089324618736,
+   "agv_loaded": 0.41230936819172115,
+   "agv_waiting_total": 367,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 3.1153846153846154,
+   "queue_wait_mean": 14.017241379310345,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 200,
+   "agv_down_steps": 0,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 3,
+   "revision_count": 0,
+   "revision_fails": 2
+  },
+  "config_context": {
+   "instance": null,
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "scenario": "S4_harsh"
+  },
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "?|S4_harsh|cpsat-partial",
+  "query": "为何该 episode 的 makespan/未完工状态如此? 定位关键资源与原因, 并给干预建议。",
+  "trajectory_summary": {
+   "makespan": 426,
+   "finished": true,
+   "steps": 428,
+   "n_events": 2,
+   "events": [
+    {
+     "step": 80,
+     "type": "machine_breakdown",
+     "level": "warning",
+     "payload": {
+      "machine_id": 0,
+      "duration_steps": 200,
+      "reason": "machine_breakdown",
+      "current_op": {
+       "job_id": 5,
+       "op_id": 2
+      }
+     }
+    },
+    {
+     "step": 279,
+     "type": "machine_recovery",
+     "level": "info",
+     "payload": {
+      "machine_id": 0
+     }
+    }
+   ],
+   "agv_busy": 0.8014018691588785,
+   "agv_loaded": 0.4147196261682243,
+   "agv_waiting_total": 340,
+   "tasked_stationary": 0,
+   "blocking_delay_mean": 2.9019607843137254,
+   "queue_wait_mean": 10.931034482758621,
+   "machine_waiting_inbound": 0.0,
+   "machine_down_steps": 200,
+   "agv_down_steps": 0,
+   "throughput_jobs": 10
+  },
+  "plan_revisions": {
+   "n_revisions": 3,
+   "revision_count": 0,
+   "revision_fails": 2
+  },
+  "config_context": {
+   "instance": null,
+   "num_agv": 4,
+   "policy": "cpsat-partial",
+   "scenario": "S4_harsh"
+  },
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ }
+]

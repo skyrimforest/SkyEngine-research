@@ -1,0 +1,508 @@
+[
+ {
+  "case_id": "mk01|S0_none|greedy-reactive",
+  "localization": "none",
+  "cause": "baseline",
+  "evidence": [],
+  "intervention": "无 (基线工况)",
+  "ground_truth": {
+   "localization": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "case_id": "mk01|S0_none|cpsat-static",
+  "localization": "none",
+  "cause": "baseline",
+  "evidence": [],
+  "intervention": "无 (基线工况)",
+  "ground_truth": {
+   "localization": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "case_id": "mk01|S0_none|cpsat-full",
+  "localization": "none",
+  "cause": "baseline",
+  "evidence": [],
+  "intervention": "无 (基线工况)",
+  "ground_truth": {
+   "localization": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "case_id": "mk01|S0_none|cpsat-partial",
+  "localization": "none",
+  "cause": "baseline",
+  "evidence": [],
+  "intervention": "无 (基线工况)",
+  "ground_truth": {
+   "localization": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "case_id": "mk01|S1_machine@150|greedy-reactive",
+  "localization": "machine:0",
+  "cause": "disruption_machine",
+  "evidence": [
+   "events: m_down=[0]"
+  ],
+  "intervention": "为关键机器增加并行等效机器或预留 slack (padding alpha=0.2)",
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "mk01|S1_machine@150|cpsat-static",
+  "localization": "machine:0",
+  "cause": "disruption_machine",
+  "evidence": [
+   "events: m_down=[0]"
+  ],
+  "intervention": "为关键机器增加并行等效机器或预留 slack (padding alpha=0.2)",
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "mk01|S1_machine@150|cpsat-full",
+  "localization": "machine:0",
+  "cause": "disruption_machine",
+  "evidence": [
+   "events: m_down=[0]"
+  ],
+  "intervention": "为关键机器增加并行等效机器或预留 slack (padding alpha=0.2)",
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "mk01|S1_machine@150|cpsat-partial",
+  "localization": "machine:0",
+  "cause": "disruption_machine",
+  "evidence": [
+   "events: m_down=[0]"
+  ],
+  "intervention": "为关键机器增加并行等效机器或预留 slack (padding alpha=0.2)",
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "mk01|S2_machine+agv|greedy-reactive",
+  "localization": "machine:0+agv:1",
+  "cause": "disruption_machine_agv",
+  "evidence": [
+   "events: m_down=[0] a_down=[1]"
+  ],
+  "intervention": "增大 AGV 冗余 (K+1) 并启用周期重规划 periodic-100",
+  "ground_truth": {
+   "localization": "machine:0+agv:1",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "case_id": "mk01|S2_machine+agv|cpsat-static",
+  "localization": "machine:0+agv:1",
+  "cause": "disruption_machine_agv",
+  "evidence": [
+   "events: m_down=[0] a_down=[1]"
+  ],
+  "intervention": "增大 AGV 冗余 (K+1) 并启用周期重规划 periodic-100",
+  "ground_truth": {
+   "localization": "machine:0+agv:1",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "case_id": "mk01|S2_machine+agv|cpsat-full",
+  "localization": "machine:0+agv:1",
+  "cause": "disruption_machine_agv",
+  "evidence": [
+   "events: m_down=[0] a_down=[1]"
+  ],
+  "intervention": "增大 AGV 冗余 (K+1) 并启用周期重规划 periodic-100",
+  "ground_truth": {
+   "localization": "machine:0+agv:1",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "case_id": "mk01|S2_machine+agv|cpsat-partial",
+  "localization": "machine:0+agv:1",
+  "cause": "disruption_machine_agv",
+  "evidence": [
+   "events: m_down=[0] a_down=[1]"
+  ],
+  "intervention": "增大 AGV 冗余 (K+1) 并启用周期重规划 periodic-100",
+  "ground_truth": {
+   "localization": "machine:0+agv:1",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "case_id": "mk01|S3_mild_stochastic|greedy-reactive",
+  "localization": "stochastic",
+  "cause": "disruption_stochastic",
+  "evidence": [
+   "events: 6 stochastic events"
+  ],
+  "intervention": "启用 moderate padding 并将分配器换为 least_congestion",
+  "ground_truth": {
+   "localization": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "case_id": "mk01|S3_mild_stochastic|cpsat-static",
+  "localization": "stochastic",
+  "cause": "disruption_stochastic",
+  "evidence": [
+   "events: 6 stochastic events"
+  ],
+  "intervention": "启用 moderate padding 并将分配器换为 least_congestion",
+  "ground_truth": {
+   "localization": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "case_id": "mk01|S3_mild_stochastic|cpsat-full",
+  "localization": "stochastic",
+  "cause": "disruption_stochastic",
+  "evidence": [
+   "events: 6 stochastic events"
+  ],
+  "intervention": "启用 moderate padding 并将分配器换为 least_congestion",
+  "ground_truth": {
+   "localization": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "case_id": "mk01|S3_mild_stochastic|cpsat-partial",
+  "localization": "stochastic",
+  "cause": "disruption_stochastic",
+  "evidence": [
+   "events: 6 stochastic events"
+  ],
+  "intervention": "启用 moderate padding 并将分配器换为 least_congestion",
+  "ground_truth": {
+   "localization": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "case_id": "mk02|S0_none|greedy-reactive",
+  "localization": "task_pool",
+  "cause": "starvation_livelock",
+  "evidence": [
+   "agv_waiting_total=9545 tasked_stationary=0"
+  ],
+  "intervention": "启用饥饿看门狗: 强制重指派滞留运输任务",
+  "ground_truth": {
+   "localization": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "case_id": "mk02|S0_none|cpsat-static",
+  "localization": "none",
+  "cause": "baseline",
+  "evidence": [],
+  "intervention": "无 (基线工况)",
+  "ground_truth": {
+   "localization": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "case_id": "mk02|S0_none|cpsat-full",
+  "localization": "none",
+  "cause": "baseline",
+  "evidence": [],
+  "intervention": "无 (基线工况)",
+  "ground_truth": {
+   "localization": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "case_id": "mk02|S0_none|cpsat-partial",
+  "localization": "none",
+  "cause": "baseline",
+  "evidence": [],
+  "intervention": "无 (基线工况)",
+  "ground_truth": {
+   "localization": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "case_id": "mk02|S1_machine@150|greedy-reactive",
+  "localization": "machine:0",
+  "cause": "disruption_machine",
+  "evidence": [
+   "events: m_down=[0]"
+  ],
+  "intervention": "为关键机器增加并行等效机器或预留 slack (padding alpha=0.2)",
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "mk02|S1_machine@150|cpsat-static",
+  "localization": "machine:0",
+  "cause": "disruption_machine",
+  "evidence": [
+   "events: m_down=[0]"
+  ],
+  "intervention": "为关键机器增加并行等效机器或预留 slack (padding alpha=0.2)",
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "mk02|S1_machine@150|cpsat-full",
+  "localization": "machine:0",
+  "cause": "disruption_machine",
+  "evidence": [
+   "events: m_down=[0]"
+  ],
+  "intervention": "为关键机器增加并行等效机器或预留 slack (padding alpha=0.2)",
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "mk02|S1_machine@150|cpsat-partial",
+  "localization": "machine:0",
+  "cause": "disruption_machine",
+  "evidence": [
+   "events: m_down=[0]"
+  ],
+  "intervention": "为关键机器增加并行等效机器或预留 slack (padding alpha=0.2)",
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "mk02|S2_machine+agv|greedy-reactive",
+  "localization": "machine:0+agv:1",
+  "cause": "disruption_machine_agv",
+  "evidence": [
+   "events: m_down=[0] a_down=[1]"
+  ],
+  "intervention": "增大 AGV 冗余 (K+1) 并启用周期重规划 periodic-100",
+  "ground_truth": {
+   "localization": "machine:0+agv:1",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "case_id": "mk02|S2_machine+agv|cpsat-static",
+  "localization": "machine:0+agv:1",
+  "cause": "disruption_machine_agv",
+  "evidence": [
+   "events: m_down=[0] a_down=[1]"
+  ],
+  "intervention": "增大 AGV 冗余 (K+1) 并启用周期重规划 periodic-100",
+  "ground_truth": {
+   "localization": "machine:0+agv:1",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "case_id": "mk02|S2_machine+agv|cpsat-full",
+  "localization": "machine:0+agv:1",
+  "cause": "disruption_machine_agv",
+  "evidence": [
+   "events: m_down=[0] a_down=[1]"
+  ],
+  "intervention": "增大 AGV 冗余 (K+1) 并启用周期重规划 periodic-100",
+  "ground_truth": {
+   "localization": "machine:0+agv:1",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "case_id": "mk02|S2_machine+agv|cpsat-partial",
+  "localization": "machine:0+agv:1",
+  "cause": "disruption_machine_agv",
+  "evidence": [
+   "events: m_down=[0] a_down=[1]"
+  ],
+  "intervention": "增大 AGV 冗余 (K+1) 并启用周期重规划 periodic-100",
+  "ground_truth": {
+   "localization": "machine:0+agv:1",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "case_id": "mk02|S3_mild_stochastic|greedy-reactive",
+  "localization": "machine:0+agv:0",
+  "cause": "disruption_machine_agv",
+  "evidence": [
+   "events: m_down=[0] a_down=[0, 3]"
+  ],
+  "intervention": "增大 AGV 冗余 (K+1) 并启用周期重规划 periodic-100",
+  "ground_truth": {
+   "localization": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "case_id": "mk02|S3_mild_stochastic|cpsat-static",
+  "localization": "stochastic",
+  "cause": "disruption_stochastic",
+  "evidence": [
+   "events: 6 stochastic events"
+  ],
+  "intervention": "启用 moderate padding 并将分配器换为 least_congestion",
+  "ground_truth": {
+   "localization": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "case_id": "mk02|S3_mild_stochastic|cpsat-full",
+  "localization": "stochastic",
+  "cause": "disruption_stochastic",
+  "evidence": [
+   "events: 6 stochastic events"
+  ],
+  "intervention": "启用 moderate padding 并将分配器换为 least_congestion",
+  "ground_truth": {
+   "localization": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "case_id": "mk02|S3_mild_stochastic|cpsat-partial",
+  "localization": "stochastic",
+  "cause": "disruption_stochastic",
+  "evidence": [
+   "events: 6 stochastic events"
+  ],
+  "intervention": "启用 moderate padding 并将分配器换为 least_congestion",
+  "ground_truth": {
+   "localization": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "case_id": "?|S4_harsh|greedy-reactive",
+  "localization": "machine:0",
+  "cause": "disruption_machine",
+  "evidence": [
+   "events: m_down=[0]"
+  ],
+  "intervention": "为关键机器增加并行等效机器或预留 slack (padding alpha=0.2)",
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "?|S4_harsh|cpsat-static",
+  "localization": "machine:0",
+  "cause": "disruption_machine",
+  "evidence": [
+   "events: m_down=[0]"
+  ],
+  "intervention": "为关键机器增加并行等效机器或预留 slack (padding alpha=0.2)",
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "?|S4_harsh|cpsat-full",
+  "localization": "machine:0",
+  "cause": "disruption_machine",
+  "evidence": [
+   "events: m_down=[0]"
+  ],
+  "intervention": "为关键机器增加并行等效机器或预留 slack (padding alpha=0.2)",
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "?|S4_harsh|cpsat-partial",
+  "localization": "machine:0",
+  "cause": "disruption_machine",
+  "evidence": [
+   "events: m_down=[0]"
+  ],
+  "intervention": "为关键机器增加并行等效机器或预留 slack (padding alpha=0.2)",
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "?|S4_harsh|greedy-reactive",
+  "localization": "machine:0",
+  "cause": "disruption_machine",
+  "evidence": [
+   "events: m_down=[0]"
+  ],
+  "intervention": "为关键机器增加并行等效机器或预留 slack (padding alpha=0.2)",
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "?|S4_harsh|cpsat-static",
+  "localization": "machine:0",
+  "cause": "disruption_machine",
+  "evidence": [
+   "events: m_down=[0]"
+  ],
+  "intervention": "为关键机器增加并行等效机器或预留 slack (padding alpha=0.2)",
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "?|S4_harsh|cpsat-full",
+  "localization": "machine:0",
+  "cause": "disruption_machine",
+  "evidence": [
+   "events: m_down=[0]"
+  ],
+  "intervention": "为关键机器增加并行等效机器或预留 slack (padding alpha=0.2)",
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "case_id": "?|S4_harsh|cpsat-partial",
+  "localization": "machine:0",
+  "cause": "disruption_machine",
+  "evidence": [
+   "events: m_down=[0]"
+  ],
+  "intervention": "为关键机器增加并行等效机器或预留 slack (padding alpha=0.2)",
+  "ground_truth": {
+   "localization": "machine:0",
+   "cause": "disruption_machine"
+  }
+ }
+]
