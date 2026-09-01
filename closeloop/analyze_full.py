@@ -109,6 +109,53 @@ def main():
                          f"| {total.get(k, 0)} | {cens.get(k, 0)} |")
     (OUT / "T1_main.md").write_text("\n".join(lines))
 
+    # ---- T1b 删失插补表: censored -> 4096 (公平比较, 消除幸存者偏差) ----
+    MAX_STEPS = 4096
+    lines = ["# T1b 删失插补表: mk (censored 按 4096 计)", "",
+             "| scen | greedy | static | full | partial |",
+             "|---|---|---|---|---|"]
+    imp = defaultdict(list)
+    for r in main_rows:
+        v = r.get("makespan")
+        if censored(r) or not v:
+            v = MAX_STEPS
+        imp[(r.get("scen"), r.get("policy"))].append(v)
+    for scen in ["S0", "S1", "S4", "S3"]:
+        row = [scen]
+        for pol in ["greedy-reactive", "cpsat-static", "cpsat-full", "cpsat-partial"]:
+            v = imp.get((scen, pol), [])
+            row.append(fmt_ms(v))
+        lines.append("| " + " | ".join(row) + " |")
+    (OUT / "T1b_imputed.md").write_text("\n".join(lines))
+
+    # ---- T1c 配对胜率 (含删失: 删失=输, 双删失=平) ----
+    lines = ["# T1c 配对胜率矩阵 (行 vs 列, 含删失)", ""]
+    pols = ["greedy-reactive", "cpsat-static", "cpsat-full", "cpsat-partial"]
+    paired = defaultdict(dict)
+    for r in main_rows:
+        key = (r.get("instance"), r.get("map"), r.get("num_agv"),
+               r.get("scen"), r.get("seed"))
+        v = r.get("makespan")
+        if censored(r) or not v:
+            v = MAX_STEPS
+        paired[key][r.get("policy")] = v
+    lines.append("| A \\ B | " + " | ".join(p.replace("cpsat-", "") for p in pols) + " |")
+    lines.append("|---" * (len(pols) + 1) + "|")
+    for a in pols:
+        row = [a.replace("cpsat-", "")]
+        for b in pols:
+            win = tie = n = 0
+            for key, d in paired.items():
+                if a in d and b in d:
+                    n += 1
+                    if d[a] < d[b]:
+                        win += 1
+                    elif d[a] == d[b]:
+                        tie += 1
+            row.append(f"{win}/{n}" + (f" (+{tie}平)" if tie else ""))
+        lines.append("| " + " | ".join(row) + " |")
+    (OUT / "T1c_winrate.md").write_text("\n".join(lines))
+
     # ---- T2 扰动遗憾 ----
     base = {}
     for r in main_rows:

@@ -111,6 +111,19 @@ def build_runs(phase: str):
                                          seed=seed, soft=True, allowance=allowance))
         if phase == "E4":
             return runs
+    if phase in ("E5", "all"):
+        # 路由求解器敏感性: 需配合 scripts/run_E5.sh 换 mapf 服务镜像
+        route_img = os.getenv("E5_ROUTE", "unknown")
+        for inst in ["mk01", "mk05"]:
+            for scen in ["S0", "S3", "S4"]:
+                for pol in ["cpsat-static", "cpsat-full"]:
+                    for seed in SEEDS:
+                        runs.append(dict(phase="E5", instance=inst, map="maze",
+                                         num_agv=4, scen=scen, policy=pol,
+                                         seed=seed, soft=True, allowance=200,
+                                         route_img=route_img))
+        if phase == "E5":
+            return runs
     return runs
 
 
@@ -149,15 +162,15 @@ def _worker(run: dict, out_file: str):
 
 
 def run_key(r: dict) -> str:
-    return "|".join(str(r[k]) for k in
-                    ("phase", "instance", "map", "num_agv", "scen", "policy",
-                     "seed", "soft", "allowance"))
+    keys = ("phase", "instance", "map", "num_agv", "scen", "policy",
+            "seed", "soft", "allowance", "route_img")
+    return "|".join(str(r.get(k)) for k in keys)
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--phase", default="smoke",
-                    choices=["smoke", "E1", "E2", "E3", "E4", "all"])
+                    choices=["smoke", "E1", "E2", "E3", "E4", "E5", "all"])
     ap.add_argument("--resume", action="store_true")
     ap.add_argument("--limit", type=int, default=0)
     args = ap.parse_args()
@@ -173,9 +186,7 @@ def main():
             for line in out.read_text().splitlines():
                 try:
                     d = json.loads(line)
-                    done.add("|".join(str(d.get(k)) for k in
-                                      ("phase", "instance", "map", "num_agv", "scen",
-                                       "policy", "seed", "soft", "allowance")))
+                    done.add(run_key(d))
                 except Exception:
                     pass
             runs = [r for r in runs if run_key(r) not in done]
