@@ -14,6 +14,7 @@ request_partial_schedule_repair) 已存在但无人调用——即调度层在�
 
 from __future__ import annotations
 
+import os
 import time
 from pathlib import Path
 from typing import Optional
@@ -272,7 +273,16 @@ def run_closed_episode(
         job_kwargs = {
             "service_url": fjsp_service_url,
             "algorithm": "cp_sat",
-            "config": {"time_limit": fjsp_time_limit, "num_workers": 1, "seed": seed},
+            "config": {
+                "time_limit": fjsp_time_limit,
+                "num_workers": 1,
+                "seed": seed,
+                # 引擎 0901softcommit 分支的可违约承诺语义 (默认关闭=旧行为)
+                "soft_commitments": os.getenv("FJSP_SOFT_COMMIT", "0") == "1",
+                "soft_commitment_travel_allowance": int(
+                    os.getenv("FJSP_SOFT_TRAVEL_ALLOWANCE", "200")
+                ),
+            },
         }
     if route_solver_kwargs is None and route_solver_name == "rolling_mapf_http":
         route_solver_kwargs = {

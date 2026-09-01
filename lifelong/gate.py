@@ -202,10 +202,20 @@ def run_lifelong_episode(
 
     job_kwargs = {}
     if job_solver == "online_fjsp":
+        import os
+
         job_kwargs = {
             "service_url": "http://fjsp:8002",
             "algorithm": "cp_sat",
-            "config": {"time_limit": fjsp_time_limit, "num_workers": 1, "seed": seed},
+            "config": {
+                "time_limit": fjsp_time_limit,
+                "num_workers": 1,
+                "seed": seed,
+                "soft_commitments": os.getenv("FJSP_SOFT_COMMIT", "0") == "1",
+                "soft_commitment_travel_allowance": int(
+                    os.getenv("FJSP_SOFT_TRAVEL_ALLOWANCE", "200")
+                ),
+            },
         }
     if route_solver_kwargs is None and route_solver_name == "rolling_mapf_http":
         route_solver_kwargs = {
