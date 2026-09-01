@@ -90,6 +90,21 @@ class ArrivalGateJobSolver(JobSolver):
             jid = j.get("job_id", 0)
         return int(jid)
 
+    def _reset_inner(self):
+        """硬复位内层求解器: 下一次 plan() 以残差观测重建初始计划。
+
+        两个内置求解器 (priority greedy / replayable http) 都是"一次规划—按时释放"，
+        新工件到达时若修订不可用 (greedy 无修订 API; replayable 修订可能因
+        未解决承诺激活失败)，用复位实现再规划——残差观测的工序状态
+        (DONE/PROCESSING/PENDING) 保证已执行前缀被尊重。
+        """
+        inner = self.inner
+        inner.initialized = False
+        if hasattr(inner, "transfer_requests"):
+            inner.transfer_requests = []
+        if hasattr(inner, "fixed_plan"):
+            inner.fixed_plan = None
+
     def plan(self, obs: dict) -> dict:
         gated = self._released_jobs(obs)
         n_now = sum(
@@ -98,7 +113,8 @@ class ArrivalGateJobSolver(JobSolver):
         newly = n_now - self._released
         if newly > 0:
             self._released = n_now
-            # CP-SAT 内层: 到达即修订 (贪心内层每步重建, 无需处理)
+            revised = False
+            # CP-SAT 内层: 到达即修订 (承诺一致优先)
             if getattr(self.inner, "initialized", False) and hasattr(
                 self.inner, "request_plan_revision"
             ):
@@ -113,8 +129,23 @@ class ArrivalGateJobSolver(JobSolver):
                         route_solver=self.route_solver,
                     )
                     self.stats["arrival_revisions"] += 1
+                    revised = True
                 except Exception:  # noqa: BLE001
                     self.stats["arrival_revision_fails"] += 1
+            if not revised and getattr(self.inner, "initialized", False):
+                # 硬复位仅适用于规则求解器 (fixed_plan 可从残差重建);
+                # replayable 求解器复位后重初始化需要 activation_env 且
+                # 同样受未解决承诺约束 (与方向1 F2 同根因), 保持旧计划
+                # 并让新工件等待 (记为饥饿数据点)。
+                if hasattr(self.inner, "fixed_plan"):
+                    self._reset_inner()
+                    self.stats["arrival_resets"] = (
+                        self.stats.get("arrival_resets", 0) + 1
+                    )
+                else:
+                    self.stats["arrival_starved"] = (
+                        self.stats.get("arrival_starved", 0) + 1
+                    )
         return self.inner.plan(gated)
 
     # 透传内层的审计接口 (Coordinator 会探测)
