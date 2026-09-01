@@ -112,7 +112,9 @@ def build_runs(phase: str):
         if phase == "E4":
             return runs
     if phase in ("E5", "all"):
-        # 路由求解器敏感性: 需配合 scripts/run_E5.sh 换 mapf 服务镜像
+        # 路由求解器敏感性: 需配合 scripts/run_E5.sh 换 mapf 服务镜像。
+        # Python 版 lacam/pibt 服务在 500ms 滚动预算内无法完成初始化,
+        # E5 专用放宽到 3s (引擎 HTTP 超时同步放宽到 30s)。
         route_img = os.getenv("E5_ROUTE", "unknown")
         for inst in ["mk01", "mk05"]:
             for scen in ["S0", "S3", "S4"]:
@@ -121,7 +123,8 @@ def build_runs(phase: str):
                         runs.append(dict(phase="E5", instance=inst, map="maze",
                                          num_agv=4, scen=scen, policy=pol,
                                          seed=seed, soft=True, allowance=200,
-                                         route_img=route_img))
+                                         route_img=route_img,
+                                         mapf_time_limit_ms=3000))
         if phase == "E5":
             return runs
     return runs
@@ -136,6 +139,18 @@ def _worker(run: dict, out_file: str):
     rec = {k: run[k] for k in
            ("phase", "instance", "map", "num_agv", "scen", "policy", "seed",
             "soft", "allowance")}
+    if "route_img" in run:
+        rec["route_img"] = run["route_img"]
+    route_kwargs = None
+    if run.get("mapf_time_limit_ms"):
+        # E5: 放宽滚动预算以适配 Python 版路由服务
+        os.environ["HTTP_TIMEOUT"] = "30"
+        route_kwargs = {
+            "service_url": "http://mapf:8001",
+            "time_limit_ms": int(run["mapf_time_limit_ms"]),
+            "planning_horizon": 10,
+            "execution_window": 5,
+        }
     try:
         res = run_closed_episode(
             fjsp_path=ROOT / "data" / "fjsp_official" / "brandimarte" / f"{run['instance']}.json",
@@ -144,6 +159,7 @@ def _worker(run: dict, out_file: str):
             exception_config=scenario(run["scen"], run["seed"]),
             num_agv=run["num_agv"], seed=run["seed"], max_steps=4096,
             route_solver_name="astar" if run["policy"] == "greedy-reactive" else "rolling_mapf_http",
+            route_solver_kwargs=route_kwargs,
         )
         os_ = res.get("orchestrator_stats", {})
         rec.update(
