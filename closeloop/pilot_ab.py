@@ -1,10 +1,11 @@
 """
-引擎修复后试点重跑 (dedupe + 终点唯一不变量)
-=============================================
-目的: 度量修复对 R2 (static vs full) 结论的影响 + 旧楔死格能否完工。
-P1 核心: {mk01,mk02} x 迷宫 x agv4 x {S1,S4} x {static,full} x 3 seeds = 24
-P2 楔死: mk05 x 迷宫 x agv4 x S1 x {static,full} x seed42 = 2   (旧引擎该格 censored)
-输出: results/icaps_pilot_fixed.jsonl
+E8: 修复引擎 vs 旧引擎 配对对照 (论文新证据)
+================================================
+同 26 个格子, 两臂:
+  fixed = 三个修复开关全开 (dedupe+reserve+samecell)
+  legacy = 全关 (复现旧引擎行为: 幽灵投递/同格死锁/无效同格运输)
+配对记录 makespan / 完工 / 幽灵工序数 / 多余投递数。
+输出: results/icaps_pilot_ab.jsonl
 """
 
 from __future__ import annotations
@@ -39,6 +40,7 @@ def scenario(scen: str, seed: int):
 
 
 def _episode(run: dict) -> dict:
+    # 开关由父进程通过环境变量传入子进程
     from common.engine_adapter import build_configs, load_fjsp_json, load_map
     from closeloop.orchestrator import RecoveryOrchestrator
     from sky_executor.grid_factory.factory.Component.Coordinator.coordinator import (
@@ -77,6 +79,7 @@ def _episode(run: dict) -> dict:
     deliveries = defaultdict(int)
     t0 = time.time()
     steps = 0
+    term = {}
     for i in range(4096):
         actions = coord.decide(obs)
         obs, _r, term, trunc, _i = env.step(actions)
@@ -99,23 +102,14 @@ def _episode(run: dict) -> dict:
         if term.get("job_done"):
             break
     done = bool(term.get("job_done"))
-    total_ops = sum(len(j) for j in fjsp["jobs"])
-    extra_del = sum(v - 1 for v in deliveries.values() if v > 1)
-    summ = env.pogema_env.summary() if hasattr(env.pogema_env, "summary") else {}
     return {
         **run, "finished": done, "steps": steps,
         "makespan": steps if done else None,
-        "n_finished_ops": len(fin), "n_total_ops": total_ops,
+        "n_finished_ops": len(fin),
         "revisions": orch.stats.get("revision_count", 0),
-        "revision_fails": orch.stats.get("revision_fail_count", 0),
         "ghost_ops": len(ghosts),
-        "ghost_events": {f"j{k[0]}_o{k[1]}": v for k, v in ghosts.items()},
-        "extra_deliveries": extra_del,
-        "agv_travel": summ.get("agv_travel_steps"),
-        "agv_wait": summ.get("agv_wait_steps"),
+        "extra_deliveries": sum(v - 1 for v in deliveries.values() if v > 1),
         "wall_s": round(time.time() - t0, 1),
-        "dedupe": os.environ.get("AGV_TRANSFER_DEDUPE", "1"),
-        "reserve": os.environ.get("AGV_CELL_RESERVE", "1"),
     }
 
 
@@ -127,62 +121,61 @@ def _worker(run: dict, out_file: str):
     Path(out_file).write_text(json.dumps(rec, default=str))
 
 
-def main():
+def build_runs():
     runs = []
     for inst in ("mk01", "mk02"):
         for scen in ("S1", "S4"):
             for pol in ("cpsat-static", "cpsat-full"):
                 for seed in SEEDS:
                     runs.append({"instance": inst, "scen": scen,
-                                 "policy": pol, "seed": seed, "num_agv": 4,
-                                 "phase": "P1"})
+                                 "policy": pol, "seed": seed, "num_agv": 4})
     for pol in ("cpsat-static", "cpsat-full"):
         runs.append({"instance": "mk05", "scen": "S1", "policy": pol,
-                     "seed": 42, "num_agv": 4, "phase": "P2"})
-    out = ROOT / "results" / "icaps_pilot_fixed.jsonl"
-    done = set()
-    if out.exists():
-        for line in out.read_text().splitlines():
-            try:
-                d = json.loads(line)
-                done.add("|".join(str(d.get(k)) for k in
-                                  ("phase", "instance", "scen", "policy", "seed")))
-            except Exception:
-                pass
-    else:
-        out.write_text("")
-    runs = [r for r in runs if "|".join(
-        str(r[k]) for k in ("phase", "instance", "scen", "policy", "seed")
-    ) not in done]
-    print(f"[pilot] {len(runs)} runs -> {out}", flush=True)
+                     "seed": 42, "num_agv": 4})
+    return runs
+
+
+def main():
+    out = ROOT / "results" / "icaps_pilot_ab.jsonl"
+    out.write_text("")
     ctx = mp.get_context("fork")
-    for i, run in enumerate(runs):
+    arms = {
+        "legacy": {"AGV_TRANSFER_DEDUPE": "0",
+                   "AGV_CELL_RESERVE": "0", "AGV_SAMECELL_SKIP": "0"},
+        "fixed": {"AGV_TRANSFER_DEDUPE": "1",
+                  "AGV_CELL_RESERVE": "1", "AGV_SAMECELL_SKIP": "1"},
+    }
+    jobs = [(arm, run) for run in build_runs() for arm in arms]
+    print(f"[E8-ab] {len(jobs)} runs -> {out}", flush=True)
+    for i, (arm, run) in enumerate(jobs):
         t0 = time.time()
-        tmp = ROOT / "results" / f".pilot_{os.getpid()}_{t0:.0f}.json"
-        proc = ctx.Process(target=_worker, args=(run, str(tmp)))
+        os.environ.update(arms[arm])
+        tmp = ROOT / "results" / f".ab_{os.getpid()}_{t0:.0f}.json"
+        proc = ctx.Process(target=_worker, args=({**run, "arm": arm}, str(tmp)))
         proc.start()
         proc.join(EPISODE_TIMEOUT)
         if proc.is_alive():
             proc.terminate(); proc.join(5)
             if proc.is_alive():
                 proc.kill(); proc.join(5)
-            rec = {**run, "error": f"hard timeout {EPISODE_TIMEOUT}s"}
+            rec = {**run, "arm": arm,
+                   "error": f"hard timeout {EPISODE_TIMEOUT}s"}
         else:
             try:
                 rec = json.loads(tmp.read_text())
             except Exception as e:
-                rec = {**run, "error": f"unreadable: {e}"}
+                rec = {**run, "arm": arm, "error": f"unreadable: {e}"}
         tmp.unlink(missing_ok=True)
         with open(out, "a") as f:
             f.write(json.dumps(rec, default=str) + "\n")
         err = rec.get("error")
-        st = (f"ERR {err[:50]}" if err else
+        st = (f"ERR {err[:44]}" if err else
               f"mk={rec.get('makespan')} ghost={rec.get('ghost_ops')} "
-              f"extradel={rec.get('extra_deliveries')} rev={rec.get('revisions')}")
-        print(f"[pilot {i+1}/{len(runs)}] {run['instance']}|{run['scen']}|"
-              f"{run['policy']}|s{run['seed']} -> {st} ({time.time()-t0:.0f}s)",
-              flush=True)
-    print("[pilot] done", flush=True)
+              f"extradel={rec.get('extra_deliveries')}")
+        print(f"[E8-ab {i+1}/{len(jobs)}] {arm:6s} {run['instance']}|"
+              f"{run['scen']}|{run['policy']}|s{run['seed']} -> {st} "
+              f"({time.time()-t0:.0f}s)", flush=True)
+    print("[E8-ab] done", flush=True)
 
 
 if __name__ == "__main__":
