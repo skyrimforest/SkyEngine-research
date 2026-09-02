@@ -234,7 +234,9 @@ def left_panel(intervals, n_jobs, downs, t_now, total, path):
 
 
 def right_panel(env, t, path):
-    svg = draw_svg_with_machines_and_targets(env.pogema_env, int(t))
+    # inactive_color: 机器圈颜色 —— 默认#F0F0F0在浅色迷宫上几乎不可见, 换可辨识的岩灰
+    svg = draw_svg_with_machines_and_targets(
+        env.pogema_env, int(t), inactive_color="#7E8CA0")
     import cairosvg
     cairosvg.svg2png(bytestring=svg.encode(), write_to=str(path),
                      output_width=832, output_height=832)
