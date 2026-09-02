@@ -127,6 +127,20 @@ def build_runs(phase: str):
                                          mapf_time_limit_ms=3000))
         if phase == "E5":
             return runs
+    if phase in ("E7", "all"):
+        # value-aware 触发对照: 三策略统一 astar 路由 (本地状态自包含,
+        # myopic 的快照/回滚分支不兼容滚动求解器的远程会话状态)
+        for inst in ["mk01", "mk05"]:
+            for nagv in [4, 6]:
+                for scen in ["S1", "S4", "S3"]:
+                    for pol in ["cpsat-static", "cpsat-full", "cpsat-myopic"]:
+                        for seed in SEEDS:
+                            runs.append(dict(phase="E7", instance=inst, map="maze",
+                                             num_agv=nagv, scen=scen, policy=pol,
+                                             seed=seed, soft=True, allowance=200,
+                                             route="astar"))
+        if phase == "E7":
+            return runs
     return runs
 
 
@@ -151,6 +165,12 @@ def _worker(run: dict, out_file: str):
             "planning_horizon": 10,
             "execution_window": 5,
         }
+    if run.get("route") == "astar":
+        route_name = "astar"
+    elif run["policy"] == "greedy-reactive":
+        route_name = "astar"
+    else:
+        route_name = "rolling_mapf_http"
     try:
         res = run_closed_episode(
             fjsp_path=ROOT / "data" / "fjsp_official" / "brandimarte" / f"{run['instance']}.json",
@@ -158,7 +178,7 @@ def _worker(run: dict, out_file: str):
             policy=run["policy"],
             exception_config=scenario(run["scen"], run["seed"]),
             num_agv=run["num_agv"], seed=run["seed"], max_steps=4096,
-            route_solver_name="astar" if run["policy"] == "greedy-reactive" else "rolling_mapf_http",
+            route_solver_name=route_name,
             route_solver_kwargs=route_kwargs,
         )
         os_ = res.get("orchestrator_stats", {})
@@ -168,6 +188,9 @@ def _worker(run: dict, out_file: str):
             revisions=os_.get("revision_count", 0),
             revision_fails=os_.get("revision_fail_count", 0),
             partial_fallbacks=os_.get("partial_fallback_count", 0),
+            myopic_evals=os_.get("myopic_evals", 0),
+            myopic_replans=os_.get("myopic_replans", 0),
+            myopic_skips=os_.get("myopic_skips", 0),
             n_events=res.get("n_events"),
             agv_busy=res.get("summary", {}).get("agv_busy_utilization"),
             wall_s=res.get("wall_time_s"),
@@ -186,7 +209,7 @@ def run_key(r: dict) -> str:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--phase", default="smoke",
-                    choices=["smoke", "E1", "E2", "E3", "E4", "E5", "all"])
+                    choices=["smoke", "E1", "E2", "E3", "E4", "E5", "E7", "all"])
     ap.add_argument("--resume", action="store_true")
     ap.add_argument("--limit", type=int, default=0)
     args = ap.parse_args()

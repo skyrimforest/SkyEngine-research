@@ -67,9 +67,11 @@ class RecoveryOrchestrator:
         coordinator: Coordinator,
         env: GridFactoryEnv,
         *,
-        trigger: str = "event",           # never | event | periodic-K
+        trigger: str = "event",           # never | event | periodic-K | myopic
         scope: str = "full",              # full | partial
         min_replan_interval: int = 10,    # 两次重规划的最小间隔(步), 防重规划风暴
+        rollout_horizon: int = 60,        # myopic 模式: 分支 rollout 步数 H
+        myopic_threshold: float = 0.0,    # myopic 模式: replan iff prog_B - prog_A > threshold
         verbose: bool = False,
     ):
         self.coordinator = coordinator
@@ -77,6 +79,8 @@ class RecoveryOrchestrator:
         self.trigger = trigger
         self.scope = scope
         self.min_replan_interval = min_replan_interval
+        self.rollout_horizon = rollout_horizon
+        self.myopic_threshold = myopic_threshold
         self.verbose = verbose
         self.last_replan_step = -10**9
         self.period = None
@@ -87,6 +91,9 @@ class RecoveryOrchestrator:
             "revision_fail_count": 0,
             "triggered_events": [],
             "planner_wall_s": 0.0,
+            "myopic_evals": 0,
+            "myopic_replans": 0,
+            "myopic_skips": 0,
         }
 
     # -- 触发判定 ---------------------------------------------------------
@@ -108,32 +115,14 @@ class RecoveryOrchestrator:
         return None
 
     # -- 执行重规划 -------------------------------------------------------
-    def on_step(self, obs: dict, step: int) -> None:
-        injector = getattr(self.env, "exception_injector", None)
-        if injector is None:
-            return
-        events = injector.get_step_events() or []
-        ev = self._should_replan(step, events)
-        if ev is None:
-            return
-
+    def _attempt_revision(self, job_obs, step: int, ev: dict) -> bool:
+        """修订升级阶梯 (scoped-partial -> U4 全域 -> U3 兜底), 返回是否激活。"""
         solver = self.coordinator.job_solver
-        if not hasattr(solver, "request_plan_revision"):
-            return  # 规则求解器天然闭环, 无需编排
-        if not getattr(solver, "initialized", False):
-            return
-
-        job_obs = obs.get("job_observation")
-        if job_obs is None:
-            return
-
         t0 = time.time()
-        self.last_replan_step = step
         activated = False
         prefer_partial = (
             self.scope == "partial" and ev.get("type") == "machine_breakdown"
         )
-        # 策略显式: scope=partial 直接局部修复; 否则 U4 全域 -> (机器事件) U3 兜底
         if prefer_partial and hasattr(solver, "request_partial_schedule_repair"):
             try:
                 revision = solver.request_partial_schedule_repair(
@@ -187,11 +176,83 @@ class RecoveryOrchestrator:
             except Exception as e:  # noqa: BLE001
                 if self.verbose:
                     print(f"[orchestrator] U3 partial fallback failed at step {step}: {e}")
+        self.stats["planner_wall_s"] += time.time() - t0
+        self.stats["triggered_events"].append({"step": step, "event": ev})
+        return activated
+
+    # -- myopic value-aware 分支评估 --------------------------------------
+    @staticmethod
+    def _progress(env) -> float:
+        """进度度量: 完工工序数 (主) + 机器累计加工时长 (次, 打破并列)。"""
+        penv = env.pogema_env
+        fin = 0
+        for job in getattr(penv, "jobs", []) or []:
+            for op in getattr(job, "ops", []) or []:
+                if str(getattr(op, "status", "")) == "FINISHED":
+                    fin += 1
+        mpt = 0.0
+        for v in (getattr(penv, "machine_process_time", None) or {}).values():
+            try:
+                mpt += float(v)
+            except Exception:
+                pass
+        return fin + 1e-3 * mpt
+
+    def _rollout(self, obs: dict, horizon: int) -> float:
+        """从当前状态执行 horizon 步 (不触发任何重规划), 返回进度。"""
+        for _ in range(horizon):
+            actions = self.coordinator.decide(obs)
+            obs, _r, terminations, truncations, _i = self.env.step(actions)
+            if terminations.get("job_done") or all(truncations.values()):
+                break
+        return self._progress(self.env)
+
+    def _myopic_decide(self, obs: dict, step: int, ev: dict) -> None:
+        """分支 A(不重规划) vs B(重规划) 同种子前滚 H 步, 择优回到真实时间线。"""
+        self.stats["myopic_evals"] += 1
+        snap = self.env.get_state(self.coordinator)
+        prog_a = self._rollout(obs, self.rollout_horizon)
+        self.env.set_state(snap, self.coordinator)
+        obs_b = self.env.observe()
+        self._attempt_revision(obs_b.get("job_observation"), step, ev)
+        prog_b = self._rollout(obs_b, self.rollout_horizon)
+        self.env.set_state(snap, self.coordinator)
+        if prog_b - prog_a > self.myopic_threshold:
+            obs_real = self.env.observe()
+            self._attempt_revision(obs_real.get("job_observation"), step, ev)
+            self.stats["myopic_replans"] += 1
+        else:
+            self.stats["myopic_skips"] += 1
+            self.last_replan_step = step  # 本轮放弃, 间隔重新起算
+
+    def on_step(self, obs: dict, step: int) -> None:
+        injector = getattr(self.env, "exception_injector", None)
+        if injector is None:
+            return
+        events = injector.get_step_events() or []
+        ev = self._should_replan(step, events)
+        if ev is None:
+            return
+
+        solver = self.coordinator.job_solver
+        if not hasattr(solver, "request_plan_revision"):
+            return  # 规则求解器天然闭环, 无需编排
+        if not getattr(solver, "initialized", False):
+            return
+
+        job_obs = obs.get("job_observation")
+        if job_obs is None:
+            return
+
+        self.last_replan_step = step
+        if self.trigger == "myopic":
+            self._myopic_decide(obs, step, ev)
+            return
+
+        activated = self._attempt_revision(job_obs, step, ev)
         if not activated:
             # 允许稍后事件(如修复完成)再次触发, 而非被最小间隔挡住
             self.last_replan_step = step - self.min_replan_interval
-        self.stats["planner_wall_s"] += time.time() - t0
-        self.stats["triggered_events"].append({"step": step, "event": ev})
 
 
 def run_closed_episode(
@@ -199,7 +260,7 @@ def run_closed_episode(
     map_file: str | Path,
     map_name: Optional[str] = None,
     *,
-    policy: str = "cpsat-full",       # greedy-reactive | cpsat-static | cpsat-full | cpsat-partial
+    policy: str = "cpsat-full",       # greedy-reactive | cpsat-static | cpsat-full | cpsat-partial | cpsat-myopic
     exception_config: Optional[dict] = None,
     num_agv: int = 4,
     seed: int = 42,
@@ -214,6 +275,8 @@ def run_closed_episode(
     verbose: bool = False,
     trigger_override: Optional[str] = None,
     processing_time_config: Optional[dict] = None,
+    rollout_horizon: int = 60,
+    myopic_threshold: float = 0.0,
 ) -> dict:
     """运行一个带扰动注入与闭环策略的 episode。
 
@@ -222,6 +285,7 @@ def run_closed_episode(
       cpsat-static    : CP-SAT 一次规划, 扰动下不修正 (开环对照, à la generate-then-refine)
       cpsat-full      : CP-SAT + 事件触发全域残差重规划
       cpsat-partial   : CP-SAT + 事件触发局部修复 (围绕故障机器)
+      cpsat-myopic    : CP-SAT + value-aware: 分支前滚比较后决定是否重规划
     trigger_override: 覆盖触发器 (如 "periodic-100", 供鲁棒性实验复用)。
     """
     t0 = time.time()
@@ -235,6 +299,8 @@ def run_closed_episode(
         trigger, scope = "event", "full"
     elif policy == "cpsat-partial":
         trigger, scope = "event", "partial"
+    elif policy == "cpsat-myopic":
+        trigger, scope = "myopic", "full"
     else:
         raise ValueError(f"unknown policy {policy}")
     if trigger_override is not None:
@@ -302,7 +368,8 @@ def run_closed_episode(
         transfer_time_estimator=transfer_estimator,
     )
     orch = RecoveryOrchestrator(
-        coordinator, env, trigger=trigger, scope=scope, verbose=verbose
+        coordinator, env, trigger=trigger, scope=scope, verbose=verbose,
+        rollout_horizon=rollout_horizon, myopic_threshold=myopic_threshold,
     )
 
     finished = False
