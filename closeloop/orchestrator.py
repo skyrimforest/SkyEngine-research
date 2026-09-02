@@ -310,11 +310,16 @@ def run_closed_episode(
     grid_map = load_map(map_file, map_name)
     observation_type = "MAPF" if route_solver_name == "rolling_mapf_http" else "default"
     collision_system = "soft" if route_solver_name == "rolling_mapf_http" else "priority"
+    # 局部 astar 求解器无全局导航梯度: 目标一旦超出观测窗口就退化为随机
+    # 游走, 诚实执行下会稳定困在配对互换的活锁里。给该臂全图视野,
+    # 使目标恒在窗口内(微服务臂有自己的全局规划, 不受影响)。
+    obs_radius = 5 if route_solver_name == "rolling_mapf_http" else 64
 
     grid_cfg, machine_cfg, job_cfg = build_configs(
         fjsp_data, grid_map,
         num_agv=num_agv, seed=seed, max_episode_steps=max_steps,
         observation_type=observation_type, collision_system=collision_system,
+        obs_radius=obs_radius,
     )
     env = GridFactoryEnv(
         grid_config=grid_cfg, machine_config=machine_cfg, job_config=job_cfg,
