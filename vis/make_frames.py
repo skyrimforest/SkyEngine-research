@@ -39,7 +39,9 @@ from sky_executor.grid_factory.factory.grid_factory_env import GridFactoryEnv
 OUT = ROOT / "results" / "vis"
 OUT.mkdir(parents=True, exist_ok=True)
 
-CAPTURES = [1, 149, 155, 260, 400, 10**9]  # 最后一项=终点
+CAPTURES = [1, 149, 155, 260, 400, 10**9]  # 关键帧(子集, 进论文)
+FULL = os.environ.get("FULL_VIS", "1") == "1"  # 1=全程逐帧(校验用)
+FULL_DIR = OUT / "full"
 SCEN = {"enabled": True, "random_seed": 42,
         "schedule": [{"step": 150, "type": "machine_breakdown",
                       "machine_id": 0, "duration_steps": 40}]}
@@ -117,7 +119,7 @@ def run_and_collect():
                 prev_down[m.id] = t
             elif m.id in prev_down and rem == 0:
                 downs.append((prev_down.pop(m.id), t, m.id))
-        if i + 1 in CAPTURES[:-1]:
+        if FULL or (i + 1 in CAPTURES[:-1]):
             snapshot(i + 1)
         orch.on_step(obs, i + 1)
         if term.get("job_done"):
@@ -257,23 +259,51 @@ def main():
     print(f"episode done={done} makespan={total} downs={downs}")
     intervals = op_intervals(trans)
     n_jobs = len(env.pogema_env.jobs)
-    frames = []
+
+    # 状态跃迁明细导出: 供人工核对 每道工序何时在何机器 排队/开工/完工
+    (OUT / "transitions.json").write_text(
+        json.dumps({"makespan": total, "downs": downs,
+                    "records": trans}, ensure_ascii=False))
+
+    frame_times = list(range(1, total + 1)) if FULL else \
+        sorted({min(t, total) for t in CAPTURES})
+    outdir = FULL_DIR if FULL else OUT
+    outdir.mkdir(parents=True, exist_ok=True)
     tmp = OUT / ".tmp"
     tmp.mkdir(exist_ok=True)
-    for t in CAPTURES:
-        tt = min(t, total)
+    frames = []
+    for n, tt in enumerate(frame_times, 1):
         lp = tmp / f"l_{tt}.png"; rp = tmp / f"r_{tt}.png"
         left_panel(intervals, n_jobs, downs, tt, total, lp)
         right_panel(env, tt, rp)
-        fp = OUT / f"frame_t{tt:04d}.png"
+        fp = outdir / f"frame_t{tt:04d}.png"
         compose(lp, rp, fp)
         frames.append(fp)
-        print("frame ->", fp.name)
+        if n % 50 == 0 or n == len(frame_times):
+            print(f"  composed {n}/{len(frame_times)} frames")
+
+    # GIF: 全程帧降采样拼接(逐帧可翻看PNG, GIF用于快速通览)
     from PIL import Image
-    ims = [Image.open(f) for f in frames]
-    ims[0].save(OUT / "rollout.gif", save_all=True, append_images=ims[1:],
-                duration=1100, loop=0)
-    print("gif ->", OUT / "rollout.gif")
+    ims = []
+    for f in frames:
+        im = Image.open(f)
+        w = 640
+        im = im.resize((w, int(im.height * w / im.width)))
+        im = im.convert("P", palette=Image.ADAPTIVE, colors=128)
+        ims.append(im)
+    gif_path = outdir / ("rollout_full.gif" if FULL else "rollout.gif")
+    ims[0].save(gif_path, save_all=True, append_images=ims[1:],
+                duration=50, loop=0, optimize=True)
+    print("gif ->", gif_path)
+
+    # 关键帧同步到 results/vis 根目录(论文用)
+    if FULL:
+        for t in CAPTURES:
+            src = FULL_DIR / f"frame_t{min(t, total):04d}.png"
+            if src.exists():
+                frames_keep = OUT / src.name
+                frames_keep.write_bytes(src.read_bytes())
+        print("keyframes refreshed ->", OUT)
 
 
 if __name__ == "__main__":
