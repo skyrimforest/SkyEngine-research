@@ -40,7 +40,7 @@ POLICIES = ["greedy-reactive", "cpsat-static", "cpsat-full", "cpsat-partial"]
 INSTANCES_E1 = ["mk01", "mk02", "mk05", "mk07"]
 INSTANCES_E2 = ["mk01", "mk05"]
 SEEDS = [42, 43, 44]
-EPISODE_TIMEOUT = 600.0  # myopic 臂含 EECBS rollout, 需要更长墙钟
+EPISODE_TIMEOUT = 1200.0  # myopic 臂含 EECBS rollout, 需要更长墙钟
 
 
 def scenario(scen: str, seed: int):

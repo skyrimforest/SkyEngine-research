@@ -70,7 +70,7 @@ class RecoveryOrchestrator:
         trigger: str = "event",           # never | event | periodic-K | myopic
         scope: str = "full",              # full | partial
         min_replan_interval: int = 10,    # 两次重规划的最小间隔(步), 防重规划风暴
-        rollout_horizon: int = 60,        # myopic 模式: 分支 rollout 步数 H
+        rollout_horizon: int = 24,        # myopic 模式: 分支 rollout 步数 H
         myopic_threshold: float = 0.0,    # myopic 模式: replan iff prog_B - prog_A > threshold
         verbose: bool = False,
     ):
@@ -284,7 +284,7 @@ def run_closed_episode(
     verbose: bool = False,
     trigger_override: Optional[str] = None,
     processing_time_config: Optional[dict] = None,
-    rollout_horizon: int = 60,
+    rollout_horizon: int = 24,
     myopic_threshold: float = 0.0,
 ) -> dict:
     """运行一个带扰动注入与闭环策略的 episode。
