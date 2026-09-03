@@ -207,16 +207,25 @@ class RecoveryOrchestrator:
                 break
         return self._progress(self.env)
 
+    def _reset_route_session(self) -> None:
+        """快照回滚后重置滚动路由器的远程会话: 服务端残留路径与
+        恢复后的世界不一致(会 503 楔死), 置无效后下次 plan 自动重初始化。"""
+        rs = getattr(self.coordinator, "route_solver", None)
+        if rs is not None and hasattr(rs, "start_new_remote_session"):
+            rs.start_new_remote_session()
+
     def _myopic_decide(self, obs: dict, step: int, ev: dict) -> None:
         """分支 A(不重规划) vs B(重规划) 同种子前滚 H 步, 择优回到真实时间线。"""
         self.stats["myopic_evals"] += 1
         snap = self.env.get_state(self.coordinator)
         prog_a = self._rollout(obs, self.rollout_horizon)
         self.env.set_state(snap, self.coordinator)
+        self._reset_route_session()
         obs_b = self.env.observe()
         self._attempt_revision(obs_b.get("job_observation"), step, ev)
         prog_b = self._rollout(obs_b, self.rollout_horizon)
         self.env.set_state(snap, self.coordinator)
+        self._reset_route_session()
         if prog_b - prog_a > self.myopic_threshold:
             obs_real = self.env.observe()
             self._attempt_revision(obs_real.get("job_observation"), step, ev)

@@ -40,7 +40,7 @@ POLICIES = ["greedy-reactive", "cpsat-static", "cpsat-full", "cpsat-partial"]
 INSTANCES_E1 = ["mk01", "mk02", "mk05", "mk07"]
 INSTANCES_E2 = ["mk01", "mk05"]
 SEEDS = [42, 43, 44]
-EPISODE_TIMEOUT = 240.0
+EPISODE_TIMEOUT = 600.0  # myopic 臂含 EECBS rollout, 需要更长墙钟
 
 
 def scenario(scen: str, seed: int):
@@ -128,8 +128,8 @@ def build_runs(phase: str):
         if phase == "E5":
             return runs
     if phase in ("E7", "all"):
-        # value-aware 触发对照: 三策略统一 astar 路由 (本地状态自包含,
-        # myopic 的快照/回滚分支不兼容滚动求解器的远程会话状态)
+        # value-aware 触发对照: 三策略统一滚动 EECBS 路由 (修复引擎 +
+        # myopic 回滚后的会话重置钩子, 使快照/回滚与远程会话兼容)
         for inst in ["mk01", "mk05"]:
             for nagv in [4, 6]:
                 for scen in ["S1", "S4", "S3"]:
@@ -138,7 +138,7 @@ def build_runs(phase: str):
                             runs.append(dict(phase="E7", instance=inst, map="maze",
                                              num_agv=nagv, scen=scen, policy=pol,
                                              seed=seed, soft=True, allowance=200,
-                                             route="astar"))
+                                             route="rolling_mapf_http"))
         if phase == "E7":
             return runs
     return runs
