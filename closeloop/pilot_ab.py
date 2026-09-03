@@ -141,9 +141,11 @@ def main():
     ctx = mp.get_context("fork")
     arms = {
         "legacy": {"AGV_TRANSFER_DEDUPE": "0",
-                   "AGV_CELL_RESERVE": "0", "AGV_SAMECELL_SKIP": "0"},
+                   "AGV_CELL_RESERVE": "0", "AGV_SAMECELL_SKIP": "0",
+                   "AGV_PARK_DISCIPLINE": "0", "AGV_ASSIGN_LOSS_GUARD": "0"},
         "fixed": {"AGV_TRANSFER_DEDUPE": "1",
-                  "AGV_CELL_RESERVE": "1", "AGV_SAMECELL_SKIP": "1"},
+                  "AGV_CELL_RESERVE": "1", "AGV_SAMECELL_SKIP": "1",
+                  "AGV_PARK_DISCIPLINE": "1", "AGV_ASSIGN_LOSS_GUARD": "1"},
     }
     jobs = [(arm, run) for run in build_runs() for arm in arms]
     print(f"[E8-ab] {len(jobs)} runs -> {out}", flush=True)
