@@ -26,7 +26,7 @@ INSTANCES = ["mk01", "mk02", "mk05"]
 CADENCES = [10, 20, 50, 100]
 MODES = ["legacy", "soft"]
 SEEDS = [42, 43, 44]
-EPISODE_TIMEOUT = 300.0
+EPISODE_TIMEOUT = 900.0
 
 
 def build_runs():
