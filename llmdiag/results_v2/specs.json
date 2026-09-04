@@ -1,0 +1,434 @@
+[
+ {
+  "case_id": "v2_baseline_000",
+  "target_class": "baseline",
+  "instance": "mk01",
+  "policy": "greedy-reactive",
+  "num_agv": 3,
+  "map_name": "medium-mazes-seed-0058",
+  "seed": 209756,
+  "exception_config": {
+   "enabled": false,
+   "random_seed": 209756
+  },
+  "route_solver": "astar",
+  "query": "该 episode 运行是否正常? 若正常请说明判断依据, 给出干预建议 none。"
+ },
+ {
+  "case_id": "v2_baseline_001",
+  "target_class": "baseline",
+  "instance": "mk02",
+  "policy": "greedy-reactive",
+  "num_agv": 4,
+  "map_name": "medium-mazes-seed-0011",
+  "seed": 139463,
+  "exception_config": {
+   "enabled": false,
+   "random_seed": 139463
+  },
+  "route_solver": "astar",
+  "query": "该 episode 运行是否正常? 若正常请说明判断依据, 给出干预建议 none。"
+ },
+ {
+  "case_id": "v2_baseline_002",
+  "target_class": "baseline",
+  "instance": "mk01",
+  "policy": "greedy-reactive",
+  "num_agv": 3,
+  "map_name": "medium-mazes-seed-0045",
+  "seed": 279672,
+  "exception_config": {
+   "enabled": false,
+   "random_seed": 279672
+  },
+  "route_solver": "astar",
+  "query": "该 episode 运行是否正常? 若正常请说明判断依据, 给出干预建议 none。"
+ },
+ {
+  "case_id": "v2_disruption_machine_000",
+  "target_class": "disruption_machine",
+  "instance": "mk01",
+  "policy": "greedy-reactive",
+  "num_agv": 3,
+  "map_name": "medium-mazes-seed-0049",
+  "seed": 378107,
+  "exception_config": {
+   "enabled": true,
+   "random_seed": 378107,
+   "schedule": [
+    {
+     "step": 277,
+     "type": "machine_breakdown",
+     "machine_id": 3,
+     "duration_steps": 47
+    }
+   ]
+  },
+  "route_solver": "astar",
+  "query": "为何该 episode 的 makespan 超预期? 定位关键资源与原因, 给干预建议。"
+ },
+ {
+  "case_id": "v2_disruption_machine_001",
+  "target_class": "disruption_machine",
+  "instance": "mk02",
+  "policy": "greedy-reactive",
+  "num_agv": 4,
+  "map_name": "medium-mazes-seed-0070",
+  "seed": 188215,
+  "exception_config": {
+   "enabled": true,
+   "random_seed": 188215,
+   "schedule": [
+    {
+     "step": 122,
+     "type": "machine_breakdown",
+     "machine_id": 0,
+     "duration_steps": 78
+    }
+   ]
+  },
+  "route_solver": "astar",
+  "query": "为何该 episode 的 makespan 超预期? 定位关键资源与原因, 给干预建议。"
+ },
+ {
+  "case_id": "v2_disruption_machine_002",
+  "target_class": "disruption_machine",
+  "instance": "mk01",
+  "policy": "greedy-reactive",
+  "num_agv": 4,
+  "map_name": "medium-mazes-seed-0060",
+  "seed": 590720,
+  "exception_config": {
+   "enabled": true,
+   "random_seed": 590720,
+   "schedule": [
+    {
+     "step": 210,
+     "type": "machine_breakdown",
+     "machine_id": 4,
+     "duration_steps": 62
+    }
+   ]
+  },
+  "route_solver": "astar",
+  "query": "为何该 episode 的 makespan 超预期? 定位关键资源与原因, 给干预建议。"
+ },
+ {
+  "case_id": "v2_disruption_machine_agv_000",
+  "target_class": "disruption_machine_agv",
+  "instance": "mk02",
+  "policy": "greedy-reactive",
+  "num_agv": 4,
+  "map_name": "medium-mazes-seed-0076",
+  "seed": 189385,
+  "exception_config": {
+   "enabled": true,
+   "random_seed": 189385,
+   "schedule": [
+    {
+     "step": 164,
+     "type": "machine_breakdown",
+     "machine_id": 0,
+     "duration_steps": 47
+    },
+    {
+     "step": 293,
+     "type": "agv_breakdown",
+     "agv_id": 0,
+     "duration_steps": 29
+    }
+   ]
+  },
+  "route_solver": "astar",
+  "query": "为何该 episode 的 makespan 超预期且运输同时受阻? 定位资源与原因, 给干预建议。"
+ },
+ {
+  "case_id": "v2_disruption_machine_agv_001",
+  "target_class": "disruption_machine_agv",
+  "instance": "mk01",
+  "policy": "greedy-reactive",
+  "num_agv": 4,
+  "map_name": "medium-mazes-seed-0056",
+  "seed": 569021,
+  "exception_config": {
+   "enabled": true,
+   "random_seed": 569021,
+   "schedule": [
+    {
+     "step": 187,
+     "type": "machine_breakdown",
+     "machine_id": 1,
+     "duration_steps": 43
+    },
+    {
+     "step": 370,
+     "type": "agv_breakdown",
+     "agv_id": 3,
+     "duration_steps": 26
+    }
+   ]
+  },
+  "route_solver": "astar",
+  "query": "为何该 episode 的 makespan 超预期且运输同时受阻? 定位资源与原因, 给干预建议。"
+ },
+ {
+  "case_id": "v2_disruption_machine_agv_002",
+  "target_class": "disruption_machine_agv",
+  "instance": "mk01",
+  "policy": "greedy-reactive",
+  "num_agv": 4,
+  "map_name": "medium-mazes-seed-0049",
+  "seed": 209258,
+  "exception_config": {
+   "enabled": true,
+   "random_seed": 209258,
+   "schedule": [
+    {
+     "step": 249,
+     "type": "machine_breakdown",
+     "machine_id": 0,
+     "duration_steps": 38
+    },
+    {
+     "step": 334,
+     "type": "agv_breakdown",
+     "agv_id": 3,
+     "duration_steps": 29
+    }
+   ]
+  },
+  "route_solver": "astar",
+  "query": "为何该 episode 的 makespan 超预期且运输同时受阻? 定位资源与原因, 给干预建议。"
+ },
+ {
+  "case_id": "v2_disruption_stochastic_000",
+  "target_class": "disruption_stochastic",
+  "instance": "mk01",
+  "policy": "greedy-reactive",
+  "num_agv": 3,
+  "map_name": "medium-mazes-seed-0076",
+  "seed": 222288,
+  "exception_config": {
+   "enabled": true,
+   "random_seed": 222288,
+   "preset": "moderate_failure"
+  },
+  "route_solver": "astar",
+  "query": "该 episode 的性能波动由何引起? 定位扰动来源, 给干预建议。"
+ },
+ {
+  "case_id": "v2_disruption_stochastic_001",
+  "target_class": "disruption_stochastic",
+  "instance": "mk02",
+  "policy": "greedy-reactive",
+  "num_agv": 3,
+  "map_name": "medium-mazes-seed-0060",
+  "seed": 861097,
+  "exception_config": {
+   "enabled": true,
+   "random_seed": 861097,
+   "preset": "moderate_failure"
+  },
+  "route_solver": "astar",
+  "query": "该 episode 的性能波动由何引起? 定位扰动来源, 给干预建议。"
+ },
+ {
+  "case_id": "v2_disruption_stochastic_002",
+  "target_class": "disruption_stochastic",
+  "instance": "mk02",
+  "policy": "greedy-reactive",
+  "num_agv": 4,
+  "map_name": "medium-mazes-seed-0056",
+  "seed": 589898,
+  "exception_config": {
+   "enabled": true,
+   "random_seed": 589898,
+   "preset": "moderate_failure"
+  },
+  "route_solver": "astar",
+  "query": "该 episode 的性能波动由何引起? 定位扰动来源, 给干预建议。"
+ },
+ {
+  "case_id": "v2_starvation_livelock_000",
+  "target_class": "starvation_livelock",
+  "instance": "mk01",
+  "policy": "greedy-reactive",
+  "num_agv": 3,
+  "map_name": "medium-mazes-seed-0005",
+  "seed": 485137,
+  "exception_config": {
+   "enabled": false,
+   "random_seed": 485137
+  },
+  "route_solver": "astar",
+  "query": "为何该 episode 未完工且 AGV 闲置? 判断失效模式, 给干预建议。"
+ },
+ {
+  "case_id": "v2_starvation_livelock_001",
+  "target_class": "starvation_livelock",
+  "instance": "mk01",
+  "policy": "greedy-reactive",
+  "num_agv": 3,
+  "map_name": "medium-mazes-seed-0005",
+  "seed": 440433,
+  "exception_config": {
+   "enabled": false,
+   "random_seed": 440433
+  },
+  "route_solver": "astar",
+  "query": "为何该 episode 未完工且 AGV 闲置? 判断失效模式, 给干预建议。"
+ },
+ {
+  "case_id": "v2_starvation_livelock_002",
+  "target_class": "starvation_livelock",
+  "instance": "mk02",
+  "policy": "greedy-reactive",
+  "num_agv": 3,
+  "map_name": "medium-mazes-seed-0007",
+  "seed": 925459,
+  "exception_config": {
+   "enabled": false,
+   "random_seed": 925459
+  },
+  "route_solver": "astar",
+  "query": "为何该 episode 未完工且 AGV 闲置? 判断失效模式, 给干预建议。"
+ },
+ {
+  "case_id": "v2_blocking_livelock_000",
+  "target_class": "blocking_livelock",
+  "instance": "mk05",
+  "policy": "greedy-reactive",
+  "num_agv": 6,
+  "map_name": "medium-mazes-seed-0012",
+  "seed": 875387,
+  "exception_config": {
+   "enabled": false,
+   "random_seed": 875387
+  },
+  "route_solver": "astar",
+  "query": "为何该 episode 有任务在身却长期无进展? 判断失效模式, 给干预建议。"
+ },
+ {
+  "case_id": "v2_blocking_livelock_001",
+  "target_class": "blocking_livelock",
+  "instance": "mk01",
+  "policy": "greedy-reactive",
+  "num_agv": 6,
+  "map_name": "medium-mazes-seed-0004",
+  "seed": 794186,
+  "exception_config": {
+   "enabled": false,
+   "random_seed": 794186
+  },
+  "route_solver": "astar",
+  "query": "为何该 episode 有任务在身却长期无进展? 判断失效模式, 给干预建议。"
+ },
+ {
+  "case_id": "v2_blocking_livelock_002",
+  "target_class": "blocking_livelock",
+  "instance": "mk02",
+  "policy": "greedy-reactive",
+  "num_agv": 6,
+  "map_name": "medium-mazes-seed-0011",
+  "seed": 160464,
+  "exception_config": {
+   "enabled": false,
+   "random_seed": 160464
+  },
+  "route_solver": "astar",
+  "query": "为何该 episode 有任务在身却长期无进展? 判断失效模式, 给干预建议。"
+ },
+ {
+  "case_id": "v2_machine_bottleneck_000",
+  "target_class": "machine_bottleneck",
+  "instance": "mk03",
+  "policy": "greedy-reactive",
+  "num_agv": 3,
+  "map_name": "medium-mazes-seed-0076",
+  "seed": 698076,
+  "exception_config": {
+   "enabled": false,
+   "random_seed": 698076
+  },
+  "route_solver": "astar",
+  "query": "为何该 episode 完工时间远超计划? 定位瓶颈资源, 给干预建议。"
+ },
+ {
+  "case_id": "v2_machine_bottleneck_001",
+  "target_class": "machine_bottleneck",
+  "instance": "mk03",
+  "policy": "greedy-reactive",
+  "num_agv": 4,
+  "map_name": "medium-mazes-seed-0045",
+  "seed": 921549,
+  "exception_config": {
+   "enabled": false,
+   "random_seed": 921549
+  },
+  "route_solver": "astar",
+  "query": "为何该 episode 完工时间远超计划? 定位瓶颈资源, 给干预建议。"
+ },
+ {
+  "case_id": "v2_machine_bottleneck_002",
+  "target_class": "machine_bottleneck",
+  "instance": "mk03",
+  "policy": "greedy-reactive",
+  "num_agv": 3,
+  "map_name": "medium-mazes-seed-0076",
+  "seed": 213065,
+  "exception_config": {
+   "enabled": false,
+   "random_seed": 213065
+  },
+  "route_solver": "astar",
+  "query": "为何该 episode 完工时间远超计划? 定位瓶颈资源, 给干预建议。"
+ },
+ {
+  "case_id": "v2_route_disruption_000",
+  "target_class": "route_disruption",
+  "instance": "mk02",
+  "policy": "greedy-reactive",
+  "num_agv": 4,
+  "map_name": "medium-mazes-seed-0011",
+  "seed": 503647,
+  "exception_config": {
+   "enabled": true,
+   "random_seed": 503647,
+   "preset": "routing_disruption"
+  },
+  "route_solver": "astar",
+  "query": "为何该 episode 的运输时间显著变长? 定位原因, 给干预建议。"
+ },
+ {
+  "case_id": "v2_route_disruption_001",
+  "target_class": "route_disruption",
+  "instance": "mk01",
+  "policy": "greedy-reactive",
+  "num_agv": 3,
+  "map_name": "medium-mazes-seed-0076",
+  "seed": 435775,
+  "exception_config": {
+   "enabled": true,
+   "random_seed": 435775,
+   "preset": "routing_disruption"
+  },
+  "route_solver": "astar",
+  "query": "为何该 episode 的运输时间显著变长? 定位原因, 给干预建议。"
+ },
+ {
+  "case_id": "v2_route_disruption_002",
+  "target_class": "route_disruption",
+  "instance": "mk02",
+  "policy": "greedy-reactive",
+  "num_agv": 4,
+  "map_name": "medium-mazes-seed-0069",
+  "seed": 872568,
+  "exception_config": {
+   "enabled": true,
+   "random_seed": 872568,
+   "preset": "routing_disruption"
+  },
+  "route_solver": "astar",
+  "query": "为何该 episode 的运输时间显著变长? 定位原因, 给干预建议。"
+ }
+]

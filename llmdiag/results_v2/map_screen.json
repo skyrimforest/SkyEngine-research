@@ -1,0 +1,411 @@
+{
+ "healthy": [
+  {
+   "map": "medium-mazes-seed-0011",
+   "makespan": 906,
+   "wall": 6.4
+  },
+  {
+   "map": "medium-mazes-seed-0035",
+   "makespan": 754,
+   "wall": 5.9
+  },
+  {
+   "map": "medium-mazes-seed-0044",
+   "makespan": 871,
+   "wall": 6.4
+  },
+  {
+   "map": "medium-mazes-seed-0045",
+   "makespan": 705,
+   "wall": 5.7
+  },
+  {
+   "map": "medium-mazes-seed-0049",
+   "makespan": 3330,
+   "wall": 17.6
+  },
+  {
+   "map": "medium-mazes-seed-0056",
+   "makespan": 544,
+   "wall": 5.0
+  },
+  {
+   "map": "medium-mazes-seed-0058",
+   "makespan": 626,
+   "wall": 5.3
+  },
+  {
+   "map": "medium-mazes-seed-0060",
+   "makespan": 1244,
+   "wall": 7.4
+  },
+  {
+   "map": "medium-mazes-seed-0069",
+   "makespan": 3526,
+   "wall": 18.1
+  },
+  {
+   "map": "medium-mazes-seed-0070",
+   "makespan": 804,
+   "wall": 5.9
+  },
+  {
+   "map": "medium-mazes-seed-0076",
+   "makespan": 882,
+   "wall": 6.4
+  },
+  {
+   "map": "medium-mazes-seed-0077",
+   "makespan": 957,
+   "wall": 6.4
+  }
+ ],
+ "pathological": [
+  {
+   "map": "medium-mazes-seed-0000",
+   "makespan": 4096,
+   "wall": 15.8
+  },
+  {
+   "map": "medium-mazes-seed-0001",
+   "makespan": 4096,
+   "wall": 16.0
+  },
+  {
+   "map": "medium-mazes-seed-0002",
+   "makespan": 4096,
+   "wall": 15.5
+  },
+  {
+   "map": "medium-mazes-seed-0003",
+   "makespan": 4096,
+   "wall": 13.6
+  },
+  {
+   "map": "medium-mazes-seed-0004",
+   "makespan": 4096,
+   "wall": 15.9
+  },
+  {
+   "map": "medium-mazes-seed-0005",
+   "makespan": 4096,
+   "wall": 19.1
+  },
+  {
+   "map": "medium-mazes-seed-0006",
+   "makespan": 4096,
+   "wall": 14.6
+  },
+  {
+   "map": "medium-mazes-seed-0007",
+   "makespan": 4096,
+   "wall": 17.4
+  },
+  {
+   "map": "medium-mazes-seed-0008",
+   "makespan": 4096,
+   "wall": 24.4
+  },
+  {
+   "map": "medium-mazes-seed-0009",
+   "makespan": 4096,
+   "wall": 14.8
+  },
+  {
+   "map": "medium-mazes-seed-0010",
+   "makespan": 4096,
+   "wall": 17.2
+  },
+  {
+   "map": "medium-mazes-seed-0012",
+   "makespan": 4096,
+   "wall": 14.0
+  },
+  {
+   "map": "medium-mazes-seed-0013",
+   "makespan": 4096,
+   "wall": 19.1
+  },
+  {
+   "map": "medium-mazes-seed-0014",
+   "makespan": 4096,
+   "wall": 15.0
+  },
+  {
+   "map": "medium-mazes-seed-0015",
+   "makespan": 4096,
+   "wall": 17.8
+  },
+  {
+   "map": "medium-mazes-seed-0016",
+   "makespan": 4096,
+   "wall": 16.8
+  },
+  {
+   "map": "medium-mazes-seed-0017",
+   "makespan": 4096,
+   "wall": 17.1
+  },
+  {
+   "map": "medium-mazes-seed-0018",
+   "makespan": 4096,
+   "wall": 15.7
+  },
+  {
+   "map": "medium-mazes-seed-0019",
+   "makespan": 4096,
+   "wall": 20.2
+  },
+  {
+   "map": "medium-mazes-seed-0020",
+   "makespan": 4096,
+   "wall": 15.7
+  },
+  {
+   "map": "medium-mazes-seed-0021",
+   "makespan": 4096,
+   "wall": 15.3
+  },
+  {
+   "map": "medium-mazes-seed-0022",
+   "makespan": 4096,
+   "wall": 15.7
+  },
+  {
+   "map": "medium-mazes-seed-0023",
+   "makespan": 4096,
+   "wall": 16.2
+  },
+  {
+   "map": "medium-mazes-seed-0024",
+   "makespan": 4096,
+   "wall": 20.8
+  },
+  {
+   "map": "medium-mazes-seed-0025",
+   "makespan": 4096,
+   "wall": 14.0
+  },
+  {
+   "map": "medium-mazes-seed-0026",
+   "makespan": 4096,
+   "wall": 18.1
+  },
+  {
+   "map": "medium-mazes-seed-0027",
+   "makespan": 4096,
+   "wall": 15.5
+  },
+  {
+   "map": "medium-mazes-seed-0028",
+   "makespan": 4096,
+   "wall": 14.1
+  },
+  {
+   "map": "medium-mazes-seed-0029",
+   "makespan": 4096,
+   "wall": 19.5
+  },
+  {
+   "map": "medium-mazes-seed-0030",
+   "makespan": 4096,
+   "wall": 16.7
+  },
+  {
+   "map": "medium-mazes-seed-0031",
+   "makespan": 4096,
+   "wall": 15.1
+  },
+  {
+   "map": "medium-mazes-seed-0032",
+   "makespan": 4096,
+   "wall": 15.0
+  },
+  {
+   "map": "medium-mazes-seed-0033",
+   "makespan": 4096,
+   "wall": 20.5
+  },
+  {
+   "map": "medium-mazes-seed-0034",
+   "makespan": 4096,
+   "wall": 15.5
+  },
+  {
+   "map": "medium-mazes-seed-0036",
+   "makespan": 4096,
+   "wall": 17.4
+  },
+  {
+   "map": "medium-mazes-seed-0037",
+   "makespan": 4096,
+   "wall": 17.2
+  },
+  {
+   "map": "medium-mazes-seed-0038",
+   "makespan": 4096,
+   "wall": 16.7
+  },
+  {
+   "map": "medium-mazes-seed-0039",
+   "makespan": 4096,
+   "wall": 16.6
+  },
+  {
+   "map": "medium-mazes-seed-0040",
+   "makespan": 4096,
+   "wall": 13.6
+  },
+  {
+   "map": "medium-mazes-seed-0041",
+   "makespan": 4096,
+   "wall": 15.4
+  },
+  {
+   "map": "medium-mazes-seed-0042",
+   "makespan": 4096,
+   "wall": 15.9
+  },
+  {
+   "map": "medium-mazes-seed-0043",
+   "makespan": 4096,
+   "wall": 17.3
+  },
+  {
+   "map": "medium-mazes-seed-0046",
+   "makespan": 4096,
+   "wall": 15.7
+  },
+  {
+   "map": "medium-mazes-seed-0047",
+   "makespan": 4096,
+   "wall": 13.5
+  },
+  {
+   "map": "medium-mazes-seed-0048",
+   "makespan": 4096,
+   "wall": 14.3
+  },
+  {
+   "map": "medium-mazes-seed-0050",
+   "makespan": 4096,
+   "wall": 19.6
+  },
+  {
+   "map": "medium-mazes-seed-0051",
+   "makespan": 4096,
+   "wall": 14.8
+  },
+  {
+   "map": "medium-mazes-seed-0052",
+   "makespan": 4096,
+   "wall": 13.5
+  },
+  {
+   "map": "medium-mazes-seed-0053",
+   "makespan": 4096,
+   "wall": 15.4
+  },
+  {
+   "map": "medium-mazes-seed-0054",
+   "makespan": 4096,
+   "wall": 15.1
+  },
+  {
+   "map": "medium-mazes-seed-0055",
+   "makespan": 4096,
+   "wall": 15.4
+  },
+  {
+   "map": "medium-mazes-seed-0057",
+   "makespan": 4096,
+   "wall": 14.4
+  },
+  {
+   "map": "medium-mazes-seed-0059",
+   "makespan": 4096,
+   "wall": 14.9
+  },
+  {
+   "map": "medium-mazes-seed-0061",
+   "makespan": 4096,
+   "wall": 17.4
+  },
+  {
+   "map": "medium-mazes-seed-0062",
+   "makespan": 4096,
+   "wall": 16.6
+  },
+  {
+   "map": "medium-mazes-seed-0063",
+   "makespan": 4096,
+   "wall": 14.5
+  },
+  {
+   "map": "medium-mazes-seed-0064",
+   "makespan": 4096,
+   "wall": 16.8
+  },
+  {
+   "map": "medium-mazes-seed-0065",
+   "makespan": 4096,
+   "wall": 16.3
+  },
+  {
+   "map": "medium-mazes-seed-0066",
+   "makespan": 4096,
+   "wall": 12.6
+  },
+  {
+   "map": "medium-mazes-seed-0067",
+   "makespan": 4096,
+   "wall": 14.6
+  },
+  {
+   "map": "medium-mazes-seed-0068",
+   "makespan": 4096,
+   "wall": 17.0
+  },
+  {
+   "map": "medium-mazes-seed-0071",
+   "makespan": 4096,
+   "wall": 16.3
+  },
+  {
+   "map": "medium-mazes-seed-0072",
+   "makespan": 4096,
+   "wall": 16.8
+  },
+  {
+   "map": "medium-mazes-seed-0073",
+   "makespan": 4096,
+   "wall": 19.3
+  },
+  {
+   "map": "medium-mazes-seed-0074",
+   "makespan": 4096,
+   "wall": 19.8
+  },
+  {
+   "map": "medium-mazes-seed-0075",
+   "makespan": 4096,
+   "wall": 14.8
+  },
+  {
+   "map": "medium-mazes-seed-0078",
+   "makespan": 4096,
+   "wall": 16.1
+  },
+  {
+   "map": "medium-mazes-seed-0079",
+   "makespan": 4096,
+   "wall": 14.6
+  }
+ ],
+ "screened_at": "2026-09-04 02:56:21",
+ "config": {
+  "instance": "mk01",
+  "num_agv": 4
+ }
+}

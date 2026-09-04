@@ -1,0 +1,65 @@
+[
+ {
+  "intervention": "none",
+  "executable": true,
+  "delta_kpi": null,
+  "success": null,
+  "note": "不建议干预",
+  "case_id": "v2_baseline_000"
+ },
+ {
+  "intervention": "padding(alpha=0.2)",
+  "executable": true,
+  "delta_kpi": 0.0,
+  "delta_relative": 0.0,
+  "rerun_makespan": 4096,
+  "rerun_finished": false,
+  "success": false,
+  "note": "同 seed=378107 重仿真",
+  "case_id": "v2_disruption_machine_000"
+ },
+ {
+  "intervention": "fleet(K=5)",
+  "executable": true,
+  "delta_kpi": 0.0,
+  "delta_relative": 0.0,
+  "rerun_makespan": 4096,
+  "rerun_finished": false,
+  "success": false,
+  "note": "同 seed=189385 重仿真",
+  "case_id": "v2_disruption_machine_agv_000"
+ },
+ {
+  "intervention": "fleet(K=5)",
+  "executable": true,
+  "delta_kpi": 0.0,
+  "delta_relative": 0.0,
+  "rerun_makespan": 4096,
+  "rerun_finished": false,
+  "success": false,
+  "note": "同 seed=222288 重仿真",
+  "case_id": "v2_disruption_stochastic_000"
+ },
+ {
+  "intervention": "assigner(random)",
+  "executable": true,
+  "delta_kpi": 0.0,
+  "delta_relative": 0.0,
+  "rerun_makespan": 4096,
+  "rerun_finished": false,
+  "success": false,
+  "note": "同 seed=875387 重仿真",
+  "case_id": "v2_blocking_livelock_000"
+ },
+ {
+  "intervention": "padding(alpha=0.1)",
+  "executable": true,
+  "delta_kpi": -1.0,
+  "delta_relative": -0.0016,
+  "rerun_makespan": 610,
+  "rerun_finished": true,
+  "success": false,
+  "note": "同 seed=435775 重仿真",
+  "case_id": "v2_route_disruption_001"
+ }
+]

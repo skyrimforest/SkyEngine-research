@@ -1,0 +1,315 @@
+[
+ {
+  "case_id": "v2_baseline_000",
+  "variant": "easy",
+  "target_class": "baseline",
+  "localization_correct": true,
+  "cause_correct": true,
+  "cause_coarse_correct": true,
+  "unseen_escape": false,
+  "jra": true,
+  "jra_coarse": true,
+  "evidence": {
+   "faithfulness": 1.0,
+   "n_evidence": 1,
+   "n_verified": 1,
+   "lines": [
+    "KPI:n_events_total=0"
+   ]
+  }
+ },
+ {
+  "case_id": "v2_baseline_001",
+  "variant": "easy",
+  "target_class": "baseline",
+  "localization_correct": true,
+  "cause_correct": true,
+  "cause_coarse_correct": true,
+  "unseen_escape": false,
+  "jra": true,
+  "jra_coarse": true,
+  "evidence": {
+   "faithfulness": 1.0,
+   "n_evidence": 1,
+   "n_verified": 1,
+   "lines": [
+    "KPI:n_events_total=0"
+   ]
+  }
+ },
+ {
+  "case_id": "v2_disruption_machine_000",
+  "variant": "easy",
+  "target_class": "disruption_machine",
+  "localization_correct": true,
+  "cause_correct": true,
+  "cause_coarse_correct": true,
+  "unseen_escape": false,
+  "jra": true,
+  "jra_coarse": true,
+  "evidence": {
+   "faithfulness": 1.0,
+   "n_evidence": 1,
+   "n_verified": 1,
+   "lines": [
+    "EVT000"
+   ]
+  }
+ },
+ {
+  "case_id": "v2_disruption_machine_001",
+  "variant": "easy",
+  "target_class": "disruption_machine",
+  "localization_correct": true,
+  "cause_correct": true,
+  "cause_coarse_correct": true,
+  "unseen_escape": false,
+  "jra": true,
+  "jra_coarse": true,
+  "evidence": {
+   "faithfulness": 1.0,
+   "n_evidence": 1,
+   "n_verified": 1,
+   "lines": [
+    "EVT000"
+   ]
+  }
+ },
+ {
+  "case_id": "v2_disruption_machine_002",
+  "variant": "easy",
+  "target_class": "disruption_machine",
+  "localization_correct": true,
+  "cause_correct": true,
+  "cause_coarse_correct": true,
+  "unseen_escape": false,
+  "jra": true,
+  "jra_coarse": true,
+  "evidence": {
+   "faithfulness": 1.0,
+   "n_evidence": 1,
+   "n_verified": 1,
+   "lines": [
+    "EVT000"
+   ]
+  }
+ },
+ {
+  "case_id": "v2_disruption_machine_agv_000",
+  "variant": "easy",
+  "target_class": "disruption_machine_agv",
+  "localization_correct": true,
+  "cause_correct": true,
+  "cause_coarse_correct": true,
+  "unseen_escape": false,
+  "jra": true,
+  "jra_coarse": true,
+  "evidence": {
+   "faithfulness": 1.0,
+   "n_evidence": 2,
+   "n_verified": 2,
+   "lines": [
+    "EVT000",
+    "EVT002"
+   ]
+  }
+ },
+ {
+  "case_id": "v2_disruption_machine_agv_001",
+  "variant": "easy",
+  "target_class": "disruption_machine_agv",
+  "localization_correct": true,
+  "cause_correct": true,
+  "cause_coarse_correct": true,
+  "unseen_escape": false,
+  "jra": true,
+  "jra_coarse": true,
+  "evidence": {
+   "faithfulness": 1.0,
+   "n_evidence": 2,
+   "n_verified": 2,
+   "lines": [
+    "EVT000",
+    "EVT002"
+   ]
+  }
+ },
+ {
+  "case_id": "v2_disruption_machine_agv_002",
+  "variant": "easy",
+  "target_class": "disruption_machine_agv",
+  "localization_correct": true,
+  "cause_correct": true,
+  "cause_coarse_correct": true,
+  "unseen_escape": false,
+  "jra": true,
+  "jra_coarse": true,
+  "evidence": {
+   "faithfulness": 1.0,
+   "n_evidence": 2,
+   "n_verified": 2,
+   "lines": [
+    "EVT000",
+    "EVT002"
+   ]
+  }
+ },
+ {
+  "case_id": "v2_disruption_stochastic_000",
+  "variant": "easy",
+  "target_class": "disruption_stochastic",
+  "localization_correct": false,
+  "cause_correct": false,
+  "cause_coarse_correct": true,
+  "unseen_escape": false,
+  "jra": false,
+  "jra_coarse": false,
+  "evidence": {
+   "faithfulness": 1.0,
+   "n_evidence": 2,
+   "n_verified": 2,
+   "lines": [
+    "EVT002",
+    "EVT008"
+   ]
+  }
+ },
+ {
+  "case_id": "v2_disruption_stochastic_001",
+  "variant": "easy",
+  "target_class": "disruption_stochastic",
+  "localization_correct": false,
+  "cause_correct": false,
+  "cause_coarse_correct": true,
+  "unseen_escape": false,
+  "jra": false,
+  "jra_coarse": false,
+  "evidence": {
+   "faithfulness": 1.0,
+   "n_evidence": 2,
+   "n_verified": 2,
+   "lines": [
+    "EVT002",
+    "EVT007"
+   ]
+  }
+ },
+ {
+  "case_id": "v2_disruption_stochastic_002",
+  "variant": "easy",
+  "target_class": "disruption_stochastic",
+  "localization_correct": false,
+  "cause_correct": false,
+  "cause_coarse_correct": true,
+  "unseen_escape": false,
+  "jra": false,
+  "jra_coarse": false,
+  "evidence": {
+   "faithfulness": 1.0,
+   "n_evidence": 2,
+   "n_verified": 2,
+   "lines": [
+    "EVT004",
+    "EVT002"
+   ]
+  }
+ },
+ {
+  "case_id": "v2_blocking_livelock_000",
+  "variant": "easy",
+  "target_class": "blocking_livelock",
+  "localization_correct": true,
+  "cause_correct": true,
+  "cause_coarse_correct": true,
+  "unseen_escape": false,
+  "jra": true,
+  "jra_coarse": true,
+  "evidence": {
+   "faithfulness": 1.0,
+   "n_evidence": 2,
+   "n_verified": 2,
+   "lines": [
+    "KPI:n_events_total=0",
+    "KPI:tasked_stationary_count(episode均值)=4.000"
+   ]
+  }
+ },
+ {
+  "case_id": "v2_blocking_livelock_001",
+  "variant": "easy",
+  "target_class": "blocking_livelock",
+  "localization_correct": true,
+  "cause_correct": true,
+  "cause_coarse_correct": true,
+  "unseen_escape": false,
+  "jra": true,
+  "jra_coarse": true,
+  "evidence": {
+   "faithfulness": 1.0,
+   "n_evidence": 2,
+   "n_verified": 2,
+   "lines": [
+    "KPI:n_events_total=0",
+    "KPI:tasked_stationary_count(episode均值)=4.000"
+   ]
+  }
+ },
+ {
+  "case_id": "v2_blocking_livelock_002",
+  "variant": "easy",
+  "target_class": "blocking_livelock",
+  "localization_correct": true,
+  "cause_correct": true,
+  "cause_coarse_correct": true,
+  "unseen_escape": false,
+  "jra": true,
+  "jra_coarse": true,
+  "evidence": {
+   "faithfulness": 1.0,
+   "n_evidence": 2,
+   "n_verified": 2,
+   "lines": [
+    "KPI:n_events_total=0",
+    "KPI:tasked_stationary_count(episode均值)=3.000"
+   ]
+  }
+ },
+ {
+  "case_id": "v2_route_disruption_001",
+  "variant": "easy",
+  "target_class": "route_disruption",
+  "localization_correct": true,
+  "cause_correct": false,
+  "cause_coarse_correct": false,
+  "unseen_escape": true,
+  "jra": false,
+  "jra_coarse": false,
+  "evidence": {
+   "faithfulness": 1.0,
+   "n_evidence": 1,
+   "n_verified": 1,
+   "lines": [
+    "EVT000"
+   ]
+  }
+ },
+ {
+  "case_id": "v2_route_disruption_002",
+  "variant": "easy",
+  "target_class": "route_disruption",
+  "localization_correct": true,
+  "cause_correct": false,
+  "cause_coarse_correct": false,
+  "unseen_escape": true,
+  "jra": false,
+  "jra_coarse": false,
+  "evidence": {
+   "faithfulness": 1.0,
+   "n_evidence": 1,
+   "n_verified": 1,
+   "lines": [
+    "EVT000"
+   ]
+  }
+ }
+]
