@@ -1,12 +1,12 @@
 [
  {
-  "loc": 1.0,
-  "cause": 1.0,
-  "jra": 1.0,
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
   "faithful": 1.0,
   "parse": 1,
-  "intervention": "none",
-  "narrative": "该 episode 无中断事件，机器无故障，故完工状态正常。",
+  "intervention": "assigner(least_congestion)",
+  "narrative": "由于AGV阻塞延迟高（2.3454545454545452）和机器利用率低（0.059880239520958084），任务饥饿导致AGV总等待时间高（562）。",
   "case_id": "base_mk01_cpsat|easy",
   "gt": {
    "loc_type": "none",
@@ -14,27 +14,28 @@
    "cause": "baseline"
   },
   "retries": 0,
-  "wall_s": 129.8,
+  "wall_s": 150.1,
   "raw": {
-   "loc_type": "none",
-   "loc_target": "none",
-   "cause": "baseline",
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "starvation_livelock",
    "evidence": [
-    "active_disruption_count=0",
-    "machine_down_steps_total=0"
+    "machine_utilization=0.059880239520958084",
+    "agv_waiting_time_total=562",
+    "transport_blocking_delay_mean=2.3454545454545452"
    ],
-   "intervention": "none",
-   "narrative": "该 episode 无中断事件，机器无故障，故完工状态正常。"
+   "intervention": "assigner(least_congestion)",
+   "narrative": "由于AGV阻塞延迟高（2.3454545454545452）和机器利用率低（0.059880239520958084），任务饥饿导致AGV总等待时间高（562）。"
   }
  },
  {
-  "loc": 1.0,
+  "loc": 0.0,
   "cause": 1.0,
-  "jra": 1.0,
+  "jra": 0.0,
   "faithful": 1.0,
   "parse": 1,
   "intervention": "assigner(least_congestion)",
-  "narrative": "任务静止计数为4，吞吐量仅1，运输阻塞延迟均值9.36。",
+  "narrative": "由于AGV等待总时间高（12551）和运输阻塞延迟平均（9.36），导致4个任务静止，机器利用率极低（0.0058），造成仅1个任务完成。",
   "case_id": "base_mk01_greedy|easy",
   "gt": {
    "loc_type": "corridor",
@@ -42,28 +43,29 @@
    "cause": "blocking_livelock"
   },
   "retries": 0,
-  "wall_s": 193.7,
+  "wall_s": 126.4,
   "raw": {
-   "loc_type": "corridor",
-   "loc_target": "corridor",
+   "loc_type": "agv",
+   "loc_target": "agv",
    "cause": "blocking_livelock",
    "evidence": [
+    "agv_waiting_time_total=12551",
+    "transport_blocking_delay_mean=9.363636363636363",
     "tasked_stationary_count=4",
-    "throughput_jobs=1",
-    "transport_blocking_delay_mean=9.36"
+    "machine_utilization=0.00581868489583333"
    ],
    "intervention": "assigner(least_congestion)",
-   "narrative": "任务静止计数为4，吞吐量仅1，运输阻塞延迟均值9.36。"
+   "narrative": "由于AGV等待总时间高（12551）和运输阻塞延迟平均（9.36），导致4个任务静止，机器利用率极低（0.0058），造成仅1个任务完成。"
   }
  },
  {
-  "loc": 1.0,
+  "loc": 0.0,
   "cause": 1.0,
-  "jra": 1.0,
+  "jra": 0.0,
   "faithful": 1.0,
   "parse": 1,
   "intervention": "assigner(least_congestion)",
-  "narrative": "任务队列平均等待时间为1.0步，AGV总等待时间达3137步，机器利用率仅0.0046，已完成作业数为1，引发任务池饥饿死锁。",
+  "narrative": "机器利用率极低（0.0046）且AGV等待时间总和高（3137），导致仅完成1个作业。",
   "case_id": "emg_starve_00|easy",
   "gt": {
    "loc_type": "task_pool",
@@ -71,19 +73,19 @@
    "cause": "starvation_livelock"
   },
   "retries": 0,
-  "wall_s": 127.2,
+  "wall_s": 132.7,
   "raw": {
-   "loc_type": "task_pool",
-   "loc_target": "task_pool",
+   "loc_type": "machine",
+   "loc_target": "machine",
    "cause": "starvation_livelock",
    "evidence": [
-    "operation_queue_waiting_time_mean=1.0",
-    "agv_waiting_time_total=3137",
     "machine_utilization=0.004638671875",
-    "throughput_jobs=1"
+    "agv_waiting_time_total=3137",
+    "throughput_jobs=1",
+    "transport_blocking_delay_mean=1.7777777777777777"
    ],
    "intervention": "assigner(least_congestion)",
-   "narrative": "任务队列平均等待时间为1.0步，AGV总等待时间达3137步，机器利用率仅0.0046，已完成作业数为1，引发任务池饥饿死锁。"
+   "narrative": "机器利用率极低（0.0046）且AGV等待时间总和高（3137），导致仅完成1个作业。"
   }
  },
  {
@@ -92,8 +94,8 @@
   "jra": 1.0,
   "faithful": 1.0,
   "parse": 1,
-  "intervention": "periodic_revision(T=100)",
-  "narrative": "机器3在第180步发生故障并持续30步，AGV1在第275步发生故障并持续20步，导致资源干扰损失面积50。",
+  "intervention": "fleet(K+1)",
+  "narrative": "机器3故障30步和AGV1故障20步，导致机器利用率低，但任务按时完成。",
   "case_id": "inj_combo_00|easy",
   "gt": {
    "loc_type": "machine_agv",
@@ -101,77 +103,17 @@
    "cause": "disruption_machine_agv"
   },
   "retries": 0,
-  "wall_s": 155.9,
+  "wall_s": 134.9,
   "raw": {
    "loc_type": "machine_agv",
    "loc_target": "machine:3+agv:1",
    "cause": "disruption_machine_agv",
    "evidence": [
     "machine_down_steps_total=30",
-    "agv_down_steps_total=20",
-    "EVT001: step=180, type=machine_breakdown",
-    "EVT003: step=275, type=agv_breakdown"
+    "agv_down_steps_total=20"
    ],
-   "intervention": "periodic_revision(T=100)",
-   "narrative": "机器3在第180步发生故障并持续30步，AGV1在第275步发生故障并持续20步，导致资源干扰损失面积50。"
-  }
- },
- {
-  "loc": 1.0,
-  "cause": 1.0,
-  "jra": 1.0,
-  "faithful": 0.25,
-  "parse": 1,
-  "intervention": "periodic_revision(T=100)",
-  "narrative": "机器0在第150步发生故障，持续40步。",
-  "case_id": "inj_machine_00|easy",
-  "gt": {
-   "loc_type": "machine",
-   "loc_target": "machine:0",
-   "cause": "disruption_machine"
-  },
-  "retries": 0,
-  "wall_s": 140.5,
-  "raw": {
-   "loc_type": "machine",
-   "loc_target": "machine:0",
-   "cause": "disruption_machine",
-   "evidence": [
-    "events[0].step=150",
-    "events[0].type=machine_breakdown",
-    "events[0].payload.machine_id=0",
-    "events[0].payload.duration_steps=40"
-   ],
-   "intervention": "periodic_revision(T=100)",
-   "narrative": "机器0在第150步发生故障，持续40步。"
-  }
- },
- {
-  "loc": 1.0,
-  "cause": 1.0,
-  "jra": 1.0,
-  "faithful": 1.0,
-  "parse": 1,
-  "intervention": "periodic_revision(T=100)",
-  "narrative": "由于agv随机故障导致agv_down_steps_total=56，资源损失面积为66。",
-  "case_id": "inj_stoch_00|easy",
-  "gt": {
-   "loc_type": "stochastic",
-   "loc_target": "stochastic",
-   "cause": "disruption_stochastic"
-  },
-  "retries": 0,
-  "wall_s": 113.8,
-  "raw": {
-   "loc_type": "stochastic",
-   "loc_target": "stochastic",
-   "cause": "disruption_stochastic",
-   "evidence": [
-    "agv_down_steps_total=56",
-    "resource_disruption_loss_area=66"
-   ],
-   "intervention": "periodic_revision(T=100)",
-   "narrative": "由于agv随机故障导致agv_down_steps_total=56，资源损失面积为66。"
+   "intervention": "fleet(K+1)",
+   "narrative": "机器3故障30步和AGV1故障20步，导致机器利用率低，但任务按时完成。"
   }
  }
 ]

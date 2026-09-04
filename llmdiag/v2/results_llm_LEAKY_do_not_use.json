@@ -1,0 +1,3078 @@
+[
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该 episode 无中断事件，机器无故障，故完工状态正常。",
+  "case_id": "base_mk01_cpsat|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 129.8,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "active_disruption_count=0",
+    "machine_down_steps_total=0"
+   ],
+   "intervention": "none",
+   "narrative": "该 episode 无中断事件，机器无故障，故完工状态正常。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "任务静止计数为4，吞吐量仅1，运输阻塞延迟均值9.36。",
+  "case_id": "base_mk01_greedy|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 193.7,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "tasked_stationary_count=4",
+    "throughput_jobs=1",
+    "transport_blocking_delay_mean=9.36"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "任务静止计数为4，吞吐量仅1，运输阻塞延迟均值9.36。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "任务队列平均等待时间为1.0步，AGV总等待时间达3137步，机器利用率仅0.0046，已完成作业数为1，引发任务池饥饿死锁。",
+  "case_id": "emg_starve_00|easy",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  },
+  "retries": 0,
+  "wall_s": 127.2,
+  "raw": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "operation_queue_waiting_time_mean=1.0",
+    "agv_waiting_time_total=3137",
+    "machine_utilization=0.004638671875",
+    "throughput_jobs=1"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "任务队列平均等待时间为1.0步，AGV总等待时间达3137步，机器利用率仅0.0046，已完成作业数为1，引发任务池饥饿死锁。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器3在第180步发生故障并持续30步，AGV1在第275步发生故障并持续20步，导致资源干扰损失面积50。",
+  "case_id": "inj_combo_00|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:3+agv:1",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 155.9,
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:3+agv:1",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "machine_down_steps_total=30",
+    "agv_down_steps_total=20",
+    "EVT001: step=180, type=machine_breakdown",
+    "EVT003: step=275, type=agv_breakdown"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器3在第180步发生故障并持续30步，AGV1在第275步发生故障并持续20步，导致资源干扰损失面积50。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.25,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器0在第150步发生故障，持续40步。",
+  "case_id": "inj_machine_00|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:0",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 140.5,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:0",
+   "cause": "disruption_machine",
+   "evidence": [
+    "events[0].step=150",
+    "events[0].type=machine_breakdown",
+    "events[0].payload.machine_id=0",
+    "events[0].payload.duration_steps=40"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器0在第150步发生故障，持续40步。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "由于agv随机故障导致agv_down_steps_total=56，资源损失面积为66。",
+  "case_id": "inj_stoch_00|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 113.8,
+  "raw": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic",
+   "evidence": [
+    "agv_down_steps_total=56",
+    "resource_disruption_loss_area=66"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "由于agv随机故障导致agv_down_steps_total=56，资源损失面积为66。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该episode在基准配置下完成，无作业延迟、无资源中断。",
+  "case_id": "base_mk01_cpsat|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 112.7,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "tardy_job_count=0",
+    "throughput_jobs=10",
+    "active_disruption_count=0",
+    "machine_down_steps_total=0",
+    "agv_down_steps_total=0"
+   ],
+   "intervention": "none",
+   "narrative": "该episode在基准配置下完成，无作业延迟、无资源中断。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "运输阻塞延迟均值为9.36，AGV等待时间总和为12551，任务静止计数为4，导致阻塞死锁。",
+  "case_id": "base_mk01_greedy|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 144.0,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=9.36",
+    "agv_waiting_time_total=12551",
+    "tasked_stationary_count=4"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "运输阻塞延迟均值为9.36，AGV等待时间总和为12551，任务静止计数为4，导致阻塞死锁。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.75,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该episode运行完成，无任务延迟，吞吐量为10。",
+  "case_id": "base_mk02_cpsat|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 128.3,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "tardy_job_count=0",
+    "total_tardiness=0.0",
+    "throughput_jobs=10",
+    "finished=true"
+   ],
+   "intervention": "none",
+   "narrative": "该episode运行完成，无任务延迟，吞吐量为10。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.667,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该episode在基础状态下完成，无延迟任务且无事件发生。",
+  "case_id": "base_mk02_cpsat|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 146.9,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "agv_waiting_time_total=637",
+    "throughput_jobs=10",
+    "tardy_job_count=0",
+    "total_tardiness=0.0",
+    "makespan=516",
+    "n_events_total=0"
+   ],
+   "intervention": "none",
+   "narrative": "该episode在基础状态下完成，无延迟任务且无事件发生。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该episode无任务迟到且完成10个任务，符合基准运行状态。",
+  "case_id": "base_mk02_greedy|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 138.2,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "tardy_job_count=0",
+    "throughput_jobs=10"
+   ],
+   "intervention": "none",
+   "narrative": "该episode无任务迟到且完成10个任务，符合基准运行状态。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.667,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该episode在基准条件下完成，无延迟任务（tardy_job_count=0），吞吐量为10，总耗时511步。",
+  "case_id": "base_mk02_greedy|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 100.5,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "tardy_job_count=0",
+    "throughput_jobs=10",
+    "makespan=511"
+   ],
+   "intervention": "none",
+   "narrative": "该episode在基准条件下完成，无延迟任务（tardy_job_count=0），吞吐量为10，总耗时511步。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该episode完成状态正常，无中断事件，无任务延迟，15个任务全部按时完成。",
+  "case_id": "base_mk03_cpsat|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 117.6,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "active_disruption_count=0",
+    "machine_down_steps_total=0",
+    "agv_down_steps_total=0",
+    "tasked_stationary_count=0",
+    "tardy_job_count=0",
+    "total_tardiness=0.0",
+    "throughput_jobs=15"
+   ],
+   "intervention": "none",
+   "narrative": "该episode完成状态正常，无中断事件，无任务延迟，15个任务全部按时完成。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该episode无超时任务、无中断事件，系统运行正常。",
+  "case_id": "base_mk03_cpsat|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 96.3,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "tardy_job_count=0",
+    "total_tardiness=0.0",
+    "active_disruption_count=0",
+    "machine_down_steps_total=0",
+    "agv_down_steps_total=0"
+   ],
+   "intervention": "none",
+   "narrative": "该episode无超时任务、无中断事件，系统运行正常。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "由于任务静止计数为1，运输阻塞延迟平均13.043，导致无任务完成。",
+  "case_id": "base_mk03_greedy|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 135.9,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "tasked_stationary_count=1",
+    "transport_blocking_delay_mean=13.043478260869565",
+    "throughput_jobs=0",
+    "agv_waiting_time_total=9380"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "由于任务静止计数为1，运输阻塞延迟平均13.043，导致无任务完成。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "任务静止数量为1，AGV等待时间总和为9380，运输阻塞延迟平均13.043478260869565，导致阻塞死锁。",
+  "case_id": "base_mk03_greedy|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 109.5,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "throughput_jobs=0",
+    "tasked_stationary_count=1",
+    "agv_waiting_time_total=9380",
+    "transport_blocking_delay_mean=13.043478260869565"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "任务静止数量为1，AGV等待时间总和为9380，运输阻塞延迟平均13.043478260869565，导致阻塞死锁。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.75,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "任务池饥饿导致AGV等待时间高达3137步，机器利用率仅0.46%，仅完成1个任务。",
+  "case_id": "emg_starve_00|hard",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  },
+  "retries": 0,
+  "wall_s": 107.7,
+  "raw": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "agv_waiting_time_total=3137",
+    "machine_utilization=0.004638671875",
+    "throughput_jobs=1",
+    "finished=false"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "任务池饥饿导致AGV等待时间高达3137步，机器利用率仅0.46%，仅完成1个任务。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "任务池饥饿导致机器利用率极低（0.00415），操作队列平均等待时间较高（1.785），任务无法及时调度。",
+  "case_id": "emg_starve_02|easy",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  },
+  "retries": 0,
+  "wall_s": 120.8,
+  "raw": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "machine_utilization=0.004150390625",
+    "operation_queue_waiting_time_mean=1.7857142857142858",
+    "agv_waiting_time_total=6221",
+    "throughput_jobs=1"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "任务池饥饿导致机器利用率极低（0.00415），操作队列平均等待时间较高（1.785），任务无法及时调度。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "任务池饥饿死锁：机器利用率极低（0.00415），AGV总等待时间高（6221），仅完成1个任务。",
+  "case_id": "emg_starve_02|hard",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  },
+  "retries": 0,
+  "wall_s": 129.8,
+  "raw": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "machine_utilization=0.00415",
+    "agv_waiting_time_total=6221",
+    "transport_blocking_delay_mean=17.4545",
+    "operation_queue_waiting_time_mean=1.7857",
+    "throughput_jobs=1",
+    "tasked_stationary_count=0"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "任务池饥饿死锁：机器利用率极低（0.00415），AGV总等待时间高（6221），仅完成1个任务。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "任务池任务饥饿导致机器利用率极低（0.014），AGV等待时间总和达3037步，无任务完成。",
+  "case_id": "emg_starve_03|easy",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  },
+  "retries": 0,
+  "wall_s": 144.8,
+  "raw": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "agv_waiting_time_total=3037",
+    "operation_queue_waiting_time_mean=1.0714",
+    "machine_utilization=0.0141",
+    "throughput_jobs=0"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "任务池任务饥饿导致机器利用率极低（0.014），AGV等待时间总和达3037步，无任务完成。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "任务池任务饥饿，机器利用率仅0.014，任务队列平均等待时间1.07步，AGV总等待时间3037步，系统停滞。",
+  "case_id": "emg_starve_03|hard",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  },
+  "retries": 0,
+  "wall_s": 101.6,
+  "raw": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "throughput_jobs=0",
+    "machine_utilization=0.014129638671875",
+    "operation_queue_waiting_time_mean=1.0714285714285714",
+    "agv_waiting_time_total=3037"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "任务池任务饥饿，机器利用率仅0.014，任务队列平均等待时间1.07步，AGV总等待时间3037步，系统停滞。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "机器停机总步数为30，AGV停机总步数为20，资源干扰损失区域为50",
+  "case_id": "inj_combo_00|hard",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:3+agv:1",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 135.4,
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:3+agv:1",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "machine_down_steps_total=30",
+    "agv_down_steps_total=20",
+    "resource_disruption_loss_area=50"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "机器停机总步数为30，AGV停机总步数为20，资源干扰损失区域为50"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "系统在基线条件下完成任务，机器利用率低（0.0356）和AGV等待时间总和高（1062）表明资源效率较低，但无干扰发生。",
+  "case_id": "inj_combo_00_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 116.5,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "machine_utilization=0.03558718861209965",
+    "agv_waiting_time_total=1062",
+    "transport_blocking_delay_mean=2.727272727272727"
+   ],
+   "intervention": "none",
+   "narrative": "系统在基线条件下完成任务，机器利用率低（0.0356）和AGV等待时间总和高（1062）表明资源效率较低，但无干扰发生。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该 episode 无活跃干扰事件，资源恢复完成数为0，机器和AGV均无故障，无延迟作业，完工状态符合基线预期。",
+  "case_id": "inj_combo_00_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 130.9,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "active_disruption_count=0",
+    "resource_recovery_completed_count=0",
+    "machine_down_steps_total=0",
+    "agv_down_steps_total=0",
+    "obstacle_blocked_steps_total=0",
+    "swap_conflict_count=0",
+    "tardy_job_count=0",
+    "total_tardiness=0.0"
+   ],
+   "intervention": "none",
+   "narrative": "该 episode 无活跃干扰事件，资源恢复完成数为0，机器和AGV均无故障，无延迟作业，完工状态符合基线预期。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "由于运输阻塞延迟均值为206.69230769230768，AGV等待时间总和达14136步，导致3个任务静止，引发阻塞死锁。",
+  "case_id": "inj_combo_01_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 134.3,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=206.69230769230768",
+    "agv_waiting_time_total=14136",
+    "tasked_stationary_count=3"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "由于运输阻塞延迟均值为206.69230769230768，AGV等待时间总和达14136步，导致3个任务静止，引发阻塞死锁。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "由于运输阻塞延迟高（206.69）和3个任务静止，系统卡住。",
+  "case_id": "inj_combo_01_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 145.1,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=206.69",
+    "tasked_stationary_count=3"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "由于运输阻塞延迟高（206.69）和3个任务静止，系统卡住。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器4故障停机40步，AGV2故障停机30步，导致生产中断。",
+  "case_id": "inj_combo_02|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:4+agv:2",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 158.2,
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:4+agv:2",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "machine_down_steps_total=40",
+    "agv_down_steps_total=30"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器4故障停机40步，AGV2故障停机30步，导致生产中断。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "因机器中断总步数40、AGV中断总步数30，致资源中断损失区域70；系统通过2次恢复完成处理。",
+  "case_id": "inj_combo_02|hard",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:4+agv:2",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 131.3,
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:4+agv:2",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "machine_down_steps_total=40",
+    "agv_down_steps_total=30",
+    "resource_disruption_loss_area=70",
+    "resource_recovery_completed_count=2"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "因机器中断总步数40、AGV中断总步数30，致资源中断损失区域70；系统通过2次恢复完成处理。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "系统运行稳定，无活跃中断事件，无阻塞，任务按时完成。",
+  "case_id": "inj_combo_02_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 128.0,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "active_disruption_count=0",
+    "obstacle_blocked_steps_total=0",
+    "machine_down_steps_total=0",
+    "agv_down_steps_total=0",
+    "tardy_job_count=0",
+    "throughput_jobs=15"
+   ],
+   "intervention": "none",
+   "narrative": "系统运行稳定，无活跃中断事件，无阻塞，任务按时完成。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "本episode无干扰事件，所有资源正常运行，系统处于基准状态。",
+  "case_id": "inj_combo_02_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 100.3,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "active_disruption_count=0",
+    "machine_down_steps_total=0",
+    "agv_down_steps_total=0",
+    "resource_recovery_completed_count=0",
+    "resource_time_to_recover_mean=0.0",
+    "obstacle_blocked_steps_total=0",
+    "swap_conflict_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "本episode无干扰事件，所有资源正常运行，系统处于基准状态。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "运输阻塞延迟平均50步，任务静止计数为2，导致阻塞死锁。",
+  "case_id": "inj_combo_03_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 117.4,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=50.0",
+    "tasked_stationary_count=2"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "运输阻塞延迟平均50步，任务静止计数为2，导致阻塞死锁。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "运输阻塞延迟平均50步，2个任务静止，机器利用率仅0.655%，导致阻塞死锁。",
+  "case_id": "inj_combo_03_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 165.2,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=50.0",
+    "tasked_stationary_count=2",
+    "machine_utilization=0.006551",
+    "agv_waiting_time_total=14512"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "运输阻塞延迟平均50步，2个任务静止，机器利用率仅0.655%，导致阻塞死锁。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "由于机器5在第145步发生故障持续60步，同时AGV3在第245步发生故障持续20步，导致系统中断。",
+  "case_id": "inj_combo_04|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:5+agv:3",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 136.7,
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:5+agv:3",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "machine_down_steps_total=60",
+    "agv_down_steps_total=20"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "由于机器5在第145步发生故障持续60步，同时AGV3在第245步发生故障持续20步，导致系统中断。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器中断步数为60，AGV中断步数为20，资源中断损失面积为80",
+  "case_id": "inj_combo_04|hard",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:5+agv:3",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 123.2,
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:5+agv:3",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "machine_down_steps_total=60",
+    "agv_down_steps_total=20",
+    "resource_disruption_loss_area=80"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器中断步数为60，AGV中断步数为20，资源中断损失面积为80"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该episode在基准配置下运行，机器利用率低（0.048），AGV总等待时间618，无活动中断事件，故完工状态正常。",
+  "case_id": "inj_combo_04_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 162.7,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "machine_utilization=0.04818181818181818",
+    "agv_waiting_time_total=618",
+    "active_disruption_count=0",
+    "throughput_jobs=10"
+   ],
+   "intervention": "none",
+   "narrative": "该episode在基准配置下运行，机器利用率低（0.048），AGV总等待时间618，无活动中断事件，故完工状态正常。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该episode在基准配置下运行，无主动干扰事件（active_disruption_count=0）且无交换冲突（swap_conflict_count=0），因此完工状态正常。",
+  "case_id": "inj_combo_04_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 115.7,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "active_disruption_count=0",
+    "swap_conflict_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "该episode在基准配置下运行，无主动干扰事件（active_disruption_count=0）且无交换冲突（swap_conflict_count=0），因此完工状态正常。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "运输阻塞延迟平均值209.79步，任务吞吐量为0。",
+  "case_id": "inj_combo_05_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 211.3,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=209.79",
+    "throughput_jobs=0"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "运输阻塞延迟平均值209.79步，任务吞吐量为0。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "由于运输阻塞延迟平均值为209.79166666666666，任务吞吐量为0，且有2个任务静止，导致系统出现阻塞活锁。",
+  "case_id": "inj_combo_05_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 114.4,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=209.79166666666666",
+    "throughput_jobs=0",
+    "tasked_stationary_count=2",
+    "agv_waiting_time_total=10631"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "由于运输阻塞延迟平均值为209.79166666666666，任务吞吐量为0，且有2个任务静止，导致系统出现阻塞活锁。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "由于机器2和AGV3发生故障，导致机器停机步骤30、AGV停机步骤30及AGV等待时间总729。",
+  "case_id": "inj_combo_06|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:3",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 83.2,
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:3",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "machine_down_steps_total=30",
+    "agv_down_steps_total=30",
+    "agv_waiting_time_total=729"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "由于机器2和AGV3发生故障，导致机器停机步骤30、AGV停机步骤30及AGV等待时间总729。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器2和AGV3各中断30步，资源中断损失面积达60",
+  "case_id": "inj_combo_06|hard",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:3",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 103.9,
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:3",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "machine_down_steps_total=30",
+    "agv_down_steps_total=30",
+    "resource_disruption_loss_area=60"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器2和AGV3各中断30步，资源中断损失面积达60"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该episode完成10个任务无延迟，无活动干扰事件，状态符合基准。",
+  "case_id": "inj_combo_06_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 94.4,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "tardy_job_count=0",
+    "throughput_jobs=10",
+    "active_disruption_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "该episode完成10个任务无延迟，无活动干扰事件，状态符合基准。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "系统无活动中断事件、无机器停机、无AGV停机、无延迟作业，完工状态正常。",
+  "case_id": "inj_combo_06_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 129.2,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "active_disruption_count=0",
+    "machine_down_steps_total=0",
+    "agv_down_steps_total=0",
+    "tardy_job_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "系统无活动中断事件、无机器停机、无AGV停机、无延迟作业，完工状态正常。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "运输阻塞平均延迟为63.4，导致5个任务静止。",
+  "case_id": "inj_combo_07_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 98.6,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=63.4",
+    "tasked_stationary_count=5"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "运输阻塞平均延迟为63.4，导致5个任务静止。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "由于AGV总等待时间高达16815，运输阻塞延迟平均为63.4，导致5个任务在工作站静止，形成阻塞死锁。",
+  "case_id": "inj_combo_07_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 116.9,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=16815",
+    "transport_blocking_delay_mean=63.4",
+    "tasked_stationary_count=5"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "由于AGV总等待时间高达16815，运输阻塞延迟平均为63.4，导致5个任务在工作站静止，形成阻塞死锁。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "运输阻塞延迟平均为20.333333333333332步，5个任务静止，任务队列平均等待时间为1.1666666666666667步，导致阻塞死锁。",
+  "case_id": "inj_combo_09_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 114.4,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=20.333333333333332",
+    "tasked_stationary_count=5",
+    "operation_queue_waiting_time_mean=1.1666666666666667"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "运输阻塞延迟平均为20.333333333333332步，5个任务静止，任务队列平均等待时间为1.1666666666666667步，导致阻塞死锁。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "由于运输阻塞延迟平均值为20.333333333333332步，且5个任务处于静止状态，导致机器利用率仅0.006266276041666667，仅完成3个作业，系统未完成。",
+  "case_id": "inj_combo_09_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 151.0,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=20.333333333333332",
+    "tasked_stationary_count=5",
+    "machine_utilization=0.006266276041666667",
+    "throughput_jobs=3"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "由于运输阻塞延迟平均值为20.333333333333332步，且5个任务处于静止状态，导致机器利用率仅0.006266276041666667，仅完成3个作业，系统未完成。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器2故障停机40步，AGV1故障停机20步。",
+  "case_id": "inj_combo_10|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:1",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 131.0,
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:1",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "machine_down_steps_total=40",
+    "agv_down_steps_total=20"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器2故障停机40步，AGV1故障停机20步。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器停机总步数40步，AGV停机总步数20步，资源中断损失区域60，导致机器与AGV协同中断。",
+  "case_id": "inj_combo_10|hard",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:1",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 125.5,
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:1",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "machine_down_steps_total=40",
+    "agv_down_steps_total=20",
+    "resource_disruption_loss_area=60"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器停机总步数40步，AGV停机总步数20步，资源中断损失区域60，导致机器与AGV协同中断。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "基准调度下无任务延迟（tardy_job_count=0），系统成功完成10个任务",
+  "case_id": "inj_combo_10_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 74.2,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "tardy_job_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "基准调度下无任务延迟（tardy_job_count=0），系统成功完成10个任务"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.889,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该episode在无干扰条件下完成10个任务，机器利用率低但无任务延迟，表明基准调度方案运行正常。",
+  "case_id": "inj_combo_10_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 108.9,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "machine_utilization=0.03571428571428571",
+    "throughput_jobs=10",
+    "tardy_job_count=0",
+    "makespan=740",
+    "agv_busy_utilization=0.6974393530997305",
+    "agv_waiting_time_total=898",
+    "active_disruption_count=0",
+    "resource_recovery_completed_count=0",
+    "swap_conflict_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "该episode在无干扰条件下完成10个任务，机器利用率低但无任务延迟，表明基准调度方案运行正常。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "运输阻塞延迟均值为22.444444444444443，无任务完成，存在2个静止任务",
+  "case_id": "inj_combo_11_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 122.7,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=22.444444444444443",
+    "throughput_jobs=0",
+    "tasked_stationary_count=2"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "运输阻塞延迟均值为22.444444444444443，无任务完成，存在2个静止任务"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "运输阻塞延迟均值为22.4444，AGV总等待时间为14685，机器利用率为0.0238，无任务完成。",
+  "case_id": "inj_combo_11_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 135.4,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=22.444444444444443",
+    "agv_waiting_time_total=14685",
+    "machine_utilization=0.0238037109375",
+    "throughput_jobs=0"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "运输阻塞延迟均值为22.4444，AGV总等待时间为14685，机器利用率为0.0238，无任务完成。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器0在40步内发生故障，导致资源平均恢复时间40步。",
+  "case_id": "inj_machine_00|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:0",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 105.7,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:0",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=40",
+    "resource_time_to_recover_mean=40.0"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器0在40步内发生故障，导致资源平均恢复时间40步。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.75,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该episode在基准配置下运行，无活跃中断事件，机器和AGV均无停机。",
+  "case_id": "inj_machine_00_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 117.7,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "active_disruption_count=0",
+    "machine_down_steps_total=0",
+    "agv_down_steps_total=0",
+    "n_events_total=0"
+   ],
+   "intervention": "none",
+   "narrative": "该episode在基准配置下运行，无活跃中断事件，机器和AGV均无停机。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.5,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该episode任务准时完成，总耗时499步。",
+  "case_id": "inj_machine_00_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 129.3,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "tardy_job_count=0",
+    "makespan=499"
+   ],
+   "intervention": "none",
+   "narrative": "该episode任务准时完成，总耗时499步。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "任务池饥饿导致机器利用率极低（0.0075），操作队列平均等待时间达1.36，运输阻塞延迟高（109.36）",
+  "case_id": "inj_machine_01_T|easy",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  },
+  "retries": 0,
+  "wall_s": 141.0,
+  "raw": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "machine_utilization=0.007527669270833333",
+    "operation_queue_waiting_time_mean=1.3571428571428572",
+    "transport_blocking_delay_mean=109.36363636363636"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "任务池饥饿导致机器利用率极低（0.0075），操作队列平均等待时间达1.36，运输阻塞延迟高（109.36）"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "任务池饥饿导致机器利用率极低（0.007527669270833333），任务队列平均等待时间约1.357，AGV总等待时间15066，运输阻塞延迟平均109.36。",
+  "case_id": "inj_machine_01_T|hard",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  },
+  "retries": 0,
+  "wall_s": 142.6,
+  "raw": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "machine_utilization=0.007527669270833333",
+    "operation_queue_waiting_time_mean=1.3571428571428572",
+    "agv_waiting_time_total=15066",
+    "transport_blocking_delay_mean=109.36363636363636"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "任务池饥饿导致机器利用率极低（0.007527669270833333），任务队列平均等待时间约1.357，AGV总等待时间15066，运输阻塞延迟平均109.36。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器3发生故障（持续20步），导致机器利用率低（0.09635119726339794）和资源损失区域20。",
+  "case_id": "inj_machine_02|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 133.8,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=20",
+    "machine_utilization=0.09635119726339794",
+    "resource_disruption_loss_area=20"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器3发生故障（持续20步），导致机器利用率低（0.09635119726339794）和资源损失区域20。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "机器停机总步数为20，资源干扰损失面积为20，导致机器干扰。",
+  "case_id": "inj_machine_02|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 140.5,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=20",
+    "resource_disruption_loss_area=20"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "机器停机总步数为20，资源干扰损失面积为20，导致机器干扰。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该episode机器利用率低（0.096），无作业延迟，属于基准运行状态。",
+  "case_id": "inj_machine_02_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 120.6,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "machine_utilization=0.09635119726339794",
+    "tardy_job_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "该episode机器利用率低（0.096），无作业延迟，属于基准运行状态。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该episode无活动中断事件，无延迟作业，系统完成15个作业，符合基准运行状态。",
+  "case_id": "inj_machine_02_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 142.7,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "active_disruption_count=0",
+    "tardy_job_count=0",
+    "throughput_jobs=15"
+   ],
+   "intervention": "none",
+   "narrative": "该episode无活动中断事件，无延迟作业，系统完成15个作业，符合基准运行状态。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "由于AGV总等待时间16902步，运输阻塞延迟均值7.43，导致无任务完成。",
+  "case_id": "inj_machine_03_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 175.8,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=16902",
+    "transport_blocking_delay_mean=7.428571428571429",
+    "throughput_jobs=0"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "由于AGV总等待时间16902步，运输阻塞延迟均值7.43，导致无任务完成。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "运输阻塞延迟平均为7.428571428571429步，且有3个任务静止，导致系统陷入阻塞活锁。",
+  "case_id": "inj_machine_03_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 178.1,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=7.428571428571429",
+    "tasked_stationary_count=3"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "运输阻塞延迟平均为7.428571428571429步，且有3个任务静止，导致系统陷入阻塞活锁。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "机器2在第221步发生故障，导致停机60步",
+  "case_id": "inj_machine_04|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 126.9,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=60",
+    "EVT001: type=machine_breakdown"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "机器2在第221步发生故障，导致停机60步"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "机器利用率极低（0.044）且机器停机总步数为60，导致任务完成效率低下。",
+  "case_id": "inj_machine_04|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 121.8,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_utilization=0.044141252006420544",
+    "machine_down_steps_total=60",
+    "resource_disruption_loss_area=60"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "机器利用率极低（0.044）且机器停机总步数为60，导致任务完成效率低下。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.875,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该episode在基础调度下完成，无中断事件，机器利用率低但所有作业准时完成。",
+  "case_id": "inj_machine_04_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 152.2,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "machine_utilization=0.0423",
+    "throughput_jobs=10",
+    "makespan=624",
+    "tardy_job_count=0",
+    "total_tardiness=0.0",
+    "machine_down_steps_total=0",
+    "agv_down_steps_total=0",
+    "active_disruption_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "该episode在基础调度下完成，无中断事件，机器利用率低但所有作业准时完成。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.833,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该episode在基线条件下运行，无干扰事件，无机器或AGV故障，事件流为空。",
+  "case_id": "inj_machine_04_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 165.4,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "active_disruption_count=0",
+    "machine_down_steps_total=0",
+    "agv_down_steps_total=0",
+    "obstacle_blocked_steps_total=0",
+    "swap_conflict_count=0",
+    "n_events_total=0"
+   ],
+   "intervention": "none",
+   "narrative": "该episode在基线条件下运行，无干扰事件，无机器或AGV故障，事件流为空。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "运输阻塞平均延迟24.07步，AGV总等待时间12097步，任务吞吐量为0，引发阻塞死锁。",
+  "case_id": "inj_machine_05_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 124.5,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=24.074074074074073",
+    "agv_waiting_time_total=12097",
+    "throughput_jobs=0"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "运输阻塞平均延迟24.07步，AGV总等待时间12097步，任务吞吐量为0，引发阻塞死锁。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "运输阻塞延迟均值为24.074，AGV总等待时间为12097，任务静止计数为3，导致阻塞死锁。",
+  "case_id": "inj_machine_05_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 121.4,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=24.074",
+    "agv_waiting_time_total=12097",
+    "tasked_stationary_count=3"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "运输阻塞延迟均值为24.074，AGV总等待时间为12097，任务静止计数为3，导致阻塞死锁。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该episode系统无机器故障、无AGV故障、无活跃中断，所有作业按时完成。",
+  "case_id": "inj_machine_06_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 132.9,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "machine_down_steps_total=0",
+    "agv_down_steps_total=0",
+    "active_disruption_count=0",
+    "tardy_job_count=0",
+    "throughput_jobs=10"
+   ],
+   "intervention": "none",
+   "narrative": "该episode系统无机器故障、无AGV故障、无活跃中断，所有作业按时完成。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该 episode 无干扰事件，系统运行在基准状态。",
+  "case_id": "inj_machine_06_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 126.1,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "active_disruption_count=0",
+    "resource_recovery_completed_count=0",
+    "machine_down_steps_total=0",
+    "agv_down_steps_total=0",
+    "obstacle_blocked_steps_total=0",
+    "swap_conflict_count=0",
+    "tardy_job_count=0",
+    "total_tardiness=0.0"
+   ],
+   "intervention": "none",
+   "narrative": "该 episode 无干扰事件，系统运行在基准状态。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "由于AGV等待时间总和为16492且任务静止计数为4，导致运输阻塞延迟均值达181.277，引发阻塞死锁。",
+  "case_id": "inj_machine_07_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 132.8,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=181.27777777777777",
+    "agv_waiting_time_total=16492",
+    "tasked_stationary_count=4"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "由于AGV等待时间总和为16492且任务静止计数为4，导致运输阻塞延迟均值达181.277，引发阻塞死锁。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV等待时间总和高（16492）和运输阻塞延迟均值高（181.28）导致任务静止计数高（4），引发阻塞死锁。",
+  "case_id": "inj_machine_07_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 139.8,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=16492",
+    "transport_blocking_delay_mean=181.27777777777777",
+    "tasked_stationary_count=4"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV等待时间总和高（16492）和运输阻塞延迟均值高（181.28）导致任务静止计数高（4），引发阻塞死锁。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器4停机60步，资源中断损失面积60。",
+  "case_id": "inj_machine_08|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:4",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 127.1,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:4",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=60",
+    "resource_disruption_loss_area=60"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器4停机60步，资源中断损失面积60。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器4发生中断，导致机器停机步骤总和为60，资源中断损失面积为60。",
+  "case_id": "inj_machine_08|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:4",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 130.7,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:4",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=60",
+    "resource_disruption_loss_area=60"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器4发生中断，导致机器停机步骤总和为60，资源中断损失面积为60。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.75,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "系统运行于基准模式，无活动中断事件，无任务延迟，15个任务在1848时间步内完成。",
+  "case_id": "inj_machine_08_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 110.1,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "active_disruption_count=0",
+    "tardy_job_count=0",
+    "throughput_jobs=15",
+    "makespan=1848"
+   ],
+   "intervention": "none",
+   "narrative": "系统运行于基准模式，无活动中断事件，无任务延迟，15个任务在1848时间步内完成。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.833,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该 episode 在基准情况下运行，机器利用率低（0.09135135135135135）但无中断，AGV 等待时间总和为1368，任务按时完成。",
+  "case_id": "inj_machine_08_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 182.6,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "machine_utilization=0.09135135135135135",
+    "agv_busy_utilization=0.8151351351351351",
+    "agv_waiting_time_total=1368",
+    "transport_blocking_delay_mean=2.1911764705882355",
+    "throughput_jobs=15",
+    "makespan=1848"
+   ],
+   "intervention": "none",
+   "narrative": "该 episode 在基准情况下运行，机器利用率低（0.09135135135135135）但无中断，AGV 等待时间总和为1368，任务按时完成。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "任务静止数量为4，运输阻塞延迟均值22.5，导致无任务完成。",
+  "case_id": "inj_machine_09_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 121.6,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "tasked_stationary_count=4",
+    "transport_blocking_delay_mean=22.5",
+    "agv_waiting_time_total=14468",
+    "throughput_jobs=0"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "任务静止数量为4，运输阻塞延迟均值22.5，导致无任务完成。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "静止任务数量为4，运输阻塞延迟均值22.5，导致系统未完成。",
+  "case_id": "inj_machine_09_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 139.7,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=22.5",
+    "tasked_stationary_count=4",
+    "throughput_jobs=0"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "静止任务数量为4，运输阻塞延迟均值22.5，导致系统未完成。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.4,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器3发生故障，持续20步，于第187步完成恢复。",
+  "case_id": "inj_machine_10|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 138.4,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=20",
+    "events.EVT001.type=machine_breakdown",
+    "events.EVT001.payload.machine_id=3",
+    "events.EVT001.payload.duration_steps=20",
+    "events.EVT002.step=187"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器3发生故障，持续20步，于第187步完成恢复。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器3中断，导致机器利用率仅0.0516，资源中断损失区域为20步。",
+  "case_id": "inj_machine_10|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 150.8,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=20",
+    "resource_disruption_loss_area=20",
+    "machine_utilization=0.0516"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器3中断，导致机器利用率仅0.0516，资源中断损失区域为20步。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该episode在基准配置下完成，无中断事件，任务按时完成。",
+  "case_id": "inj_machine_10_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 138.0,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "throughput_jobs=10",
+    "tardy_job_count=0",
+    "active_disruption_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "该episode在基准配置下完成，无中断事件，任务按时完成。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.75,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该episode完成10个任务，无延迟任务，无总延迟。",
+  "case_id": "inj_machine_10_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 139.3,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "throughput_jobs=10",
+    "tardy_job_count=0",
+    "total_tardiness=0.0",
+    "finished=true"
+   ],
+   "intervention": "none",
+   "narrative": "该episode完成10个任务，无延迟任务，无总延迟。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "任务队列平均等待时间达4.36步，AGV总等待时间11040步，导致系统未完成任务。",
+  "case_id": "inj_machine_11_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 196.2,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "throughput_jobs=0",
+    "operation_queue_waiting_time_mean=4.357",
+    "agv_waiting_time_total=11040",
+    "transport_blocking_delay_mean=80.325"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "任务队列平均等待时间达4.36步，AGV总等待时间11040步，导致系统未完成任务。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "运输阻塞延迟平均为80.325，AGV总等待时间达11040，导致1个任务停滞。",
+  "case_id": "inj_machine_11_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 151.2,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=80.325",
+    "agv_waiting_time_total=11040",
+    "tasked_stationary_count=1"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "运输阻塞延迟平均为80.325，AGV总等待时间达11040，导致1个任务停滞。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "机器2发生故障，持续40步，导致机器下线步数为40",
+  "case_id": "inj_machine_12|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 167.6,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=40",
+    "events[0].type=machine_breakdown",
+    "events[0].payload.machine_id=2"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "机器2发生故障，持续40步，导致机器下线步数为40"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "fleet(K+1)",
+  "narrative": "由于机器2下线40步，导致机器利用率仅4.14%，任务队列平均等待时间1.15秒。",
+  "case_id": "inj_machine_12|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 174.0,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=40",
+    "resource_disruption_loss_area=40",
+    "machine_utilization=0.0414"
+   ],
+   "intervention": "fleet(K+1)",
+   "narrative": "由于机器2下线40步，导致机器利用率仅4.14%，任务队列平均等待时间1.15秒。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该episode在基准调度下完成，无活动中断（active_disruption_count=0）且无任务延迟（tardy_job_count=0）。",
+  "case_id": "inj_machine_12_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 134.6,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "active_disruption_count=0",
+    "swap_conflict_count=0",
+    "tardy_job_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "该episode在基准调度下完成，无活动中断（active_disruption_count=0）且无任务延迟（tardy_job_count=0）。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该episode机器利用率仅0.0415，AGV利用率73.48%，AGV总等待时间767步，系统完成10个任务且无延迟，属于基准运行状态。",
+  "case_id": "inj_machine_12_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 178.9,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "machine_utilization=0.0415",
+    "agv_busy_utilization=0.7348",
+    "agv_waiting_time_total=767"
+   ],
+   "intervention": "none",
+   "narrative": "该episode机器利用率仅0.0415，AGV利用率73.48%，AGV总等待时间767步，系统完成10个任务且无延迟，属于基准运行状态。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "由于机器利用率极低（0.00581868489583333）和AGV等待时间总和高达16205，导致运输阻塞延迟均值为10.5，仅完成1个任务。",
+  "case_id": "inj_machine_13_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 186.4,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "machine_utilization=0.00581868489583333",
+    "agv_waiting_time_total=16205",
+    "transport_blocking_delay_mean=10.5",
+    "throughput_jobs=1"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "由于机器利用率极低（0.00581868489583333）和AGV等待时间总和高达16205，导致运输阻塞延迟均值为10.5，仅完成1个任务。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "运输阻塞延迟均值为10.5，任务静止计数为3，导致阻塞死锁。",
+  "case_id": "inj_machine_13_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 111.8,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=10.5",
+    "tasked_stationary_count=3",
+    "agv_waiting_time_total=16205"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "运输阻塞延迟均值为10.5，任务静止计数为3，导致阻塞死锁。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "机器6在第243步发生故障，停机40步，导致资源损失40步。",
+  "case_id": "inj_machine_14|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:6",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 128.7,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:6",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=40",
+    "resource_disruption_loss_area=40",
+    "EVT001: step=243, type=machine_breakdown, machine_id=6"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "机器6在第243步发生故障，停机40步，导致资源损失40步。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "关键机器6停机40步，资源中断损失区域40，AGV等待时间总和1308。",
+  "case_id": "inj_machine_14|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:6",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 163.3,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:6",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=40",
+    "resource_disruption_loss_area=40",
+    "agv_waiting_time_total=1308"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "关键机器6停机40步，资源中断损失区域40，AGV等待时间总和1308。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "系统无主动中断事件、无资源恢复完成、无机器故障、无AGV故障、无交换冲突。",
+  "case_id": "inj_machine_14_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 142.9,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "active_disruption_count=0",
+    "resource_recovery_completed_count=0",
+    "machine_down_steps_total=0",
+    "agv_down_steps_total=0",
+    "swap_conflict_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "系统无主动中断事件、无资源恢复完成、无机器故障、无AGV故障、无交换冲突。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该episode在基准情况下运行，无干扰事件，所有任务按时完成。",
+  "case_id": "inj_machine_14_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 102.6,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "active_disruption_count=0",
+    "machine_down_steps_total=0",
+    "agv_down_steps_total=0",
+    "tardy_job_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "该episode在基准情况下运行，无干扰事件，所有任务按时完成。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "运输阻塞延迟平均为30.28步，导致走廊活锁问题。",
+  "case_id": "inj_machine_15_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 124.4,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=30.28"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "运输阻塞延迟平均为30.28步，导致走廊活锁问题。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "运输阻塞延迟均值为30.28，AGV等待时间总和达19936，导致2个任务静止。",
+  "case_id": "inj_machine_15_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 164.5,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=30.28",
+    "agv_waiting_time_total=19936",
+    "tasked_stationary_count=2"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "运输阻塞延迟均值为30.28，AGV等待时间总和达19936，导致2个任务静止。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "随机扰动导致资源损失面积为66，机器停机10步，AGV停机56步。",
+  "case_id": "inj_stoch_00|hard",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 150.7,
+  "raw": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic",
+   "evidence": [
+    "resource_disruption_loss_area=66",
+    "machine_down_steps_total=10",
+    "agv_down_steps_total=56"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "随机扰动导致资源损失面积为66，机器停机10步，AGV停机56步。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "fleet(K+1)",
+  "narrative": "随机故障事件导致AGV和机器频繁下线，AGV总等待时间达1473步。",
+  "case_id": "inj_stoch_02|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 154.6,
+  "raw": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic",
+   "evidence": [
+    "agv_down_steps_total=88",
+    "machine_down_steps_total=40",
+    "agv_waiting_time_total=1473"
+   ],
+   "intervention": "fleet(K+1)",
+   "narrative": "随机故障事件导致AGV和机器频繁下线，AGV总等待时间达1473步。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "随机扰动导致资源中断损失区域为128，机器停机步骤40，AGV停机步骤88。",
+  "case_id": "inj_stoch_02|hard",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 118.2,
+  "raw": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic",
+   "evidence": [
+    "resource_disruption_loss_area=128",
+    "machine_down_steps_total=40",
+    "agv_down_steps_total=88"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "随机扰动导致资源中断损失区域为128，机器停机步骤40，AGV停机步骤88。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "随机AGV故障和机器故障导致任务等待时间长（agv_waiting_time_total=520），系统最终完成。",
+  "case_id": "inj_stoch_04|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 93.9,
+  "raw": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic",
+   "evidence": [
+    "agv_waiting_time_total=520",
+    "machine_utilization=0.05",
+    "agv_breakdown:agv_id=0,step=29",
+    "agv_breakdown:agv_id=3,step=88",
+    "machine_breakdown:machine_id=3,step=96"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "随机AGV故障和机器故障导致任务等待时间长（agv_waiting_time_total=520），系统最终完成。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "资源中断损失区域为26，机器下线总步数10，AGV下线总步数16，系统在随机中断下完成任务且无延迟。",
+  "case_id": "inj_stoch_04|hard",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 126.7,
+  "raw": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic",
+   "evidence": [
+    "resource_disruption_loss_area=26",
+    "machine_down_steps_total=10",
+    "agv_down_steps_total=16",
+    "tardy_job_count=0",
+    "total_tardiness=0.0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "资源中断损失区域为26，机器下线总步数10，AGV下线总步数16，系统在随机中断下完成任务且无延迟。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "fleet(K+1)",
+  "narrative": "随机agv故障导致停机，造成运输阻塞和操作队列等待。",
+  "case_id": "inj_stoch_06|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 116.3,
+  "raw": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic",
+   "evidence": [
+    "agv_down_steps_total=48",
+    "resource_disruption_loss_area=48",
+    "agv_waiting_time_total=872"
+   ],
+   "intervention": "fleet(K+1)",
+   "narrative": "随机agv故障导致停机，造成运输阻塞和操作队列等待。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "随机扰动导致AGV下线48步，资源损失区域48，恢复平均时间8.0",
+  "case_id": "inj_stoch_06|hard",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 94.9,
+  "raw": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic",
+   "evidence": [
+    "agv_down_steps_total=48",
+    "resource_disruption_loss_area=48",
+    "resource_time_to_recover_mean=8.0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "随机扰动导致AGV下线48步，资源损失区域48，恢复平均时间8.0"
+  }
+ }
+]

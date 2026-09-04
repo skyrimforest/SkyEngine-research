@@ -26,8 +26,16 @@ SYSTEM = """你是FJSP+MAPF柔性制造仿真系统的调度诊断专家。根�
 只输出一个JSON对象。"""
 
 
+def model_view(case: dict) -> dict:
+    """防泄露视图: 只给模型看档案本体。ground_truth/meta/scen_id/case_id/variant 一律不出。
+    (20260904 事故: 全量首跑 100% 系 ground_truth 随 json.dumps 整体入 prompt 所致, 全部作废)"""
+    return {"config": case.get("config"), "kpi": case.get("kpi"),
+            "events": case.get("events", []),
+            "revisions": case.get("revisions"), "query": case.get("query")}
+
+
 def call_llm(case: dict) -> tuple[dict | None, int, float]:
-    user = (f"## 运行档案\n{json.dumps(case, ensure_ascii=False)}\n\n"
+    user = (f"## 运行档案\n{json.dumps(model_view(case), ensure_ascii=False)}\n\n"
             f"## 查询\n{case['query']}\n请只输出诊断JSON。/no_think")
     msgs = [{"role": "system", "content": SYSTEM}, {"role": "user", "content": user}]
     for attempt in range(3):  # JsonRegen: 解析失败带反馈重试
