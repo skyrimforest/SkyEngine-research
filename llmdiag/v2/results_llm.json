@@ -1,0 +1,177 @@
+[
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "该 episode 无中断事件，机器无故障，故完工状态正常。",
+  "case_id": "base_mk01_cpsat|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 129.8,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "active_disruption_count=0",
+    "machine_down_steps_total=0"
+   ],
+   "intervention": "none",
+   "narrative": "该 episode 无中断事件，机器无故障，故完工状态正常。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "任务静止计数为4，吞吐量仅1，运输阻塞延迟均值9.36。",
+  "case_id": "base_mk01_greedy|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 193.7,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "tasked_stationary_count=4",
+    "throughput_jobs=1",
+    "transport_blocking_delay_mean=9.36"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "任务静止计数为4，吞吐量仅1，运输阻塞延迟均值9.36。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "任务队列平均等待时间为1.0步，AGV总等待时间达3137步，机器利用率仅0.0046，已完成作业数为1，引发任务池饥饿死锁。",
+  "case_id": "emg_starve_00|easy",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  },
+  "retries": 0,
+  "wall_s": 127.2,
+  "raw": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "operation_queue_waiting_time_mean=1.0",
+    "agv_waiting_time_total=3137",
+    "machine_utilization=0.004638671875",
+    "throughput_jobs=1"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "任务队列平均等待时间为1.0步，AGV总等待时间达3137步，机器利用率仅0.0046，已完成作业数为1，引发任务池饥饿死锁。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器3在第180步发生故障并持续30步，AGV1在第275步发生故障并持续20步，导致资源干扰损失面积50。",
+  "case_id": "inj_combo_00|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:3+agv:1",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 155.9,
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:3+agv:1",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "machine_down_steps_total=30",
+    "agv_down_steps_total=20",
+    "EVT001: step=180, type=machine_breakdown",
+    "EVT003: step=275, type=agv_breakdown"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器3在第180步发生故障并持续30步，AGV1在第275步发生故障并持续20步，导致资源干扰损失面积50。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.25,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器0在第150步发生故障，持续40步。",
+  "case_id": "inj_machine_00|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:0",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 140.5,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:0",
+   "cause": "disruption_machine",
+   "evidence": [
+    "events[0].step=150",
+    "events[0].type=machine_breakdown",
+    "events[0].payload.machine_id=0",
+    "events[0].payload.duration_steps=40"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器0在第150步发生故障，持续40步。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "由于agv随机故障导致agv_down_steps_total=56，资源损失面积为66。",
+  "case_id": "inj_stoch_00|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 113.8,
+  "raw": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic",
+   "evidence": [
+    "agv_down_steps_total=56",
+    "resource_disruption_loss_area=66"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "由于agv随机故障导致agv_down_steps_total=56，资源损失面积为66。"
+  }
+ }
+]

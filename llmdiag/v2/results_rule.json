@@ -1,0 +1,1562 @@
+[
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "base_mk01_cpsat|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "base_mk01_cpsat|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "base_mk01_greedy|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "base_mk01_greedy|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "base_mk02_cpsat|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "base_mk02_cpsat|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "base_mk02_greedy|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "base_mk02_greedy|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "base_mk03_cpsat|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "base_mk03_cpsat|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "base_mk03_greedy|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "base_mk03_greedy|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "emg_starve_00|easy",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "emg_starve_00|hard",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "emg_starve_02|easy",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "emg_starve_02|hard",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "emg_starve_03|easy",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "emg_starve_03|hard",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "fleet(K+1)",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_00|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:3+agv:1",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_00|hard",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:3+agv:1",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_00_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_00_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_01_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_01_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "fleet(K+1)",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_02|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:4+agv:2",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_02|hard",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:4+agv:2",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_02_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_02_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_03_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_03_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "fleet(K+1)",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_04|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:5+agv:3",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_04|hard",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:5+agv:3",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_04_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_04_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_05_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_05_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "fleet(K+1)",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_06|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:3",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_06|hard",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:3",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_06_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_06_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_07_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_07_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_09_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_09_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "fleet(K+1)",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_10|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:1",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_10|hard",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:1",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_10_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_10_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_11_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_combo_11_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_00|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_00|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_00_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_00_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_01_T|easy",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_01_T|hard",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_02|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_02|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_02_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_02_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_03_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_03_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_04|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_04|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_04_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_04_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_05_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_05_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_06_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_06_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_07_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_07_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_08|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:4",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_08|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:4",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_08_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_08_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_09_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_09_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_10|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_10|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_10_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_10_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_11_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_11_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_12|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_12|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_12_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_12_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_13_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_13_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_14|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:6",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_14|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:6",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_14_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_14_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_15_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "rule baseline",
+  "case_id": "inj_machine_15_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "rule baseline",
+  "case_id": "inj_stoch_00|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "rule baseline",
+  "case_id": "inj_stoch_00|hard",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "fleet(K+1)",
+  "narrative": "rule baseline",
+  "case_id": "inj_stoch_02|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "rule baseline",
+  "case_id": "inj_stoch_02|hard",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "fleet(K+1)",
+  "narrative": "rule baseline",
+  "case_id": "inj_stoch_04|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "rule baseline",
+  "case_id": "inj_stoch_04|hard",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "rule baseline",
+  "case_id": "inj_stoch_06|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "rule baseline",
+  "case_id": "inj_stoch_06|hard",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ }
+]
