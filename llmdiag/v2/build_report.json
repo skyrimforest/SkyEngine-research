@@ -1,0 +1,110 @@
+{
+ "kept_scenarios": 52,
+ "dropped": [
+  {
+   "scen_id": "emg_block_00",
+   "reason": "drop: blocking signature absent (fin=True, blocking=4.6, stationary=0)"
+  },
+  {
+   "scen_id": "emg_block_01",
+   "reason": "drop: blocking signature absent (fin=True, blocking=4.076923076923077, stationary=0)"
+  },
+  {
+   "scen_id": "emg_block_02",
+   "reason": "drop: blocking signature absent (fin=True, blocking=3.7454545454545456, stationary=0)"
+  },
+  {
+   "scen_id": "emg_block_03",
+   "reason": "drop: blocking signature absent (fin=True, blocking=4.294117647058823, stationary=0)"
+  },
+  {
+   "scen_id": "emg_starve_01",
+   "reason": "drop: starvation signature absent (fin=True, agv_wait=527, stationary=0)"
+  },
+  {
+   "scen_id": "inj_combo_01",
+   "reason": "pair_drop: injected episode unfinished/error"
+  },
+  {
+   "scen_id": "inj_combo_03",
+   "reason": "pair_drop: injected episode unfinished/error"
+  },
+  {
+   "scen_id": "inj_combo_05",
+   "reason": "pair_drop: injected episode unfinished/error"
+  },
+  {
+   "scen_id": "inj_combo_07",
+   "reason": "pair_drop: injected episode unfinished/error"
+  },
+  {
+   "scen_id": "inj_combo_08",
+   "reason": "pair_drop: injected episode unfinished/error"
+  },
+  {
+   "scen_id": "inj_combo_08_T",
+   "reason": "episode_error: hard timeout 300.0s"
+  },
+  {
+   "scen_id": "inj_combo_09",
+   "reason": "pair_drop: injected episode unfinished/error"
+  },
+  {
+   "scen_id": "inj_combo_11",
+   "reason": "pair_drop: injected episode unfinished/error"
+  },
+  {
+   "scen_id": "inj_machine_01",
+   "reason": "pair_drop: injected episode unfinished/error"
+  },
+  {
+   "scen_id": "inj_machine_03",
+   "reason": "pair_drop: injected episode unfinished/error"
+  },
+  {
+   "scen_id": "inj_machine_05",
+   "reason": "pair_drop: injected episode unfinished/error"
+  },
+  {
+   "scen_id": "inj_machine_06",
+   "reason": "pair_drop: injected episode unfinished/error"
+  },
+  {
+   "scen_id": "inj_machine_07",
+   "reason": "pair_drop: injected episode unfinished/error"
+  },
+  {
+   "scen_id": "inj_machine_09",
+   "reason": "pair_drop: injected episode unfinished/error"
+  },
+  {
+   "scen_id": "inj_machine_11",
+   "reason": "pair_drop: injected episode unfinished/error"
+  },
+  {
+   "scen_id": "inj_machine_13",
+   "reason": "pair_drop: injected episode unfinished/error"
+  },
+  {
+   "scen_id": "inj_machine_15",
+   "reason": "pair_drop: injected episode unfinished/error"
+  },
+  {
+   "scen_id": "inj_stoch_01",
+   "reason": "drop: stochastic episode unfinished"
+  },
+  {
+   "scen_id": "inj_stoch_03",
+   "reason": "drop: stochastic episode unfinished"
+  },
+  {
+   "scen_id": "inj_stoch_05",
+   "reason": "drop: stochastic episode unfinished"
+  },
+  {
+   "scen_id": "inj_stoch_07",
+   "reason": "drop: stochastic episode unfinished"
+  }
+ ],
+ "n_cases": 104
+}

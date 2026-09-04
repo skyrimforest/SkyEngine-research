@@ -122,19 +122,49 @@ def build_archive(scn: dict, rec: dict, label: dict, note: str) -> dict:
 def main():
     scns = {json.loads(l)["scen_id"]: json.loads(l)
             for l in (HERE / "scenarios_v2.jsonl").read_text().splitlines() if l.strip()}
-    cases, dropped, kept = [], [], 0
+    recs = {}
     for f in sorted((HERE / "episodes").glob("*.json")):
-        sid = f.stem
-        if sid not in scns:
+        if f.stem in scns:
+            recs[f.stem] = json.loads(f.read_text())
+
+    def twin_ok(sid: str) -> bool:
+        """CRN 孪生健康判定: 孪生存在且完工 (孪生不存在视为不通过, 保持保守)"""
+        tw = recs.get(sid + "_T")
+        if tw is None:
+            return False
+        return "error" not in tw and tw.get("finished", False)
+
+    cases, dropped, kept = [], [], 0
+    for sid, scn in sorted(scns.items()):
+        rec = recs.get(sid)
+        if rec is None:
             continue
-        rec = json.loads(f.read_text())
-        label, note = verify(scns[sid], rec)
+        v = scn["verifier"]
+        # 配对作废: 注入案例要求自身完工 + 孪生健康 (排除 K=6 拥塞/活锁混因)
+        if v in ("injected_machine", "injected_combo"):
+            if "error" in rec or not rec.get("finished", False):
+                dropped.append({"scen_id": sid, "reason": "pair_drop: injected episode unfinished/error"})
+                continue
+            if not twin_ok(sid):
+                dropped.append({"scen_id": sid,
+                                "reason": "pair_drop: CRN twin unfinished (livelock/congestion confound)"})
+                continue
+        if v == "preset_stochastic" and ("error" in rec or not rec.get("finished", False)):
+            dropped.append({"scen_id": sid, "reason": "drop: stochastic episode unfinished"})
+            continue
+        label, note = verify(scn, rec)
         if label is None:
             dropped.append({"scen_id": sid, "reason": note})
             continue
-        easy, hard = build_archive(scns[sid], rec, label, note)
-        if scns[sid]["verifier"].startswith("injected"):
-            easy["meta"]["event_visible"] = event_visible(rec, scns[sid])
+        easy, hard = build_archive(scn, rec, label, note)
+        if v.startswith("injected"):
+            easy["meta"]["event_visible"] = event_visible(rec, scn)
+            tw = recs.get(sid + "_T")
+            if tw is not None:
+                easy["meta"]["twin_makespan"] = tw.get("makespan")
+                easy["meta"]["fault_delta_makespan"] = (
+                    rec.get("makespan", 0) - tw.get("makespan", 0)
+                    if rec.get("makespan") and tw.get("makespan") else None)
         cases += [easy, hard]
         kept += 1
     (HERE / "cases_v2.json").write_text(json.dumps(cases, ensure_ascii=False, indent=1))
@@ -145,7 +175,7 @@ def main():
     print(f"kept={kept} dropped={len(dropped)} cases={len(cases)} (easy+hard)")
     print("cause:", Counter(c["ground_truth"]["cause"] for c in cases))
     for d in dropped:
-        print("  DROP", d["scen_id"], "->", d["reason"][:90])
+        print("  DROP", d["scen_id"], "->", d["reason"][:80])
 
 
 if __name__ == "__main__":
