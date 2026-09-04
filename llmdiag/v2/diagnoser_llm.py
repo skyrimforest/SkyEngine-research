@@ -62,7 +62,8 @@ def main():
     ap.add_argument("--cases", default=str(HERE / "cases_v2.json"))
     ap.add_argument("--variant", default="all", choices=["all", "easy", "hard"])
     ap.add_argument("--limit", type=int, default=0)
-    ap.add_argument("--out", default=str(HERE / "results_llm.json"))
+    ap.add_argument("--out", default=str(HERE / f"results_{MODEL.replace(':', '_').replace('/', '_')}.json"),
+                    help="默认按模型命名, 防止不同模型的结果互相覆盖")
     args = ap.parse_args()
     from score import score_one, aggregate
     cases = json.loads(Path(args.cases).read_text())

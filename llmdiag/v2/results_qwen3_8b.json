@@ -1,0 +1,60 @@
+[
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "fleet(K+1)",
+  "narrative": "AGV总等待时间562且运输阻塞延迟均值2.34表明存在持续性运输阻塞，导致AGV利用率71.96%却无法及时完成任务，增加AGV数量可缓解运输通道竞争。",
+  "case_id": "base_mk01_cpsat|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 48.1,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv:0+agv:1+agv:2+agv:3",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=562",
+    "transport_blocking_delay_mean=2.3454545454545452",
+    "agv_busy_utilization=0.719560878243513"
+   ],
+   "intervention": "fleet(K+1)",
+   "narrative": "AGV总等待时间562且运输阻塞延迟均值2.34表明存在持续性运输阻塞，导致AGV利用率71.96%却无法及时完成任务，增加AGV数量可缓解运输通道竞争。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "fleet(K+1)",
+  "narrative": "AGV运输阻塞延迟均值达2.345，等待时间总和达562，导致运输路径频繁拥堵，引发阻塞死锁，降低任务运输效率，进而影响整体完工进度。",
+  "case_id": "base_mk01_cpsat|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 75.4,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=2.345",
+    "agv_waiting_time_total=562",
+    "agv_busy_utilization=0.71956"
+   ],
+   "intervention": "fleet(K+1)",
+   "narrative": "AGV运输阻塞延迟均值达2.345，等待时间总和达562，导致运输路径频繁拥堵，引发阻塞死锁，降低任务运输效率，进而影响整体完工进度。"
+  }
+ }
+]
