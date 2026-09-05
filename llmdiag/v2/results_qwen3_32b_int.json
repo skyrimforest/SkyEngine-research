@@ -1,0 +1,463 @@
+[
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.667,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于machine:3在第180步发生30步的故障，agv:1在第275步发生20步的故障，导致关键资源不可用，影响了整体调度与任务完成。",
+  "case_id": "inj_combo_00|int",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:3+agv:1",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 11.6,
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:3+agv:1",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "machine_down_steps_total=30",
+    "agv_down_steps_total=20",
+    "fault.public_fault_schedule=[{'step': 180, 'type': 'machine_breakdown', 'machine_id': 3, 'duration_steps': 30}, {'step': 275, 'type': 'agv_breakdown', 'agv_id': 1, 'duration_steps': 20}]"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于machine:3在第180步发生30步的故障，agv:1在第275步发生20步的故障，导致关键资源不可用，影响了整体调度与任务完成。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于machine:4在step 141发生故障持续40步，agv:2在step 288发生故障持续30步，导致资源中断损失面积为70，影响了整体完工状态。",
+  "case_id": "inj_combo_02|int",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:4+agv:2",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 8.4,
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:4+agv:2",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "machine_down_steps_total=40",
+    "agv_down_steps_total=30",
+    "resource_disruption_loss_area=70"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于machine:4在step 141发生故障持续40步，agv:2在step 288发生故障持续30步，导致资源中断损失面积为70，影响了整体完工状态。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于machine:5在step 145发生故障持续60步，agv:3在step 245发生故障持续20步，导致资源中断损失面积为80，影响了整体完工状态。",
+  "case_id": "inj_combo_04|int",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:5+agv:3",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 8.3,
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:5+agv:3",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "machine_down_steps_total=60",
+    "agv_down_steps_total=20",
+    "resource_disruption_loss_area=80"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于machine:5在step 145发生故障持续60步，agv:3在step 245发生故障持续20步，导致资源中断损失面积为80，影响了整体完工状态。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.667,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于machine:2在step 158发生故障持续30步，agv:3在step 247发生故障持续30步，导致关键资源不可用，影响了整体调度与完工状态。",
+  "case_id": "inj_combo_06|int",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:3",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 11.3,
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:3",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "machine_down_steps_total=30",
+    "agv_down_steps_total=30",
+    "fault: public_fault_schedule=[{step: 158, type: machine_breakdown, machine_id: 2, duration_steps: 30}, {step: 247, type: agv_breakdown, agv_id: 3, duration_steps: 30}]"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于machine:2在step 158发生故障持续30步，agv:3在step 247发生故障持续30步，导致关键资源不可用，影响了整体调度与完工状态。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.667,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于machine:2在step 141发生故障持续40步，agv:1在step 230发生故障持续20步，导致系统整体资源可用性下降，影响了任务的执行与调度，从而影响了完工状态。",
+  "case_id": "inj_combo_10|int",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:1",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 12.2,
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:1",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "machine_down_steps_total=40",
+    "agv_down_steps_total=20",
+    "fault:public_fault_schedule=[{'step': 141, 'type': 'machine_breakdown', 'machine_id': 2, 'duration_steps': 40}, {'step': 230, 'type': 'agv_breakdown', 'agv_id': 1, 'duration_steps': 20}]"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于machine:2在step 141发生故障持续40步，agv:1在step 230发生故障持续20步，导致系统整体资源可用性下降，影响了任务的执行与调度，从而影响了完工状态。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于machine:0在step 150发生故障并持续40步，导致资源损失面积为40，平均恢复时间为40步，这可能是影响完工状态的关键原因。",
+  "case_id": "inj_machine_00|int",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:0",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 7.4,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:0",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=40",
+    "resource_disruption_loss_area=40",
+    "resource_time_to_recover_mean=40.0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于machine:0在step 150发生故障并持续40步，导致资源损失面积为40，平均恢复时间为40步，这可能是影响完工状态的关键原因。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.667,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "在第225步时，machine:3发生故障并持续20步，导致资源损失面积为20，这是影响完工状态的关键原因。",
+  "case_id": "inj_machine_02|int",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 8.5,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=20",
+    "resource_disruption_loss_area=20",
+    "fault: public_fault_schedule=[{'step': 225, 'type': 'machine_breakdown', 'machine_id': 3, 'duration_steps': 20}]"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "在第225步时，machine:3发生故障并持续20步，导致资源损失面积为20，这是影响完工状态的关键原因。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于machine:2在step 221发生故障并持续60步，导致资源损失面积为60，平均恢复时间为60步，这可能是影响完工状态的关键原因。",
+  "case_id": "inj_machine_04|int",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 7.2,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=60",
+    "resource_disruption_loss_area=60",
+    "resource_time_to_recover_mean=60.0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于machine:2在step 221发生故障并持续60步，导致资源损失面积为60，平均恢复时间为60步，这可能是影响完工状态的关键原因。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "根据运行档案，machine:4 在 step 225 发生了持续 60 步的故障，导致资源中断损失面积为 60，平均恢复时间为 60 步。这表明该机器是关键资源瓶颈，故障是影响完工状态的主要原因。",
+  "case_id": "inj_machine_08|int",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:4",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 8.6,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:4",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=60",
+    "resource_disruption_loss_area=60",
+    "resource_time_to_recover_mean=60.0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "根据运行档案，machine:4 在 step 225 发生了持续 60 步的故障，导致资源中断损失面积为 60，平均恢复时间为 60 步。这表明该机器是关键资源瓶颈，故障是影响完工状态的主要原因。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于machine:3在step 168发生故障并持续20步，导致资源中断损失面积为20，影响了整体生产进度。",
+  "case_id": "inj_machine_10|int",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 6.0,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=20",
+    "resource_disruption_loss_area=20"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于machine:3在step 168发生故障并持续20步，导致资源中断损失面积为20，影响了整体生产进度。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "根据运行档案，machine:2 在 step 248 发生了持续 40 步的故障，导致资源中断损失面积为 40，平均恢复时间为 40 步。这表明 machine:2 是关键资源瓶颈，其故障直接影响了完工状态。",
+  "case_id": "inj_machine_12|int",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 8.2,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=40",
+    "resource_disruption_loss_area=40",
+    "resource_time_to_recover_mean=40.0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "根据运行档案，machine:2 在 step 248 发生了持续 40 步的故障，导致资源中断损失面积为 40，平均恢复时间为 40 步。这表明 machine:2 是关键资源瓶颈，其故障直接影响了完工状态。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "根据运行档案，machine:6 在 step 243 发生了持续 40 步的故障，导致资源中断损失面积为 40，平均恢复时间为 40 步。这表明 machine:6 是关键资源瓶颈，其故障直接影响了完工状态。",
+  "case_id": "inj_machine_14|int",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:6",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 8.2,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:6",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=40",
+    "resource_disruption_loss_area=40",
+    "resource_time_to_recover_mean=40.0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "根据运行档案，machine:6 在 step 243 发生了持续 40 步的故障，导致资源中断损失面积为 40，平均恢复时间为 40 步。这表明 machine:6 是关键资源瓶颈，其故障直接影响了完工状态。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.0376)，且操作队列平均等待时间(1.036)表明任务在等待机器资源，推测存在机器瓶颈，导致整体完工状态不佳。",
+  "case_id": "inj_stoch_00|int",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 9.2,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.037641154328732745",
+    "operation_queue_waiting_time_mean=1.0363636363636364"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.0376)，且操作队列平均等待时间(1.036)表明任务在等待机器资源，推测存在机器瓶颈，导致整体完工状态不佳。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率较低且操作队列平均等待时间较高，表明存在机器瓶颈，限制了整体生产效率。",
+  "case_id": "inj_stoch_02|int",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 8.6,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.1284107669616519",
+    "operation_queue_waiting_time_mean=2.5952380952380953"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率较低且操作队列平均等待时间较高，表明存在机器瓶颈，限制了整体生产效率。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.05)，且操作队列平均等待时间较短(1.045)，表明机器资源未被充分利用，成为生产瓶颈。",
+  "case_id": "inj_stoch_04|int",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 8.6,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.05",
+    "operation_queue_waiting_time_mean=1.0454545454545454"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.05)，且操作队列平均等待时间较短(1.045)，表明机器资源未被充分利用，成为生产瓶颈。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "fleet(K+1)",
+  "narrative": "AGV的总停机步数为48步，且运输阻塞延迟均值为2.28步，表明AGV在运输过程中存在随机性干扰，导致任务等待时间增加。",
+  "case_id": "inj_stoch_06|int",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 10.4,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv",
+   "cause": "disruption_stochastic",
+   "evidence": [
+    "agv_down_steps_total=48",
+    "resource_disruption_loss_area=48",
+    "agv_waiting_time_total=872",
+    "transport_blocking_delay_mean=2.2830188679245285"
+   ],
+   "intervention": "fleet(K+1)",
+   "narrative": "AGV的总停机步数为48步，且运输阻塞延迟均值为2.28步，表明AGV在运输过程中存在随机性干扰，导致任务等待时间增加。"
+  }
+ }
+]

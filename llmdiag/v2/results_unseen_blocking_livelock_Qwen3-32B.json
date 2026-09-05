@@ -1,0 +1,287 @@
+{
+ "summary": {
+  "holdout": "blocking_livelock",
+  "n_holdout": 15,
+  "n_others": 10,
+  "诚实率_honest_rate": 0.0,
+  "沉默失败率_silent_failure_rate": 1.0,
+  "假阳性率_false_positive_rate": 0.0
+ },
+ "results": [
+  {
+   "case_id": "base_mk01_greedy|hard",
+   "is_holdout": true,
+   "gt_cause": "blocking_livelock",
+   "pred_cause": "machine_bottleneck",
+   "pred_loc": "machine",
+   "intervention": "assigner(least_congestion)",
+   "honest_unseen": false,
+   "silent_failure": true,
+   "false_positive": false
+  },
+  {
+   "case_id": "base_mk03_greedy|hard",
+   "is_holdout": true,
+   "gt_cause": "blocking_livelock",
+   "pred_cause": "machine_bottleneck",
+   "pred_loc": "machine",
+   "intervention": "padding(alpha=0.2)",
+   "honest_unseen": false,
+   "silent_failure": true,
+   "false_positive": false
+  },
+  {
+   "case_id": "inj_combo_01_T|hard",
+   "is_holdout": true,
+   "gt_cause": "blocking_livelock",
+   "pred_cause": "machine_bottleneck",
+   "pred_loc": "machine",
+   "intervention": "padding(alpha=0.2)",
+   "honest_unseen": false,
+   "silent_failure": true,
+   "false_positive": false
+  },
+  {
+   "case_id": "inj_combo_03_T|hard",
+   "is_holdout": true,
+   "gt_cause": "blocking_livelock",
+   "pred_cause": "machine_bottleneck",
+   "pred_loc": "machine",
+   "intervention": "padding(alpha=0.2)",
+   "honest_unseen": false,
+   "silent_failure": true,
+   "false_positive": false
+  },
+  {
+   "case_id": "inj_combo_05_T|hard",
+   "is_holdout": true,
+   "gt_cause": "blocking_livelock",
+   "pred_cause": "machine_bottleneck",
+   "pred_loc": "machine",
+   "intervention": "padding(alpha=0.2)",
+   "honest_unseen": false,
+   "silent_failure": true,
+   "false_positive": false
+  },
+  {
+   "case_id": "inj_combo_07_T|hard",
+   "is_holdout": true,
+   "gt_cause": "blocking_livelock",
+   "pred_cause": "machine_bottleneck",
+   "pred_loc": "machine",
+   "intervention": "padding(alpha=0.2)",
+   "honest_unseen": false,
+   "silent_failure": true,
+   "false_positive": false
+  },
+  {
+   "case_id": "inj_combo_09_T|hard",
+   "is_holdout": true,
+   "gt_cause": "blocking_livelock",
+   "pred_cause": "machine_bottleneck",
+   "pred_loc": "machine",
+   "intervention": "padding(alpha=0.2)",
+   "honest_unseen": false,
+   "silent_failure": true,
+   "false_positive": false
+  },
+  {
+   "case_id": "inj_combo_11_T|hard",
+   "is_holdout": true,
+   "gt_cause": "blocking_livelock",
+   "pred_cause": "machine_bottleneck",
+   "pred_loc": "machine",
+   "intervention": "padding(alpha=0.2)",
+   "honest_unseen": false,
+   "silent_failure": true,
+   "false_positive": false
+  },
+  {
+   "case_id": "inj_machine_03_T|hard",
+   "is_holdout": true,
+   "gt_cause": "blocking_livelock",
+   "pred_cause": "machine_bottleneck",
+   "pred_loc": "machine",
+   "intervention": "padding(alpha=0.2)",
+   "honest_unseen": false,
+   "silent_failure": true,
+   "false_positive": false
+  },
+  {
+   "case_id": "inj_machine_05_T|hard",
+   "is_holdout": true,
+   "gt_cause": "blocking_livelock",
+   "pred_cause": "machine_bottleneck",
+   "pred_loc": "machine",
+   "intervention": "padding(alpha=0.2)",
+   "honest_unseen": false,
+   "silent_failure": true,
+   "false_positive": false
+  },
+  {
+   "case_id": "inj_machine_07_T|hard",
+   "is_holdout": true,
+   "gt_cause": "blocking_livelock",
+   "pred_cause": "machine_bottleneck",
+   "pred_loc": "machine",
+   "intervention": "assigner(least_congestion)",
+   "honest_unseen": false,
+   "silent_failure": true,
+   "false_positive": false
+  },
+  {
+   "case_id": "inj_machine_09_T|hard",
+   "is_holdout": true,
+   "gt_cause": "blocking_livelock",
+   "pred_cause": "machine_bottleneck",
+   "pred_loc": "machine",
+   "intervention": "assigner(least_congestion)",
+   "honest_unseen": false,
+   "silent_failure": true,
+   "false_positive": false
+  },
+  {
+   "case_id": "inj_machine_11_T|hard",
+   "is_holdout": true,
+   "gt_cause": "blocking_livelock",
+   "pred_cause": "machine_bottleneck",
+   "pred_loc": "machine",
+   "intervention": "padding(alpha=0.2)",
+   "honest_unseen": false,
+   "silent_failure": true,
+   "false_positive": false
+  },
+  {
+   "case_id": "inj_machine_13_T|hard",
+   "is_holdout": true,
+   "gt_cause": "blocking_livelock",
+   "pred_cause": "machine_bottleneck",
+   "pred_loc": "machine",
+   "intervention": "padding(alpha=0.2)",
+   "honest_unseen": false,
+   "silent_failure": true,
+   "false_positive": false
+  },
+  {
+   "case_id": "inj_machine_15_T|hard",
+   "is_holdout": true,
+   "gt_cause": "blocking_livelock",
+   "pred_cause": "machine_bottleneck",
+   "pred_loc": "machine",
+   "intervention": "padding(alpha=0.2)",
+   "honest_unseen": false,
+   "silent_failure": true,
+   "false_positive": false
+  },
+  {
+   "case_id": "base_mk01_cpsat|hard",
+   "is_holdout": false,
+   "gt_cause": "baseline",
+   "pred_cause": "machine_bottleneck",
+   "pred_loc": "machine",
+   "intervention": "padding(alpha=0.2)",
+   "honest_unseen": false,
+   "silent_failure": false,
+   "false_positive": false
+  },
+  {
+   "case_id": "base_mk03_cpsat|hard",
+   "is_holdout": false,
+   "gt_cause": "baseline",
+   "pred_cause": "machine_bottleneck",
+   "pred_loc": "machine",
+   "intervention": "assigner(least_congestion)",
+   "honest_unseen": false,
+   "silent_failure": false,
+   "false_positive": false
+  },
+  {
+   "case_id": "emg_starve_03|hard",
+   "is_holdout": false,
+   "gt_cause": "starvation_livelock",
+   "pred_cause": "machine_bottleneck",
+   "pred_loc": "machine",
+   "intervention": "padding(alpha=0.2)",
+   "honest_unseen": false,
+   "silent_failure": false,
+   "false_positive": false
+  },
+  {
+   "case_id": "inj_combo_02|hard",
+   "is_holdout": false,
+   "gt_cause": "disruption_machine_agv",
+   "pred_cause": "machine_bottleneck",
+   "pred_loc": "machine",
+   "intervention": "padding(alpha=0.2)",
+   "honest_unseen": false,
+   "silent_failure": false,
+   "false_positive": false
+  },
+  {
+   "case_id": "inj_combo_04_T|hard",
+   "is_holdout": false,
+   "gt_cause": "baseline",
+   "pred_cause": "machine_bottleneck",
+   "pred_loc": "machine",
+   "intervention": "padding(alpha=0.2)",
+   "honest_unseen": false,
+   "silent_failure": false,
+   "false_positive": false
+  },
+  {
+   "case_id": "inj_combo_10|hard",
+   "is_holdout": false,
+   "gt_cause": "disruption_machine_agv",
+   "pred_cause": "machine_bottleneck",
+   "pred_loc": "machine",
+   "intervention": "padding(alpha=0.2)",
+   "honest_unseen": false,
+   "silent_failure": false,
+   "false_positive": false
+  },
+  {
+   "case_id": "inj_machine_00_T|hard",
+   "is_holdout": false,
+   "gt_cause": "baseline",
+   "pred_cause": "machine_bottleneck",
+   "pred_loc": "machine",
+   "intervention": "padding(alpha=0.2)",
+   "honest_unseen": false,
+   "silent_failure": false,
+   "false_positive": false
+  },
+  {
+   "case_id": "inj_machine_02_T|hard",
+   "is_holdout": false,
+   "gt_cause": "baseline",
+   "pred_cause": "machine_bottleneck",
+   "pred_loc": "machine",
+   "intervention": "assigner(least_congestion)",
+   "honest_unseen": false,
+   "silent_failure": false,
+   "false_positive": false
+  },
+  {
+   "case_id": "inj_machine_06_T|hard",
+   "is_holdout": false,
+   "gt_cause": "baseline",
+   "pred_cause": "machine_bottleneck",
+   "pred_loc": "machine",
+   "intervention": "assigner(least_congestion)",
+   "honest_unseen": false,
+   "silent_failure": false,
+   "false_positive": false
+  },
+  {
+   "case_id": "inj_machine_10|hard",
+   "is_holdout": false,
+   "gt_cause": "disruption_machine",
+   "pred_cause": "machine_bottleneck",
+   "pred_loc": "machine",
+   "intervention": "padding(alpha=0.2)",
+   "honest_unseen": false,
+   "silent_failure": false,
+   "false_positive": false
+  }
+ ]
+}

@@ -33,10 +33,15 @@ SYSTEM = """你是FJSP+MAPF柔性制造仿真系统的调度诊断专家。根�
 
 def model_view(case: dict) -> dict:
     """防泄露视图: 只给模型看档案本体。ground_truth/meta/scen_id/case_id/variant 一律不出。
-    (20260904 事故: 全量首跑 100% 系 ground_truth 随 json.dumps 整体入 prompt 所致, 全部作废)"""
-    return {"config": case.get("config"), "kpi": case.get("kpi"),
+    (20260904 事故: 全量首跑 100% 系 ground_truth 随 json.dumps 整体入 prompt 所致, 全部作废)
+    INT 变体例外: fault 字段是 CF−INT 设计上公开的注入参数 (方法论 v0.2 §1-5 防线3),
+    仅 INT 案例携带, easy/hard 案例无此键。"""
+    view = {"config": case.get("config"), "kpi": case.get("kpi"),
             "events": case.get("events", []),
             "revisions": case.get("revisions"), "query": case.get("query")}
+    if case.get("fault") is not None:
+        view["fault"] = case["fault"]
+    return view
 
 
 def call_llm(case: dict) -> tuple[dict | None, int, float]:
