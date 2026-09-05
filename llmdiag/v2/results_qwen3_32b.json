@@ -1,0 +1,2968 @@
+[
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "根据运行档案，machine_utilization 仅为 0.0599，表明机器利用率极低，同时 operation_queue_waiting_time_mean 为 1.0，说明作业在队列中等待时间较短，但整体生产效率受限，可能由于机器成为瓶颈。因此，初步判断完工状态不佳的主要原因是 machine_bottleneck。",
+  "case_id": "base_mk01_cpsat|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 9.3,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.059880239520958084",
+    "operation_queue_waiting_time_mean=1.0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "根据运行档案，machine_utilization 仅为 0.0599，表明机器利用率极低，同时 operation_queue_waiting_time_mean 为 1.0，说明作业在队列中等待时间较短，但整体生产效率受限，可能由于机器成为瓶颈。因此，初步判断完工状态不佳的主要原因是 machine_bottleneck。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "根据运行档案，machine_utilization 仅为 0.0599，表明机器利用率极低，同时 operation_queue_waiting_time_mean 为 1.0，说明作业在队列中等待时间较短，但整体生产效率受限，可能由于机器成为瓶颈。因此，初步判断完工状态不佳的主要原因是 machine_bottleneck。",
+  "case_id": "base_mk01_cpsat|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 9.4,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.059880239520958084",
+    "operation_queue_waiting_time_mean=1.0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "根据运行档案，machine_utilization 仅为 0.0599，表明机器利用率极低，同时 operation_queue_waiting_time_mean 为 1.0，说明作业在队列中等待时间较短，但整体生产效率受限，可能由于机器成为瓶颈。因此，初步判断完工状态不佳的主要原因是 machine_bottleneck。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.0058)且任务在操作队列中平均等待1.68个时间单位，表明机器资源成为瓶颈，导致任务积压。",
+  "case_id": "base_mk01_greedy|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 8.1,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.005818684895833333",
+    "operation_queue_waiting_time_mean=1.68",
+    "tasked_stationary_count=4"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.0058)且任务在操作队列中平均等待1.68个时间单位，表明机器资源成为瓶颈，导致任务积压。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.0058)且任务在操作队列中平均等待1.68个时间单位，表明机器资源成为瓶颈，导致任务积压。",
+  "case_id": "base_mk01_greedy|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 8.2,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.005818684895833333",
+    "operation_queue_waiting_time_mean=1.68",
+    "tasked_stationary_count=4"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.0058)且任务在操作队列中平均等待1.68个时间单位，表明机器资源成为瓶颈，导致任务积压。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "根据运行档案，machine_utilization 仅为 0.05，表明机器利用率极低，同时 operation_queue_waiting_time_mean 为 1.0，说明作业在队列中等待时间较短，但整体生产效率受限。这表明系统存在机器瓶颈问题，导致完工状态不佳。",
+  "case_id": "base_mk02_cpsat|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 8.6,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.05115830115830116",
+    "operation_queue_waiting_time_mean=1.0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "根据运行档案，machine_utilization 仅为 0.05，表明机器利用率极低，同时 operation_queue_waiting_time_mean 为 1.0，说明作业在队列中等待时间较短，但整体生产效率受限。这表明系统存在机器瓶颈问题，导致完工状态不佳。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.051)，且操作队列平均等待时间仅为1秒，表明机器资源未被充分利用，可能是调度策略未能有效分配任务，导致机器成为瓶颈。",
+  "case_id": "base_mk02_cpsat|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 7.4,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.05115830115830116",
+    "operation_queue_waiting_time_mean=1.0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.051)，且操作队列平均等待时间仅为1秒，表明机器资源未被充分利用，可能是调度策略未能有效分配任务，导致机器成为瓶颈。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "根据运行档案，machine_utilization 仅为 0.07，表明机器利用率极低，同时 operation_queue_waiting_time_mean 为 1.0，说明作业在等待机器处理时存在轻微延迟。这表明机器是当前流程的瓶颈，限制了整体完工状态。",
+  "case_id": "base_mk02_greedy|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 9.3,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.0705003248862898",
+    "operation_queue_waiting_time_mean=1.0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "根据运行档案，machine_utilization 仅为 0.07，表明机器利用率极低，同时 operation_queue_waiting_time_mean 为 1.0，说明作业在等待机器处理时存在轻微延迟。这表明机器是当前流程的瓶颈，限制了整体完工状态。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "根据运行档案，machine_utilization 仅为 0.07，表明机器利用率极低，同时 operation_queue_waiting_time_mean 为 1.0，说明作业在等待机器处理时存在轻微延迟。这表明机器资源是当前流程的瓶颈，限制了整体完工效率。",
+  "case_id": "base_mk02_greedy|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 9.0,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.0705003248862898",
+    "operation_queue_waiting_time_mean=1.0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "根据运行档案，machine_utilization 仅为 0.07，表明机器利用率极低，同时 operation_queue_waiting_time_mean 为 1.0，说明作业在等待机器处理时存在轻微延迟。这表明机器资源是当前流程的瓶颈，限制了整体完工效率。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "由于机器利用率较低且操作队列平均等待时间较高，表明存在机器瓶颈问题。",
+  "case_id": "base_mk03_cpsat|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 8.3,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.13695299837925445",
+    "operation_queue_waiting_time_mean=2.1702127659574466"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "由于机器利用率较低且操作队列平均等待时间较高，表明存在机器瓶颈问题。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率较低(0.137)且操作队列平均等待时间较高(2.17秒)，表明存在机器瓶颈，限制了整体生产效率。",
+  "case_id": "base_mk03_cpsat|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 8.3,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.13695299837925445",
+    "operation_queue_waiting_time_mean=2.1702127659574466"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率较低(0.137)且操作队列平均等待时间较高(2.17秒)，表明存在机器瓶颈，限制了整体生产效率。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.0201)且操作队列平均等待时间较高(2.1887), 导致整体生产吞吐量为0。这表明机器资源存在严重瓶颈。",
+  "case_id": "base_mk03_greedy|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 8.6,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.0201416015625",
+    "operation_queue_waiting_time_mean=2.188679245283019",
+    "throughput_jobs=0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.0201)且操作队列平均等待时间较高(2.1887), 导致整体生产吞吐量为0。这表明机器资源存在严重瓶颈。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "由于机器利用率极低(0.02)，且操作队列平均等待时间较高(2.19)，表明机器资源存在严重瓶颈，导致任务无法推进，最终整体制程无产出。",
+  "case_id": "base_mk03_greedy|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 8.7,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.0201416015625",
+    "operation_queue_waiting_time_mean=2.188679245283019",
+    "throughput_jobs=0"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "由于机器利用率极低(0.02)，且操作队列平均等待时间较高(2.19)，表明机器资源存在严重瓶颈，导致任务无法推进，最终整体制程无产出。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.0046)，且平均操作等待时间为1秒，表明机器资源存在严重瓶颈，导致整体完工状态不佳。",
+  "case_id": "emg_starve_00|easy",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  },
+  "retries": 0,
+  "wall_s": 7.6,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.004638671875",
+    "operation_queue_waiting_time_mean=1.0",
+    "throughput_jobs=1"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.0046)，且平均操作等待时间为1秒，表明机器资源存在严重瓶颈，导致整体完工状态不佳。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.0046)，且平均操作等待时间为1秒，表明机器资源存在严重瓶颈，导致整体完工效率低下。",
+  "case_id": "emg_starve_00|hard",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  },
+  "retries": 0,
+  "wall_s": 7.2,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.004638671875",
+    "operation_queue_waiting_time_mean=1.0",
+    "throughput_jobs=1"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.0046)，且平均操作等待时间为1秒，表明机器资源存在严重瓶颈，导致整体完工效率低下。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.00415)，且操作队列平均等待时间较高(1.7857)，表明机器资源存在瓶颈，限制了整体完工状态。",
+  "case_id": "emg_starve_02|easy",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  },
+  "retries": 0,
+  "wall_s": 8.1,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.004150390625",
+    "operation_queue_waiting_time_mean=1.7857142857142858"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.00415)，且操作队列平均等待时间较高(1.7857)，表明机器资源存在瓶颈，限制了整体完工状态。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.00415)，且操作队列平均等待时间较高(1.7857)，表明机器资源存在瓶颈，限制了整体完工状态。",
+  "case_id": "emg_starve_02|hard",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  },
+  "retries": 0,
+  "wall_s": 8.2,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.004150390625",
+    "operation_queue_waiting_time_mean=1.7857142857142858"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.00415)，且操作队列平均等待时间较高(1.7857)，表明机器资源存在瓶颈，限制了整体完工状态。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.014)，导致整体生产吞吐量为0，表明存在机器瓶颈问题。",
+  "case_id": "emg_starve_03|easy",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  },
+  "retries": 0,
+  "wall_s": 6.6,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.014129638671875",
+    "throughput_jobs=0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.014)，导致整体生产吞吐量为0，表明存在机器瓶颈问题。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.014)，导致整体生产吞吐量为0，表明存在机器瓶颈问题。",
+  "case_id": "emg_starve_03|hard",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  },
+  "retries": 0,
+  "wall_s": 6.4,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.014129638671875",
+    "throughput_jobs=0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.014)，导致整体生产吞吐量为0，表明存在机器瓶颈问题。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器3在第180步发生故障并持续30步，直到第209步恢复，导致机器利用率低（0.0435），影响了整体生产进度。",
+  "case_id": "inj_combo_00|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:3+agv:1",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 6.7,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine",
+   "evidence": [
+    "EVT001",
+    "EVT002",
+    "machine_down_steps_total=30"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器3在第180步发生故障并持续30步，直到第209步恢复，导致机器利用率低（0.0435），影响了整体生产进度。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.0435)，且操作队列平均等待时间较高(1.164)，表明机器资源存在瓶颈，限制了整体完工状态。",
+  "case_id": "inj_combo_00|hard",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:3+agv:1",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 8.8,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.04354136429608128",
+    "operation_queue_waiting_time_mean=1.1636363636363636"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.0435)，且操作队列平均等待时间较高(1.164)，表明机器资源存在瓶颈，限制了整体完工状态。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "根据运行档案，machine_utilization=0.03558718861209965，表明机器利用率极低，可能是生产瓶颈。因此，完工状态不佳可能与机器资源利用率不足有关。",
+  "case_id": "inj_combo_00_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 8.5,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.03558718861209965"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "根据运行档案，machine_utilization=0.03558718861209965，表明机器利用率极低，可能是生产瓶颈。因此，完工状态不佳可能与机器资源利用率不足有关。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "根据运行档案，machine_utilization=0.03558718861209965，表明机器利用率极低，可能是生产瓶颈。因此，机器资源是影响完工状态的关键因素。",
+  "case_id": "inj_combo_00_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 8.0,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.03558718861209965"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "根据运行档案，machine_utilization=0.03558718861209965，表明机器利用率极低，可能是生产瓶颈。因此，机器资源是影响完工状态的关键因素。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低且任务在队列中等待时间较短，表明机器成为瓶颈，导致任务无法进一步推进。",
+  "case_id": "inj_combo_01_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 8.3,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.006429036458333333",
+    "operation_queue_waiting_time_mean=1.2",
+    "tasked_stationary_count=3"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低且任务在队列中等待时间较短，表明机器成为瓶颈，导致任务无法进一步推进。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低且任务在队列中等待时间较短，表明机器成为瓶颈，导致任务无法进一步推进。",
+  "case_id": "inj_combo_01_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 7.5,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.006429036458333333",
+    "operation_queue_waiting_time_mean=1.2",
+    "tasked_stationary_count=3"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低且任务在队列中等待时间较短，表明机器成为瓶颈，导致任务无法进一步推进。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器4在第141步发生故障并持续40步，直到第180步恢复，导致机器利用率较低（0.1129），影响了整体生产进度。",
+  "case_id": "inj_combo_02|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:4+agv:2",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 7.1,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:4",
+   "cause": "disruption_machine",
+   "evidence": [
+    "EVT001",
+    "EVT002",
+    "machine_down_steps_total=40"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器4在第141步发生故障并持续40步，直到第180步恢复，导致机器利用率较低（0.1129），影响了整体生产进度。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率较低(0.1129)，且操作队列平均等待时间为2.62秒，表明机器资源存在瓶颈，限制了整体生产效率。",
+  "case_id": "inj_combo_02|hard",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:4+agv:2",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 8.5,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.11289245156980628",
+    "operation_queue_waiting_time_mean=2.6214285714285714"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率较低(0.1129)，且操作队列平均等待时间为2.62秒，表明机器资源存在瓶颈，限制了整体生产效率。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率较低（machine_utilization=0.11695501730103806），表明存在机器瓶颈，导致整体完工状态不佳。",
+  "case_id": "inj_combo_02_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 8.0,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.11695501730103806"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率较低（machine_utilization=0.11695501730103806），表明存在机器瓶颈，导致整体完工状态不佳。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率较低(0.11695501730103806)，表明存在机器瓶颈，限制了整体生产效率。",
+  "case_id": "inj_combo_02_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 7.2,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.11695501730103806"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率较低(0.11695501730103806)，表明存在机器瓶颈，限制了整体生产效率。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.006551106770833333)，且操作队列平均等待时间为1.0，表明机器资源存在严重瓶颈，导致整体完工状态不佳。",
+  "case_id": "inj_combo_03_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 10.0,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.006551106770833333",
+    "operation_queue_waiting_time_mean=1.0",
+    "throughput_jobs=2"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.006551106770833333)，且操作队列平均等待时间为1.0，表明机器资源存在严重瓶颈，导致整体完工状态不佳。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.006551106770833333)且操作队列平均等待时间较短(1.0), 表明机器资源存在严重瓶颈, 导致整体完工状态不佳。",
+  "case_id": "inj_combo_03_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 10.1,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.006551106770833333",
+    "operation_queue_waiting_time_mean=1.0",
+    "throughput_jobs=2"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.006551106770833333)且操作队列平均等待时间较短(1.0), 表明机器资源存在严重瓶颈, 导致整体完工状态不佳。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器5在第145步发生故障并持续60步，直到第204步才恢复，导致整体机器利用率较低（0.049），影响了生产进度。",
+  "case_id": "inj_combo_04|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:5+agv:3",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 8.1,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:5",
+   "cause": "disruption_machine",
+   "evidence": [
+    "EVT001",
+    "EVT002",
+    "machine_down_steps_total=60"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器5在第145步发生故障并持续60步，直到第204步才恢复，导致整体机器利用率较低（0.049），影响了生产进度。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.049)，且操作队列平均等待时间较高(1.519)，表明机器资源存在瓶颈，限制了整体完工状态。",
+  "case_id": "inj_combo_04|hard",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:5+agv:3",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 9.7,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.048983364140480594",
+    "operation_queue_waiting_time_mean=1.5192307692307692"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.049)，且操作队列平均等待时间较高(1.519)，表明机器资源存在瓶颈，限制了整体完工状态。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "根据运行档案，machine_utilization 仅为 0.048，表明机器利用率极低，同时 operation_queue_waiting_time_mean 为 1.0，说明作业在队列中等待时间较短，但整体生产效率受限。这表明系统存在机器瓶颈，导致完工状态不佳。",
+  "case_id": "inj_combo_04_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 8.8,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.04818181818181818",
+    "operation_queue_waiting_time_mean=1.0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "根据运行档案，machine_utilization 仅为 0.048，表明机器利用率极低，同时 operation_queue_waiting_time_mean 为 1.0，说明作业在队列中等待时间较短，但整体生产效率受限。这表明系统存在机器瓶颈，导致完工状态不佳。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "根据运行档案，machine_utilization=0.04818181818181818 表明机器利用率极低，说明机器资源未被充分利用，可能是生产瓶颈所在。因此，定位关键资源为 machine，归因为 machine_bottleneck。",
+  "case_id": "inj_combo_04_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 7.7,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.04818181818181818"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "根据运行档案，machine_utilization=0.04818181818181818 表明机器利用率极低，说明机器资源未被充分利用，可能是生产瓶颈所在。因此，定位关键资源为 machine，归因为 machine_bottleneck。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.02078)，导致整体生产吞吐量为0，表明存在机器瓶颈问题。",
+  "case_id": "inj_combo_05_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 6.7,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.020782470703125",
+    "throughput_jobs=0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.02078)，导致整体生产吞吐量为0，表明存在机器瓶颈问题。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.02078)，导致整体生产吞吐量为0，表明存在机器瓶颈问题。",
+  "case_id": "inj_combo_05_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 6.5,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.020782470703125",
+    "throughput_jobs=0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.02078)，导致整体生产吞吐量为0，表明存在机器瓶颈问题。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于machine:2在step 158发生故障并持续30步，以及agv:3在step 247发生故障并持续30步，导致关键资源的中断，影响了整体的完工状态。",
+  "case_id": "inj_combo_06|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:3",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 12.8,
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:3",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "EVT001: machine_breakdown at step 158 for machine_id 2",
+    "EVT002: machine_recovery at step 187 for machine_id 2",
+    "EVT003: agv_breakdown at step 247 for agv_id 3",
+    "EVT004: agv_recovery at step 276 for agv_id 3",
+    "machine_down_steps_total=30",
+    "agv_down_steps_total=30"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于machine:2在step 158发生故障并持续30步，以及agv:3在step 247发生故障并持续30步，导致关键资源的中断，影响了整体的完工状态。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.0455)，表明存在机器瓶颈，导致整体完工状态受限。",
+  "case_id": "inj_combo_06|hard",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:3",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 6.3,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.04554406696208764",
+    "throughput_jobs=10"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.0455)，表明存在机器瓶颈，导致整体完工状态受限。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "根据运行档案，machine_utilization 仅为 0.035，表明机器利用率极低，同时 operation_queue_waiting_time_mean 为 1.0，说明作业在队列中等待时间较短，但整体生产效率受限。这表明系统存在机器瓶颈问题，导致完工状态不佳。",
+  "case_id": "inj_combo_06_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 9.1,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.03529411764705882",
+    "operation_queue_waiting_time_mean=1.0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "根据运行档案，machine_utilization 仅为 0.035，表明机器利用率极低，同时 operation_queue_waiting_time_mean 为 1.0，说明作业在队列中等待时间较短，但整体生产效率受限。这表明系统存在机器瓶颈问题，导致完工状态不佳。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.035)，且操作队列平均等待时间为1秒，表明机器资源存在瓶颈，限制了整体生产进度。",
+  "case_id": "inj_combo_06_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 7.2,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.03529411764705882",
+    "operation_queue_waiting_time_mean=1.0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.035)，且操作队列平均等待时间为1秒，表明机器资源存在瓶颈，限制了整体生产进度。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.00618)，且有5个任务处于静止状态，表明机器成为瓶颈，导致完工状态不佳。",
+  "case_id": "inj_combo_07_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 8.1,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.006184895833333333",
+    "operation_queue_waiting_time_mean=1.0",
+    "tasked_stationary_count=5"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.00618)，且有5个任务处于静止状态，表明机器成为瓶颈，导致完工状态不佳。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.00618)且任务在操作队列中等待时间平均为1秒，同时有5个任务处于静止状态，表明机器资源存在瓶颈，限制了整体生产进度。",
+  "case_id": "inj_combo_07_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 8.5,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.006184895833333333",
+    "operation_queue_waiting_time_mean=1.0",
+    "tasked_stationary_count=5"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.00618)且任务在操作队列中等待时间平均为1秒，同时有5个任务处于静止状态，表明机器资源存在瓶颈，限制了整体生产进度。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "由于机器利用率极低(0.0063)，且有5个任务处于静止状态，表明机器成为瓶颈，导致整体完工状态不佳。",
+  "case_id": "inj_combo_09_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 8.9,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.006266276041666667",
+    "operation_queue_waiting_time_mean=1.1666666666666667",
+    "tasked_stationary_count=5"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "由于机器利用率极低(0.0063)，且有5个任务处于静止状态，表明机器成为瓶颈，导致整体完工状态不佳。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "由于机器利用率极低(0.0063)，且有5个任务处于静止状态，表明机器资源存在严重瓶颈，导致作业等待时间增加。",
+  "case_id": "inj_combo_09_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 8.7,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.006266276041666667",
+    "operation_queue_waiting_time_mean=1.1666666666666667",
+    "tasked_stationary_count=5"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "由于机器利用率极低(0.0063)，且有5个任务处于静止状态，表明机器资源存在严重瓶颈，导致作业等待时间增加。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器2在第141步发生故障并持续40步，直到第180步恢复，导致整体机器利用率较低（0.036），影响了生产进度。",
+  "case_id": "inj_combo_10|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:1",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 7.1,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine",
+   "evidence": [
+    "EVT001",
+    "EVT002",
+    "machine_down_steps_total=40"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器2在第141步发生故障并持续40步，直到第180步恢复，导致整体机器利用率较低（0.036），影响了生产进度。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.036), 导致整体生产吞吐量仅为10个工件。这表明机器资源存在严重瓶颈, 限制了生产进度。",
+  "case_id": "inj_combo_10|hard",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:1",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 7.4,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.035969615728328866",
+    "throughput_jobs=10"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.036), 导致整体生产吞吐量仅为10个工件。这表明机器资源存在严重瓶颈, 限制了生产进度。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.0357)，表明存在机器瓶颈，导致整体完工状态受限。",
+  "case_id": "inj_combo_10_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 6.6,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.03571428571428571",
+    "throughput_jobs=10"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.0357)，表明存在机器瓶颈，导致整体完工状态受限。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低（0.0357），表明存在机器瓶颈，导致整体完工状态受限。",
+  "case_id": "inj_combo_10_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 6.3,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.03571428571428571",
+    "throughput_jobs=10"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低（0.0357），表明存在机器瓶颈，导致整体完工状态受限。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "由于机器利用率极低(0.0238)且任务队列平均等待时间较高(1.85), 表明机器资源存在严重瓶颈, 导致任务无法推进。",
+  "case_id": "inj_combo_11_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 9.0,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.0238037109375",
+    "operation_queue_waiting_time_mean=1.8461538461538463",
+    "tasked_stationary_count=2"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "由于机器利用率极低(0.0238)且任务队列平均等待时间较高(1.85), 表明机器资源存在严重瓶颈, 导致任务无法推进。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "由于机器利用率极低(0.0238)且任务队列平均等待时间较高(1.85), 说明机器资源存在严重瓶颈, 导致任务无法推进。",
+  "case_id": "inj_combo_11_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 8.8,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.0238037109375",
+    "operation_queue_waiting_time_mean=1.8461538461538463",
+    "tasked_stationary_count=2"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "由于机器利用率极低(0.0238)且任务队列平均等待时间较高(1.85), 说明机器资源存在严重瓶颈, 导致任务无法推进。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于machine:0在step 150发生故障并持续40步，导致资源中断损失面积为40，影响了整体完工状态。",
+  "case_id": "inj_machine_00|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:0",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 7.9,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:0",
+   "cause": "disruption_machine",
+   "evidence": [
+    "EVT001: machine_breakdown at step 150 for machine_id 0 with duration_steps 40",
+    "machine_down_steps_total=40",
+    "resource_disruption_loss_area=40"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于machine:0在step 150发生故障并持续40步，导致资源中断损失面积为40，影响了整体完工状态。"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率较低(0.06)，且操作队列平均等待时间为1.53，表明机器资源存在瓶颈，限制了整体生产效率。",
+  "case_id": "inj_machine_00|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:0",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 8.0,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.060240963855421686",
+    "operation_queue_waiting_time_mean=1.5272727272727273"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率较低(0.06)，且操作队列平均等待时间为1.53，表明机器资源存在瓶颈，限制了整体生产效率。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "根据运行档案，machine_utilization 仅为 0.0599，表明机器利用率极低，同时 operation_queue_waiting_time_mean 为 1.0，说明作业在队列中等待时间较短，但整体生产效率受限。这表明系统存在机器瓶颈，导致完工状态不佳。",
+  "case_id": "inj_machine_00_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 8.9,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.059880239520958084",
+    "operation_queue_waiting_time_mean=1.0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "根据运行档案，machine_utilization 仅为 0.0599，表明机器利用率极低，同时 operation_queue_waiting_time_mean 为 1.0，说明作业在队列中等待时间较短，但整体生产效率受限。这表明系统存在机器瓶颈，导致完工状态不佳。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "根据运行档案，machine_utilization 仅为 0.0599，表明机器利用率极低，同时 operation_queue_waiting_time_mean 为 1.0，说明作业在队列中等待时间较短，但整体生产效率受限。这表明系统存在机器瓶颈，导致完工状态不佳。",
+  "case_id": "inj_machine_00_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 8.8,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.059880239520958084",
+    "operation_queue_waiting_time_mean=1.0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "根据运行档案，machine_utilization 仅为 0.0599，表明机器利用率极低，同时 operation_queue_waiting_time_mean 为 1.0，说明作业在队列中等待时间较短，但整体生产效率受限。这表明系统存在机器瓶颈，导致完工状态不佳。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "根据运行档案，machine_utilization 极低，表明机器资源利用率不足，可能是导致完工状态不佳的主要原因。",
+  "case_id": "inj_machine_01_T|easy",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  },
+  "retries": 0,
+  "wall_s": 6.1,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.007527669270833333"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "根据运行档案，machine_utilization 极低，表明机器资源利用率不足，可能是导致完工状态不佳的主要原因。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "该 episode 的完工状态不佳，主要由于机器利用率极低（machine_utilization=0.007527669270833333），表明机器资源存在严重瓶颈。",
+  "case_id": "inj_machine_01_T|hard",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  },
+  "retries": 0,
+  "wall_s": 7.1,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.007527669270833333"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "该 episode 的完工状态不佳，主要由于机器利用率极低（machine_utilization=0.007527669270833333），表明机器资源存在严重瓶颈。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "根据事件记录 EVT001 和 EVT002，machine:3 在第 225 步发生故障，持续 20 步，直到第 244 步恢复。同时，machine_down_steps_total 为 20，resource_disruption_loss_area 为 20，表明该机器的故障对整体生产造成了显著影响。因此，machine:3 是影响完工状态的关键资源，其故障是导致当前状态的主要原因。",
+  "case_id": "inj_machine_02|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 10.8,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine",
+   "evidence": [
+    "EVT001",
+    "EVT002",
+    "machine_down_steps_total=20",
+    "resource_disruption_loss_area=20"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "根据事件记录 EVT001 和 EVT002，machine:3 在第 225 步发生故障，持续 20 步，直到第 244 步恢复。同时，machine_down_steps_total 为 20，resource_disruption_loss_area 为 20，表明该机器的故障对整体生产造成了显著影响。因此，machine:3 是影响完工状态的关键资源，其故障是导致当前状态的主要原因。"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率较低(0.096)，表明存在机器瓶颈，导致整体完工状态受限。",
+  "case_id": "inj_machine_02|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 6.6,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.09635119726339794",
+    "throughput_jobs=15"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率较低(0.096)，表明存在机器瓶颈，导致整体完工状态受限。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "由于机器利用率较低(0.096)，且操作队列平均等待时间较高(1.59)，表明存在机器瓶颈，导致整体完工效率受限。",
+  "case_id": "inj_machine_02_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 8.1,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.09635119726339794",
+    "operation_queue_waiting_time_mean=1.5912408759124088"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "由于机器利用率较低(0.096)，且操作队列平均等待时间较高(1.59)，表明存在机器瓶颈，导致整体完工效率受限。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "由于机器利用率较低(0.096)，且操作队列平均等待时间较高(1.59)，表明存在机器瓶颈，限制了整体生产效率。",
+  "case_id": "inj_machine_02_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 7.9,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.09635119726339794",
+    "operation_queue_waiting_time_mean=1.5912408759124088"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "由于机器利用率较低(0.096)，且操作队列平均等待时间较高(1.59)，表明存在机器瓶颈，限制了整体生产效率。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "由于机器利用率极低且任务在队列中等待时间较长，表明机器资源存在瓶颈，导致任务无法推进。",
+  "case_id": "inj_machine_03_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 8.0,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.004150390625",
+    "operation_queue_waiting_time_mean=1.6666666666666667",
+    "tasked_stationary_count=3"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "由于机器利用率极低且任务在队列中等待时间较长，表明机器资源存在瓶颈，导致任务无法推进。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "由于机器利用率极低且任务在队列中等待时间较长，表明机器成为瓶颈，导致任务无法推进。",
+  "case_id": "inj_machine_03_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 7.7,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.004150390625",
+    "operation_queue_waiting_time_mean=1.6666666666666667",
+    "tasked_stationary_count=3"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "由于机器利用率极低且任务在队列中等待时间较长，表明机器成为瓶颈，导致任务无法推进。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "根据事件记录 EVT001 和 EVT002，machine:2 在第 221 步发生故障，持续 60 步，直到第 280 步恢复。machine_down_steps_total 为 60，表明该机器的停机时间是生产中断的主要原因。由于该机器的停机导致资源利用率下降，影响了整体完工状态。",
+  "case_id": "inj_machine_04|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 9.8,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine",
+   "evidence": [
+    "EVT001",
+    "EVT002",
+    "machine_down_steps_total=60",
+    "resource_disruption_loss_area=60"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "根据事件记录 EVT001 和 EVT002，machine:2 在第 221 步发生故障，持续 60 步，直到第 280 步恢复。machine_down_steps_total 为 60，表明该机器的停机时间是生产中断的主要原因。由于该机器的停机导致资源利用率下降，影响了整体完工状态。"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.044)，且操作队列平均等待时间为1秒，表明机器资源存在瓶颈，限制了整体生产进度。",
+  "case_id": "inj_machine_04|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 7.2,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.044141252006420544",
+    "operation_queue_waiting_time_mean=1.0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.044)，且操作队列平均等待时间为1秒，表明机器资源存在瓶颈，限制了整体生产进度。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "根据运行档案，machine_utilization 极低（0.042），表明机器资源利用率不足，可能是导致完工状态受限的主要原因。尽管没有发生设备故障或AGV阻塞，但低效的机器使用可能成为瓶颈。",
+  "case_id": "inj_machine_04_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 8.3,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.04233226837060703",
+    "throughput_jobs=10"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "根据运行档案，machine_utilization 极低（0.042），表明机器资源利用率不足，可能是导致完工状态受限的主要原因。尽管没有发生设备故障或AGV阻塞，但低效的机器使用可能成为瓶颈。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.0423)，表明存在机器瓶颈，导致整体完工状态受限。",
+  "case_id": "inj_machine_04_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 6.5,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.04233226837060703",
+    "throughput_jobs=10"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.0423)，表明存在机器瓶颈，导致整体完工状态受限。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.016)，导致整体生产吞吐量为0，表明存在机器瓶颈问题。",
+  "case_id": "inj_machine_05_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 7.0,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.016082763671875",
+    "throughput_jobs=0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.016)，导致整体生产吞吐量为0，表明存在机器瓶颈问题。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.016)，导致整体生产吞吐量为0，表明存在机器瓶颈问题。",
+  "case_id": "inj_machine_05_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 7.2,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.016082763671875",
+    "throughput_jobs=0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.016)，导致整体生产吞吐量为0，表明存在机器瓶颈问题。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.03322259136212625)，表明存在机器瓶颈，限制了整体生产进度。",
+  "case_id": "inj_machine_06_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 7.1,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.03322259136212625"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.03322259136212625)，表明存在机器瓶颈，限制了整体生产进度。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "根据运行档案，machine_utilization=0.03322259136212625，表明机器利用率极低，可能是生产瓶颈。因此，机器资源是影响完工状态的关键因素。",
+  "case_id": "inj_machine_06_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 7.1,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.03322259136212625"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "根据运行档案，machine_utilization=0.03322259136212625，表明机器利用率极低，可能是生产瓶颈。因此，机器资源是影响完工状态的关键因素。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "由于机器利用率极低且任务在队列中等待时间平均为1.0，表明机器成为瓶颈，导致任务无法及时处理。",
+  "case_id": "inj_machine_07_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 7.7,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.005574544270833333",
+    "operation_queue_waiting_time_mean=1.0",
+    "tasked_stationary_count=4"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "由于机器利用率极低且任务在队列中等待时间平均为1.0，表明机器成为瓶颈，导致任务无法及时处理。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低且任务在队列中等待时间平均为1.0，表明机器资源成为瓶颈，导致任务无法及时处理。",
+  "case_id": "inj_machine_07_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 7.5,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.005574544270833333",
+    "operation_queue_waiting_time_mean=1.0",
+    "tasked_stationary_count=4"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低且任务在队列中等待时间平均为1.0，表明机器资源成为瓶颈，导致任务无法及时处理。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "根据事件记录，machine:4 在第225步发生故障，持续60步，直到第284步恢复。这导致了60步的资源中断损失，影响了整体生产进度。由于机器利用率仅为0.088，表明机器整体使用率低，而故障进一步加剧了瓶颈。因此，machine:4 是关键资源，其故障是导致当前完工状态的主要原因。",
+  "case_id": "inj_machine_08|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:4",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 10.2,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:4",
+   "cause": "disruption_machine",
+   "evidence": [
+    "EVT001",
+    "EVT002",
+    "machine_down_steps_total=60",
+    "resource_disruption_loss_area=60"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "根据事件记录，machine:4 在第225步发生故障，持续60步，直到第284步恢复。这导致了60步的资源中断损失，影响了整体生产进度。由于机器利用率仅为0.088，表明机器整体使用率低，而故障进一步加剧了瓶颈。因此，machine:4 是关键资源，其故障是导致当前完工状态的主要原因。"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率较低且操作队列等待时间较高，表明存在机器瓶颈，限制了整体生产效率。",
+  "case_id": "inj_machine_08|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:4",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 7.3,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.08829676071055381",
+    "operation_queue_waiting_time_mean=2.197080291970803"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率较低且操作队列等待时间较高，表明存在机器瓶颈，限制了整体生产效率。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率较低(0.091)，且操作队列平均等待时间较高(1.365)，表明机器资源存在瓶颈，限制了整体完工效率。",
+  "case_id": "inj_machine_08_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 8.5,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.09135135135135135",
+    "operation_queue_waiting_time_mean=1.364963503649635",
+    "throughput_jobs=15"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率较低(0.091)，且操作队列平均等待时间较高(1.365)，表明机器资源存在瓶颈，限制了整体完工效率。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率较低(0.091)，且操作队列平均等待时间较高(1.365)，表明机器资源存在瓶颈，限制了整体生产效率。",
+  "case_id": "inj_machine_08_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 8.3,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.09135135135135135",
+    "operation_queue_waiting_time_mean=1.364963503649635",
+    "throughput_jobs=15"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率较低(0.091)，且操作队列平均等待时间较高(1.365)，表明机器资源存在瓶颈，限制了整体生产效率。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.0045)且任务在队列中等待时间平均为1.5步，表明机器资源存在严重瓶颈，导致任务无法推进。",
+  "case_id": "inj_machine_09_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 8.0,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.0045166015625",
+    "operation_queue_waiting_time_mean=1.5",
+    "tasked_stationary_count=4"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.0045)且任务在队列中等待时间平均为1.5步，表明机器资源存在严重瓶颈，导致任务无法推进。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.0045)且任务在队列中等待时间平均为1.5步，表明机器资源成为瓶颈，导致任务无法推进。",
+  "case_id": "inj_machine_09_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 7.7,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.0045166015625",
+    "operation_queue_waiting_time_mean=1.5",
+    "tasked_stationary_count=4"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.0045)且任务在队列中等待时间平均为1.5步，表明机器资源成为瓶颈，导致任务无法推进。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "根据事件记录，machine:3 在第168步发生故障，持续20步，直到第187步恢复。这导致了20步的资源损失面积，表明该机器是关键资源瓶颈。由于机器故障直接导致了生产中断，因此归因为机器故障。",
+  "case_id": "inj_machine_10|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 8.7,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine",
+   "evidence": [
+    "EVT001",
+    "EVT002",
+    "machine_down_steps_total=20",
+    "resource_disruption_loss_area=20"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "根据事件记录，machine:3 在第168步发生故障，持续20步，直到第187步恢复。这导致了20步的资源损失面积，表明该机器是关键资源瓶颈。由于机器故障直接导致了生产中断，因此归因为机器故障。"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.0516)，表明存在机器瓶颈，导致整体完工状态受限。",
+  "case_id": "inj_machine_10|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 6.7,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.051622418879056046",
+    "throughput_jobs=10"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.0516)，表明存在机器瓶颈，导致整体完工状态受限。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.03716690042075736)，表明机器资源存在瓶颈，限制了整体生产进度。",
+  "case_id": "inj_machine_10_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 6.8,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.03716690042075736"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.03716690042075736)，表明机器资源存在瓶颈，限制了整体生产进度。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.037)，且操作队列平均等待时间为1秒，表明机器资源存在瓶颈，限制了整体生产进度。",
+  "case_id": "inj_machine_10_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 7.0,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.03716690042075736",
+    "operation_queue_waiting_time_mean=1.0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.037)，且操作队列平均等待时间为1秒，表明机器资源存在瓶颈，限制了整体生产进度。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.02078)，且操作队列平均等待时间较高(4.3571)，表明机器成为瓶颈，导致任务无法推进，最终整体制程无产出(throughput_jobs=0)。",
+  "case_id": "inj_machine_11_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 9.4,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.020782470703125",
+    "operation_queue_waiting_time_mean=4.357142857142857",
+    "throughput_jobs=0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.02078)，且操作队列平均等待时间较高(4.3571)，表明机器成为瓶颈，导致任务无法推进，最终整体制程无产出(throughput_jobs=0)。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.02078)，且操作队列平均等待时间较高(4.357)，表明机器资源成为瓶颈，导致任务无法推进，最终整体制程无产出(throughput_jobs=0)。",
+  "case_id": "inj_machine_11_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 9.4,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.020782470703125",
+    "operation_queue_waiting_time_mean=4.357142857142857",
+    "throughput_jobs=0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.02078)，且操作队列平均等待时间较高(4.357)，表明机器资源成为瓶颈，导致任务无法推进，最终整体制程无产出(throughput_jobs=0)。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于machine:2在第248步发生故障，持续40步，导致资源中断损失面积为40。这可能是影响完工状态的关键原因。",
+  "case_id": "inj_machine_12|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 8.3,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine",
+   "evidence": [
+    "EVT001: machine_breakdown at step 248 for machine_id 2 with duration_steps 40",
+    "machine_down_steps_total=40",
+    "resource_disruption_loss_area=40"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于machine:2在第248步发生故障，持续40步，导致资源中断损失面积为40。这可能是影响完工状态的关键原因。"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.0414)，表明存在机器瓶颈，导致整体完工状态受限。",
+  "case_id": "inj_machine_12|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 6.5,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.04143646408839779",
+    "throughput_jobs=10"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.0414)，表明存在机器瓶颈，导致整体完工状态受限。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "根据运行档案，machine_utilization 仅为 0.0415，表明机器利用率极低，同时 operation_queue_waiting_time_mean 为 1.0，说明作业在队列中等待时间较短，但整体生产效率受限。这表明系统存在机器瓶颈，导致完工状态不佳。",
+  "case_id": "inj_machine_12_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 8.9,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.04149377593360996",
+    "operation_queue_waiting_time_mean=1.0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "根据运行档案，machine_utilization 仅为 0.0415，表明机器利用率极低，同时 operation_queue_waiting_time_mean 为 1.0，说明作业在队列中等待时间较短，但整体生产效率受限。这表明系统存在机器瓶颈，导致完工状态不佳。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.0415)，且操作队列平均等待时间为1秒，表明机器资源存在瓶颈，限制了整体生产进度。",
+  "case_id": "inj_machine_12_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 7.3,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.04149377593360996",
+    "operation_queue_waiting_time_mean=1.0"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.0415)，且操作队列平均等待时间为1秒，表明机器资源存在瓶颈，限制了整体生产进度。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低且任务在操作队列中等待时间较短，表明机器成为瓶颈，导致任务无法进一步推进。",
+  "case_id": "inj_machine_13_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 7.5,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.005818684895833333",
+    "operation_queue_waiting_time_mean=1.25",
+    "tasked_stationary_count=3"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低且任务在操作队列中等待时间较短，表明机器成为瓶颈，导致任务无法进一步推进。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低且任务在队列中等待时间较短，表明机器成为瓶颈，导致任务无法快速推进。",
+  "case_id": "inj_machine_13_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 7.4,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.005818684895833333",
+    "operation_queue_waiting_time_mean=1.25",
+    "tasked_stationary_count=3"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低且任务在队列中等待时间较短，表明机器成为瓶颈，导致任务无法快速推进。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于machine:6在第243步发生故障，持续40步，导致资源中断损失面积为40。这表明该机器是关键资源，其故障直接影响了生产进度。",
+  "case_id": "inj_machine_14|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:6",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 8.8,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:6",
+   "cause": "disruption_machine",
+   "evidence": [
+    "EVT001: machine_breakdown at step 243 for machine:6 with duration_steps=40",
+    "machine_down_steps_total=40",
+    "resource_disruption_loss_area=40"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于machine:6在第243步发生故障，持续40步，导致资源中断损失面积为40。这表明该机器是关键资源，其故障直接影响了生产进度。"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率较低(0.0967)，表明存在机器瓶颈，导致整体完工状态受限。",
+  "case_id": "inj_machine_14|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:6",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 6.2,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.09673726388093876",
+    "throughput_jobs=15"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率较低(0.0967)，表明存在机器瓶颈，导致整体完工状态受限。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率较低（machine_utilization=0.0967），表明机器资源未被充分利用，可能是生产瓶颈所在。",
+  "case_id": "inj_machine_14_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 6.3,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.09673726388093876"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率较低（machine_utilization=0.0967），表明机器资源未被充分利用，可能是生产瓶颈所在。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率较低(0.0967)，表明存在机器瓶颈，限制了整体生产效率。",
+  "case_id": "inj_machine_14_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 5.6,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.09673726388093876"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率较低(0.0967)，表明存在机器瓶颈，限制了整体生产效率。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.006958)，且作业平均等待时间(1.115)表明存在瓶颈，推测机器资源是限制完工状态的关键因素。",
+  "case_id": "inj_machine_15_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 8.5,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.0069580078125",
+    "operation_queue_waiting_time_mean=1.1153846153846154",
+    "throughput_jobs=2"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.006958)，且作业平均等待时间(1.115)表明存在瓶颈，推测机器资源是限制完工状态的关键因素。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.006958)，且作业平均等待时间(1.115)表明存在瓶颈，推测机器资源是限制完工状态的关键因素。",
+  "case_id": "inj_machine_15_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 8.3,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.0069580078125",
+    "operation_queue_waiting_time_mean=1.1153846153846154",
+    "throughput_jobs=2"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.006958)，且作业平均等待时间(1.115)表明存在瓶颈，推测机器资源是限制完工状态的关键因素。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "fleet(K+1)",
+  "narrative": "AGV 3 和 AGV 0 多次发生故障，导致 AGV 整体等待时间显著增加，同时 AGV 故障次数和恢复时间也影响了运输效率，从而影响了整体完工状态。",
+  "case_id": "inj_stoch_00|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 14.1,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv:3",
+   "cause": "disruption_agv",
+   "evidence": [
+    "agv_waiting_time_total=919",
+    "agv_down_steps_total=56",
+    "EVT001: agv_breakdown (agv_id=3, duration_steps=8)",
+    "EVT003: agv_breakdown (agv_id=3, duration_steps=8)",
+    "EVT005: agv_breakdown (agv_id=0, duration_steps=8)",
+    "EVT007: agv_breakdown (agv_id=2, duration_steps=8)",
+    "EVT008: agv_breakdown (agv_id=0, duration_steps=8)"
+   ],
+   "intervention": "fleet(K+1)",
+   "narrative": "AGV 3 和 AGV 0 多次发生故障，导致 AGV 整体等待时间显著增加，同时 AGV 故障次数和恢复时间也影响了运输效率，从而影响了整体完工状态。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.0376)，且操作队列平均等待时间较短(1.04)，表明机器资源存在严重瓶颈，限制了整体完工状态。",
+  "case_id": "inj_stoch_00|hard",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 8.3,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.037641154328732745",
+    "operation_queue_waiting_time_mean=1.0363636363636364"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.0376)，且操作队列平均等待时间较短(1.04)，表明机器资源存在严重瓶颈，限制了整体完工状态。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "fleet(K+1)",
+  "narrative": "AGV 3、1、2 和 0 在运行过程中多次发生故障，导致运输阻塞延迟和AGV等待时间显著增加，影响了整体作业完成效率。",
+  "case_id": "inj_stoch_02|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 13.8,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv:3+agv:1+agv:2+agv:0",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "agv_down_steps_total=88",
+    "agv_waiting_time_total=1473",
+    "transport_blocking_delay_mean=2.430894308943089",
+    "EVT001: agv_breakdown (agv_id=3)",
+    "EVT004: agv_breakdown (agv_id=1)",
+    "EVT007: agv_breakdown (agv_id=2)",
+    "EVT008: agv_breakdown (agv_id=0)"
+   ],
+   "intervention": "fleet(K+1)",
+   "narrative": "AGV 3、1、2 和 0 在运行过程中多次发生故障，导致运输阻塞延迟和AGV等待时间显著增加，影响了整体作业完成效率。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率较低(0.1284)，且操作队列平均等待时间较高(2.5952)，表明存在机器瓶颈，限制了整体完工效率。",
+  "case_id": "inj_stoch_02|hard",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 8.4,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.1284107669616519",
+    "operation_queue_waiting_time_mean=2.5952380952380953"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率较低(0.1284)，且操作队列平均等待时间较高(2.5952)，表明存在机器瓶颈，限制了整体完工效率。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "AGV 0 和 AGV 3 各发生了一次故障，持续 8 步，同时机器 3 也发生了 10 步的故障。这些中断事件可能影响了任务的运输和加工进度，导致整体完工状态受限。",
+  "case_id": "inj_stoch_04|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 12.5,
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:3+agv:0+agv:3",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "agv_down_steps_total=16",
+    "machine_down_steps_total=10",
+    "EVT001: agv_breakdown (agv_id=0, duration_steps=8)",
+    "EVT003: agv_breakdown (agv_id=3, duration_steps=8)",
+    "EVT005: machine_breakdown (machine_id=3, duration_steps=10)"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "AGV 0 和 AGV 3 各发生了一次故障，持续 8 步，同时机器 3 也发生了 10 步的故障。这些中断事件可能影响了任务的运输和加工进度，导致整体完工状态受限。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.05)且操作队列平均等待时间较短(1.045), 表明机器资源未被充分利用, 成为生产瓶颈。",
+  "case_id": "inj_stoch_04|hard",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 8.0,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.05",
+    "operation_queue_waiting_time_mean=1.0454545454545454"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.05)且操作队列平均等待时间较短(1.045), 表明机器资源未被充分利用, 成为生产瓶颈。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "fleet(K+1)",
+  "narrative": "AGV 0、1 和 2 多次发生故障，累计停机时间为 48 步，导致运输任务延迟，影响整体完工状态。",
+  "case_id": "inj_stoch_06|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 14.3,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv:0+agv:1+agv:2",
+   "cause": "disruption_agv",
+   "evidence": [
+    "agv_down_steps_total=48",
+    "EVT001: agv_breakdown (agv_id=0, duration_steps=8)",
+    "EVT003: agv_breakdown (agv_id=1, duration_steps=8)",
+    "EVT005: agv_breakdown (agv_id=1, duration_steps=8)",
+    "EVT007: agv_breakdown (agv_id=2, duration_steps=8)",
+    "EVT008: agv_breakdown (agv_id=0, duration_steps=8)"
+   ],
+   "intervention": "fleet(K+1)",
+   "narrative": "AGV 0、1 和 2 多次发生故障，累计停机时间为 48 步，导致运输任务延迟，影响整体完工状态。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "由于机器利用率极低(0.0447)且操作队列平均等待时间较高(1.1132), 表明存在机器瓶颈问题。",
+  "case_id": "inj_stoch_06|hard",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 8.1,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "machine_bottleneck",
+   "evidence": [
+    "machine_utilization=0.04472140762463343",
+    "operation_queue_waiting_time_mean=1.1132075471698113"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "由于机器利用率极低(0.0447)且操作队列平均等待时间较高(1.1132), 表明存在机器瓶颈问题。"
+  }
+ }
+]

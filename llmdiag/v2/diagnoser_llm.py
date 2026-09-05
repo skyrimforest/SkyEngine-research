@@ -15,6 +15,11 @@ from pathlib import Path
 HERE = Path(__file__).parent
 BASE = os.environ.get("LLM_BASE_URL", "http://localhost:11434")
 MODEL = os.environ.get("LLM_MODEL", "qwen3:4b")
+# LLM_API: ollama(原生 /api/chat) | openai(OpenAI 兼容 /chat/completions, vLLM 等)
+API = os.environ.get("LLM_API", "ollama")
+# Qwen3 混合思考链: openai 模式下经 chat_template_kwargs 关闭 (冒烟记录: 思考链
+# 烧 3-5k token 是延迟主因); ollama 模式依赖提示内 /no_think 软开关
+NO_THINK = os.environ.get("LLM_NO_THINK", "1") == "1"
 
 SYSTEM = """你是FJSP+MAPF柔性制造仿真系统的调度诊断专家。根据运行档案填写诊断JSON, 字段:
 - loc_type: 定位类型, 枚举 machine|agv|machine_agv|stochastic|task_pool|corridor|machines|none
@@ -39,14 +44,25 @@ def call_llm(case: dict) -> tuple[dict | None, int, float]:
             f"## 查询\n{case['query']}\n请只输出诊断JSON。/no_think")
     msgs = [{"role": "system", "content": SYSTEM}, {"role": "user", "content": user}]
     for attempt in range(3):  # JsonRegen: 解析失败带反馈重试
-        body = json.dumps({"model": MODEL, "stream": False, "temperature": 0,
-                           "options": {"num_ctx": 8192}, "messages": msgs}).encode()
-        req = urllib.request.Request(f"{BASE}/api/chat", data=body,
+        if API == "openai":
+            body = {"model": MODEL, "stream": False, "temperature": 0,
+                    "max_tokens": int(os.environ.get("LLM_MAX_TOKENS", "2048")),
+                    "messages": msgs}
+            if NO_THINK:
+                body["chat_template_kwargs"] = {"enable_thinking": False}
+            url = f"{BASE}/chat/completions"
+        else:
+            body = json.dumps({"model": MODEL, "stream": False, "temperature": 0,
+                               "options": {"num_ctx": 8192}, "messages": msgs}).encode()
+            url = f"{BASE}/api/chat"
+        req = urllib.request.Request(url, data=body if isinstance(body, bytes)
+                                     else json.dumps(body).encode(),
                                      headers={"Content-Type": "application/json"})
         t0 = time.time()
         r = json.loads(urllib.request.urlopen(req, timeout=600).read())
         dt = time.time() - t0
-        txt = r["message"]["content"].strip()
+        txt = (r["choices"][0]["message"]["content"] if API == "openai"
+               else r["message"]["content"]).strip()
         try:
             j = json.loads(txt[txt.index("{"): txt.rindex("}") + 1])
             return j, attempt, dt
