@@ -1,7 +1,7 @@
 {
  "summary": {
-  "n": 3,
-  "graded": 3,
+  "n": 9,
+  "graded": 9,
   "success_rate": 0.667,
   "recovery_ratio_mean": 5.104
  },
@@ -50,6 +50,96 @@
    "success": true,
    "note": "同 seed=242 重仿真",
    "wall_time_s": 24.4
+  },
+  {
+   "case_id": "inj_combo_00|hard",
+   "intervention": "assigner(least_congestion)",
+   "family": "assigner",
+   "arg": "least_congestion",
+   "executable": true,
+   "delta_kpi": -67.0,
+   "rerun_makespan": 754,
+   "rerun_finished": true,
+   "fault_delta_makespan": null,
+   "recovery_ratio": null,
+   "success": false,
+   "note": "同 seed=142 重仿真",
+   "wall_time_s": 19.5
+  },
+  {
+   "case_id": "inj_combo_02|easy",
+   "intervention": "fleet(K+1)",
+   "family": "fleet",
+   "arg": "+1",
+   "executable": true,
+   "delta_kpi": 179.0,
+   "rerun_makespan": 1316,
+   "rerun_finished": true,
+   "fault_delta_makespan": 52,
+   "recovery_ratio": null,
+   "success": true,
+   "note": "同 seed=144 重仿真",
+   "wall_time_s": 50.0
+  },
+  {
+   "case_id": "inj_machine_00|hard",
+   "intervention": "assigner(least_congestion)",
+   "family": "assigner",
+   "arg": "least_congestion",
+   "executable": true,
+   "delta_kpi": 30.0,
+   "rerun_makespan": 466,
+   "rerun_finished": true,
+   "fault_delta_makespan": null,
+   "recovery_ratio": null,
+   "success": true,
+   "note": "同 seed=42 重仿真",
+   "wall_time_s": 13.8
+  },
+  {
+   "case_id": "inj_machine_02|easy",
+   "intervention": "assigner(least_congestion)",
+   "family": "assigner",
+   "arg": "least_congestion",
+   "executable": true,
+   "delta_kpi": 66.0,
+   "rerun_makespan": 1686,
+   "rerun_finished": true,
+   "fault_delta_makespan": 0,
+   "recovery_ratio": null,
+   "success": false,
+   "note": "同 seed=44 重仿真",
+   "wall_time_s": 53.6
+  },
+  {
+   "case_id": "inj_stoch_00|hard",
+   "intervention": "assigner(least_congestion)",
+   "family": "assigner",
+   "arg": "least_congestion",
+   "executable": true,
+   "delta_kpi": 59.0,
+   "rerun_makespan": 736,
+   "rerun_finished": true,
+   "fault_delta_makespan": null,
+   "recovery_ratio": null,
+   "success": true,
+   "note": "同 seed=242 重仿真",
+   "wall_time_s": 24.4
+  },
+  {
+   "case_id": "inj_stoch_02|easy",
+   "intervention": "fleet(K+1)",
+   "family": "fleet",
+   "arg": "+1",
+   "executable": true,
+   "delta_kpi": 375.0,
+   "rerun_makespan": 979,
+   "rerun_finished": true,
+   "fault_delta_makespan": null,
+   "recovery_ratio": null,
+   "success": true,
+   "note": "同 seed=244 重仿真",
+   "wall_time_s": 105.8
   }
  ]
 }
