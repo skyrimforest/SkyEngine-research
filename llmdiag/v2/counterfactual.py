@@ -178,9 +178,12 @@ def main():
     out_path = Path(args.out) if args.out else \
         HERE / f"results_cf_{rp.stem.replace('results_', '')}.json"
     done: dict = {}
-    if out_path.exists():  # 断点续跑
-        for r in json.loads(out_path.read_text()):
-            if r.get("delta_kpi") is not None or r.get("family") == "none":
+    if out_path.exists():  # 断点续跑 (兼容 dict 包装与纯列表两种存法)
+        prev = json.loads(out_path.read_text())
+        prev_list = prev.get("results", []) if isinstance(prev, dict) else prev
+        for r in prev_list:
+            if isinstance(r, dict) and (
+                    r.get("delta_kpi") is not None or r.get("family") == "none"):
                 done[r["case_id"]] = r
     out_lines = list(done.values())
     print(f"[cf] 待重仿真 {len(picked)} 案例 (policy={args.policy}, "
