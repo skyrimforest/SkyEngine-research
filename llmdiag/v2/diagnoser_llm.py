@@ -83,7 +83,12 @@ def main():
     for i, c in enumerate(cases):
         if c["case_id"] in done:
             continue
-        pred, retries, dt = call_llm(c)
+        try:
+            pred, retries, dt = call_llm(c)
+        except Exception as e:  # noqa: BLE001 — 单案例失败不拖垮全量(网络/服务波动), 留空行待续跑补测
+            print(f"[{i+1}/{len(cases)}] {c['case_id']}: CALL_FAIL {type(e).__name__}: {str(e)[:80]}", flush=True)
+            time.sleep(5)
+            continue
         row = dict(score_one(pred, c), case_id=c["case_id"], gt=c["ground_truth"],
                    retries=retries, wall_s=round(dt, 1), raw=pred)
         done[c["case_id"]] = row
