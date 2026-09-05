@@ -1,0 +1,103 @@
+{
+ "line1_signature": {
+  "passed": 52,
+  "rejected": 0,
+  "rejected_detail": [],
+  "by_cause": {},
+  "passed_ids": [
+   "base_mk01_cpsat|hard",
+   "base_mk01_greedy|hard",
+   "base_mk02_cpsat|hard",
+   "base_mk02_greedy|hard",
+   "base_mk03_cpsat|hard",
+   "base_mk03_greedy|hard",
+   "emg_starve_00|hard",
+   "emg_starve_02|hard",
+   "emg_starve_03|hard",
+   "inj_combo_00|hard",
+   "inj_combo_00_T|hard",
+   "inj_combo_01_T|hard",
+   "inj_combo_02|hard",
+   "inj_combo_02_T|hard",
+   "inj_combo_03_T|hard",
+   "inj_combo_04|hard",
+   "inj_combo_04_T|hard",
+   "inj_combo_05_T|hard",
+   "inj_combo_06|hard",
+   "inj_combo_06_T|hard",
+   "inj_combo_07_T|hard",
+   "inj_combo_09_T|hard",
+   "inj_combo_10|hard",
+   "inj_combo_10_T|hard",
+   "inj_combo_11_T|hard",
+   "inj_machine_00|hard",
+   "inj_machine_00_T|hard",
+   "inj_machine_01_T|hard",
+   "inj_machine_02|hard",
+   "inj_machine_02_T|hard",
+   "inj_machine_03_T|hard",
+   "inj_machine_04|hard",
+   "inj_machine_04_T|hard",
+   "inj_machine_05_T|hard",
+   "inj_machine_06_T|hard",
+   "inj_machine_07_T|hard",
+   "inj_machine_08|hard",
+   "inj_machine_08_T|hard",
+   "inj_machine_09_T|hard",
+   "inj_machine_10|hard",
+   "inj_machine_10_T|hard",
+   "inj_machine_11_T|hard",
+   "inj_machine_12|hard",
+   "inj_machine_12_T|hard",
+   "inj_machine_13_T|hard",
+   "inj_machine_14|hard",
+   "inj_machine_14_T|hard",
+   "inj_machine_15_T|hard",
+   "inj_stoch_00|hard",
+   "inj_stoch_02|hard",
+   "inj_stoch_04|hard",
+   "inj_stoch_06|hard"
+  ]
+ },
+ "line2_identifiability": {
+  "pairwise_overlap": {
+   "baseline|blocking_livelock": 0.0,
+   "baseline|starvation_livelock": 0.0,
+   "baseline|disruption_machine_agv": 0.0,
+   "baseline|disruption_machine": 0.0,
+   "baseline|disruption_stochastic": 0.0,
+   "blocking_livelock|starvation_livelock": 0.0,
+   "blocking_livelock|disruption_machine_agv": 0.0,
+   "blocking_livelock|disruption_machine": 0.0,
+   "blocking_livelock|disruption_stochastic": 0.0,
+   "starvation_livelock|disruption_machine_agv": 0.0,
+   "starvation_livelock|disruption_machine": 0.0,
+   "starvation_livelock|disruption_stochastic": 0.0,
+   "disruption_machine_agv|disruption_machine": 0.0,
+   "disruption_machine_agv|disruption_stochastic": 1.0,
+   "disruption_machine|disruption_stochastic": 0.0
+  },
+  "confusable_pairs": [
+   {
+    "pair": [
+     "disruption_machine_agv",
+     "disruption_stochastic"
+    ],
+    "profile_overlap": 1.0,
+    "note": "hard 视图上轮廓重合>=50%, 需 INT 消歧或 set-F1"
+   }
+  ],
+  "class_profile_counts": {
+   "baseline": 1,
+   "blocking_livelock": 2,
+   "starvation_livelock": 2,
+   "disruption_machine_agv": 1,
+   "disruption_machine": 1,
+   "disruption_stochastic": 2
+  }
+ },
+ "line3_int_views": {
+  "n": 32
+ },
+ "verdict": "F2 归因前提成立: hard 视图签名全部可辨识, 塌陷归因于溯因本身"
+}

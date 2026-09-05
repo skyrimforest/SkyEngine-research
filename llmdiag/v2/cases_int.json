@@ -1,0 +1,1986 @@
+[
+ {
+  "scen_id": "inj_combo_00",
+  "config": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 142,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.04354136429608128,
+   "operation_queue_waiting_time_mean": 1.1636363636363636,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.7565312046444121,
+   "agv_waiting_time_total": 671,
+   "transport_blocking_delay_mean": 2.6363636363636362,
+   "throughput_jobs": 10,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 30,
+   "agv_down_steps_total": 20,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 2,
+   "resource_time_to_recover_mean": 25.0,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 50,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 5,
+   "fail_count": 4,
+   "changed_operations": 0,
+   "machine_assignment_changes": 0
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:3+agv:1",
+   "cause": "disruption_machine_agv"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 4,
+   "makespan": 687,
+   "finished": true,
+   "event_visible": true,
+   "twin_makespan": 841,
+   "fault_delta_makespan": -154
+  },
+  "case_id": "inj_combo_00|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_schedule": [
+    {
+     "step": 180,
+     "type": "machine_breakdown",
+     "machine_id": 3,
+     "duration_steps": 30
+    },
+    {
+     "step": 275,
+     "type": "agv_breakdown",
+     "agv_id": 1,
+     "duration_steps": 20
+    }
+   ]
+  }
+ },
+ {
+  "scen_id": "inj_combo_00",
+  "config": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 142,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.04354136429608128,
+   "operation_queue_waiting_time_mean": 1.1636363636363636,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.7565312046444121,
+   "agv_waiting_time_total": 671,
+   "transport_blocking_delay_mean": 2.6363636363636362,
+   "throughput_jobs": 10,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 30,
+   "agv_down_steps_total": 20,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 2,
+   "resource_time_to_recover_mean": 25.0,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 50,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 5,
+   "fail_count": 4,
+   "changed_operations": 0,
+   "machine_assignment_changes": 0
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:3+agv:1",
+   "cause": "disruption_machine_agv"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 4,
+   "makespan": 687,
+   "finished": true,
+   "hard_note": "事件流已被移除, 仅凭统计特征推断"
+  },
+  "case_id": "inj_combo_00|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_schedule": [
+    {
+     "step": 180,
+     "type": "machine_breakdown",
+     "machine_id": 3,
+     "duration_steps": 30
+    },
+    {
+     "step": 275,
+     "type": "agv_breakdown",
+     "agv_id": 1,
+     "duration_steps": 20
+    }
+   ]
+  }
+ },
+ {
+  "scen_id": "inj_combo_02",
+  "config": {
+   "instance": "mk03",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 144,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.11289245156980628,
+   "operation_queue_waiting_time_mean": 2.6214285714285714,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.7428189712758851,
+   "agv_waiting_time_total": 1540,
+   "transport_blocking_delay_mean": 1.8970588235294117,
+   "throughput_jobs": 15,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 40,
+   "agv_down_steps_total": 30,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 2,
+   "resource_time_to_recover_mean": 35.0,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 70,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 5,
+   "fail_count": 4,
+   "changed_operations": 0,
+   "machine_assignment_changes": 0
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:4+agv:2",
+   "cause": "disruption_machine_agv"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 4,
+   "makespan": 1495,
+   "finished": true,
+   "event_visible": true,
+   "twin_makespan": 1443,
+   "fault_delta_makespan": 52
+  },
+  "case_id": "inj_combo_02|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_schedule": [
+    {
+     "step": 141,
+     "type": "machine_breakdown",
+     "machine_id": 4,
+     "duration_steps": 40
+    },
+    {
+     "step": 288,
+     "type": "agv_breakdown",
+     "agv_id": 2,
+     "duration_steps": 30
+    }
+   ]
+  }
+ },
+ {
+  "scen_id": "inj_combo_02",
+  "config": {
+   "instance": "mk03",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 144,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.11289245156980628,
+   "operation_queue_waiting_time_mean": 2.6214285714285714,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.7428189712758851,
+   "agv_waiting_time_total": 1540,
+   "transport_blocking_delay_mean": 1.8970588235294117,
+   "throughput_jobs": 15,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 40,
+   "agv_down_steps_total": 30,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 2,
+   "resource_time_to_recover_mean": 35.0,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 70,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 5,
+   "fail_count": 4,
+   "changed_operations": 0,
+   "machine_assignment_changes": 0
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:4+agv:2",
+   "cause": "disruption_machine_agv"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 4,
+   "makespan": 1495,
+   "finished": true,
+   "hard_note": "事件流已被移除, 仅凭统计特征推断"
+  },
+  "case_id": "inj_combo_02|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_schedule": [
+    {
+     "step": 141,
+     "type": "machine_breakdown",
+     "machine_id": 4,
+     "duration_steps": 40
+    },
+    {
+     "step": 288,
+     "type": "agv_breakdown",
+     "agv_id": 2,
+     "duration_steps": 30
+    }
+   ]
+  }
+ },
+ {
+  "scen_id": "inj_combo_04",
+  "config": {
+   "instance": "mk02",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 146,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.048983364140480594,
+   "operation_queue_waiting_time_mean": 1.5192307692307692,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.7384473197781886,
+   "agv_waiting_time_total": 566,
+   "transport_blocking_delay_mean": 2.673076923076923,
+   "throughput_jobs": 10,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 60,
+   "agv_down_steps_total": 20,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 2,
+   "resource_time_to_recover_mean": 40.0,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 80,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 5,
+   "fail_count": 4,
+   "changed_operations": 0,
+   "machine_assignment_changes": 0
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:5+agv:3",
+   "cause": "disruption_machine_agv"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 4,
+   "makespan": 539,
+   "finished": true,
+   "event_visible": true,
+   "twin_makespan": 548,
+   "fault_delta_makespan": -9
+  },
+  "case_id": "inj_combo_04|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_schedule": [
+    {
+     "step": 145,
+     "type": "machine_breakdown",
+     "machine_id": 5,
+     "duration_steps": 60
+    },
+    {
+     "step": 245,
+     "type": "agv_breakdown",
+     "agv_id": 3,
+     "duration_steps": 20
+    }
+   ]
+  }
+ },
+ {
+  "scen_id": "inj_combo_04",
+  "config": {
+   "instance": "mk02",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 146,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.048983364140480594,
+   "operation_queue_waiting_time_mean": 1.5192307692307692,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.7384473197781886,
+   "agv_waiting_time_total": 566,
+   "transport_blocking_delay_mean": 2.673076923076923,
+   "throughput_jobs": 10,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 60,
+   "agv_down_steps_total": 20,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 2,
+   "resource_time_to_recover_mean": 40.0,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 80,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 5,
+   "fail_count": 4,
+   "changed_operations": 0,
+   "machine_assignment_changes": 0
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:5+agv:3",
+   "cause": "disruption_machine_agv"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 4,
+   "makespan": 539,
+   "finished": true,
+   "hard_note": "事件流已被移除, 仅凭统计特征推断"
+  },
+  "case_id": "inj_combo_04|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_schedule": [
+    {
+     "step": 145,
+     "type": "machine_breakdown",
+     "machine_id": 5,
+     "duration_steps": 60
+    },
+    {
+     "step": 245,
+     "type": "agv_breakdown",
+     "agv_id": 3,
+     "duration_steps": 20
+    }
+   ]
+  }
+ },
+ {
+  "scen_id": "inj_combo_06",
+  "config": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 148,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.04554406696208764,
+   "operation_queue_waiting_time_mean": 1.2156862745098038,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.7307976366322009,
+   "agv_waiting_time_total": 729,
+   "transport_blocking_delay_mean": 2.58,
+   "throughput_jobs": 10,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 30,
+   "agv_down_steps_total": 30,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 2,
+   "resource_time_to_recover_mean": 30.0,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 60,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 5,
+   "fail_count": 0,
+   "changed_operations": 117,
+   "machine_assignment_changes": 38
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:3",
+   "cause": "disruption_machine_agv"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 4,
+   "makespan": 675,
+   "finished": true,
+   "event_visible": true,
+   "twin_makespan": 848,
+   "fault_delta_makespan": -173
+  },
+  "case_id": "inj_combo_06|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_schedule": [
+    {
+     "step": 158,
+     "type": "machine_breakdown",
+     "machine_id": 2,
+     "duration_steps": 30
+    },
+    {
+     "step": 247,
+     "type": "agv_breakdown",
+     "agv_id": 3,
+     "duration_steps": 30
+    }
+   ]
+  }
+ },
+ {
+  "scen_id": "inj_combo_06",
+  "config": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 148,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.04554406696208764,
+   "operation_queue_waiting_time_mean": 1.2156862745098038,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.7307976366322009,
+   "agv_waiting_time_total": 729,
+   "transport_blocking_delay_mean": 2.58,
+   "throughput_jobs": 10,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 30,
+   "agv_down_steps_total": 30,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 2,
+   "resource_time_to_recover_mean": 30.0,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 60,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 5,
+   "fail_count": 0,
+   "changed_operations": 117,
+   "machine_assignment_changes": 38
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:3",
+   "cause": "disruption_machine_agv"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 4,
+   "makespan": 675,
+   "finished": true,
+   "hard_note": "事件流已被移除, 仅凭统计特征推断"
+  },
+  "case_id": "inj_combo_06|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_schedule": [
+    {
+     "step": 158,
+     "type": "machine_breakdown",
+     "machine_id": 2,
+     "duration_steps": 30
+    },
+    {
+     "step": 247,
+     "type": "agv_breakdown",
+     "agv_id": 3,
+     "duration_steps": 30
+    }
+   ]
+  }
+ },
+ {
+  "scen_id": "inj_combo_10",
+  "config": {
+   "instance": "mk02",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 152,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.035969615728328866,
+   "operation_queue_waiting_time_mean": 1.5208333333333333,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.7372654155495979,
+   "agv_waiting_time_total": 784,
+   "transport_blocking_delay_mean": 2.0833333333333335,
+   "throughput_jobs": 10,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 40,
+   "agv_down_steps_total": 20,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 2,
+   "resource_time_to_recover_mean": 30.0,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 60,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 5,
+   "fail_count": 2,
+   "changed_operations": 65,
+   "machine_assignment_changes": 17
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:1",
+   "cause": "disruption_machine_agv"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 4,
+   "makespan": 744,
+   "finished": true,
+   "event_visible": true,
+   "twin_makespan": 740,
+   "fault_delta_makespan": 4
+  },
+  "case_id": "inj_combo_10|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_schedule": [
+    {
+     "step": 141,
+     "type": "machine_breakdown",
+     "machine_id": 2,
+     "duration_steps": 40
+    },
+    {
+     "step": 230,
+     "type": "agv_breakdown",
+     "agv_id": 1,
+     "duration_steps": 20
+    }
+   ]
+  }
+ },
+ {
+  "scen_id": "inj_combo_10",
+  "config": {
+   "instance": "mk02",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 152,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.035969615728328866,
+   "operation_queue_waiting_time_mean": 1.5208333333333333,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.7372654155495979,
+   "agv_waiting_time_total": 784,
+   "transport_blocking_delay_mean": 2.0833333333333335,
+   "throughput_jobs": 10,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 40,
+   "agv_down_steps_total": 20,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 2,
+   "resource_time_to_recover_mean": 30.0,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 60,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 5,
+   "fail_count": 2,
+   "changed_operations": 65,
+   "machine_assignment_changes": 17
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:1",
+   "cause": "disruption_machine_agv"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 4,
+   "makespan": 744,
+   "finished": true,
+   "hard_note": "事件流已被移除, 仅凭统计特征推断"
+  },
+  "case_id": "inj_combo_10|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_schedule": [
+    {
+     "step": 141,
+     "type": "machine_breakdown",
+     "machine_id": 2,
+     "duration_steps": 40
+    },
+    {
+     "step": 230,
+     "type": "agv_breakdown",
+     "agv_id": 1,
+     "duration_steps": 20
+    }
+   ]
+  }
+ },
+ {
+  "scen_id": "inj_machine_00",
+  "config": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 42,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.060240963855421686,
+   "operation_queue_waiting_time_mean": 1.5272727272727273,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.7048192771084337,
+   "agv_waiting_time_total": 588,
+   "transport_blocking_delay_mean": 2.4,
+   "throughput_jobs": 10,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 40,
+   "agv_down_steps_total": 0,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 1,
+   "resource_time_to_recover_mean": 40.0,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 40,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 3,
+   "fail_count": 2,
+   "changed_operations": 0,
+   "machine_assignment_changes": 0
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "machine",
+   "loc_target": "machine:0",
+   "cause": "disruption_machine"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 2,
+   "makespan": 496,
+   "finished": true,
+   "event_visible": true,
+   "twin_makespan": 499,
+   "fault_delta_makespan": -3
+  },
+  "case_id": "inj_machine_00|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_schedule": [
+    {
+     "step": 150,
+     "type": "machine_breakdown",
+     "machine_id": 0,
+     "duration_steps": 40
+    }
+   ]
+  }
+ },
+ {
+  "scen_id": "inj_machine_00",
+  "config": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 42,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.060240963855421686,
+   "operation_queue_waiting_time_mean": 1.5272727272727273,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.7048192771084337,
+   "agv_waiting_time_total": 588,
+   "transport_blocking_delay_mean": 2.4,
+   "throughput_jobs": 10,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 40,
+   "agv_down_steps_total": 0,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 1,
+   "resource_time_to_recover_mean": 40.0,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 40,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 3,
+   "fail_count": 2,
+   "changed_operations": 0,
+   "machine_assignment_changes": 0
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "machine",
+   "loc_target": "machine:0",
+   "cause": "disruption_machine"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 2,
+   "makespan": 496,
+   "finished": true,
+   "hard_note": "事件流已被移除, 仅凭统计特征推断"
+  },
+  "case_id": "inj_machine_00|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_schedule": [
+    {
+     "step": 150,
+     "type": "machine_breakdown",
+     "machine_id": 0,
+     "duration_steps": 40
+    }
+   ]
+  }
+ },
+ {
+  "scen_id": "inj_machine_02",
+  "config": {
+   "instance": "mk03",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 44,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.09635119726339794,
+   "operation_queue_waiting_time_mean": 1.5912408759124088,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.8397947548460661,
+   "agv_waiting_time_total": 1124,
+   "transport_blocking_delay_mean": 2.161764705882353,
+   "throughput_jobs": 15,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 20,
+   "agv_down_steps_total": 0,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 1,
+   "resource_time_to_recover_mean": 20.0,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 20,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 3,
+   "fail_count": 2,
+   "changed_operations": 0,
+   "machine_assignment_changes": 0
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 2,
+   "makespan": 1752,
+   "finished": true,
+   "event_visible": true,
+   "twin_makespan": 1752,
+   "fault_delta_makespan": 0
+  },
+  "case_id": "inj_machine_02|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_schedule": [
+    {
+     "step": 225,
+     "type": "machine_breakdown",
+     "machine_id": 3,
+     "duration_steps": 20
+    }
+   ]
+  }
+ },
+ {
+  "scen_id": "inj_machine_02",
+  "config": {
+   "instance": "mk03",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 44,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.09635119726339794,
+   "operation_queue_waiting_time_mean": 1.5912408759124088,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.8397947548460661,
+   "agv_waiting_time_total": 1124,
+   "transport_blocking_delay_mean": 2.161764705882353,
+   "throughput_jobs": 15,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 20,
+   "agv_down_steps_total": 0,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 1,
+   "resource_time_to_recover_mean": 20.0,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 20,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 3,
+   "fail_count": 2,
+   "changed_operations": 0,
+   "machine_assignment_changes": 0
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 2,
+   "makespan": 1752,
+   "finished": true,
+   "hard_note": "事件流已被移除, 仅凭统计特征推断"
+  },
+  "case_id": "inj_machine_02|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_schedule": [
+    {
+     "step": 225,
+     "type": "machine_breakdown",
+     "machine_id": 3,
+     "duration_steps": 20
+    }
+   ]
+  }
+ },
+ {
+  "scen_id": "inj_machine_04",
+  "config": {
+   "instance": "mk02",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 46,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.044141252006420544,
+   "operation_queue_waiting_time_mean": 1.0,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.7271268057784912,
+   "agv_waiting_time_total": 680,
+   "transport_blocking_delay_mean": 1.375,
+   "throughput_jobs": 10,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 60,
+   "agv_down_steps_total": 0,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 1,
+   "resource_time_to_recover_mean": 60.0,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 60,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 3,
+   "fail_count": 1,
+   "changed_operations": 32,
+   "machine_assignment_changes": 10
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 2,
+   "makespan": 621,
+   "finished": true,
+   "event_visible": true,
+   "twin_makespan": 624,
+   "fault_delta_makespan": -3
+  },
+  "case_id": "inj_machine_04|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_schedule": [
+    {
+     "step": 221,
+     "type": "machine_breakdown",
+     "machine_id": 2,
+     "duration_steps": 60
+    }
+   ]
+  }
+ },
+ {
+  "scen_id": "inj_machine_04",
+  "config": {
+   "instance": "mk02",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 46,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.044141252006420544,
+   "operation_queue_waiting_time_mean": 1.0,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.7271268057784912,
+   "agv_waiting_time_total": 680,
+   "transport_blocking_delay_mean": 1.375,
+   "throughput_jobs": 10,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 60,
+   "agv_down_steps_total": 0,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 1,
+   "resource_time_to_recover_mean": 60.0,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 60,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 3,
+   "fail_count": 1,
+   "changed_operations": 32,
+   "machine_assignment_changes": 10
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 2,
+   "makespan": 621,
+   "finished": true,
+   "hard_note": "事件流已被移除, 仅凭统计特征推断"
+  },
+  "case_id": "inj_machine_04|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_schedule": [
+    {
+     "step": 221,
+     "type": "machine_breakdown",
+     "machine_id": 2,
+     "duration_steps": 60
+    }
+   ]
+  }
+ },
+ {
+  "scen_id": "inj_machine_08",
+  "config": {
+   "instance": "mk03",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 50,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.08829676071055381,
+   "operation_queue_waiting_time_mean": 2.197080291970803,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.7741640543364682,
+   "agv_waiting_time_total": 1729,
+   "transport_blocking_delay_mean": 2.198529411764706,
+   "throughput_jobs": 15,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 60,
+   "agv_down_steps_total": 0,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 1,
+   "resource_time_to_recover_mean": 60.0,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 60,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 3,
+   "fail_count": 2,
+   "changed_operations": 0,
+   "machine_assignment_changes": 0
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "machine",
+   "loc_target": "machine:4",
+   "cause": "disruption_machine"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 2,
+   "makespan": 1912,
+   "finished": true,
+   "event_visible": true,
+   "twin_makespan": 1848,
+   "fault_delta_makespan": 64
+  },
+  "case_id": "inj_machine_08|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_schedule": [
+    {
+     "step": 225,
+     "type": "machine_breakdown",
+     "machine_id": 4,
+     "duration_steps": 60
+    }
+   ]
+  }
+ },
+ {
+  "scen_id": "inj_machine_08",
+  "config": {
+   "instance": "mk03",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 50,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.08829676071055381,
+   "operation_queue_waiting_time_mean": 2.197080291970803,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.7741640543364682,
+   "agv_waiting_time_total": 1729,
+   "transport_blocking_delay_mean": 2.198529411764706,
+   "throughput_jobs": 15,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 60,
+   "agv_down_steps_total": 0,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 1,
+   "resource_time_to_recover_mean": 60.0,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 60,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 3,
+   "fail_count": 2,
+   "changed_operations": 0,
+   "machine_assignment_changes": 0
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "machine",
+   "loc_target": "machine:4",
+   "cause": "disruption_machine"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 2,
+   "makespan": 1912,
+   "finished": true,
+   "hard_note": "事件流已被移除, 仅凭统计特征推断"
+  },
+  "case_id": "inj_machine_08|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_schedule": [
+    {
+     "step": 225,
+     "type": "machine_breakdown",
+     "machine_id": 4,
+     "duration_steps": 60
+    }
+   ]
+  }
+ },
+ {
+  "scen_id": "inj_machine_10",
+  "config": {
+   "instance": "mk02",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 52,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.051622418879056046,
+   "operation_queue_waiting_time_mean": 1.0681818181818181,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.7106194690265487,
+   "agv_waiting_time_total": 654,
+   "transport_blocking_delay_mean": 1.4285714285714286,
+   "throughput_jobs": 10,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 20,
+   "agv_down_steps_total": 0,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 1,
+   "resource_time_to_recover_mean": 20.0,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 20,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 3,
+   "fail_count": 0,
+   "changed_operations": 77,
+   "machine_assignment_changes": 44
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 2,
+   "makespan": 563,
+   "finished": true,
+   "event_visible": true,
+   "twin_makespan": 711,
+   "fault_delta_makespan": -148
+  },
+  "case_id": "inj_machine_10|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_schedule": [
+    {
+     "step": 168,
+     "type": "machine_breakdown",
+     "machine_id": 3,
+     "duration_steps": 20
+    }
+   ]
+  }
+ },
+ {
+  "scen_id": "inj_machine_10",
+  "config": {
+   "instance": "mk02",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 52,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.051622418879056046,
+   "operation_queue_waiting_time_mean": 1.0681818181818181,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.7106194690265487,
+   "agv_waiting_time_total": 654,
+   "transport_blocking_delay_mean": 1.4285714285714286,
+   "throughput_jobs": 10,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 20,
+   "agv_down_steps_total": 0,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 1,
+   "resource_time_to_recover_mean": 20.0,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 20,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 3,
+   "fail_count": 0,
+   "changed_operations": 77,
+   "machine_assignment_changes": 44
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 2,
+   "makespan": 563,
+   "finished": true,
+   "hard_note": "事件流已被移除, 仅凭统计特征推断"
+  },
+  "case_id": "inj_machine_10|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_schedule": [
+    {
+     "step": 168,
+     "type": "machine_breakdown",
+     "machine_id": 3,
+     "duration_steps": 20
+    }
+   ]
+  }
+ },
+ {
+  "scen_id": "inj_machine_12",
+  "config": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 54,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.04143646408839779,
+   "operation_queue_waiting_time_mean": 1.1454545454545455,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.7337707182320442,
+   "agv_waiting_time_total": 771,
+   "transport_blocking_delay_mean": 2.1818181818181817,
+   "throughput_jobs": 10,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 40,
+   "agv_down_steps_total": 0,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 1,
+   "resource_time_to_recover_mean": 40.0,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 40,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 3,
+   "fail_count": 2,
+   "changed_operations": 0,
+   "machine_assignment_changes": 0
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 2,
+   "makespan": 722,
+   "finished": true,
+   "event_visible": true,
+   "twin_makespan": 721,
+   "fault_delta_makespan": 1
+  },
+  "case_id": "inj_machine_12|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_schedule": [
+    {
+     "step": 248,
+     "type": "machine_breakdown",
+     "machine_id": 2,
+     "duration_steps": 40
+    }
+   ]
+  }
+ },
+ {
+  "scen_id": "inj_machine_12",
+  "config": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 54,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.04143646408839779,
+   "operation_queue_waiting_time_mean": 1.1454545454545455,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.7337707182320442,
+   "agv_waiting_time_total": 771,
+   "transport_blocking_delay_mean": 2.1818181818181817,
+   "throughput_jobs": 10,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 40,
+   "agv_down_steps_total": 0,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 1,
+   "resource_time_to_recover_mean": 40.0,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 40,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 3,
+   "fail_count": 2,
+   "changed_operations": 0,
+   "machine_assignment_changes": 0
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 2,
+   "makespan": 722,
+   "finished": true,
+   "hard_note": "事件流已被移除, 仅凭统计特征推断"
+  },
+  "case_id": "inj_machine_12|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_schedule": [
+    {
+     "step": 248,
+     "type": "machine_breakdown",
+     "machine_id": 2,
+     "duration_steps": 40
+    }
+   ]
+  }
+ },
+ {
+  "scen_id": "inj_machine_14",
+  "config": {
+   "instance": "mk03",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 56,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.09673726388093876,
+   "operation_queue_waiting_time_mean": 1.4087591240875912,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.8128219805380652,
+   "agv_waiting_time_total": 1308,
+   "transport_blocking_delay_mean": 1.875,
+   "throughput_jobs": 15,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 40,
+   "agv_down_steps_total": 0,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 1,
+   "resource_time_to_recover_mean": 40.0,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 40,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 3,
+   "fail_count": 2,
+   "changed_operations": 0,
+   "machine_assignment_changes": 0
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "machine",
+   "loc_target": "machine:6",
+   "cause": "disruption_machine"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 2,
+   "makespan": 1745,
+   "finished": true,
+   "event_visible": true,
+   "twin_makespan": 1745,
+   "fault_delta_makespan": 0
+  },
+  "case_id": "inj_machine_14|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_schedule": [
+    {
+     "step": 243,
+     "type": "machine_breakdown",
+     "machine_id": 6,
+     "duration_steps": 40
+    }
+   ]
+  }
+ },
+ {
+  "scen_id": "inj_machine_14",
+  "config": {
+   "instance": "mk03",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 56,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.09673726388093876,
+   "operation_queue_waiting_time_mean": 1.4087591240875912,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.8128219805380652,
+   "agv_waiting_time_total": 1308,
+   "transport_blocking_delay_mean": 1.875,
+   "throughput_jobs": 15,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 40,
+   "agv_down_steps_total": 0,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 1,
+   "resource_time_to_recover_mean": 40.0,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 40,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 3,
+   "fail_count": 2,
+   "changed_operations": 0,
+   "machine_assignment_changes": 0
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "machine",
+   "loc_target": "machine:6",
+   "cause": "disruption_machine"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 2,
+   "makespan": 1745,
+   "finished": true,
+   "hard_note": "事件流已被移除, 仅凭统计特征推断"
+  },
+  "case_id": "inj_machine_14|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_schedule": [
+    {
+     "step": 243,
+     "type": "machine_breakdown",
+     "machine_id": 6,
+     "duration_steps": 40
+    }
+   ]
+  }
+ },
+ {
+  "scen_id": "inj_stoch_00",
+  "config": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 242,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.037641154328732745,
+   "operation_queue_waiting_time_mean": 1.0363636363636364,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.7117314930991218,
+   "agv_waiting_time_total": 919,
+   "transport_blocking_delay_mean": 2.909090909090909,
+   "throughput_jobs": 10,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 10,
+   "agv_down_steps_total": 56,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 8,
+   "resource_time_to_recover_mean": 8.25,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 66,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 12,
+   "fail_count": 7,
+   "changed_operations": 14,
+   "machine_assignment_changes": 1
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 16,
+   "makespan": 795,
+   "finished": true
+  },
+  "case_id": "inj_stoch_00|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_preset": "mild_failure",
+   "fault_seed": 42
+  }
+ },
+ {
+  "scen_id": "inj_stoch_00",
+  "config": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 242,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.037641154328732745,
+   "operation_queue_waiting_time_mean": 1.0363636363636364,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.7117314930991218,
+   "agv_waiting_time_total": 919,
+   "transport_blocking_delay_mean": 2.909090909090909,
+   "throughput_jobs": 10,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 10,
+   "agv_down_steps_total": 56,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 8,
+   "resource_time_to_recover_mean": 8.25,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 66,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 12,
+   "fail_count": 7,
+   "changed_operations": 14,
+   "machine_assignment_changes": 1
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 16,
+   "makespan": 795,
+   "finished": true,
+   "hard_note": "事件流已被移除, 仅凭统计特征推断"
+  },
+  "case_id": "inj_stoch_00|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_preset": "mild_failure",
+   "fault_seed": 42
+  }
+ },
+ {
+  "scen_id": "inj_stoch_02",
+  "config": {
+   "instance": "mk03",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 244,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.1284107669616519,
+   "operation_queue_waiting_time_mean": 2.5952380952380953,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.728429203539823,
+   "agv_waiting_time_total": 1473,
+   "transport_blocking_delay_mean": 2.430894308943089,
+   "throughput_jobs": 15,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 40,
+   "agv_down_steps_total": 88,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 15,
+   "resource_time_to_recover_mean": 8.533333333333333,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 128,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 17,
+   "fail_count": 2,
+   "changed_operations": 763,
+   "machine_assignment_changes": 241
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 30,
+   "makespan": 1354,
+   "finished": true
+  },
+  "case_id": "inj_stoch_02|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_preset": "mild_failure",
+   "fault_seed": 42
+  }
+ },
+ {
+  "scen_id": "inj_stoch_02",
+  "config": {
+   "instance": "mk03",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 244,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.1284107669616519,
+   "operation_queue_waiting_time_mean": 2.5952380952380953,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.728429203539823,
+   "agv_waiting_time_total": 1473,
+   "transport_blocking_delay_mean": 2.430894308943089,
+   "throughput_jobs": 15,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 40,
+   "agv_down_steps_total": 88,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 15,
+   "resource_time_to_recover_mean": 8.533333333333333,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 128,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 17,
+   "fail_count": 2,
+   "changed_operations": 763,
+   "machine_assignment_changes": 241
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 30,
+   "makespan": 1354,
+   "finished": true,
+   "hard_note": "事件流已被移除, 仅凭统计特征推断"
+  },
+  "case_id": "inj_stoch_02|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_preset": "mild_failure",
+   "fault_seed": 42
+  }
+ },
+ {
+  "scen_id": "inj_stoch_04",
+  "config": {
+   "instance": "mk02",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 246,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.05,
+   "operation_queue_waiting_time_mean": 1.0454545454545454,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.7636363636363637,
+   "agv_waiting_time_total": 520,
+   "transport_blocking_delay_mean": 2.7906976744186047,
+   "throughput_jobs": 10,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 10,
+   "agv_down_steps_total": 16,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 3,
+   "resource_time_to_recover_mean": 8.666666666666666,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 26,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 5,
+   "fail_count": 2,
+   "changed_operations": 87,
+   "machine_assignment_changes": 27
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 6,
+   "makespan": 548,
+   "finished": true
+  },
+  "case_id": "inj_stoch_04|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_preset": "mild_failure",
+   "fault_seed": 42
+  }
+ },
+ {
+  "scen_id": "inj_stoch_04",
+  "config": {
+   "instance": "mk02",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 246,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.05,
+   "operation_queue_waiting_time_mean": 1.0454545454545454,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.7636363636363637,
+   "agv_waiting_time_total": 520,
+   "transport_blocking_delay_mean": 2.7906976744186047,
+   "throughput_jobs": 10,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 10,
+   "agv_down_steps_total": 16,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 3,
+   "resource_time_to_recover_mean": 8.666666666666666,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 26,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 5,
+   "fail_count": 2,
+   "changed_operations": 87,
+   "machine_assignment_changes": 27
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 6,
+   "makespan": 548,
+   "finished": true,
+   "hard_note": "事件流已被移除, 仅凭统计特征推断"
+  },
+  "case_id": "inj_stoch_04|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_preset": "mild_failure",
+   "fault_seed": 42
+  }
+ },
+ {
+  "scen_id": "inj_stoch_06",
+  "config": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 248,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.04472140762463343,
+   "operation_queue_waiting_time_mean": 1.1132075471698113,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.6803519061583577,
+   "agv_waiting_time_total": 872,
+   "transport_blocking_delay_mean": 2.2830188679245285,
+   "throughput_jobs": 10,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 0,
+   "agv_down_steps_total": 48,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 6,
+   "resource_time_to_recover_mean": 8.0,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 48,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 11,
+   "fail_count": 9,
+   "changed_operations": 10,
+   "machine_assignment_changes": 4
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 12,
+   "makespan": 680,
+   "finished": true
+  },
+  "case_id": "inj_stoch_06|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_preset": "mild_failure",
+   "fault_seed": 42
+  }
+ },
+ {
+  "scen_id": "inj_stoch_06",
+  "config": {
+   "instance": "mk01",
+   "num_agv": 4,
+   "policy": "cpsat-full",
+   "seed": 248,
+   "map": "medium-mazes-seed-0000"
+  },
+  "kpi": {
+   "machine_utilization": 0.04472140762463343,
+   "operation_queue_waiting_time_mean": 1.1132075471698113,
+   "tasked_stationary_count": 0,
+   "agv_busy_utilization": 0.6803519061583577,
+   "agv_waiting_time_total": 872,
+   "transport_blocking_delay_mean": 2.2830188679245285,
+   "throughput_jobs": 10,
+   "tardy_job_count": 0,
+   "total_tardiness": 0.0,
+   "machine_down_steps_total": 0,
+   "agv_down_steps_total": 48,
+   "active_disruption_count": 0,
+   "resource_recovery_completed_count": 6,
+   "resource_time_to_recover_mean": 8.0,
+   "obstacle_blocked_steps_total": 0,
+   "resource_disruption_loss_area": 48,
+   "swap_conflict_count": 0
+  },
+  "revisions": {
+   "count": 11,
+   "fail_count": 9,
+   "changed_operations": 10,
+   "machine_assignment_changes": 4
+  },
+  "query": "为何该 episode 的完工状态如此? 定位关键资源(loc_type/loc_target)与原因(cause), 并给干预建议。",
+  "ground_truth": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "meta": {
+   "verify_note": "by_construction",
+   "n_events_total": 12,
+   "makespan": 680,
+   "finished": true,
+   "hard_note": "事件流已被移除, 仅凭统计特征推断"
+  },
+  "case_id": "inj_stoch_06|int",
+  "variant": "int",
+  "events": [],
+  "fault": {
+   "public_fault_preset": "mild_failure",
+   "fault_seed": 42
+  }
+ }
+]
