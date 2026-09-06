@@ -1,0 +1,2982 @@
+[
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟平均2.345，导致走廊运输路径频繁活锁，影响整体调度效率。",
+  "case_id": "base_mk01_cpsat|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 100.5,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=2.3454545454545452"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟平均2.345，导致走廊运输路径频繁活锁，影响整体调度效率。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟平均2.345，导致走廊运输路径频繁活锁，影响整体调度效率。",
+  "case_id": "base_mk01_cpsat|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 97.2,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=2.3454545454545452"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟平均2.345，导致走廊运输路径频繁活锁，影响整体调度效率。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "fleet(5)",
+  "narrative": "AGV总等待时间12551，运输阻塞平均延迟9.36，导致机器利用率仅0.58%，任务无法及时处理，引发运输阻塞死锁。",
+  "case_id": "base_mk01_greedy|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 136.2,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=12551",
+    "transport_blocking_delay_mean=9.36",
+    "machine_utilization=0.0058"
+   ],
+   "intervention": "fleet(5)",
+   "narrative": "AGV总等待时间12551，运输阻塞平均延迟9.36，导致机器利用率仅0.58%，任务无法及时处理，引发运输阻塞死锁。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "fleet(5)",
+  "narrative": "AGV总等待时间12551，运输阻塞平均延迟9.36，导致机器利用率仅0.58%，任务无法及时处理，引发运输阻塞死锁。",
+  "case_id": "base_mk01_greedy|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 133.2,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=12551",
+    "transport_blocking_delay_mean=9.36",
+    "machine_utilization=0.0058"
+   ],
+   "intervention": "fleet(5)",
+   "narrative": "AGV总等待时间12551，运输阻塞平均延迟9.36，导致机器利用率仅0.58%，任务无法及时处理，引发运输阻塞死锁。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "走廊运输阻塞延迟均值4.0，AGV总等待时间637，机器利用率仅5.1%，表明走廊阻塞导致运输延迟，引发任务积压和机器闲置。",
+  "case_id": "base_mk02_cpsat|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 142.9,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=4.0",
+    "agv_waiting_time_total=637",
+    "machine_utilization=0.051"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "走廊运输阻塞延迟均值4.0，AGV总等待时间637，机器利用率仅5.1%，表明走廊阻塞导致运输延迟，引发任务积压和机器闲置。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟平均4.0导致物料无法及时送达，机器利用率仅5.1%，引发资源饥饿活锁。",
+  "case_id": "base_mk02_cpsat|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 212.1,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "machine_utilization=0.051",
+    "transport_blocking_delay_mean=4.0"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟平均4.0导致物料无法及时送达，机器利用率仅5.1%，引发资源饥饿活锁。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟均值21.45，AGV总等待时间687，导致运输路径持续阻塞形成活锁。",
+  "case_id": "base_mk02_greedy|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 78.7,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=21.448",
+    "agv_waiting_time_total=687"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟均值21.45，AGV总等待时间687，导致运输路径持续阻塞形成活锁。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞导致平均延迟21.45，AGV总等待时间687，机器利用率仅7%，表明AGV阻塞造成物料运输不畅，机器空闲。",
+  "case_id": "base_mk02_greedy|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 103.0,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=21.448275862068964",
+    "agv_waiting_time_total=687",
+    "machine_utilization=0.0705003248862898"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞导致平均延迟21.45，AGV总等待时间687，机器利用率仅7%，表明AGV阻塞造成物料运输不畅，机器空闲。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟均值2.90，AGV总等待时间1144，导致机器利用率低。",
+  "case_id": "base_mk03_cpsat|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 115.8,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=2.9044117647058822",
+    "agv_waiting_time_total=1144"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟均值2.90，AGV总等待时间1144，导致机器利用率低。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV总等待时间1144，运输阻塞延迟均值2.90，导致走廊区域AGV调度拥堵，引发阻塞死锁。",
+  "case_id": "base_mk03_cpsat|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 95.3,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=1144",
+    "transport_blocking_delay_mean=2.9044117647058822"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV总等待时间1144，运输阻塞延迟均值2.90，导致走廊区域AGV调度拥堵，引发阻塞死锁。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "任务池中存在1个静止任务，AGV总等待时间9380，机器利用率仅2.01%，导致任务无法流转形成资源饥饿死锁",
+  "case_id": "base_mk03_greedy|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 84.4,
+  "raw": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "tasked_stationary_count=1",
+    "agv_waiting_time_total=9380",
+    "machine_utilization=0.0201416015625"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "任务池中存在1个静止任务，AGV总等待时间9380，机器利用率仅2.01%，导致任务无法流转形成资源饥饿死锁"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "任务池中存在待处理任务，但AGV总等待时间高达9380，导致机器利用率仅0.02，任务无法完成，形成资源饥饿死锁。",
+  "case_id": "base_mk03_greedy|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 89.9,
+  "raw": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "agv_waiting_time_total=9380",
+    "machine_utilization=0.0201416015625",
+    "throughput_jobs=0"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "任务池中存在待处理任务，但AGV总等待时间高达9380，导致机器利用率仅0.02，任务无法完成，形成资源饥饿死锁。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "fleet(K+1)",
+  "narrative": "AGV总等待时间3137，运输阻塞延迟均值1.78，导致机器利用率仅0.46%，任务吞吐量仅1。",
+  "case_id": "emg_starve_00|easy",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  },
+  "retries": 0,
+  "wall_s": 140.1,
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine_agv",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=3137",
+    "transport_blocking_delay_mean=1.7777777777777777",
+    "machine_utilization=0.004638671875"
+   ],
+   "intervention": "fleet(K+1)",
+   "narrative": "AGV总等待时间3137，运输阻塞延迟均值1.78，导致机器利用率仅0.46%，任务吞吐量仅1。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "fleet(K+1)",
+  "narrative": "AGV总等待时间3137，运输阻塞延迟均值1.78，导致机器利用率仅0.46%，任务吞吐量仅1。",
+  "case_id": "emg_starve_00|hard",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  },
+  "retries": 0,
+  "wall_s": 139.2,
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine_agv",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=3137",
+    "transport_blocking_delay_mean=1.7777777777777777",
+    "machine_utilization=0.004638671875"
+   ],
+   "intervention": "fleet(K+1)",
+   "narrative": "AGV总等待时间3137，运输阻塞延迟均值1.78，导致机器利用率仅0.46%，任务吞吐量仅1。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟高（17.45）导致AGV总等待时间6221，机器利用率仅0.415%，任务完成数仅1。",
+  "case_id": "emg_starve_02|easy",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  },
+  "retries": 0,
+  "wall_s": 116.8,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv:1",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=17.454545454545453",
+    "agv_waiting_time_total=6221",
+    "machine_utilization=0.004150390625"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟高（17.45）导致AGV总等待时间6221，机器利用率仅0.415%，任务完成数仅1。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟均值17.45，AGV总等待时间6221，导致机器利用率仅0.004，任务无法及时运输至机器，引发运输阻塞活锁。",
+  "case_id": "emg_starve_02|hard",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  },
+  "retries": 0,
+  "wall_s": 183.2,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=17.454545454545453",
+    "agv_waiting_time_total=6221",
+    "machine_utilization=0.004150390625"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟均值17.45，AGV总等待时间6221，导致机器利用率仅0.004，任务无法及时运输至机器，引发运输阻塞活锁。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "任务池中无有效任务分配，导致机器利用率极低（0.014）且AGV总等待时间达3037，系统陷入任务饥饿死锁。",
+  "case_id": "emg_starve_03|easy",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  },
+  "retries": 0,
+  "wall_s": 63.5,
+  "raw": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "throughput_jobs=0",
+    "machine_utilization=0.014129638671875",
+    "agv_waiting_time_total=3037"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "任务池中无有效任务分配，导致机器利用率极低（0.014）且AGV总等待时间达3037，系统陷入任务饥饿死锁。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "任务池为空导致机器利用率极低（0.014），AGV总等待时间高达3037，任务队列平均等待时间1.07，形成资源饥饿死锁。",
+  "case_id": "emg_starve_03|hard",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  },
+  "retries": 0,
+  "wall_s": 132.0,
+  "raw": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "agv_waiting_time_total=3037",
+    "machine_utilization=0.014",
+    "operation_queue_waiting_time_mean=1.07"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "任务池为空导致机器利用率极低（0.014），AGV总等待时间高达3037，任务队列平均等待时间1.07，形成资源饥饿死锁。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 0.75,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器3故障30步导致机器利用率仅4.35%，调度修订失败4次，引发资源分配问题。",
+  "case_id": "inj_combo_00|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:3+agv:1",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 105.4,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=30",
+    "machine_utilization=0.04354136429608128",
+    "revisions.fail_count=4",
+    "events: EVT001 machine_breakdown on machine 3"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器3故障30步导致机器利用率仅4.35%，调度修订失败4次，引发资源分配问题。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "走廊运输阻塞导致AGV平均延迟2.636，总等待时间671，机器利用率仅0.0435，表明走廊阻塞引发运输延迟，造成机器资源闲置。",
+  "case_id": "inj_combo_00|hard",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:3+agv:1",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 196.0,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "machine_utilization=0.0435",
+    "transport_blocking_delay_mean=2.636",
+    "agv_waiting_time_total=671"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "走廊运输阻塞导致AGV平均延迟2.636，总等待时间671，机器利用率仅0.0435，表明走廊阻塞引发运输延迟，造成机器资源闲置。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "任务池为空（tasked_stationary_count=0）导致AGV等待时间总和达1062，机器利用率仅3.56%，形成任务饥饿活锁。",
+  "case_id": "inj_combo_00_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 127.7,
+  "raw": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "machine_utilization=0.03558718861209965",
+    "agv_waiting_time_total=1062",
+    "tasked_stationary_count=0"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "任务池为空（tasked_stationary_count=0）导致AGV等待时间总和达1062，机器利用率仅3.56%，形成任务饥饿活锁。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟均值2.727，AGV总等待时间1062，导致运输效率低下，引发阻塞死锁。",
+  "case_id": "inj_combo_00_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 94.5,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=2.727",
+    "agv_waiting_time_total=1062"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟均值2.727，AGV总等待时间1062，导致运输效率低下，引发阻塞死锁。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "运输阻塞延迟均值206.69，AGV总等待时间14136，3个任务处于静止状态，导致AGV路径阻塞引发活锁，机器利用率仅0.64%。",
+  "case_id": "inj_combo_01_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 95.9,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=206.69",
+    "agv_waiting_time_total=14136",
+    "tasked_stationary_count=3"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "运输阻塞延迟均值206.69，AGV总等待时间14136，3个任务处于静止状态，导致AGV路径阻塞引发活锁，机器利用率仅0.64%。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "走廊运输阻塞导致AGV等待时间累积，任务在工作站静止，机器利用率极低。",
+  "case_id": "inj_combo_01_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 104.9,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=206.69",
+    "agv_waiting_time_total=14136",
+    "machine_utilization=0.0064",
+    "tasked_stationary_count=3"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "走廊运输阻塞导致AGV等待时间累积，任务在工作站静止，机器利用率极低。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 0.5,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器4故障40步导致机器利用率低，调度调整失败4次，需定期重新规划。",
+  "case_id": "inj_combo_02|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:4+agv:2",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 113.2,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:4",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=40",
+    "revisions.fail_count=4"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器4故障40步导致机器利用率低，调度调整失败4次，需定期重新规划。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "机器利用率低（0.1129）主要因AGV总等待时间长（1540）导致物料供应不足，引发资源闲置。",
+  "case_id": "inj_combo_02|hard",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:4+agv:2",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 79.8,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "machine_utilization=0.11289245156980628",
+    "agv_waiting_time_total=1540"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "机器利用率低（0.1129）主要因AGV总等待时间长（1540）导致物料供应不足，引发资源闲置。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV总等待时间1120，运输阻塞延迟均值1.91，导致运输阻塞死锁。",
+  "case_id": "inj_combo_02_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 229.8,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=1120",
+    "transport_blocking_delay_mean=1.911764705882353"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV总等待时间1120，运输阻塞延迟均值1.91，导致运输阻塞死锁。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "运输阻塞导致AGV等待时间累积，机器利用率低",
+  "case_id": "inj_combo_02_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 255.3,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=1.91",
+    "agv_waiting_time_total=1120",
+    "machine_utilization=0.117"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "运输阻塞导致AGV等待时间累积，机器利用率低"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "运输阻塞延迟均值50.0，AGV总等待时间14512，任务池静止任务数2，导致AGV运输阻塞形成活锁。",
+  "case_id": "inj_combo_03_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 169.4,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=50.0",
+    "agv_waiting_time_total=14512",
+    "tasked_stationary_count=2"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "运输阻塞延迟均值50.0，AGV总等待时间14512，任务池静止任务数2，导致AGV运输阻塞形成活锁。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟均值50.0，AGV总等待时间14512，导致机器利用率仅0.00655，因走廊运输阻塞引发死锁。",
+  "case_id": "inj_combo_03_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 165.0,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=50.0",
+    "agv_waiting_time_total=14512",
+    "machine_utilization=0.00655"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟均值50.0，AGV总等待时间14512，导致机器利用率仅0.00655，因走廊运输阻塞引发死锁。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "机器5在步骤145发生故障，持续60步，导致机器利用率下降。",
+  "case_id": "inj_combo_04|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:5+agv:3",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 119.1,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:5",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=60",
+    "machine_breakdown: machine_id=5"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "机器5在步骤145发生故障，持续60步，导致机器利用率下降。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.667,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器整体利用率仅4.9%，任务队列平均等待时间1.52，且调度修订失败率达80%（4/5），表明计划与实际运行严重不匹配。",
+  "case_id": "inj_combo_04|hard",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:5+agv:3",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 141.3,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machines",
+   "cause": "plan_mismatch",
+   "evidence": [
+    "machine_utilization=0.04898",
+    "revisions.fail_count=4",
+    "operation_queue_waiting_time_mean=1.519"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器整体利用率仅4.9%，任务队列平均等待时间1.52，且调度修订失败率达80%（4/5），表明计划与实际运行严重不匹配。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟均值1.673，AGV总等待时间618，导致运输效率低下，引发阻塞死锁。",
+  "case_id": "inj_combo_04_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 136.6,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=1.673",
+    "agv_waiting_time_total=618"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟均值1.673，AGV总等待时间618，导致运输效率低下，引发阻塞死锁。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV总等待时间618导致机器利用率仅0.048，任务因AGV资源不可用而无法启动，引发资源饥饿死锁。",
+  "case_id": "inj_combo_04_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 135.5,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "agv_waiting_time_total=618",
+    "machine_utilization=0.048"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV总等待时间618导致机器利用率仅0.048，任务因AGV资源不可用而无法启动，引发资源饥饿死锁。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV在走廊区域频繁阻塞（transport_blocking_delay_mean=209.79）导致运输延迟，AGV总等待时间高达10631，机器利用率仅0.02，表明任务因运输阻塞无法进入加工环节。",
+  "case_id": "inj_combo_05_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 88.5,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=10631",
+    "transport_blocking_delay_mean=209.79",
+    "machine_utilization=0.02"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV在走廊区域频繁阻塞（transport_blocking_delay_mean=209.79）导致运输延迟，AGV总等待时间高达10631，机器利用率仅0.02，表明任务因运输阻塞无法进入加工环节。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟均值209.79，总等待时间10631，导致任务调度停滞，机器利用率仅2.08%，引发阻塞死锁。",
+  "case_id": "inj_combo_05_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 99.5,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=10631",
+    "transport_blocking_delay_mean=209.79",
+    "machine_utilization=0.020782470703125"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟均值209.79，总等待时间10631，导致任务调度停滞，机器利用率仅2.08%，引发阻塞死锁。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "机器2故障30步与AGV3故障30步导致机器利用率低（0.045）及AGV总等待时间729，引发运输阻塞（平均延迟2.58）。",
+  "case_id": "inj_combo_06|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:3",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 240.8,
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:3",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "machine_down_steps_total=30",
+    "agv_down_steps_total=30",
+    "transport_blocking_delay_mean=2.58"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "机器2故障30步与AGV3故障30步导致机器利用率低（0.045）及AGV总等待时间729，引发运输阻塞（平均延迟2.58）。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器停机总步数30导致机器利用率低，影响任务调度",
+  "case_id": "inj_combo_06|hard",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:3",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 105.5,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=30",
+    "machine_utilization=0.04554406696208764"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器停机总步数30导致机器利用率低，影响任务调度"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "走廊运输阻塞导致AGV平均延迟3.33，AGV忙碌率68.6%但机器利用率仅3.5%，表明AGV调度导致物料运输延迟，机器空闲。",
+  "case_id": "inj_combo_06_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 124.1,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=3.327",
+    "agv_busy_utilization=0.686",
+    "machine_utilization=0.035"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "走廊运输阻塞导致AGV平均延迟3.33，AGV忙碌率68.6%但机器利用率仅3.5%，表明AGV调度导致物料运输延迟，机器空闲。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV在走廊中频繁阻塞（平均阻塞延迟3.327），导致AGV总等待时间1068，机器利用率仅3.5%，需优化AGV路径分配以缓解拥堵。",
+  "case_id": "inj_combo_06_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 107.3,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=3.327",
+    "agv_waiting_time_total=1068",
+    "machine_utilization=0.035"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV在走廊中频繁阻塞（平均阻塞延迟3.327），导致AGV总等待时间1068，机器利用率仅3.5%，需优化AGV路径分配以缓解拥堵。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟均值63.4，AGV总等待时间16815，导致机器利用率仅0.62%，任务无法及时处理。",
+  "case_id": "inj_combo_07_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 154.9,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=63.4",
+    "agv_waiting_time_total=16815",
+    "machine_utilization=0.00618"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟均值63.4，AGV总等待时间16815，导致机器利用率仅0.62%，任务无法及时处理。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV总等待时间16815，运输阻塞延迟均值63.4，导致机器利用率仅0.62%，仅完成2个任务。",
+  "case_id": "inj_combo_07_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 109.2,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=16815",
+    "transport_blocking_delay_mean=63.4",
+    "machine_utilization=0.00618",
+    "throughput_jobs=2"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV总等待时间16815，运输阻塞延迟均值63.4，导致机器利用率仅0.62%，仅完成2个任务。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV总等待时间17206，运输阻塞延迟均值20.33，导致机器利用率仅0.63%，任务无法及时处理，引发运输阻塞死锁。",
+  "case_id": "inj_combo_09_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 176.8,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=17206",
+    "transport_blocking_delay_mean=20.33",
+    "machine_utilization=0.006266"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV总等待时间17206，运输阻塞延迟均值20.33，导致机器利用率仅0.63%，任务无法及时处理，引发运输阻塞死锁。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟均值20.33导致任务运输延迟，AGV总等待时间17206，造成机器利用率仅0.63%，任务吞吐量低。",
+  "case_id": "inj_combo_09_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 122.2,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=17206",
+    "transport_blocking_delay_mean=20.333333333333332"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟均值20.33导致任务运输延迟，AGV总等待时间17206，造成机器利用率仅0.63%，任务吞吐量低。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器2在step141发生40步故障，导致机器利用率降至0.036，引发调度中断。",
+  "case_id": "inj_combo_10|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:1",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 102.3,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=40",
+    "machine_utilization=0.035969615728328866"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器2在step141发生40步故障，导致机器利用率降至0.036，引发调度中断。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV总等待时间784，机器利用率仅3.6%，运输阻塞延迟平均2.08，表明AGV调度导致物料供应不足，引发机器饥饿。",
+  "case_id": "inj_combo_10|hard",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:2+agv:1",
+   "cause": "disruption_machine_agv"
+  },
+  "retries": 0,
+  "wall_s": 133.3,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "machine_utilization=0.03597",
+    "agv_waiting_time_total=784",
+    "transport_blocking_delay_mean=2.083"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV总等待时间784，机器利用率仅3.6%，运输阻塞延迟平均2.08，表明AGV调度导致物料供应不足，引发机器饥饿。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟均值2.25且总等待时间898导致机器利用率仅3.57%，需采用最少拥堵分配策略优化AGV调度",
+  "case_id": "inj_combo_10_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 130.0,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=2.25",
+    "agv_waiting_time_total=898",
+    "machine_utilization=0.03571428571428571"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟均值2.25且总等待时间898导致机器利用率仅3.57%，需采用最少拥堵分配策略优化AGV调度"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟均值2.25导致任务无法及时送达，机器利用率仅0.0357，任务池无积压（tasked_stationary_count=0），表明任务分配后因运输延迟造成机器空闲。",
+  "case_id": "inj_combo_10_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 209.7,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=2.25",
+    "machine_utilization=0.0357",
+    "agv_waiting_time_total=898",
+    "tasked_stationary_count=0"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟均值2.25导致任务无法及时送达，机器利用率仅0.0357，任务池无积压（tasked_stationary_count=0），表明任务分配后因运输延迟造成机器空闲。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "任务池积压2个任务，AGV总等待时间14685，任务队列平均等待时间1.846，导致任务无法及时运输，引发饥饿死锁。",
+  "case_id": "inj_combo_11_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 115.4,
+  "raw": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "tasked_stationary_count=2",
+    "agv_waiting_time_total=14685",
+    "operation_queue_waiting_time_mean=1.8461538461538463"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "任务池积压2个任务，AGV总等待时间14685，任务队列平均等待时间1.846，导致任务无法及时运输，引发饥饿死锁。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "任务池中积压2个任务（tasked_stationary_count=2），AGV总等待时间高达14685，导致机器利用率仅0.0238，系统因任务无法及时运输而陷入饥饿死锁。",
+  "case_id": "inj_combo_11_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 119.7,
+  "raw": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "agv_waiting_time_total=14685",
+    "tasked_stationary_count=2",
+    "machine_utilization=0.0238037109375"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "任务池中积压2个任务（tasked_stationary_count=2），AGV总等待时间高达14685，导致机器利用率仅0.0238，系统因任务无法及时运输而陷入饥饿死锁。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器0在step 150发生40步故障，导致资源损失40，系统通过修订完成调度。",
+  "case_id": "inj_machine_00|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:0",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 102.7,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:0",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=40",
+    "machine_breakdown at machine:0 (step 150)"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器0在step 150发生40步故障，导致资源损失40，系统通过修订完成调度。"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 0.667,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器停机总步数40步，平均恢复时间40.0步，修订失败2次，导致调度计划无法有效执行，影响完工状态。",
+  "case_id": "inj_machine_00|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:0",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 142.7,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=40",
+    "resource_time_to_recover_mean=40.0",
+    "revisions.fail_count=2"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器停机总步数40步，平均恢复时间40.0步，修订失败2次，导致调度计划无法有效执行，影响完工状态。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟平均2.345，导致走廊运输路径频繁活锁，影响整体调度效率。",
+  "case_id": "inj_machine_00_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 96.4,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=2.3454545454545452"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟平均2.345，导致走廊运输路径频繁活锁，影响整体调度效率。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟平均2.345，导致走廊运输路径频繁活锁，影响整体调度效率。",
+  "case_id": "inj_machine_00_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 95.6,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=2.3454545454545452"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟平均2.345，导致走廊运输路径频繁活锁，影响整体调度效率。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟均值109.36，AGV总等待时间15066，机器利用率0.0075，导致运输阻塞活锁。",
+  "case_id": "inj_machine_01_T|easy",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  },
+  "retries": 0,
+  "wall_s": 104.0,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=109.36",
+    "agv_waiting_time_total=15066",
+    "machine_utilization=0.0075"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟均值109.36，AGV总等待时间15066，机器利用率0.0075，导致运输阻塞活锁。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV在走廊运输阻塞导致平均延迟109.36，AGV总等待时间15066，机器利用率仅0.0075，表明运输阻塞引发系统瓶颈。",
+  "case_id": "inj_machine_01_T|hard",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  },
+  "retries": 0,
+  "wall_s": 109.6,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=109.36363636363636",
+    "agv_waiting_time_total=15066",
+    "machine_utilization=0.007527669270833333"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV在走廊运输阻塞导致平均延迟109.36，AGV总等待时间15066，机器利用率仅0.0075，表明运输阻塞引发系统瓶颈。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.667,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器3在step 225发生20步故障，导致调度修订失败2次。",
+  "case_id": "inj_machine_02|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 174.2,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=20",
+    "revisions.fail_count=2",
+    "events.machine_breakdown"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器3在step 225发生20步故障，导致调度修订失败2次。"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "机器停机总步数20导致机器利用率仅9.6%，任务积压",
+  "case_id": "inj_machine_02|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 176.9,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=20",
+    "machine_utilization=0.09635119726339794"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "机器停机总步数20导致机器利用率仅9.6%，任务积压"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟均值2.16，导致AGV总等待时间1124，引发运输阻塞活锁，造成机器利用率仅9.6%。",
+  "case_id": "inj_machine_02_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 105.8,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=1124",
+    "transport_blocking_delay_mean=2.16"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟均值2.16，导致AGV总等待时间1124，引发运输阻塞活锁，造成机器利用率仅9.6%。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟均值2.16，导致任务运输延迟，机器利用率仅9.6%，AGV总等待时间1124，表明AGV调度导致运输阻塞，引发机器空闲。",
+  "case_id": "inj_machine_02_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 241.2,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=1124",
+    "transport_blocking_delay_mean=2.16",
+    "machine_utilization=0.09635119726339794"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟均值2.16，导致任务运输延迟，机器利用率仅9.6%，AGV总等待时间1124，表明AGV调度导致运输阻塞，引发机器空闲。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV总等待时间16902导致任务无法运输，任务池积压3个任务，引发资源饥饿死锁。",
+  "case_id": "inj_machine_03_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 114.4,
+  "raw": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "agv_waiting_time_total=16902",
+    "tasked_stationary_count=3",
+    "operation_queue_waiting_time_mean=1.6666666666666667"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV总等待时间16902导致任务无法运输，任务池积压3个任务，引发资源饥饿死锁。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞导致任务无法完成，AGV总等待时间16902，平均运输阻塞时间7.43",
+  "case_id": "inj_machine_03_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 123.5,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=16902",
+    "transport_blocking_delay_mean=7.428571428571429"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞导致任务无法完成，AGV总等待时间16902，平均运输阻塞时间7.43"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器2在step 221发生60步故障，导致机器停机总步数60，调度系统进行3次修订（1次失败）以恢复计划，但机器利用率低（0.044）表明资源未被充分利用。",
+  "case_id": "inj_machine_04|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 91.6,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=60",
+    "machine_breakdown at step 221 (duration 60 steps)"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器2在step 221发生60步故障，导致机器停机总步数60，调度系统进行3次修订（1次失败）以恢复计划，但机器利用率低（0.044）表明资源未被充分利用。"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器停机总步数60，机器利用率0.0441。",
+  "case_id": "inj_machine_04|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 309.7,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=60",
+    "machine_utilization=0.0441"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器停机总步数60，机器利用率0.0441。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV等待时间总和693，运输阻塞延迟平均1.519，导致任务无法及时运输至机器，造成机器任务饥饿，利用率低。",
+  "case_id": "inj_machine_04_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 118.8,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "agv_waiting_time_total=693",
+    "transport_blocking_delay_mean=1.519"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV等待时间总和693，运输阻塞延迟平均1.519，导致任务无法及时运输至机器，造成机器任务饥饿，利用率低。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟均值1.52，AGV总等待时间693，导致走廊运输阻塞，引发阻塞死锁。",
+  "case_id": "inj_machine_04_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 252.7,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=1.519",
+    "agv_waiting_time_total=693"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟均值1.52，AGV总等待时间693，导致走廊运输阻塞，引发阻塞死锁。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "任务池为空导致机器利用率极低（0.016）且AGV总等待时间达12097，引发资源饥饿死锁",
+  "case_id": "inj_machine_05_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 80.0,
+  "raw": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "throughput_jobs=0",
+    "machine_utilization=0.016082763671875",
+    "agv_waiting_time_total=12097"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "任务池为空导致机器利用率极低（0.016）且AGV总等待时间达12097，引发资源饥饿死锁"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟均值24.07，AGV总等待时间12097，3个任务静止，导致任务无法完成。",
+  "case_id": "inj_machine_05_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 119.1,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=12097",
+    "transport_blocking_delay_mean=24.074074074074073",
+    "tasked_stationary_count=3"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟均值24.07，AGV总等待时间12097，3个任务静止，导致任务无法完成。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "运输阻塞延迟均值3.65，AGV总等待时间1131，导致AGV调度拥堵，引发阻塞活锁。",
+  "case_id": "inj_machine_06_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 142.7,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=3.65",
+    "agv_waiting_time_total=1131"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "运输阻塞延迟均值3.65，AGV总等待时间1131，导致AGV调度拥堵，引发阻塞活锁。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟均值3.65导致机器利用率仅3.3%，AGV总等待时间1131，需优化AGV路径分配以缓解通道阻塞。",
+  "case_id": "inj_machine_06_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 104.4,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=3.6545454545454548",
+    "agv_waiting_time_total=1131",
+    "machine_utilization=0.03322259136212625"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟均值3.65导致机器利用率仅3.3%，AGV总等待时间1131，需优化AGV路径分配以缓解通道阻塞。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟高（181.28）导致AGV总等待时间16492，机器利用率极低（0.56%），引发运输阻塞活锁。",
+  "case_id": "inj_machine_07_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 142.7,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=16492",
+    "transport_blocking_delay_mean=181.27777777777777",
+    "machine_utilization=0.005574544270833333"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟高（181.28）导致AGV总等待时间16492，机器利用率极低（0.56%），引发运输阻塞活锁。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV总等待时间16492和运输阻塞延迟181.28导致机器利用率仅0.55%，任务无法及时处理，影响完工数量。",
+  "case_id": "inj_machine_07_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 112.5,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=16492",
+    "transport_blocking_delay_mean=181.27777777777777",
+    "machine_utilization=0.005574544270833333"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV总等待时间16492和运输阻塞延迟181.28导致机器利用率仅0.55%，任务无法及时处理，影响完工数量。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器4在步骤225发生故障，持续60步，导致资源损失60，机器利用率仅8.8%，引发调度修订失败。",
+  "case_id": "inj_machine_08|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:4",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 101.2,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:4",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=60",
+    "machine_breakdown at step 225",
+    "resource_disruption_loss_area=60"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器4在步骤225发生故障，持续60步，导致资源损失60，机器利用率仅8.8%，引发调度修订失败。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV总等待时间1729，运输阻塞延迟均值2.198，导致任务运输延迟，机器利用率低。",
+  "case_id": "inj_machine_08|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:4",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 146.8,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=1729",
+    "transport_blocking_delay_mean=2.198529411764706"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV总等待时间1729，运输阻塞延迟均值2.198，导致任务运输延迟，机器利用率低。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "走廊运输阻塞延迟均值2.19，AGV总等待时间1368，机器利用率仅9.1%，表明走廊阻塞导致AGV调度冲突，引发任务延迟。",
+  "case_id": "inj_machine_08_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 157.2,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=2.19",
+    "agv_waiting_time_total=1368",
+    "machine_utilization=0.091"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "走廊运输阻塞延迟均值2.19，AGV总等待时间1368，机器利用率仅9.1%，表明走廊阻塞导致AGV调度冲突，引发任务延迟。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "运输阻塞延迟均值2.19，AGV总等待时间1368，导致运输效率低下，需优化AGV路径分配。",
+  "case_id": "inj_machine_08_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 117.2,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=2.19",
+    "agv_waiting_time_total=1368"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "运输阻塞延迟均值2.19，AGV总等待时间1368，导致运输效率低下，需优化AGV路径分配。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV总等待时间14468，运输阻塞延迟均值22.5，导致任务无法完成，机器利用率仅0.45%",
+  "case_id": "inj_machine_09_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 81.2,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=14468",
+    "transport_blocking_delay_mean=22.5",
+    "throughput_jobs=0",
+    "machine_utilization=0.0045166015625"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV总等待时间14468，运输阻塞延迟均值22.5，导致任务无法完成，机器利用率仅0.45%"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV等待时间总和达14468，运输阻塞延迟均值22.5，导致任务积压（tasked_stationary_count=4）且无任务完成（throughput_jobs=0），任务因AGV资源调度不足而无法进入机器处理，造成机器利用率极低（machine_utilization=0.0045）",
+  "case_id": "inj_machine_09_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 168.0,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "agv_waiting_time_total=14468",
+    "transport_blocking_delay_mean=22.5",
+    "throughput_jobs=0",
+    "tasked_stationary_count=4"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV等待时间总和达14468，运输阻塞延迟均值22.5，导致任务积压（tasked_stationary_count=4）且无任务完成（throughput_jobs=0），任务因AGV资源调度不足而无法进入机器处理，造成机器利用率极低（machine_utilization=0.0045）"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "机器3在step 168发生20步故障，导致机器总停机时间20步，资源中断损失面积20，造成机器利用率仅5.16%。",
+  "case_id": "inj_machine_10|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 107.2,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=20",
+    "machine_breakdown at machine:3"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "机器3在step 168发生20步故障，导致机器总停机时间20步，资源中断损失面积20，造成机器利用率仅5.16%。"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 0.333,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器停机导致调度频繁修订，机器停机总步数20，修订次数3次，操作变更77次，影响完工状态。",
+  "case_id": "inj_machine_10|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 155.1,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:0",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=20",
+    "revisions.count=3",
+    "revisions.changed_operations=77"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器停机导致调度频繁修订，机器停机总步数20，修订次数3次，操作变更77次，影响完工状态。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟均值2.81，AGV总等待时间813，导致运输路径频繁阻塞。",
+  "case_id": "inj_machine_10_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 93.7,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=2.8076923076923075",
+    "agv_waiting_time_total=813"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟均值2.81，AGV总等待时间813，导致运输路径频繁阻塞。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟均值2.81导致任务运输延迟，机器利用率仅3.7%，AGV总等待时间813步。",
+  "case_id": "inj_machine_10_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 122.2,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=813",
+    "transport_blocking_delay_mean=2.8076923076923075",
+    "machine_utilization=0.03716690042075736"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟均值2.81导致任务运输延迟，机器利用率仅3.7%，AGV总等待时间813步。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "任务池中积压1个任务（tasked_stationary_count=1），导致AGV总等待时间高达11040，机器利用率仅0.02%，无任务完成（throughput_jobs=0），系统因任务分配停滞陷入饥饿死锁。",
+  "case_id": "inj_machine_11_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 123.3,
+  "raw": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "tasked_stationary_count=1",
+    "agv_waiting_time_total=11040",
+    "machine_utilization=0.02",
+    "throughput_jobs=0"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "任务池中积压1个任务（tasked_stationary_count=1），导致AGV总等待时间高达11040，机器利用率仅0.02%，无任务完成（throughput_jobs=0），系统因任务分配停滞陷入饥饿死锁。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "任务池中积压1个任务（tasked_stationary_count=1），导致机器利用率极低（machine_utilization=0.02078），系统无任务完成（throughput_jobs=0），因任务分配策略失效引发饥饿死锁。",
+  "case_id": "inj_machine_11_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 95.6,
+  "raw": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "tasked_stationary_count=1",
+    "machine_utilization=0.020782470703125",
+    "throughput_jobs=0"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "任务池中积压1个任务（tasked_stationary_count=1），导致机器利用率极低（machine_utilization=0.02078），系统无任务完成（throughput_jobs=0），因任务分配策略失效引发饥饿死锁。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "机器2在step 248发生40步停机，导致机器利用率低（0.041）和资源损失面积40。",
+  "case_id": "inj_machine_12|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 91.5,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=40",
+    "EVT001: machine_breakdown at step 248, machine_id=2"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "机器2在step 248发生40步停机，导致机器利用率低（0.041）和资源损失面积40。"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器停机40步导致机器利用率仅4.1%，资源损失面积40。",
+  "case_id": "inj_machine_12|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 119.1,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=40",
+    "machine_utilization=0.041",
+    "resource_disruption_loss_area=40"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器停机40步导致机器利用率仅4.1%，资源损失面积40。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟均值2.16，AGV总等待时间767，导致操作队列等待时间均值1.0，机器利用率低。",
+  "case_id": "inj_machine_12_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 144.7,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=2.16",
+    "agv_waiting_time_total=767",
+    "operation_queue_waiting_time_mean=1.0"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟均值2.16，AGV总等待时间767，导致操作队列等待时间均值1.0，机器利用率低。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞延迟均值2.16，AGV总等待时间767，导致运输效率低下。",
+  "case_id": "inj_machine_12_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 82.4,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=2.16",
+    "agv_waiting_time_total=767"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞延迟均值2.16，AGV总等待时间767，导致运输效率低下。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV总等待时间16205，运输阻塞平均延迟10.5，导致机器利用率仅0.58%，任务无法及时处理。",
+  "case_id": "inj_machine_13_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 143.8,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=16205",
+    "transport_blocking_delay_mean=10.5",
+    "machine_utilization=0.0058"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV总等待时间16205，运输阻塞平均延迟10.5，导致机器利用率仅0.58%，任务无法及时处理。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "任务池中积压3个任务（tasked_stationary_count=3）导致机器利用率极低（machine_utilization=0.0058）和AGV等待时间过长（agv_waiting_time_total=16205），调度计划与实际执行不匹配。",
+  "case_id": "inj_machine_13_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 186.5,
+  "raw": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "plan_mismatch",
+   "evidence": [
+    "machine_utilization=0.0058",
+    "agv_waiting_time_total=16205",
+    "tasked_stationary_count=3"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "任务池中积压3个任务（tasked_stationary_count=3）导致机器利用率极低（machine_utilization=0.0058）和AGV等待时间过长（agv_waiting_time_total=16205），调度计划与实际执行不匹配。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器6故障导致机器停机总步数40和资源干扰损失面积40。",
+  "case_id": "inj_machine_14|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:6",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 263.6,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:6",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=40",
+    "resource_disruption_loss_area=40"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器6故障导致机器停机总步数40和资源干扰损失面积40。"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器停机导致资源损失40单位，修订计划失败2次，影响完工进度。",
+  "case_id": "inj_machine_14|hard",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:6",
+   "cause": "disruption_machine"
+  },
+  "retries": 0,
+  "wall_s": 128.0,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:0",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=40",
+    "resource_disruption_loss_area=40"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器停机导致资源损失40单位，修订计划失败2次，影响完工进度。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV在走廊运输中频繁发生阻塞，导致运输延迟平均1.875步，AGV忙碌率达81.28%，造成任务处理延迟。",
+  "case_id": "inj_machine_14_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 231.8,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=1.875",
+    "agv_busy_utilization=0.8128"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV在走廊运输中频繁发生阻塞，导致运输延迟平均1.875步，AGV忙碌率达81.28%，造成任务处理延迟。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "运输阻塞延迟均值1.875和AGV总等待时间1308导致运输路径拥堵，引发活锁，使机器利用率仅9.67%",
+  "case_id": "inj_machine_14_T|hard",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "retries": 0,
+  "wall_s": 102.3,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=1.875",
+    "agv_waiting_time_total=1308"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "运输阻塞延迟均值1.875和AGV总等待时间1308导致运输路径拥堵，引发活锁，使机器利用率仅9.67%"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "走廊运输阻塞延迟均值30.28，AGV总等待时间19936，机器利用率0.7%，表明AGV调度阻塞导致任务运输停滞，机器空闲。",
+  "case_id": "inj_machine_15_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 138.7,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "transport_blocking_delay_mean=30.28",
+    "agv_waiting_time_total=19936",
+    "machine_utilization=0.006958"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "走廊运输阻塞延迟均值30.28，AGV总等待时间19936，机器利用率0.7%，表明AGV调度阻塞导致任务运输停滞，机器空闲。"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV总等待时间19936，运输阻塞延迟均值30.28，导致机器利用率仅0.7%，表明走廊阻塞引发活锁，需优化AGV路径分配。",
+  "case_id": "inj_machine_15_T|hard",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "retries": 0,
+  "wall_s": 148.5,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=19936",
+    "transport_blocking_delay_mean=30.28",
+    "machine_utilization=0.006958"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV总等待时间19936，运输阻塞延迟均值30.28，导致机器利用率仅0.7%，表明走廊阻塞引发活锁，需优化AGV路径分配。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "fleet(K+1)",
+  "narrative": "AGV:3的随机故障导致运输延迟，机器利用率低至3.76%。",
+  "case_id": "inj_stoch_00|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 168.1,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv:3",
+   "cause": "disruption_stochastic",
+   "evidence": [
+    "agv_down_steps_total=56",
+    "machine_utilization=0.0376",
+    "agv_waiting_time_total=919"
+   ],
+   "intervention": "fleet(K+1)",
+   "narrative": "AGV:3的随机故障导致运输延迟，机器利用率低至3.76%。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.667,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "调度修订失败7次导致计划与实际资源分配不匹配，机器利用率低至3.76%，AGV总等待时间919步。",
+  "case_id": "inj_stoch_00|hard",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 186.2,
+  "raw": {
+   "loc_type": "machines",
+   "loc_target": "machines",
+   "cause": "plan_mismatch",
+   "evidence": [
+    "revisions.fail_count=7",
+    "machine_utilization=0.0376",
+    "agv_waiting_time_total=919"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "调度修订失败7次导致计划与实际资源分配不匹配，机器利用率低至3.76%，AGV总等待时间919步。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器利用率低（0.1284）主要由机器停机总步数40导致。",
+  "case_id": "inj_stoch_02|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 361.0,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=40",
+    "machine_utilization=0.1284"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器利用率低（0.1284）主要由机器停机总步数40导致。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "AGV运输阻塞导致任务无法及时送达，机器利用率低（0.128），AGV总等待时间1473，运输阻塞延迟均值2.43。",
+  "case_id": "inj_stoch_02|hard",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 146.2,
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "agv_waiting_time_total=1473",
+    "transport_blocking_delay_mean=2.43",
+    "machine_utilization=0.128"
+   ],
+   "intervention": "assigner(least_congestion)",
+   "narrative": "AGV运输阻塞导致任务无法及时送达，机器利用率低（0.128），AGV总等待时间1473，运输阻塞延迟均值2.43。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "机器3在step96发生故障，导致机器停机总步数10，机器利用率降至0.05。",
+  "case_id": "inj_stoch_04|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 188.7,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine",
+   "evidence": [
+    "machine_down_steps_total=10",
+    "machine_utilization=0.05"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "机器3在step96发生故障，导致机器停机总步数10，机器利用率降至0.05。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.333,
+  "parse": 1,
+  "intervention": "periodic_revision(T=100)",
+  "narrative": "初始调度计划与实际运行存在偏差，导致需进行5次修订（2次失败），机器利用率仅0.05，表明资源分配未优化。",
+  "case_id": "inj_stoch_04|hard",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 172.6,
+  "raw": {
+   "loc_type": "machines",
+   "loc_target": "machines",
+   "cause": "plan_mismatch",
+   "evidence": [
+    "machine_utilization=0.05",
+    "revisions.count=5",
+    "revisions.fail_count=2"
+   ],
+   "intervention": "periodic_revision(T=100)",
+   "narrative": "初始调度计划与实际运行存在偏差，导致需进行5次修订（2次失败），机器利用率仅0.05，表明资源分配未优化。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "fleet(K+1)",
+  "narrative": "AGV随机故障导致总停机步数48，AGV总等待时间872，资源损失面积48，影响调度效率。",
+  "case_id": "inj_stoch_06|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 130.4,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv",
+   "cause": "disruption_stochastic",
+   "evidence": [
+    "agv_down_steps_total=48",
+    "agv_waiting_time_total=872",
+    "resource_disruption_loss_area=48"
+   ],
+   "intervention": "fleet(K+1)",
+   "narrative": "AGV随机故障导致总停机步数48，AGV总等待时间872，资源损失面积48，影响调度效率。"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 0.667,
+  "parse": 1,
+  "intervention": "fleet(K+1)",
+  "narrative": "AGV停机48步导致调度修订失败9次，运输阻塞延迟均值2.28，影响完工效率。",
+  "case_id": "inj_stoch_06|hard",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "retries": 0,
+  "wall_s": 103.9,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "agv_down_steps_total=48",
+    "revisions.fail_count=9",
+    "transport_blocking_delay_mean=2.28"
+   ],
+   "intervention": "fleet(K+1)",
+   "narrative": "AGV停机48步导致调度修订失败9次，运输阻塞延迟均值2.28，影响完工效率。"
+  }
+ }
+]
