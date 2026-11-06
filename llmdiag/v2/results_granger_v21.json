@@ -1,0 +1,1730 @@
+[
+ {
+  "case_id": "v21_base_mk01_cpsat-full|easy",
+  "scen_id": "v21_base_mk01_cpsat-full",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=499"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 464,
+   "_break_score": 2.0
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_base_mk01_cpsat-partial|easy",
+  "scen_id": "v21_base_mk01_cpsat-partial",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=499"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 464,
+   "_break_score": 2.0
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_base_mk01_cpsat-static|easy",
+  "scen_id": "v21_base_mk01_cpsat-static",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=499"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 464,
+   "_break_score": 2.0
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_base_mk01_greedy-reactive|easy",
+  "scen_id": "v21_base_mk01_greedy-reactive",
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "KPI:tasked_stationary_count=4"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 160,
+   "_break_score": 5.29
+  },
+  "loc_type": "corridor",
+  "loc_target": "corridor",
+  "cause": "blocking_livelock"
+ },
+ {
+  "case_id": "v21_base_mk02_cpsat-full|easy",
+  "scen_id": "v21_base_mk02_cpsat-full",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=516"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 480,
+   "_break_score": 2.14
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_base_mk02_cpsat-partial|easy",
+  "scen_id": "v21_base_mk02_cpsat-partial",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=516"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 480,
+   "_break_score": 2.14
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_base_mk02_cpsat-static|easy",
+  "scen_id": "v21_base_mk02_cpsat-static",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=516"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 480,
+   "_break_score": 2.14
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_base_mk02_greedy-reactive|easy",
+  "scen_id": "v21_base_mk02_greedy-reactive",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=511"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 480,
+   "_break_score": 2.48
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_base_mk03_cpsat-full|easy",
+  "scen_id": "v21_base_mk03_cpsat-full",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=1232"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 1192,
+   "_break_score": 2.73
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_base_mk03_cpsat-partial|easy",
+  "scen_id": "v21_base_mk03_cpsat-partial",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=1232"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 1192,
+   "_break_score": 2.73
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_base_mk03_cpsat-static|easy",
+  "scen_id": "v21_base_mk03_cpsat-static",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=1232"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 1192,
+   "_break_score": 2.73
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_base_mk03_greedy-reactive|easy",
+  "scen_id": "v21_base_mk03_greedy-reactive",
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "KPI:tasked_stationary_count=1"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": null,
+   "_break_score": 0.0
+  },
+  "loc_type": "corridor",
+  "loc_target": "corridor",
+  "cause": "blocking_livelock"
+ },
+ {
+  "case_id": "v21_emg_block_00|easy",
+  "scen_id": "v21_emg_block_00",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=742"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 696,
+   "_break_score": 2.2
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_emg_block_01|easy",
+  "scen_id": "v21_emg_block_01",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=536"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 504,
+   "_break_score": 2.1
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_emg_block_02|easy",
+  "scen_id": "v21_emg_block_02",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=607"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 576,
+   "_break_score": 2.44
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_emg_block_03|easy",
+  "scen_id": "v21_emg_block_03",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=1138"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 1104,
+   "_break_score": 2.73
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_emg_starve_00|easy",
+  "scen_id": "v21_emg_starve_00",
+  "raw": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "KPI:agv_waiting_time_total=3137",
+    "KPI:tasked_stationary_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 264,
+   "_break_score": 4.13
+  },
+  "loc_type": "task_pool",
+  "loc_target": "task_pool",
+  "cause": "starvation_livelock"
+ },
+ {
+  "case_id": "v21_emg_starve_01|easy",
+  "scen_id": "v21_emg_starve_01",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=2065"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 1984,
+   "_break_score": 3.03
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_emg_starve_02|easy",
+  "scen_id": "v21_emg_starve_02",
+  "raw": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "KPI:agv_waiting_time_total=6221",
+    "KPI:tasked_stationary_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 240,
+   "_break_score": 4.32
+  },
+  "loc_type": "task_pool",
+  "loc_target": "task_pool",
+  "cause": "starvation_livelock"
+ },
+ {
+  "case_id": "v21_emg_starve_03|easy",
+  "scen_id": "v21_emg_starve_03",
+  "raw": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock",
+   "evidence": [
+    "KPI:agv_waiting_time_total=3037",
+    "KPI:tasked_stationary_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": null,
+   "_break_score": 0.0
+  },
+  "loc_type": "task_pool",
+  "loc_target": "task_pool",
+  "cause": "starvation_livelock"
+ },
+ {
+  "case_id": "v21_inj_combo_00|easy",
+  "scen_id": "v21_inj_combo_00",
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "KPI:machine_down_steps_total=30",
+    "KPI:agv_down_steps_total=15"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": null,
+   "_break_score": 0.0
+  },
+  "loc_type": "machine_agv",
+  "loc_target": "machine",
+  "cause": "disruption_machine_agv"
+ },
+ {
+  "case_id": "v21_inj_combo_00_T|easy",
+  "scen_id": "v21_inj_combo_00_T",
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "KPI:tasked_stationary_count=2"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": null,
+   "_break_score": 0.0
+  },
+  "loc_type": "corridor",
+  "loc_target": "corridor",
+  "cause": "blocking_livelock"
+ },
+ {
+  "case_id": "v21_inj_combo_01|easy",
+  "scen_id": "v21_inj_combo_01",
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "KPI:machine_down_steps_total=60",
+    "KPI:agv_down_steps_total=30"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 584,
+   "_break_score": 2.92
+  },
+  "loc_type": "machine_agv",
+  "loc_target": "machine",
+  "cause": "disruption_machine_agv"
+ },
+ {
+  "case_id": "v21_inj_combo_01_T|easy",
+  "scen_id": "v21_inj_combo_01_T",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=625"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 592,
+   "_break_score": 2.47
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_inj_combo_02|easy",
+  "scen_id": "v21_inj_combo_02",
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "KPI:machine_down_steps_total=60",
+    "KPI:agv_down_steps_total=15"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 600,
+   "_break_score": 2.51
+  },
+  "loc_type": "machine_agv",
+  "loc_target": "machine",
+  "cause": "disruption_machine_agv"
+ },
+ {
+  "case_id": "v21_inj_combo_02_T|easy",
+  "scen_id": "v21_inj_combo_02_T",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=671"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 624,
+   "_break_score": 2.55
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_inj_combo_03|easy",
+  "scen_id": "v21_inj_combo_03",
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "KPI:machine_down_steps_total=60",
+    "KPI:agv_down_steps_total=20"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 696,
+   "_break_score": 2.14
+  },
+  "loc_type": "machine_agv",
+  "loc_target": "machine",
+  "cause": "disruption_machine_agv"
+ },
+ {
+  "case_id": "v21_inj_combo_03_T|easy",
+  "scen_id": "v21_inj_combo_03_T",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=717"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 680,
+   "_break_score": 2.06
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_inj_combo_04|easy",
+  "scen_id": "v21_inj_combo_04",
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "KPI:machine_down_steps_total=40",
+    "KPI:agv_down_steps_total=15"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 928,
+   "_break_score": 2.38
+  },
+  "loc_type": "machine_agv",
+  "loc_target": "machine",
+  "cause": "disruption_machine_agv"
+ },
+ {
+  "case_id": "v21_inj_combo_04_T|easy",
+  "scen_id": "v21_inj_combo_04_T",
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "KPI:tasked_stationary_count=3"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 928,
+   "_break_score": 2.38
+  },
+  "loc_type": "corridor",
+  "loc_target": "corridor",
+  "cause": "blocking_livelock"
+ },
+ {
+  "case_id": "v21_inj_combo_05|easy",
+  "scen_id": "v21_inj_combo_05",
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "KPI:machine_down_steps_total=40",
+    "KPI:agv_down_steps_total=20"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 528,
+   "_break_score": 2.4
+  },
+  "loc_type": "machine_agv",
+  "loc_target": "machine",
+  "cause": "disruption_machine_agv"
+ },
+ {
+  "case_id": "v21_inj_combo_05_T|easy",
+  "scen_id": "v21_inj_combo_05_T",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=594"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 528,
+   "_break_score": 2.2
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_inj_combo_06|easy",
+  "scen_id": "v21_inj_combo_06",
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "KPI:machine_down_steps_total=40",
+    "KPI:agv_down_steps_total=30"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 368,
+   "_break_score": 1.9
+  },
+  "loc_type": "machine_agv",
+  "loc_target": "machine",
+  "cause": "disruption_machine_agv"
+ },
+ {
+  "case_id": "v21_inj_combo_06_T|easy",
+  "scen_id": "v21_inj_combo_06_T",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=525"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 488,
+   "_break_score": 2.0
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_inj_combo_08|easy",
+  "scen_id": "v21_inj_combo_08",
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "KPI:machine_down_steps_total=60",
+    "KPI:agv_down_steps_total=20"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": null,
+   "_break_score": 0.0
+  },
+  "loc_type": "machine_agv",
+  "loc_target": "machine",
+  "cause": "disruption_machine_agv"
+ },
+ {
+  "case_id": "v21_inj_combo_08_T|easy",
+  "scen_id": "v21_inj_combo_08_T",
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "KPI:tasked_stationary_count=4"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": null,
+   "_break_score": 0.0
+  },
+  "loc_type": "corridor",
+  "loc_target": "corridor",
+  "cause": "blocking_livelock"
+ },
+ {
+  "case_id": "v21_inj_combo_09|easy",
+  "scen_id": "v21_inj_combo_09",
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "KPI:machine_down_steps_total=40",
+    "KPI:agv_down_steps_total=30"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 1128,
+   "_break_score": 2.29
+  },
+  "loc_type": "machine_agv",
+  "loc_target": "machine",
+  "cause": "disruption_machine_agv"
+ },
+ {
+  "case_id": "v21_inj_combo_09_T|easy",
+  "scen_id": "v21_inj_combo_09_T",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=1267"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 1224,
+   "_break_score": 2.69
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_inj_combo_10|easy",
+  "scen_id": "v21_inj_combo_10",
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "KPI:machine_down_steps_total=60",
+    "KPI:agv_down_steps_total=20"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 1760,
+   "_break_score": 2.5
+  },
+  "loc_type": "machine_agv",
+  "loc_target": "machine",
+  "cause": "disruption_machine_agv"
+ },
+ {
+  "case_id": "v21_inj_combo_10_T|easy",
+  "scen_id": "v21_inj_combo_10_T",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=1737"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 1552,
+   "_break_score": 2.43
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_inj_combo_11|easy",
+  "scen_id": "v21_inj_combo_11",
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "KPI:machine_down_steps_total=60",
+    "KPI:agv_down_steps_total=15"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 1064,
+   "_break_score": 2.34
+  },
+  "loc_type": "machine_agv",
+  "loc_target": "machine",
+  "cause": "disruption_machine_agv"
+ },
+ {
+  "case_id": "v21_inj_combo_11_T|easy",
+  "scen_id": "v21_inj_combo_11_T",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=1318"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 1072,
+   "_break_score": 2.17
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_inj_machine_00|easy",
+  "scen_id": "v21_inj_machine_00",
+  "raw": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic",
+   "evidence": [
+    "KPI:machine_down_steps_total=20",
+    "KPI:active_disruption_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 160,
+   "_break_score": 5.29
+  },
+  "loc_type": "stochastic",
+  "loc_target": "stochastic",
+  "cause": "disruption_stochastic"
+ },
+ {
+  "case_id": "v21_inj_machine_00_T|easy",
+  "scen_id": "v21_inj_machine_00_T",
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "KPI:tasked_stationary_count=4"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 160,
+   "_break_score": 5.29
+  },
+  "loc_type": "corridor",
+  "loc_target": "corridor",
+  "cause": "blocking_livelock"
+ },
+ {
+  "case_id": "v21_inj_machine_02|easy",
+  "scen_id": "v21_inj_machine_02",
+  "raw": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic",
+   "evidence": [
+    "KPI:machine_down_steps_total=40",
+    "KPI:active_disruption_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 656,
+   "_break_score": 2.6
+  },
+  "loc_type": "stochastic",
+  "loc_target": "stochastic",
+  "cause": "disruption_stochastic"
+ },
+ {
+  "case_id": "v21_inj_machine_02_T|easy",
+  "scen_id": "v21_inj_machine_02_T",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=738"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 656,
+   "_break_score": 2.6
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_inj_machine_03|easy",
+  "scen_id": "v21_inj_machine_03",
+  "raw": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic",
+   "evidence": [
+    "KPI:machine_down_steps_total=60",
+    "KPI:active_disruption_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 664,
+   "_break_score": 2.18
+  },
+  "loc_type": "stochastic",
+  "loc_target": "stochastic",
+  "cause": "disruption_stochastic"
+ },
+ {
+  "case_id": "v21_inj_machine_03_T|easy",
+  "scen_id": "v21_inj_machine_03_T",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=703"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 664,
+   "_break_score": 2.18
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_inj_machine_04|easy",
+  "scen_id": "v21_inj_machine_04",
+  "raw": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic",
+   "evidence": [
+    "KPI:machine_down_steps_total=20",
+    "KPI:active_disruption_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 632,
+   "_break_score": 1.79
+  },
+  "loc_type": "stochastic",
+  "loc_target": "stochastic",
+  "cause": "disruption_stochastic"
+ },
+ {
+  "case_id": "v21_inj_machine_04_T|easy",
+  "scen_id": "v21_inj_machine_04_T",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=662"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 632,
+   "_break_score": 1.79
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_inj_machine_05|easy",
+  "scen_id": "v21_inj_machine_05",
+  "raw": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic",
+   "evidence": [
+    "KPI:machine_down_steps_total=20",
+    "KPI:active_disruption_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 544,
+   "_break_score": 2.36
+  },
+  "loc_type": "stochastic",
+  "loc_target": "stochastic",
+  "cause": "disruption_stochastic"
+ },
+ {
+  "case_id": "v21_inj_machine_06|easy",
+  "scen_id": "v21_inj_machine_06",
+  "raw": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic",
+   "evidence": [
+    "KPI:machine_down_steps_total=20",
+    "KPI:active_disruption_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 728,
+   "_break_score": 2.45
+  },
+  "loc_type": "stochastic",
+  "loc_target": "stochastic",
+  "cause": "disruption_stochastic"
+ },
+ {
+  "case_id": "v21_inj_machine_06_T|easy",
+  "scen_id": "v21_inj_machine_06_T",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=758"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 728,
+   "_break_score": 2.45
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_inj_machine_07|easy",
+  "scen_id": "v21_inj_machine_07",
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "disruption_machine",
+   "evidence": [
+    "KPI:machine_down_steps_total=20",
+    "KPI:operation_queue_waiting_time_mean=1.0222222222222221"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 416,
+   "_break_score": 2.21
+  },
+  "loc_type": "machine",
+  "loc_target": "machine",
+  "cause": "disruption_machine"
+ },
+ {
+  "case_id": "v21_inj_machine_07_T|easy",
+  "scen_id": "v21_inj_machine_07_T",
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "KPI:tasked_stationary_count=1"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": null,
+   "_break_score": 0.0
+  },
+  "loc_type": "corridor",
+  "loc_target": "corridor",
+  "cause": "blocking_livelock"
+ },
+ {
+  "case_id": "v21_inj_machine_08|easy",
+  "scen_id": "v21_inj_machine_08",
+  "raw": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic",
+   "evidence": [
+    "KPI:machine_down_steps_total=60",
+    "KPI:active_disruption_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": null,
+   "_break_score": 0.0
+  },
+  "loc_type": "stochastic",
+  "loc_target": "stochastic",
+  "cause": "disruption_stochastic"
+ },
+ {
+  "case_id": "v21_inj_machine_08_T|easy",
+  "scen_id": "v21_inj_machine_08_T",
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "KPI:tasked_stationary_count=2"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": null,
+   "_break_score": 0.0
+  },
+  "loc_type": "corridor",
+  "loc_target": "corridor",
+  "cause": "blocking_livelock"
+ },
+ {
+  "case_id": "v21_inj_machine_09|easy",
+  "scen_id": "v21_inj_machine_09",
+  "raw": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic",
+   "evidence": [
+    "KPI:machine_down_steps_total=20",
+    "KPI:active_disruption_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 1176,
+   "_break_score": 2.5
+  },
+  "loc_type": "stochastic",
+  "loc_target": "stochastic",
+  "cause": "disruption_stochastic"
+ },
+ {
+  "case_id": "v21_inj_machine_09_T|easy",
+  "scen_id": "v21_inj_machine_09_T",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=1265"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 1176,
+   "_break_score": 2.5
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_inj_machine_10|easy",
+  "scen_id": "v21_inj_machine_10",
+  "raw": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic",
+   "evidence": [
+    "KPI:machine_down_steps_total=40",
+    "KPI:active_disruption_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 1536,
+   "_break_score": 2.56
+  },
+  "loc_type": "stochastic",
+  "loc_target": "stochastic",
+  "cause": "disruption_stochastic"
+ },
+ {
+  "case_id": "v21_inj_machine_11|easy",
+  "scen_id": "v21_inj_machine_11",
+  "raw": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic",
+   "evidence": [
+    "KPI:machine_down_steps_total=40",
+    "KPI:active_disruption_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 1088,
+   "_break_score": 2.91
+  },
+  "loc_type": "stochastic",
+  "loc_target": "stochastic",
+  "cause": "disruption_stochastic"
+ },
+ {
+  "case_id": "v21_inj_machine_11_T|easy",
+  "scen_id": "v21_inj_machine_11_T",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=1118"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 1088,
+   "_break_score": 2.91
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_inj_machine_12|easy",
+  "scen_id": "v21_inj_machine_12",
+  "raw": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic",
+   "evidence": [
+    "KPI:machine_down_steps_total=20",
+    "KPI:active_disruption_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": null,
+   "_break_score": 0.0
+  },
+  "loc_type": "stochastic",
+  "loc_target": "stochastic",
+  "cause": "disruption_stochastic"
+ },
+ {
+  "case_id": "v21_inj_machine_12_T|easy",
+  "scen_id": "v21_inj_machine_12_T",
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "KPI:tasked_stationary_count=2"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": null,
+   "_break_score": 0.0
+  },
+  "loc_type": "corridor",
+  "loc_target": "corridor",
+  "cause": "blocking_livelock"
+ },
+ {
+  "case_id": "v21_inj_machine_13|easy",
+  "scen_id": "v21_inj_machine_13",
+  "raw": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic",
+   "evidence": [
+    "KPI:machine_down_steps_total=60",
+    "KPI:active_disruption_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 592,
+   "_break_score": 2.04
+  },
+  "loc_type": "stochastic",
+  "loc_target": "stochastic",
+  "cause": "disruption_stochastic"
+ },
+ {
+  "case_id": "v21_inj_machine_13_T|easy",
+  "scen_id": "v21_inj_machine_13_T",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=714"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 592,
+   "_break_score": 2.04
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_inj_machine_14|easy",
+  "scen_id": "v21_inj_machine_14",
+  "raw": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic",
+   "evidence": [
+    "KPI:machine_down_steps_total=60",
+    "KPI:active_disruption_count=0"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 640,
+   "_break_score": 2.32
+  },
+  "loc_type": "stochastic",
+  "loc_target": "stochastic",
+  "cause": "disruption_stochastic"
+ },
+ {
+  "case_id": "v21_inj_machine_14_T|easy",
+  "scen_id": "v21_inj_machine_14_T",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=752"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 640,
+   "_break_score": 2.32
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_inj_machine_15|easy",
+  "scen_id": "v21_inj_machine_15",
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine",
+   "cause": "disruption_machine",
+   "evidence": [
+    "KPI:machine_down_steps_total=20",
+    "KPI:operation_queue_waiting_time_mean=1.290909090909091"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 480,
+   "_break_score": 2.31
+  },
+  "loc_type": "machine",
+  "loc_target": "machine",
+  "cause": "disruption_machine"
+ },
+ {
+  "case_id": "v21_inj_machine_15_T|easy",
+  "scen_id": "v21_inj_machine_15_T",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=526"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 496,
+   "_break_score": 2.45
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_inj_stoch_00|easy",
+  "scen_id": "v21_inj_stoch_00",
+  "raw": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "KPI:tasked_stationary_count=3"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 600,
+   "_break_score": 2.3
+  },
+  "loc_type": "corridor",
+  "loc_target": "corridor",
+  "cause": "blocking_livelock"
+ },
+ {
+  "case_id": "v21_inj_stoch_01|easy",
+  "scen_id": "v21_inj_stoch_01",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=664"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 624,
+   "_break_score": 2.22
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_inj_stoch_02|easy",
+  "scen_id": "v21_inj_stoch_02",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=480"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 440,
+   "_break_score": 2.52
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_inj_stoch_03|easy",
+  "scen_id": "v21_inj_stoch_03",
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "KPI:machine_down_steps_total=10",
+    "KPI:agv_down_steps_total=80"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 672,
+   "_break_score": 2.39
+  },
+  "loc_type": "machine_agv",
+  "loc_target": "machine",
+  "cause": "disruption_machine_agv"
+ },
+ {
+  "case_id": "v21_inj_stoch_04|easy",
+  "scen_id": "v21_inj_stoch_04",
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "KPI:machine_down_steps_total=10",
+    "KPI:agv_down_steps_total=264"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 272,
+   "_break_score": 4.07
+  },
+  "loc_type": "machine_agv",
+  "loc_target": "machine",
+  "cause": "disruption_machine_agv"
+ },
+ {
+  "case_id": "v21_inj_stoch_05|easy",
+  "scen_id": "v21_inj_stoch_05",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=599"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 560,
+   "_break_score": 2.28
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_inj_stoch_06|easy",
+  "scen_id": "v21_inj_stoch_06",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=570"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 536,
+   "_break_score": 2.38
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_inj_stoch_07|easy",
+  "scen_id": "v21_inj_stoch_07",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=465"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 408,
+   "_break_score": 2.08
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_mismatch_00|easy",
+  "scen_id": "v21_mismatch_00",
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "KPI:machine_down_steps_total=437",
+    "KPI:agv_down_steps_total=102"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 584,
+   "_break_score": 2.65
+  },
+  "loc_type": "machine_agv",
+  "loc_target": "machine",
+  "cause": "disruption_machine_agv"
+ },
+ {
+  "case_id": "v21_mismatch_00_T|easy",
+  "scen_id": "v21_mismatch_00_T",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=619"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 584,
+   "_break_score": 2.44
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_mismatch_01|easy",
+  "scen_id": "v21_mismatch_01",
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "KPI:machine_down_steps_total=424",
+    "KPI:agv_down_steps_total=91"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 528,
+   "_break_score": 2.49
+  },
+  "loc_type": "machine_agv",
+  "loc_target": "machine",
+  "cause": "disruption_machine_agv"
+ },
+ {
+  "case_id": "v21_mismatch_02|easy",
+  "scen_id": "v21_mismatch_02",
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "KPI:machine_down_steps_total=1226",
+    "KPI:agv_down_steps_total=278"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 1392,
+   "_break_score": 2.46
+  },
+  "loc_type": "machine_agv",
+  "loc_target": "machine",
+  "cause": "disruption_machine_agv"
+ },
+ {
+  "case_id": "v21_mismatch_02_T|easy",
+  "scen_id": "v21_mismatch_02_T",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=1398"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 1360,
+   "_break_score": 2.65
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_mismatch_03|easy",
+  "scen_id": "v21_mismatch_03",
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "KPI:machine_down_steps_total=216",
+    "KPI:agv_down_steps_total=236"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 568,
+   "_break_score": 2.61
+  },
+  "loc_type": "machine_agv",
+  "loc_target": "machine",
+  "cause": "disruption_machine_agv"
+ },
+ {
+  "case_id": "v21_mismatch_03_T|easy",
+  "scen_id": "v21_mismatch_03_T",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=504"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 472,
+   "_break_score": 2.64
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_mismatch_04|easy",
+  "scen_id": "v21_mismatch_04",
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "KPI:machine_down_steps_total=317",
+    "KPI:agv_down_steps_total=288"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 496,
+   "_break_score": 1.84
+  },
+  "loc_type": "machine_agv",
+  "loc_target": "machine",
+  "cause": "disruption_machine_agv"
+ },
+ {
+  "case_id": "v21_mismatch_04_T|easy",
+  "scen_id": "v21_mismatch_04_T",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=593"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 480,
+   "_break_score": 2.02
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ },
+ {
+  "case_id": "v21_mismatch_05|easy",
+  "scen_id": "v21_mismatch_05",
+  "raw": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine",
+   "cause": "disruption_machine_agv",
+   "evidence": [
+    "KPI:machine_down_steps_total=2136",
+    "KPI:agv_down_steps_total=820"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 2568,
+   "_break_score": 1.97
+  },
+  "loc_type": "machine_agv",
+  "loc_target": "machine",
+  "cause": "disruption_machine_agv"
+ },
+ {
+  "case_id": "v21_mismatch_05_T|easy",
+  "scen_id": "v21_mismatch_05_T",
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:makespan=1332"
+   ],
+   "intervention": "none",
+   "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+   "_break_step": 1288,
+   "_break_score": 3.05
+  },
+  "loc_type": "none",
+  "loc_target": "none",
+  "cause": "baseline"
+ }
+]

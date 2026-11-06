@@ -1,0 +1,1052 @@
+[
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_base_mk01_cpsat-full|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_base_mk01_cpsat-partial|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_base_mk01_cpsat-static|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_base_mk01_greedy-reactive|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_base_mk02_cpsat-full|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_base_mk02_cpsat-partial|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_base_mk02_cpsat-static|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_base_mk02_greedy-reactive|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_base_mk03_cpsat-full|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_base_mk03_cpsat-partial|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_base_mk03_cpsat-static|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_base_mk03_greedy-reactive|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_emg_starve_00|easy",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_emg_starve_02|easy",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_emg_starve_03|easy",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_combo_00_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_combo_01|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:3+agv:5",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_combo_01_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_combo_02|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:1+agv:1",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_combo_02_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_combo_03|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:3+agv:2",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_combo_03_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_combo_04_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_combo_05|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:1+agv:0",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_combo_05_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_combo_06|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:0+agv:3",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_combo_06_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_combo_08_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_combo_09|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:4+agv:5",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_combo_09_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_combo_10|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:7+agv:2",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_combo_10_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_combo_11|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:5+agv:0",
+   "cause": "disruption_machine_agv"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_combo_11_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_machine_00_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_machine_02|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:4",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_machine_02_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_machine_03|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_machine_03_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_machine_04|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:0",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_machine_04_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_machine_06|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_machine_06_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_machine_07_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_machine_08_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_machine_09|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:7",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_machine_09_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_machine_11|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:6",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_machine_11_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_machine_12_T|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_machine_13|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_machine_13_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_machine_14|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:2",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_machine_14_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.5,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_machine_15|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:3",
+   "cause": "disruption_machine"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_machine_15_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_stoch_01|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_stoch_02|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_stoch_03|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_stoch_05|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_stoch_06|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_inj_stoch_07|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_mismatch_00|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "plan_mismatch"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_mismatch_00_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_mismatch_02|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "plan_mismatch"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_mismatch_02_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_mismatch_03|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "plan_mismatch"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_mismatch_03_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_mismatch_04_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "none",
+  "narrative": "统计基线 (G1.1): 序列签名映射, 无叙述。",
+  "case_id": "v21_mismatch_05_T|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  }
+ }
+]

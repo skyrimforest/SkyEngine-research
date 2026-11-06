@@ -1,0 +1,13 @@
+{
+ "n_cases": 140,
+ "n_attacks": 700,
+ "caught_rate": 1.0,
+ "per_attack": {
+  "phantom_evt": 1.0,
+  "oob_index": 1.0,
+  "value_lie": 1.0,
+  "phantom_cfg": 1.0,
+  "phantom_kpi": 1.0
+ },
+ "leaks": []
+}
