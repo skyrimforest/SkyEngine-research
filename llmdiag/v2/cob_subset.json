@@ -1,0 +1,260 @@
+[
+ {
+  "system": "boutique",
+  "fault_category": "scheduling",
+  "difficulty": "easy",
+  "case_name": "145"
+ },
+ {
+  "system": "boutique",
+  "fault_category": "scheduling",
+  "difficulty": "easy",
+  "case_name": "98"
+ },
+ {
+  "system": "boutique",
+  "fault_category": "scheduling",
+  "difficulty": "easy",
+  "case_name": "114"
+ },
+ {
+  "system": "boutique",
+  "fault_category": "scheduling",
+  "difficulty": "easy",
+  "case_name": "9"
+ },
+ {
+  "system": "boutique",
+  "fault_category": "scheduling",
+  "difficulty": "easy",
+  "case_name": "39"
+ },
+ {
+  "system": "boutique",
+  "fault_category": "scheduling",
+  "difficulty": "easy",
+  "case_name": "156"
+ },
+ {
+  "system": "boutique",
+  "fault_category": "startup",
+  "difficulty": "easy",
+  "case_name": "20"
+ },
+ {
+  "system": "boutique",
+  "fault_category": "startup",
+  "difficulty": "easy",
+  "case_name": "16"
+ },
+ {
+  "system": "boutique",
+  "fault_category": "startup",
+  "difficulty": "easy",
+  "case_name": "14"
+ },
+ {
+  "system": "boutique",
+  "fault_category": "runtime",
+  "difficulty": "easy",
+  "case_name": "45"
+ },
+ {
+  "system": "boutique",
+  "fault_category": "runtime",
+  "difficulty": "easy",
+  "case_name": "5"
+ },
+ {
+  "system": "boutique",
+  "fault_category": "runtime",
+  "difficulty": "easy",
+  "case_name": "36"
+ },
+ {
+  "system": "boutique",
+  "fault_category": "admission",
+  "difficulty": "medium",
+  "case_name": "20"
+ },
+ {
+  "system": "boutique",
+  "fault_category": "admission",
+  "difficulty": "medium",
+  "case_name": "5"
+ },
+ {
+  "system": "boutique",
+  "fault_category": "admission",
+  "difficulty": "medium",
+  "case_name": "10"
+ },
+ {
+  "system": "boutique",
+  "fault_category": "service",
+  "difficulty": "medium",
+  "case_name": "14"
+ },
+ {
+  "system": "boutique",
+  "fault_category": "service",
+  "difficulty": "medium",
+  "case_name": "26"
+ },
+ {
+  "system": "boutique",
+  "fault_category": "service",
+  "difficulty": "medium",
+  "case_name": "5"
+ },
+ {
+  "system": "boutique",
+  "fault_category": "infrastructure",
+  "difficulty": "medium",
+  "case_name": "19"
+ },
+ {
+  "system": "boutique",
+  "fault_category": "infrastructure",
+  "difficulty": "medium",
+  "case_name": "12"
+ },
+ {
+  "system": "boutique",
+  "fault_category": "codedefect",
+  "difficulty": "hard",
+  "case_name": "43"
+ },
+ {
+  "system": "boutique",
+  "fault_category": "codedefect",
+  "difficulty": "hard",
+  "case_name": "22"
+ },
+ {
+  "system": "boutique",
+  "fault_category": "codedefect",
+  "difficulty": "hard",
+  "case_name": "71"
+ },
+ {
+  "system": "boutique",
+  "fault_category": "performance",
+  "difficulty": "hard",
+  "case_name": "8"
+ },
+ {
+  "system": "boutique",
+  "fault_category": "performance",
+  "difficulty": "hard",
+  "case_name": "10"
+ },
+ {
+  "system": "trainticket",
+  "fault_category": "runtime",
+  "difficulty": "easy",
+  "case_name": "88"
+ },
+ {
+  "system": "trainticket",
+  "fault_category": "runtime",
+  "difficulty": "easy",
+  "case_name": "23"
+ },
+ {
+  "system": "trainticket",
+  "fault_category": "runtime",
+  "difficulty": "easy",
+  "case_name": "55"
+ },
+ {
+  "system": "trainticket",
+  "fault_category": "runtime",
+  "difficulty": "easy",
+  "case_name": "81"
+ },
+ {
+  "system": "trainticket",
+  "fault_category": "runtime",
+  "difficulty": "easy",
+  "case_name": "84"
+ },
+ {
+  "system": "trainticket",
+  "fault_category": "startup",
+  "difficulty": "easy",
+  "case_name": "20"
+ },
+ {
+  "system": "trainticket",
+  "fault_category": "startup",
+  "difficulty": "easy",
+  "case_name": "1"
+ },
+ {
+  "system": "trainticket",
+  "fault_category": "startup",
+  "difficulty": "easy",
+  "case_name": "3"
+ },
+ {
+  "system": "trainticket",
+  "fault_category": "service",
+  "difficulty": "medium",
+  "case_name": "33"
+ },
+ {
+  "system": "trainticket",
+  "fault_category": "service",
+  "difficulty": "medium",
+  "case_name": "34"
+ },
+ {
+  "system": "trainticket",
+  "fault_category": "service",
+  "difficulty": "medium",
+  "case_name": "15"
+ },
+ {
+  "system": "trainticket",
+  "fault_category": "service",
+  "difficulty": "medium",
+  "case_name": "16"
+ },
+ {
+  "system": "trainticket",
+  "fault_category": "performance",
+  "difficulty": "hard",
+  "case_name": "4"
+ },
+ {
+  "system": "trainticket",
+  "fault_category": "performance",
+  "difficulty": "hard",
+  "case_name": "40"
+ },
+ {
+  "system": "trainticket",
+  "fault_category": "performance",
+  "difficulty": "hard",
+  "case_name": "28"
+ },
+ {
+  "system": "trainticket",
+  "fault_category": "performance",
+  "difficulty": "hard",
+  "case_name": "34"
+ },
+ {
+  "system": "trainticket",
+  "fault_category": "performance",
+  "difficulty": "hard",
+  "case_name": "47"
+ },
+ {
+  "system": "trainticket",
+  "fault_category": "performance",
+  "difficulty": "hard",
+  "case_name": "29"
+ }
+]
