@@ -1,0 +1,271 @@
+[
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(dynamic)",
+  "narrative": "AGV利用率72%但等待时间562步，机器利用率仅6%，表明资源分配策略导致AGV空等与机器闲置并存，需动态分配器优化任务匹配。",
+  "case_id": "base_mk01_cpsat|easy",
+  "gt": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline"
+  },
+  "wall_s": 55.7,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:agv_busy_utilization=0.719560878243513",
+    "KPI:agv_waiting_time_total=562",
+    "KPI:machine_utilization=0.059880239520958084"
+   ],
+   "intervention": "assigner(dynamic)",
+   "narrative": "AGV利用率72%但等待时间562步，机器利用率仅6%，表明资源分配策略导致AGV空等与机器闲置并存，需动态分配器优化任务匹配。"
+  },
+  "agent": {
+   "n_steps": 3,
+   "tool_calls": {
+    "get_kpi": 1,
+    "get_events_page": 0,
+    "get_event_stats": 1,
+    "search_events": 0,
+    "get_revisions": 0,
+    "get_config": 0
+   },
+   "n_tool_calls": 2,
+   "tools_used": [
+    "get_event_stats",
+    "get_kpi"
+   ]
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "assigner(priority_fifo)",
+  "narrative": "系统无异常事件记录，但AGV总等待时间极高且机器利用率极低，符合基础状态下的资源闲置特征，建议采用先进先出任务分配策略优化资源利用。",
+  "case_id": "base_mk01_greedy|easy",
+  "gt": {
+   "loc_type": "corridor",
+   "loc_target": "corridor",
+   "cause": "blocking_livelock"
+  },
+  "wall_s": 61.2,
+  "raw": {
+   "loc_type": "none",
+   "loc_target": "none",
+   "cause": "baseline",
+   "evidence": [
+    "KPI:agv_waiting_time_total=12551",
+    "KPI:machine_utilization=0.005818684895833333"
+   ],
+   "intervention": "assigner(priority_fifo)",
+   "narrative": "系统无异常事件记录，但AGV总等待时间极高且机器利用率极低，符合基础状态下的资源闲置特征，建议采用先进先出任务分配策略优化资源利用。"
+  },
+  "agent": {
+   "n_steps": 3,
+   "tool_calls": {
+    "get_kpi": 1,
+    "get_events_page": 0,
+    "get_event_stats": 1,
+    "search_events": 0,
+    "get_revisions": 0,
+    "get_config": 0
+   },
+   "n_tool_calls": 2,
+   "tools_used": [
+    "get_event_stats",
+    "get_kpi"
+   ]
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "fleet(K=3)",
+  "narrative": "AGV总等待时间过高且忙碌利用率异常，表明运输堵塞导致资源闲置与任务堆积，需增加3辆AGV缓解拥堵。",
+  "case_id": "emg_starve_00|easy",
+  "gt": {
+   "loc_type": "task_pool",
+   "loc_target": "task_pool",
+   "cause": "starvation_livelock"
+  },
+  "wall_s": 56.2,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "KPI:agv_waiting_time_total=3137",
+    "KPI:agv_busy_utilization=0.6170654296875"
+   ],
+   "intervention": "fleet(K=3)",
+   "narrative": "AGV总等待时间过高且忙碌利用率异常，表明运输堵塞导致资源闲置与任务堆积，需增加3辆AGV缓解拥堵。"
+  },
+  "agent": {
+   "n_steps": 3,
+   "tool_calls": {
+    "get_kpi": 1,
+    "get_events_page": 0,
+    "get_event_stats": 1,
+    "search_events": 0,
+    "get_revisions": 0,
+    "get_config": 0
+   },
+   "n_tool_calls": 2,
+   "tools_used": [
+    "get_event_stats",
+    "get_kpi"
+   ]
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.5,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "fleet(K=2)",
+  "narrative": "agv:1在step275故障20步导致运输阻塞，高等待时间与利用率矛盾，需增加AGV数量缓解瓶颈。",
+  "case_id": "inj_combo_00|easy",
+  "gt": {
+   "loc_type": "machine_agv",
+   "loc_target": "machine:3+agv:1",
+   "cause": "disruption_machine_agv"
+  },
+  "wall_s": 102.9,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv:1",
+   "cause": "disruption_agv",
+   "evidence": [
+    "EVT003",
+    "KPI:agv_waiting_time_total=671",
+    "KPI:agv_busy_utilization=0.7565"
+   ],
+   "intervention": "fleet(K=2)",
+   "narrative": "agv:1在step275故障20步导致运输阻塞，高等待时间与利用率矛盾，需增加AGV数量缓解瓶颈。"
+  },
+  "agent": {
+   "n_steps": 5,
+   "tool_calls": {
+    "get_kpi": 1,
+    "get_events_page": 0,
+    "get_event_stats": 1,
+    "search_events": 2,
+    "get_revisions": 0,
+    "get_config": 0
+   },
+   "n_tool_calls": 4,
+   "tools_used": [
+    "get_event_stats",
+    "get_kpi",
+    "search_events"
+   ]
+  }
+ },
+ {
+  "loc": 1.0,
+  "cause": 1.0,
+  "jra": 1.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "step150 机0故障40步导致利用率骤降，停机时间直接造成资源空转损失，系统已恢复但未达预期产能。",
+  "case_id": "inj_machine_00|easy",
+  "gt": {
+   "loc_type": "machine",
+   "loc_target": "machine:0",
+   "cause": "disruption_machine"
+  },
+  "wall_s": 67.3,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:0",
+   "cause": "disruption_machine",
+   "evidence": [
+    "EVT001",
+    "KPI:machine_utilization=0.0602",
+    "KPI:machine_down_steps_total=40"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "step150 机0故障40步导致利用率骤降，停机时间直接造成资源空转损失，系统已恢复但未达预期产能。"
+  },
+  "agent": {
+   "n_steps": 4,
+   "tool_calls": {
+    "get_kpi": 1,
+    "get_events_page": 0,
+    "get_event_stats": 1,
+    "search_events": 1,
+    "get_revisions": 0,
+    "get_config": 0
+   },
+   "n_tool_calls": 3,
+   "tools_used": [
+    "get_event_stats",
+    "get_kpi",
+    "search_events"
+   ]
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 1.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "AGV0和AGV3发生5次概率性故障，导致运输阻塞延迟累积，AGV总等待时间达919步，随机性故障引发系统效率下降。",
+  "case_id": "inj_stoch_00|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "disruption_stochastic"
+  },
+  "wall_s": 95.8,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv:0+agv:3",
+   "cause": "disruption_stochastic",
+   "evidence": [
+    "EVT001",
+    "EVT003",
+    "EVT005",
+    "EVT007",
+    "EVT008",
+    "KPI:agv_waiting_time_total=919",
+    "KPI:transport_blocking_delay_mean=2.909"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "AGV0和AGV3发生5次概率性故障，导致运输阻塞延迟累积，AGV总等待时间达919步，随机性故障引发系统效率下降。"
+  },
+  "agent": {
+   "n_steps": 4,
+   "tool_calls": {
+    "get_kpi": 1,
+    "get_events_page": 0,
+    "get_event_stats": 1,
+    "search_events": 1,
+    "get_revisions": 0,
+    "get_config": 0
+   },
+   "n_tool_calls": 3,
+   "tools_used": [
+    "get_event_stats",
+    "get_kpi",
+    "search_events"
+   ]
+  }
+ }
+]
