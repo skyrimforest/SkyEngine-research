@@ -65,7 +65,13 @@ SYSTEM = """你是FJSP+MAPF柔性制造仿真系统的调度诊断专家。你�
   Observation: [{"id": "EVT001", "step": 150, "payload": {"machine_id": 2, "duration_steps": 60}}]
   Final: {"loc_type": "machine", "loc_target": "machine:2", "cause": "disruption_machine", "evidence": ["EVT001", "KPI:makespan=4096", "KPI:agv_waiting_time_total=3100"], "intervention": "none", "narrative": "step150 机2故障60步, 系统未完工, 该故障为根因。"}
 
-步数预算 20。到达预算仍未 Final 时, 基于已查询到的信息立即给出 Final。只输出 Thought/Action/Final 行。"""
+步数预算 20。到达预算仍未 Final 时, 基于已查询到的信息立即给出 Final。只输出 Thought/Action/Final 行。
+
+硬规则:
+- 一条消息只允许输出一个 Action, 输出后立即停止, 等待系统返回 Observation;
+- Observation 只能来自系统, 你自己生成的 Observation 无效, 会被丢弃;
+- 同一条消息里若同时出现 Action 和 Final, 只执行 Action, Final 作废;
+- 未调用任何工具就给 Final 会被拒答。"""
 
 
 # ---------------------------------------------------------------- 工具实现
@@ -151,13 +157,20 @@ def run_agent(case: dict, log: list) -> tuple[dict | None, dict]:
     for steps in range(1, MAX_STEPS + 1):
         txt = _chat(msgs)
         log.append({"step": steps, "text": txt[:500]})
-        m = FINAL_RE.search(txt)
-        if m:
+        m = ACTION_RE.search(txt)  # Action 优先于 Final (eager 模型会把整个对话补全完)
+        m_final = FINAL_RE.search(txt)
+        if m is None and m_final:
             try:
-                body = m.group(1)
+                body = m_final.group(1)
                 pred = json.loads(body[body.index("{"): body.rindex("}") + 1])
             except Exception:
                 pred = None
+            if pred is not None and sum(used.values()) == 0:
+                msgs = msgs + [{"role": "assistant", "content": txt[:600]},
+                               {"role": "user",
+                                "content": "拒答: 你还没有调用任何工具就给出了 Final。必须先查询再作答, 例如 'Action: get_kpi()'。/no_think"}]
+                pred = None
+                continue
             break
         a = ACTION_RE.search(txt)
         if not a:
