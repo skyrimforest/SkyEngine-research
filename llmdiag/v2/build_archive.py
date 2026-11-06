@@ -41,6 +41,12 @@ def verify(scn: dict, rec: dict) -> tuple[dict | None, str]:
         return lbl, "by_construction"
     if v == "preset_stochastic":
         return lbl, "by_construction"
+    if v == "preset_mismatch":
+        # plan_mismatch: 静态臂+故障流, 标签由构造为真; 但要求故障流真实发生
+        # (零修订失配的物理前提), 未发生则弃 —— 防"空标签"
+        if (s.get("active_disruption_count") or 0) <= 0:
+            return None, "drop: fault stream never fired (no active disruptions)"
+        return lbl, "by_construction_fault_stream_confirmed"
     if v == "baseline":
         # 基线若呈现涌现签名, 改标 (v1 S0 双标签教训)
         if not rec.get("finished", True):
@@ -119,11 +125,12 @@ def build_archive(scn: dict, rec: dict, label: dict, note: str) -> dict:
     return easy, hard
 
 
-def main():
+def main(scen_file: str = "scenarios_v2.jsonl", episodes_dir: str = "episodes",
+         out_file: str = "cases_v2.json"):
     scns = {json.loads(l)["scen_id"]: json.loads(l)
-            for l in (HERE / "scenarios_v2.jsonl").read_text().splitlines() if l.strip()}
+            for l in (HERE / scen_file).read_text().splitlines() if l.strip()}
     recs = {}
-    for f in sorted((HERE / "episodes").glob("*.json")):
+    for f in sorted((HERE / episodes_dir).glob("*.json")):
         if f.stem in scns:
             recs[f.stem] = json.loads(f.read_text())
 
@@ -152,12 +159,21 @@ def main():
         if v == "preset_stochastic" and ("error" in rec or not rec.get("finished", False)):
             dropped.append({"scen_id": sid, "reason": "drop: stochastic episode unfinished"})
             continue
+        if v == "preset_mismatch":
+            # 静态臂 episode 允许未完工 (失配可表现为 censored); 要求无错误 + 孪生健康
+            if "error" in rec:
+                dropped.append({"scen_id": sid, "reason": "pair_drop: mismatch episode error"})
+                continue
+            if not twin_ok(sid):
+                dropped.append({"scen_id": sid,
+                                "reason": "pair_drop: CRN twin unfinished (baseline confound)"})
+                continue
         label, note = verify(scn, rec)
         if label is None:
             dropped.append({"scen_id": sid, "reason": note})
             continue
         easy, hard = build_archive(scn, rec, label, note)
-        if v.startswith("injected"):
+        if v.startswith("injected") or v == "preset_mismatch":
             easy["meta"]["event_visible"] = event_visible(rec, scn)
             tw = recs.get(sid + "_T")
             if tw is not None:
@@ -167,7 +183,7 @@ def main():
                     if rec.get("makespan") and tw.get("makespan") else None)
         cases += [easy, hard]
         kept += 1
-    (HERE / "cases_v2.json").write_text(json.dumps(cases, ensure_ascii=False, indent=1))
+    (HERE / out_file).write_text(json.dumps(cases, ensure_ascii=False, indent=1))
     (HERE / "build_report.json").write_text(json.dumps(
         {"kept_scenarios": kept, "dropped": dropped, "n_cases": len(cases)},
         ensure_ascii=False, indent=1))
@@ -179,4 +195,10 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--scen", default="scenarios_v2.jsonl")
+    ap.add_argument("--episodes", default="episodes")
+    ap.add_argument("--out", default="cases_v2.json")
+    a = ap.parse_args()
+    main(a.scen, a.episodes, a.out)

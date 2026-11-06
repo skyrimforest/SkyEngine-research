@@ -112,3 +112,98 @@ def aggregate(rows: list[dict]) -> dict:
         "faithful": round(sum(r["faithful"] for r in rows) / n, 3),
         "parse_rate": round(sum(r["parse"] for r in rows) / n, 3),
     }
+
+
+# ---------------------------------------------------------------------------
+# 对抗注入 (grader_v2.py 预留的 --adversarial 欠账, v2 线落地)
+# 目的: 验证判分器忠实度层不是虚设 —— 塞"看起来合法但档案里不存在"的引用,
+# 每种攻击必须被抓 (faith=0); 抓获率 <1 即判分器存在伪造漏洞。
+# ---------------------------------------------------------------------------
+def adversarial_attacks(case: dict) -> dict:
+    """按引用类型构造 5 种伪造引用 (值需对案例自适应, 确保档案中确实不存在)"""
+    kpi_fields = list((case.get("kpi") or {}).keys())
+    fake_kpi = next((f for f in ("agv_waiting_time_total", "makespan",
+                                 "machine_utilization") if f in kpi_fields),
+                    kpi_fields[0] if kpi_fields else "makespan")
+    real_val = (case.get("kpi") or {}).get(fake_kpi, 0)
+    # 偏离真值 37.7% 再叠加偏移, 保证超出 ±5% 容差
+    fake_val = abs(real_val) * 1.377 + 137.7 if real_val else 137.7
+    n_evs = len(case.get("events") or [])
+    cfg_key = next((k for k in ("instance", "num_agv", "policy", "seed", "map")
+                    if k not in (case.get("config") or {})), "nonexistent_cfg")
+    kpi_absent = next((f"fake_field_{i}" for i in range(99)
+                       if f"fake_field_{i}" not in kpi_fields), "fake_field_x")
+    return {
+        "phantom_evt": "EVT999",                      # 不存在的事件 ID
+        "oob_index": f"events[{n_evs + 3}].payload.machine_id=0",  # 越界下标
+        "value_lie": f"KPI:{fake_kpi}={fake_val}",    # 真字段+假数值 (超容差)
+        "phantom_cfg": f"CFG:{cfg_key}=1",            # 不存在的配置键
+        "phantom_kpi": f"{kpi_absent}=87.3",          # 不存在的统计字段
+    }
+
+
+def adversarial_audit(results: list[dict], cases: dict) -> dict:
+    """对一批诊断结果逐案注入伪造引用, 返回判分器抓获率审计。
+
+    results: 诊断器输出列表 (含 case_id 与诊断 JSON 字段)
+    cases:   case_id -> 案例档案
+    返回: {"n": N, "caught_rate": x, "per_attack": {攻击名: 抓获率}, "leaks": [...]}
+    一条伪造引用"被抓获" = check_citation 为 False (faithful 不放水)。
+    """
+    per_hit, per_total = {}, {}
+    leaks = []
+    n = 0
+    for r in results:
+        cid = r.get("case_id")
+        case = cases.get(cid)
+        if case is None:
+            continue
+        attacks = adversarial_attacks(case)
+        for name, cite in attacks.items():
+            caught = not check_citation(cite, case)
+            per_total[name] = per_total.get(name, 0) + 1
+            if caught:
+                per_hit[name] = per_hit.get(name, 0) + 1
+            else:
+                leaks.append({"case_id": cid, "attack": name, "cite": cite})
+        n += 1
+    total = sum(per_total.values()) or 1
+    return {
+        "n_cases": n,
+        "n_attacks": total,
+        "caught_rate": round(sum(per_hit.values()) / total, 3),
+        "per_attack": {k: round(per_hit[k] / per_total[k], 3) for k in per_total},
+        "leaks": leaks,
+    }
+
+
+def _cli():
+    """用法: python3 score.py --adversarial --cases cases_v2.json --results results_X.json"""
+    import argparse
+    import json
+    from pathlib import Path
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--adversarial", action="store_true")
+    ap.add_argument("--cases", default="cases_v2.json")
+    ap.add_argument("--results", required=True)
+    ap.add_argument("--out", default="")
+    args = ap.parse_args()
+    here = Path(__file__).parent
+    cases = {c["case_id"]: c
+             for c in json.loads((here / args.cases).read_text())}
+    results = json.loads((here / args.results).read_text())
+    audit = adversarial_audit(results, cases)
+    print(f"对抗审计: {audit['n_cases']} 案例 × 5 攻击 = {audit['n_attacks']} 条伪造引用")
+    print(f"判分器抓获率: {audit['caught_rate']}  (1.0=无伪造漏洞)")
+    for k, v in audit["per_attack"].items():
+        print(f"  {k}: {v}")
+    for lk in audit["leaks"][:10]:
+        print(f"  LEAK {lk['case_id']} {lk['attack']}: {lk['cite']}")
+    out = args.out or str(Path(args.results).with_name(
+        Path(args.results).stem + "_adversarial.json"))
+    Path(out).write_text(json.dumps(audit, ensure_ascii=False, indent=1))
+    print(f"-> {out}")
+
+
+if __name__ == "__main__":
+    _cli()

@@ -34,12 +34,16 @@ def main():
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--ids", default="")
     ap.add_argument("--timeout", type=float, default=TIMEOUT_S)
+    ap.add_argument("--scen", default="scenarios_v2.jsonl",
+                    help="场景清单文件名 (HERE 下); v2.1 四臂网格用 scenarios_v21.jsonl")
+    ap.add_argument("--outdir", default="episodes",
+                    help="episode 输出目录 (HERE 下); v2.1 用 episodes_v21 避免污染冻结产物")
     args = ap.parse_args()
-    outdir = HERE / "episodes"
+    outdir = HERE / args.outdir
     outdir.mkdir(exist_ok=True)
     only = set(args.ids.split(",")) if args.ids else None
 
-    scns = [json.loads(l) for l in (HERE / "scenarios_v2.jsonl").read_text().splitlines() if l.strip()]
+    scns = [json.loads(l) for l in (HERE / args.scen).read_text().splitlines() if l.strip()]
     if only:
         scns = [s for s in scns if s["scen_id"] in only]
     done = 0
