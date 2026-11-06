@@ -298,6 +298,8 @@ def run_closed_episode(
     finished = False
     steps = 0
     events_total = []
+    metrics_series: list = []  # KPI 时间序列 (R4 G1.1 Granger 基线输入; 对齐平行线 episode_runner)
+    METRIC_STRIDE = 8  # KPI 序列降采样步距 (与 llmdiag/episode_runner.py 一致)
     for i in range(max_steps):
         actions = coordinator.decide(obs)
         obs, rewards, terminations, truncations, infos = env.step(actions)
@@ -308,6 +310,11 @@ def run_closed_episode(
             if evs:
                 events_total.extend(evs)
         orch.on_step(obs, steps)
+        if (i + 1) % METRIC_STRIDE == 0:
+            m = infos.get("metrics", {}) or {}
+            metrics_series.append(
+                {"step": i + 1,
+                 **{k: v for k, v in m.items() if isinstance(v, (int, float))}})
         if transfer_estimator is not None:
             for agent in obs.get("task_observation", {}).get("agents", []):
                 if agent.finished_tasks:
@@ -350,5 +357,6 @@ def run_closed_episode(
             k: v for k, v in nervous.items() if k != "schedule_revision_events"
         } if isinstance(nervous, dict) else {},
         "n_plan_revisions": len(plan_revisions),
+        "metrics_series": metrics_series,
         "wall_time_s": round(time.time() - t0, 2),
     }
