@@ -121,9 +121,9 @@ def run_subset(model: str):
 def eval_subset(model: str):
     """逐 (system, category) 写评测配置 -> 调他们的 evaluation.py -> 聚合"""
     import subprocess
-    import tempfile
     scns = json.loads((HERE / "cob_subset.json").read_text())
     groups = sorted({(s["system"], s["fault_category"]) for s in scns})
+    (SAVE_ROOT / "eval").mkdir(parents=True, exist_ok=True)
     all_details = []
     for sysname, cat in groups:
         names = sorted({s["case_name"] for s in scns
@@ -152,7 +152,9 @@ def eval_subset(model: str):
             cfg_path.write_text("\n".join(lines) + "\n")
             r = subprocess.run([sys.executable, "evaluation.py"], cwd=str(AGENT_ROOT),
                                capture_output=True, text=True, timeout=600)
-            print(f"[eval {sysname}/{cat}] {r.stdout.strip().splitlines()[-2] if r.stdout.strip() else r.stderr[-200:]}")
+            out_tail = r.stdout.strip().splitlines()[-2] if r.stdout.strip() and len(r.stdout.strip().splitlines()) >= 2 \
+                else (r.stdout.strip().splitlines()[-1] if r.stdout.strip() else r.stderr[-200:])
+            print(f"[eval {sysname}/{cat}] {out_tail}")
             detail_p = SAVE_ROOT / "eval" / f"{sysname}_{cat}_{model}_detail.json"
             if detail_p.exists():
                 for d in json.loads(detail_p.read_text()):
