@@ -1,0 +1,33 @@
+[chain] 等待 OVERNIGHT_DONE ...
+[chain] 2026-11-07 04:58:06 过夜批次完成, 启动 Cloud-OpsBench 复现
+GetClusterConfiguration:{}
+GetAlerts:{}
+[DONE] case=trainticket/performance/47 finished=True steps=11 trace=/work/codebase/Cloud-OpsBench/traces_local/trainticket/qwen3:8b/performance/47/47.json
+[42/43] trainticket/performance/47 OK 248s
+[43/43] trainticket/performance/29 TIMEOUT
+done: ok=29 fail=14 skip=0
+[chain] 2026-11-07 12:03:13 8B 跑批完成, 评测
+    (SAVE_ROOT / "eval" / f"crossbench_{model}_all_details.json").write_text(
+  File "/usr/local/lib/python3.11/pathlib.py", line 1078, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/work/codebase/Cloud-OpsBench/traces_local/eval/crossbench_qwen3:8b_all_details.json'
+[42/43] trainticket/performance/47 OK 1072s
+GetAlerts:{}
+GetAppYAML:{"app_name":"ts-order-service"}
+[DONE] case=trainticket/performance/29 finished=True steps=4 trace=/work/codebase/Cloud-OpsBench/traces_local/trainticket/qwen3:14b/performance/29/29.json
+[43/43] trainticket/performance/29 OK 373s
+done: ok=32 fail=11 skip=0
+[chain] 2026-11-07 19:01:21 14B 跑批完成, 评测
+[eval boutique/service] Summary JSON: /work/codebase/Cloud-OpsBench/traces_local/boutique/qwen3:14b/evaluation_v2_service_summary.json
+[eval boutique/startup] Summary JSON: /work/codebase/Cloud-OpsBench/traces_local/boutique/qwen3:14b/evaluation_v2_startup_summary.json
+[eval trainticket/performance] Summary JSON: /work/codebase/Cloud-OpsBench/traces_local/trainticket/qwen3:14b/evaluation_v2_performance_summary.json
+[eval trainticket/runtime] Summary JSON: /work/codebase/Cloud-OpsBench/traces_local/trainticket/qwen3:14b/evaluation_v2_runtime_summary.json
+[eval trainticket/service] Summary JSON: /work/codebase/Cloud-OpsBench/traces_local/trainticket/qwen3:14b/evaluation_v2_service_summary.json
+[eval trainticket/startup] Summary JSON: /work/codebase/Cloud-OpsBench/traces_local/trainticket/qwen3:14b/evaluation_v2_startup_summary.json
+
+== qwen3:14b × Cloud-OpsBench 子集 (n=0) ==
+[chain] CROSSBENCH_DONE 2026-11-07 19:01:23

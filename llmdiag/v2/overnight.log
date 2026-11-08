@@ -1,0 +1,21 @@
+=== 2026-11-06 20:26:16 qwen3:8b diagnoser_agent.py -> results_agent_qwen3_8b.json ===
+[102/104] inj_stoch_04|hard: loc=0.0 cause=0.0 faith=1.0 steps=3 calls=2 (55.6s) GT=stochastic/disruption_stochastic
+[103/104] inj_stoch_06|easy: loc=0.0 cause=1.0 faith=1.0 steps=4 calls=3 (74.5s) GT=stochastic/disruption_stochastic
+[104/104] inj_stoch_06|hard: loc=0.0 cause=0.0 faith=1.0 steps=3 calls=2 (53.5s) GT=stochastic/disruption_stochastic
+{"n": 104, "loc_acc": 0.274, "cause_strict_acc": 0.317, "cause_coarse_acc": 0.356, "jra": 0.24, "faithful": 0.98, "parse_rate": 1.0, "mtti_steps": 3.44, "tool_coverage": 2.14}
+=== 2026-11-06 22:31:31 qwen3:14b diagnoser_llm.py -> results_qwen3_14b.json ===
+[102/104] inj_stoch_04|hard: loc=0.0 cause=0.0 faith=1.0 (73s, retry=0) GT=stochastic/disruption_stochastic
+[103/104] inj_stoch_06|easy: loc=0.0 cause=0.5 faith=1.0 (95s, retry=0) GT=stochastic/disruption_stochastic
+[104/104] inj_stoch_06|hard: loc=0.0 cause=0.0 faith=0.5 (85s, retry=0) GT=stochastic/disruption_stochastic
+{"n": 104, "loc_acc": 0.101, "cause_strict_acc": 0.356, "cause_coarse_acc": 0.423, "jra": 0.077, "faithful": 0.988, "parse_rate": 1.0}
+=== 2026-11-07 00:34:14 qwen3:14b diagnoser_agent.py -> results_agent_qwen3_14b.json ===
+[102/104] inj_stoch_04|hard: loc=0.0 cause=0.0 faith=1.0 steps=3 calls=2 (93.0s) GT=stochastic/disruption_stochastic
+[103/104] inj_stoch_06|easy: loc=0.0 cause=0.0 faith=1.0 steps=4 calls=3 (171.3s) GT=stochastic/disruption_stochastic
+[104/104] inj_stoch_06|hard: loc=0.0 cause=0.0 faith=1.0 steps=3 calls=2 (135.8s) GT=stochastic/disruption_stochastic
+{"n": 104, "loc_acc": 0.082, "cause_strict_acc": 0.26, "cause_coarse_acc": 0.288, "jra": 0.058, "faithful": 0.983, "parse_rate": 1.0, "mtti_steps": 3.67, "tool_coverage": 2.06}
+=== 2026-11-07 03:42:26 qwen3:8b diagnoser_llm.py -> results_qwen3_8b_local.json ===
+[102/104] inj_stoch_04|hard: loc=0.0 cause=0.0 faith=1.0 (35s, retry=0) GT=stochastic/disruption_stochastic
+[103/104] inj_stoch_06|easy: loc=0.0 cause=1.0 faith=1.0 (43s, retry=0) GT=stochastic/disruption_stochastic
+[104/104] inj_stoch_06|hard: loc=0.0 cause=0.0 faith=0.8 (52s, retry=0) GT=stochastic/disruption_stochastic
+{"n": 104, "loc_acc": 0.043, "cause_strict_acc": 0.269, "cause_coarse_acc": 0.279, "jra": 0.01, "faithful": 0.998, "parse_rate": 1.0}
+=== 2026-11-07 04:56:12 OVERNIGHT_DONE ===
