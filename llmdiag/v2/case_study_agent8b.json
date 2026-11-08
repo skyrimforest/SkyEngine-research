@@ -1,0 +1,93 @@
+[
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "padding(alpha=0.2)",
+  "narrative": "机器6和7多次发生概率性故障(共3次), 导致机器停机总步数1226且AGV等待时间过高, 故障持续中断生产流程。",
+  "case_id": "v21_mismatch_02|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "plan_mismatch"
+  },
+  "wall_s": 98.9,
+  "raw": {
+   "loc_type": "machine",
+   "loc_target": "machine:6+machine:7",
+   "cause": "disruption_machine",
+   "evidence": [
+    "EVT002",
+    "EVT009",
+    "EVT001",
+    "KPI:agv_waiting_time_total=1687",
+    "KPI:machine_down_steps_total=1226"
+   ],
+   "intervention": "padding(alpha=0.2)",
+   "narrative": "机器6和7多次发生概率性故障(共3次), 导致机器停机总步数1226且AGV等待时间过高, 故障持续中断生产流程。"
+  },
+  "agent": {
+   "n_steps": 4,
+   "tool_calls": {
+    "get_kpi": 1,
+    "get_events_page": 0,
+    "get_event_stats": 1,
+    "search_events": 1,
+    "get_revisions": 0,
+    "get_config": 0
+   },
+   "n_tool_calls": 3,
+   "tools_used": [
+    "get_event_stats",
+    "get_kpi",
+    "search_events"
+   ]
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 1.0,
+  "parse": 1,
+  "intervention": "periodic_revision(60)",
+  "narrative": "AGV总等待时间异常高且利用率72.45%，配合1次主动中断事件，表明存在路径阻塞导致的死锁。",
+  "case_id": "v21_mismatch_02|hard",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "plan_mismatch"
+  },
+  "wall_s": 73.4,
+  "raw": {
+   "loc_type": "agv",
+   "loc_target": "agv",
+   "cause": "blocking_livelock",
+   "evidence": [
+    "KPI:agv_waiting_time_total=1687",
+    "KPI:agv_busy_utilization=0.7245",
+    "KPI:active_disruption_count=1"
+   ],
+   "intervention": "periodic_revision(60)",
+   "narrative": "AGV总等待时间异常高且利用率72.45%，配合1次主动中断事件，表明存在路径阻塞导致的死锁。"
+  },
+  "agent": {
+   "n_steps": 3,
+   "tool_calls": {
+    "get_kpi": 1,
+    "get_events_page": 0,
+    "get_event_stats": 1,
+    "search_events": 0,
+    "get_revisions": 0,
+    "get_config": 0
+   },
+   "n_tool_calls": 2,
+   "tools_used": [
+    "get_event_stats",
+    "get_kpi"
+   ]
+  }
+ }
+]

@@ -1,0 +1,32 @@
+[
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "fleet(K+1)",
+  "narrative": "rule baseline",
+  "case_id": "v21_mismatch_02|easy",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "plan_mismatch"
+  }
+ },
+ {
+  "loc": 0.0,
+  "cause": 0.0,
+  "jra": 0.0,
+  "faithful": 0.0,
+  "parse": 1,
+  "intervention": "assigner(least_congestion)",
+  "narrative": "rule baseline",
+  "case_id": "v21_mismatch_02|hard",
+  "gt": {
+   "loc_type": "stochastic",
+   "loc_target": "stochastic",
+   "cause": "plan_mismatch"
+  }
+ }
+]

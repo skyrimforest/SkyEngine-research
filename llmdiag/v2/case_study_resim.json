@@ -1,0 +1,50 @@
+[
+ {
+  "case_id": "v21_mismatch_02|easy",
+  "intervention": "padding(alpha=0.2)",
+  "family": "padding",
+  "arg": "0.2",
+  "executable": true,
+  "delta_kpi": 58.0,
+  "rerun_makespan": 1471,
+  "rerun_finished": true,
+  "fault_delta_makespan": 131,
+  "recovery_ratio": null,
+  "success": false,
+  "note": "同 seed=344 重仿真",
+  "wall_time_s": 10.2,
+  "label": "LLM医生·easy档"
+ },
+ {
+  "case_id": "v21_mismatch_02|hard",
+  "intervention": "periodic_revision(60)",
+  "family": "periodic_revision",
+  "arg": "60",
+  "executable": true,
+  "delta_kpi": 242.0,
+  "rerun_makespan": 1287,
+  "rerun_finished": true,
+  "fault_delta_makespan": null,
+  "recovery_ratio": null,
+  "success": true,
+  "note": "同 seed=344 重仿真",
+  "wall_time_s": 24.6,
+  "label": "LLM医生·hard档"
+ },
+ {
+  "case_id": "v21_mismatch_02|easy",
+  "intervention": "fleet(K+1)",
+  "family": "fleet",
+  "arg": "+1",
+  "executable": true,
+  "delta_kpi": 232.0,
+  "rerun_makespan": 1297,
+  "rerun_finished": true,
+  "fault_delta_makespan": 131,
+  "recovery_ratio": null,
+  "success": true,
+  "note": "同 seed=344 重仿真",
+  "wall_time_s": 7.5,
+  "label": "规则医生"
+ }
+]
