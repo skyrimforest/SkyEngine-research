@@ -1,0 +1,11 @@
+训练集(逐集级) 960 | makespan 域 [132, 4096]
+
+== 三重 hold-out 排序评测 (判活线 Spearman>=0.5) ==
+holdout_maps: n=192 Spearman=0.090 Kendall=0.067 topK命中=0/10 | true范围[123,4096]
+holdout_instance: n=48 Spearman=0.054 Kendall=0.048 topK命中=1/10 | true范围[582,4096]
+holdout_batches: n=48 Spearman=-0.258 Kendall=-0.211 topK命中=0/10 | true范围[214,4096]
+
+训练内 Spearman=0.887 (过拟合参照)
+特征重要性 Top6: [('F3_depot_wdist', np.float64(0.587)), ('F2_wdist_max', np.float64(0.257)), ('F4_hottest_cell', np.float64(0.203)), ('F5_top5_share', np.float64(0.172)), ('F7_corridor_cnt', np.float64(0.165)), ('F1_wdist_total', np.float64(0.164))]
+-> judge_v1.pkl / judge_v1.json
+TRAIN_CHAIN_DONE

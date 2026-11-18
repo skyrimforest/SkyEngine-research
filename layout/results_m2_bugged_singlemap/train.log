@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/work/SkyEngine-research-llmdiag/layout/judge/train.py", line 108, in <module>
+    main()
+  File "/work/SkyEngine-research-llmdiag/layout/judge/train.py", line 67, in main
+    X, y, ids, kinds = featurize(train, manifest)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/SkyEngine-research-llmdiag/layout/judge/train.py", line 38, in featurize
+    layouts = {l["layout_id"]: l for l in manifest["layouts"]}
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/SkyEngine-research-llmdiag/layout/judge/train.py", line 38, in <dictcomp>
+    layouts = {l["layout_id"]: l for l in manifest["layouts"]}
+               ~^^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+TRAIN_CHAIN_DONE

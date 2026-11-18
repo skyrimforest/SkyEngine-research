@@ -1,0 +1,47 @@
+{
+ "model": "HistGradientBoosting",
+ "n_train": 126,
+ "features": [
+  "F1_wdist_total",
+  "F2_wdist_max",
+  "F3_depot_wdist",
+  "F4_hottest_cell",
+  "F5_top5_share",
+  "F6_traffic_hhi",
+  "F7_corridor_cnt",
+  "F8_free_cells",
+  "F9_density",
+  "F10_mean_nbrs",
+  "F10b_min_nbrs",
+  "F11_flow_entropy",
+  "F12_mean_alts",
+  "F13_num_agv",
+  "F13b_num_machines"
+ ],
+ "importance_top": [
+  [
+   "F1_wdist_total",
+   0.29414883481657456
+  ],
+  [
+   "F3_depot_wdist",
+   0.2273885723826225
+  ],
+  [
+   "F4_hottest_cell",
+   0.22119298586015726
+  ],
+  [
+   "F7_corridor_cnt",
+   0.17109539398603552
+  ],
+  [
+   "F2_wdist_max",
+   0.13599919205724484
+  ],
+  [
+   "F11_flow_entropy",
+   0.12381864413957926
+  ]
+ ]
+}

@@ -1,0 +1,21 @@
+{
+ "map": "validation-random-seed-000",
+ "instance": "mk01",
+ "budget": 60,
+ "curve_checkpoints": {
+  "10": 310,
+  "25": 293,
+  "50": 264,
+  "60": 264
+ },
+ "single_episode_best": 264,
+ "top5_confirmed": {
+  "rs_26": 2203.75,
+  "rs_37": 606.25,
+  "rs_43": 2217.25,
+  "rs_44": 351.25,
+  "rs_39": 1245.5
+ },
+ "best_confirmed_mean": 351.25,
+ "from_to_reference_1ep": 435
+}

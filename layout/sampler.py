@@ -45,13 +45,58 @@ def cluster_layout(rng: random.Random, free: list, free_set: set,
 
 
 def perturb_layout(rng: random.Random, layout: dict, free_set: set) -> dict:
-    """微扰: 随机挑一台机器挪到相邻空格(管线三单机挪动分析的基本算子)。"""
+    """微扰: 随机挑一台机器挪到相邻空格(避开其余机器与AGV起点)。"""
     machines = [tuple(p) for p in layout["machine_positions"]]
+    agvs = {tuple(p) for p in layout.get("agv_positions", [])}
     i = rng.randrange(len(machines))
     r, c = machines[i]
     cand = [(r+dr, c+dc) for dr, dc in ((0,1),(0,-1),(1,0),(-1,0))]
-    free_cand = [p for p in cand if p in free_set and p not in machines]
+    free_cand = [p for p in cand if p in free_set and p not in machines and p not in agvs]
     if not free_cand:
         return layout
     machines[i] = rng.choice(free_cand)
     return {"machine_positions": machines, "agv_positions": list(layout["agv_positions"])}
+
+
+def expected_flow(fjsp_data: dict) -> list:
+    """机器间期望转移强度: 相邻工序对各候选机器对均分 1 单位流量(柔性摊开)。"""
+    n = fjsp_data["machines"]
+    flow = [[0.0] * n for _ in range(n)]
+    for job in fjsp_data["jobs"]:
+        for a, b in zip(job, job[1:]):
+            ms_a = [alt["machine"] for alt in a]
+            ms_b = [alt["machine"] for alt in b]
+            w = 1.0 / (len(ms_a) * len(ms_b))
+            for i in ms_a:
+                for j in ms_b:
+                    flow[i][j] += w
+                    if i != j:
+                        pass
+    return flow
+
+
+def from_to_layout(rng: random.Random, free: list, free_set: set,
+                   n_machines: int, n_agv: int, flow: list) -> dict:
+    """经典 from-to 启发式布局: 按总流量降序逐台放置, 曼哈顿距离最小化。
+    兼作 M2 基线(经典方法在耦合场景灵不灵)与好区域采样。"""
+    order = sorted(range(n_machines), key=lambda m: -sum(flow[m]))
+    placed = {}
+    first = rng.choice(free)
+    placed[order[0]] = first
+    used = {first}
+    for m in order[1:]:
+        best, best_cost = None, None
+        for cell in free:
+            if cell in used:
+                continue
+            cost = sum(
+                (flow[m][p] + flow[p][m]) * (abs(cell[0] - c[0]) + abs(cell[1] - c[1]))
+                for p, c in placed.items())
+            if best_cost is None or cost < best_cost:
+                best, best_cost = cell, cost
+        placed[m] = best
+        used.add(best)
+    machines = [placed[m] for m in range(n_machines)]
+    rest = [p for p in free if p not in used]
+    agvs = rng.sample(rest, n_agv)
+    return {"machine_positions": machines, "agv_positions": agvs}

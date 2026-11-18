@@ -38,7 +38,7 @@ CUR_MAP = [MAP_FILE, MAP_NAME]
 
 def _run_one(args):
     """子进程: 单集仿真 (fork 隔离, 超时由父进程 join 控制)。"""
-    (fjsp_path, machine_positions, agv_positions, num_agv, seed, max_steps) = args
+    (fjsp_path, machine_positions, agv_positions, num_agv, seed, max_steps, map_file, map_name) = args
     from common.engine_adapter import run_episode
     t0 = time.time()
     import contextlib, io
@@ -48,7 +48,7 @@ def _run_one(args):
         import contextlib as _cl, io as _io
         with _cl.redirect_stdout(_io.StringIO()):
             res = run_episode(
-                fjsp_path=fjsp_path, map_file=CUR_MAP[0], map_name=CUR_MAP[1],
+                fjsp_path=fjsp_path, map_file=map_file, map_name=map_name,
                 num_agv=num_agv, seed=seed, max_steps=max_steps,
                 job_solver="greedy", route_solver="astar",
                 machine_positions=machine_positions,
@@ -129,7 +129,8 @@ def evaluate(instance, layouts, n_batches, batch_jobs, n_origins, num_agv,
                 meta = {"layout_id": lay["layout_id"],
                         "layout_hash": None, "batch_id": b, "origin_id": o}
                 episodes.append((
-                    (str(bf), machines, agvs, num_agv, 42 + o, max_steps), meta))
+                    (str(bf), machines, agvs, num_agv, 42 + o, max_steps,
+                     str(CUR_MAP[0]), CUR_MAP[1]), meta))
     results = run_grid(episodes, timeout=timeout)
     out = Path(out_path)
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -184,11 +185,13 @@ def smoke(instance="mk01", num_agv=4, max_steps=4096, map_key="random"):
     for rep in range(2):  # 确定性: spread 布局跑两遍
         eps.append(((str(ROOT / f"data/fjsp_official/brandimarte/{instance}.json"),
                      [tuple(p) for p in lay_a["machine_positions"]],
-                     [tuple(p) for p in lay_a["agv_positions"]], num_agv, 42, max_steps),
+                     [tuple(p) for p in lay_a["agv_positions"]], num_agv, 42, max_steps,
+                     str(CUR_MAP[0]), CUR_MAP[1]),
                     {"layout_id": f"spread_r{rep}", "batch_id": 0, "origin_id": 0}))
     eps.append(((str(ROOT / f"data/fjsp_official/brandimarte/{instance}.json"),
                  [tuple(p) for p in lay_b["machine_positions"]],
-                 [tuple(p) for p in lay_b["agv_positions"]], num_agv, 42, max_steps),
+                 [tuple(p) for p in lay_b["agv_positions"]], num_agv, 42, max_steps,
+                 str(CUR_MAP[0]), CUR_MAP[1]),
                 {"layout_id": "cluster", "batch_id": 0, "origin_id": 0}))
     res = run_grid(eps, timeout=900)
     mks = {meta["layout_id"]: row.get("makespan") for row, meta in res}
