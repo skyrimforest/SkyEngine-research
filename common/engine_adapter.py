@@ -86,13 +86,17 @@ def build_configs(
     seed: int = 42,
     obs_radius: int = 5,
     max_episode_steps: int = 2048,
-    observation_type: str = "default",
-    collision_system: str = "priority",
-):
+        observation_type: str = "default",
+        collision_system: str = "priority",
+        machine_positions: Optional[list] = None,
+        agv_positions: Optional[list] = None,
+    ):
     """由 FJSP 实例 + 地图 + AGV 数构建 (GridConfig, MachineConfig, JobConfig)。
 
     与 run.py 的差异: 完全显式传参, 不读环境变量。
-    AGV 初始位置与机器位置在最大连通自由区域内按 seed 派生采样。
+    AGV 初始位置与机器位置在最大连通自由区域内按 seed 派生采样;
+    显式传入 machine_positions/agv_positions (raw 网格坐标 [(row,col),...]) 时
+    覆盖采样 (布局实验用, 1118layout)。机器位置顺序 = 机器 ID 顺序。
     """
     jobs = fjsp_data["jobs"]
     machine_num = fjsp_data["machines"]
@@ -131,15 +135,39 @@ def build_configs(
         raise ValueError(
             f"free cells {len(connected_cells)} < num_agv {num_agv}"
         )
-    initial_positions = random.Random(seed).sample(connected_cells, num_agv)
-    machine_candidates = [p for p in connected_cells if p not in initial_positions]
-    if len(machine_candidates) < machine_num:
-        raise ValueError(
-            f"machine candidates {len(machine_candidates)} < machines {machine_num}"
+    free_set = set(connected_cells)
+    if agv_positions is not None:
+        agv_positions = [tuple(p) for p in agv_positions]
+        if len(agv_positions) != num_agv:
+            raise ValueError(f"agv_positions 数量 {len(agv_positions)} != num_agv {num_agv}")
+        if len(set(agv_positions)) != num_agv:
+            raise ValueError("agv_positions 存在重复坐标")
+        bad = [p for p in agv_positions if p not in free_set]
+        if bad:
+            raise ValueError(f"agv_positions 不在最大连通自由区: {bad[:3]}")
+        initial_positions = list(agv_positions)
+    else:
+        initial_positions = random.Random(seed).sample(connected_cells, num_agv)
+    if machine_positions is not None:
+        machine_positions = [tuple(p) for p in machine_positions]
+        if len(machine_positions) != machine_num:
+            raise ValueError(f"machine_positions 数量 {len(machine_positions)} != machines {machine_num}")
+        if len(set(machine_positions)) != machine_num:
+            raise ValueError("machine_positions 存在重复坐标")
+        free_for_machines = free_set - set(initial_positions)
+        bad = [p for p in machine_positions if p not in free_for_machines]
+        if bad:
+            raise ValueError(f"machine_positions 非法(出界/压AGV起点): {bad[:3]}")
+        raw_machine_positions = list(machine_positions)
+    else:
+        machine_candidates = [p for p in connected_cells if p not in initial_positions]
+        if len(machine_candidates) < machine_num:
+            raise ValueError(
+                f"machine candidates {len(machine_candidates)} < machines {machine_num}"
+            )
+        raw_machine_positions = random.Random(seed + 100003).sample(
+            machine_candidates, machine_num
         )
-    raw_machine_positions = random.Random(seed + 100003).sample(
-        machine_candidates, machine_num
-    )
     machine_cfg = MachineConfig(
         num_machines=machine_num,
         strategy="custom",
@@ -233,6 +261,8 @@ def run_episode(
     metrics_interval: int = 0,
     warmup_timeout: float = 120.0,
     processing_time_config: Optional[dict] = None,
+    machine_positions: Optional[list] = None,
+    agv_positions: Optional[list] = None,
 ) -> dict:
     """运行一个完整 episode, 返回 {config, summary, steps, wall_time, finished}。
 
@@ -240,6 +270,8 @@ def run_episode(
       - job_solver="online_fjsp": FJSP 微服务 (CP-SAT 等), 需 FJSP_SERVICE_URL 可达
       - route_solver="rolling_mapf_http": MAPF 微服务 (classical C++ / lacam / pibt),
         需要 MAPF_SERVICE_URL 可达; 自动启用 OBS_TYPE=MAPF + COLLISION_SYSTEM=soft
+    布局实验 (1118layout): machine_positions/agv_positions 显式指定机器与 AGV 起点;
+    返回 config.layout 携带生效坐标与双指纹 (layout_hash / agv_origin_hash)。
     """
     t0 = time.time()
 
@@ -271,6 +303,8 @@ def run_episode(
         max_episode_steps=max_steps,
         observation_type=observation_type,
         collision_system=collision_system,
+        machine_positions=machine_positions,
+        agv_positions=agv_positions,
     )
     env = GridFactoryEnv(
         grid_config=grid_cfg,
@@ -356,6 +390,12 @@ def run_episode(
             break
 
     summary = env.metrics_hub.get_episode_summary()
+    import hashlib as _hashlib
+    eff_machines = [(r - obs_radius, c - obs_radius)
+                    for r, c in machine_cfg.custom_positions]
+    eff_agvs = [tuple(p) for p in grid_cfg.agents_xy]
+    _ph = lambda pts: _hashlib.md5(  # noqa: E731
+        json.dumps([list(p) for p in pts]).encode()).hexdigest()[:12]
     return {
         "config": {
             "fjsp": str(fjsp_path),
@@ -368,6 +408,12 @@ def run_episode(
             "assigner": assigner,
             "transfer_aware": bool(transfer_estimator is not None),
             "max_steps": max_steps,
+            "layout": {
+                "machine_positions": [list(p) for p in eff_machines],
+                "agv_positions": [list(p) for p in eff_agvs],
+                "layout_hash": _ph(eff_machines),
+                "agv_origin_hash": _ph(eff_agvs),
+            },
         },
         "finished": finished,
         "steps": steps,
