@@ -1,0 +1,30 @@
+{
+ "runs": [
+  {
+   "seed": "s1",
+   "armA_120eps": 237.5,
+   "armB_eps": 56,
+   "armB_best": 349.75,
+   "quality_ratio": 0.68
+  },
+  {
+   "seed": "s2",
+   "armA_120eps": 225.25,
+   "armB_eps": 56,
+   "armB_best": 1261.25,
+   "quality_ratio": 0.18
+  },
+  {
+   "seed": "s3",
+   "armA_120eps": 1208.75,
+   "armB_eps": 56,
+   "armB_best": 274.75,
+   "quality_ratio": 4.4
+  }
+ ],
+ "ratio_mean": 1.7533333333333336,
+ "ratio_min": 0.18,
+ "ratio_max": 4.4,
+ "armA_mean": 557.1666666666666,
+ "armB_mean": 628.5833333333334
+}

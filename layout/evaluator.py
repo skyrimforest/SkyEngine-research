@@ -71,7 +71,7 @@ def _run_one(args):
         return None, f"{type(e).__name__}: {e}"
 
 
-def run_grid(episodes, timeout=600.0):
+def run_grid(episodes, timeout=600.0, quiet=False):
     """顺序 fork 隔离执行 [(args, meta), ...] -> [row|error, ...]"""
     out = []
     ctx = mp.get_context("fork")
@@ -88,9 +88,10 @@ def run_grid(episodes, timeout=600.0):
         else:
             row = q.get() if not q.empty() else {"error": "no output"}
         out.append((row, meta))
-        mk = row.get("makespan", row.get("error", "?"))
-        print(f"[{i+1}/{len(episodes)}] L{meta['layout_id']} b{meta['batch_id']} "
-              f"o{meta['origin_id']} -> mk={mk} ({row.get('wall_time_s','?')}s)", flush=True)
+        if not quiet:
+            mk = row.get("makespan", row.get("error", "?"))
+            print(f"[{i+1}/{len(episodes)}] L{meta['layout_id']} b{meta['batch_id']} "
+                  f"o{meta['origin_id']} -> mk={mk} ({row.get('wall_time_s','?')}s)", flush=True)
     return out
 
 
