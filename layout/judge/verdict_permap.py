@@ -2,7 +2,7 @@ import json, sys
 from pathlib import Path
 from scipy.stats import spearmanr
 from collections import defaultdict
-ROOT = Path('/work/SkyEngine-research-llmdiag')
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT)); sys.path.insert(0, str(ROOT/'layout/judge'))
 from features import compute_features
 from layout.batches import make_batch

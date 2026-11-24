@@ -1,0 +1,11 @@
+总行数(逐集级): 2400
+
+=== 生死判: 同图未见布局 (奇偶分, 每图100布局) ===
+-- 模式A: 逐图独立模型 --
+validation-random-seed-000: train=400 holdout=400 Spearman=0.111
+validation-random-seed-001: train=400 holdout=400 Spearman=0.176
+validation-random-seed-002: train=400 holdout=400 Spearman=0.251
+-- 模式B: 三图合训, 图内留出 --
+validation-random-seed-000: holdout=400 Spearman=0.096
+validation-random-seed-001: holdout=400 Spearman=0.164
+validation-random-seed-002: holdout=400 Spearman=0.240

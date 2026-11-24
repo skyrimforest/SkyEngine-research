@@ -1,0 +1,7 @@
+=== 布局级裁决: 同图未见布局, 布局均值粒度 ===
+[逐图模型] validation-random-seed-000: 布局n=100 Spearman=0.342 top10命中=4/10
+[逐图模型] validation-random-seed-001: 布局n=100 Spearman=0.259 top10命中=5/10
+[逐图模型] validation-random-seed-002: 布局n=100 Spearman=0.469 top10命中=5/10
+[三图合训] validation-random-seed-000: 布局n=100 Spearman=0.387 top10命中=4/10
+[三图合训] validation-random-seed-001: 布局n=100 Spearman=0.317 top10命中=4/10
+[三图合训] validation-random-seed-002: 布局n=100 Spearman=0.477 top10命中=4/10
